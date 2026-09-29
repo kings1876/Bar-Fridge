@@ -28,6 +28,7 @@ export const Navbar: React.FC = () => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [shopDropdownOpen, setShopDropdownOpen] = useState(false);
+  const [expandedNavCategory, setExpandedNavCategory] = useState<string | null>(null);
   const [showSearchInput, setShowSearchInput] = useState(false);
 
   const handleSearchSubmit = (e: React.FormEvent) => {
@@ -101,10 +102,13 @@ export const Navbar: React.FC = () => {
           {/* Desktop Navigation - Order: Shop, Blog, About, Contact, FAQ */}
           <nav className="hidden lg:flex items-center gap-1 font-medium text-sm">
             {/* Shop with Dropdown */}
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setShopDropdownOpen(true)}
-              onMouseLeave={() => setShopDropdownOpen(false)}
+              onMouseLeave={() => {
+                setShopDropdownOpen(false);
+                setExpandedNavCategory(null);
+              }}
             >
               <button
                 onClick={() => navigateTo('shop')}
@@ -119,27 +123,53 @@ export const Navbar: React.FC = () => {
               </button>
 
               {shopDropdownOpen && (
-                <div className="absolute top-full left-0 w-80 bg-white border border-slate-200 rounded-2xl shadow-2xl p-3 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute top-full left-0 w-80 bg-white border border-slate-200 rounded-2xl shadow-2xl p-3 z-50 animate-in fade-in slide-in-from-top-2 duration-150 max-h-[75vh] overflow-y-auto">
                   <div className="text-xs font-semibold uppercase tracking-wider text-slate-400 px-3 py-1.5 mb-1 border-b border-slate-100">
                     Product Categories
                   </div>
-                  {CATEGORIES.map((cat) => (
-                    <button
-                      key={cat.id}
-                      onClick={() => {
-                        setSelectedCategory(cat.id);
-                        navigateTo('shop', { categoryId: cat.id });
-                        setShopDropdownOpen(false);
-                      }}
-                      className="w-full text-left px-3 py-2 text-xs rounded-xl text-slate-700 hover:text-sky-700 hover:bg-sky-50/80 transition-colors flex items-center justify-between group"
-                    >
-                      <div>
-                        <div className="font-semibold group-hover:text-sky-700 text-slate-900">{cat.name}</div>
-                        <div className="text-[11px] text-slate-500">{cat.subcategories.slice(0, 2).join(', ')}...</div>
+                  {CATEGORIES.map((cat) => {
+                    const isExpanded = expandedNavCategory === cat.id;
+                    return (
+                      <div key={cat.id}>
+                        <div className="w-full flex items-center rounded-xl hover:bg-sky-50/80 transition-colors group">
+                          <button
+                            onClick={() => {
+                              navigateTo('shop', { categoryId: cat.id });
+                              setShopDropdownOpen(false);
+                              setExpandedNavCategory(null);
+                            }}
+                            className="flex-1 text-left px-3 py-2 text-xs"
+                          >
+                            <div className="font-semibold group-hover:text-sky-700 text-slate-900">{cat.name}</div>
+                          </button>
+                          <button
+                            onClick={() => setExpandedNavCategory(isExpanded ? null : cat.id)}
+                            aria-label={`Toggle ${cat.name} subcategories`}
+                            className="p-2 mr-1 text-slate-400 group-hover:text-sky-600"
+                          >
+                            <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                          </button>
+                        </div>
+                        {isExpanded && (
+                          <div className="pl-3 pb-1.5 space-y-0.5">
+                            {cat.subcategories.map((sub) => (
+                              <button
+                                key={sub}
+                                onClick={() => {
+                                  navigateTo('shop', { categoryId: cat.id, subcategory: sub });
+                                  setShopDropdownOpen(false);
+                                  setExpandedNavCategory(null);
+                                }}
+                                className="w-full text-left px-3 py-1.5 text-[11px] rounded-lg text-slate-600 hover:text-sky-700 hover:bg-sky-50 transition-colors"
+                              >
+                                {sub}
+                              </button>
+                            ))}
+                          </div>
+                        )}
                       </div>
-                      <span className="text-slate-400 group-hover:text-sky-600 text-xs">→</span>
-                    </button>
-                  ))}
+                    );
+                  })}
                   <div className="mt-2 pt-2 border-t border-slate-100">
                     <button
                       onClick={() => {
