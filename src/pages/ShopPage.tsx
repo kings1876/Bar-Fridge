@@ -83,12 +83,12 @@ export const ShopPage: React.FC = () => {
     setSelectedSubcategory('all');
     setSearchQuery('');
     setBadgeFilter('all');
-    setPriceRange([0, 2000]);
+    setPriceRange([0, 4000]);
     setOnlyTropical(false);
     setSortBy('featured');
   };
 
-  const isFiltered = selectedCategory !== 'all' || selectedSubcategory !== 'all' || searchQuery || badgeFilter !== 'all' || onlyTropical || priceRange[1] < 2000;
+  const isFiltered = selectedCategory !== 'all' || selectedSubcategory !== 'all' || searchQuery || badgeFilter !== 'all' || onlyTropical || priceRange[1] < 4000;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8">
@@ -198,7 +198,7 @@ export const ShopPage: React.FC = () => {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="e.g. 304, glass, chest, alfresco..."
+                  placeholder="e.g. Schmick, Rhino, glass, alfresco..."
                   className="w-full bg-slate-50 border border-slate-300 rounded-xl pl-8 pr-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-sky-500 focus:bg-white"
                 />
                 <Search className="w-3.5 h-3.5 absolute left-2.5 top-2.5 text-slate-400" />
@@ -229,7 +229,7 @@ export const ShopPage: React.FC = () => {
                   }`}
                 >
                   <span>All Categories</span>
-                  <span className="text-[11px] text-slate-400">12</span>
+                  <span className="text-[11px] text-slate-400">{PRODUCTS.length}</span>
                 </button>
 
                 {CATEGORIES.map((cat) => {
@@ -303,15 +303,15 @@ export const ShopPage: React.FC = () => {
               <input
                 type="range"
                 min={300}
-                max={2000}
+                max={4000}
                 step={50}
                 value={priceRange[1]}
                 onChange={(e) => setPriceRange([0, Number(e.target.value)])}
                 className="w-full accent-sky-600 cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-slate-400 font-semibold">
-                <span>$300 USD</span>
-                <span>$2,000 USD</span>
+                <span>$300</span>
+                <span>$4,000</span>
               </div>
             </div>
           </div>

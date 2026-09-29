@@ -115,7 +115,7 @@ export const ProductDetailPage: React.FC = () => {
                 <ShieldCheck className="w-4 h-4" />
               </div>
               <div>
-                <strong className="text-slate-900 block font-bold">2–3 Year Warranty</strong>
+                <strong className="text-slate-900 block font-bold">2 Year Warranty</strong>
                 <span className="text-slate-500">Authorized Australian technician support.</span>
               </div>
             </div>

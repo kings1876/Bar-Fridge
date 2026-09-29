@@ -58,7 +58,7 @@ export const LiveChatWidget: React.FC = () => {
       } else if (lower.includes('shipping') || lower.includes('freight') || lower.includes('free') || lower.includes('deliver')) {
         reply = "Yes, freight is 100% FREE on all our fridges and freezers nationwide across Australia! We use specialized tailgate couriers with full transit insurance.";
       } else if (lower.includes('outdoor') || lower.includes('alfresco') || lower.includes('patio') || lower.includes('tropical')) {
-        reply = "For Australian outdoor and BBQ spaces, we recommend our OutbackMaster (190L) or AlfrescoShield (230L). They are Tropical Class-T certified (tested up to 43°C) with heated glass that prevents condensation!";
+        reply = "For Australian outdoor and BBQ spaces, we recommend the Rhino ENVY ENV1R-SS (148L) or ENV2H-SS (248L). They're rated for 43°C+ ambient heat with heated glass that prevents condensation!";
       } else if (lower.includes('order') || lower.includes('buy')) {
         reply = "To place an order, simply add your fridge to the cart and click 'Proceed to Order Form'. We will process your order and dispatch within 24 hours.";
       }

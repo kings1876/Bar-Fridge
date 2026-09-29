@@ -104,7 +104,7 @@ export const AboutPage: React.FC = () => {
                 <Building2 className="w-5 h-5" />
               </div>
               <div>
-                <strong className="text-slate-900 text-xs block font-bold">304 Marine Grade Stainless Steel</strong>
+                <strong className="text-slate-900 text-xs block font-bold">316 Marine Grade Stainless Steel</strong>
                 <span className="text-slate-500 text-xs">Impervious to rust, chlorine from pools, and coastal salty breezes.</span>
               </div>
             </div>
@@ -162,7 +162,7 @@ export const AboutPage: React.FC = () => {
             Official Warranty & Authorized Service
           </h3>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Every bar fridge and commercial freezer is backed by a 2–3 Year Australian In-Home/On-Site Warranty. We maintain contracted refrigeration mechanics in all states, ensuring prompt repair or replacement should you ever need it.
+            Every bar fridge and commercial freezer is backed by a 2 Year Parts & Labour Warranty. We maintain contracted refrigeration mechanics in all states, ensuring prompt repair or replacement should you ever need it.
           </p>
         </div>
 

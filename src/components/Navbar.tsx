@@ -59,7 +59,7 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center gap-4 text-xs">
             <span className="hidden sm:inline-flex items-center gap-1 text-slate-300">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              <span>2–3 Yr Aussie Warranty</span>
+              <span>2 Yr Aussie Warranty</span>
             </span>
             <span className="text-slate-700 hidden sm:inline">•</span>
             <span className="flex items-center gap-1.5 text-sky-300">
@@ -179,7 +179,7 @@ export const Navbar: React.FC = () => {
                       }}
                       className="w-full py-2 text-center text-xs font-bold text-sky-700 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
                     >
-                      Browse All 12+ Fridges & Freezers →
+                      Browse All 18+ Fridges & Freezers →
                     </button>
                   </div>
                 </div>
@@ -321,7 +321,7 @@ export const Navbar: React.FC = () => {
               }`}
             >
               <span>Shop All Bar Fridges & Freezers</span>
-              <span className="text-xs text-sky-600 font-semibold">12 Products</span>
+              <span className="text-xs text-sky-600 font-semibold">18 Products</span>
             </button>
 
             <button

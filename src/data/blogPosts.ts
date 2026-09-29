@@ -32,12 +32,12 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '5 min read',
     category: 'Technical & Engineering',
     image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=1000&q=80',
-    tags: ['Outdoor Entertaining', 'Tropical Rating', '304 Stainless', 'Alfresco'],
+    tags: ['Outdoor Entertaining', 'Tropical Rating', '316 Stainless', 'Alfresco'],
     content: [
       'Australian alfresco living is world-renowned. There is nothing better than grilling steaks on the barbecue while grabbing an ice-cold craft beer from your outdoor fridge. However, outdoor kitchen builders frequently make a fatal mistake: installing an indoor beverage fridge outdoors.',
       'During a scorching January afternoon in Melbourne, Western Sydney, or Brisbane, ambient temperatures under a pergola or covered patio can easily surge past 40°C. Standard indoor fridges simply choke in these conditions.',
       'The Secret of Class T (Tropical) Certification: Tropical-rated fridges feature oversized condensers, high-velocity circulating fan motors, and heavy-duty compressors (such as Embraco or Secop) designed to cool drinks down to -2°C even when the surrounding air is boiling at 43°C.',
-      'Marine Grade 304 Stainless Steel: Coastal sea air and chlorine moisture from backyard swimming pools will corrode standard 430 grade stainless steel within months. Premium alfresco fridges utilize 304 marine-grade stainless steel with high chromium and nickel content to resist rust and pitting.',
+      'Marine Grade 316 Stainless Steel: Coastal sea air and chlorine moisture from backyard swimming pools will corrode standard 430 grade stainless steel within months. Premium alfresco fridges utilize 316 marine-grade stainless steel with high chromium, nickel, and molybdenum content to resist rust and pitting.',
       'Heated Glass Panels: When the humid sea breeze strikes cold fridge glass, heavy condensation forms instantly, obscuring drinks and dripping water onto timber decking. Outdoor tropical models utilize heated wire or transparent conductive glass layers that keep the glass crystal-clear all year round.'
     ]
   },

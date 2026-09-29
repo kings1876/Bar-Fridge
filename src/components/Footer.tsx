@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="font-semibold text-white text-sm">2–3 Year Aussie Warranty</h4>
+              <h4 className="font-semibold text-white text-sm">2 Year Aussie Warranty</h4>
               <p className="text-xs text-slate-400 mt-1">Commercial warranty coverage with technician support in all states.</p>
             </div>
           </div>
@@ -137,7 +137,7 @@ export const Footer: React.FC = () => {
                   <span className="w-2 h-2 rounded-full bg-purple-400"></span> Solana (SOL)
                 </span>
                 <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs text-slate-400">
-                  USD Pricing
+                  AUD Pricing
                 </span>
               </div>
             </div>
@@ -254,7 +254,7 @@ export const Footer: React.FC = () => {
 
         {/* Copyright */}
         <div className="mt-8 pt-6 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© 2018–2026 Bar Fridges For Sale Australia. All rights reserved. Prices displayed in USD. All trademarks and brand names are property of their respective owners.</p>
+          <p>© 2018–2026 Bar Fridges For Sale Australia. All rights reserved. Prices displayed in AUD. All trademarks and brand names are property of their respective owners.</p>
           <div className="flex items-center gap-4 text-slate-400">
             <button onClick={() => navigateTo('privacy')} className="hover:text-white">Privacy</button>
             <span>•</span>

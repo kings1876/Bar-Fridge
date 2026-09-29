@@ -35,7 +35,7 @@ export const FAQS_DATA: FAQItem[] = [
     id: 'faq-6',
     category: 'Product & Technical',
     question: 'Will the glass door condensate and drip water in humid weather?',
-    answer: 'Our glass door bar fridges utilize double or triple glazed argon-filled safety glass with Low-E reflective coatings. For extreme outdoor alfresco humidity, our OutbackMaster and AlfrescoShield models feature active electrically heated glass elements that completely prevent condensation from forming on the exterior glass.'
+    answer: 'Our glass door bar fridges utilize double or triple glazed argon-filled safety glass with Low-E reflective coatings. For extreme outdoor alfresco humidity, our Rhino ENVY and Schmick heated glass models feature active electrically heated glass elements that completely prevent condensation from forming on the exterior glass.'
   },
   {
     id: 'faq-7',
@@ -47,7 +47,7 @@ export const FAQS_DATA: FAQItem[] = [
     id: 'faq-8',
     category: 'Warranty & Returns',
     question: 'What warranty is included with my bar fridge or freezer?',
-    answer: 'All products come with our Comprehensive Australian Warranty: 2 Years Full Replacement Warranty on domestic units and 3 Years Commercial Outdoor Warranty on our 304 stainless alfresco models, backed by authorized service technicians across every state and territory.'
+    answer: 'All products come with a 2 Year Parts & Labour warranty as standard, backed by authorized service technicians across every state and territory.'
   },
   {
     id: 'faq-9',

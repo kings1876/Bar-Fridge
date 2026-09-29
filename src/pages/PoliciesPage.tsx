@@ -129,9 +129,9 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
               If your new bar fridge or freezer does not fit your cabinetry or you wish to exchange it for another size, you may return the unit within 30 days of receipt in its original packaging and undamaged condition.
             </p>
 
-            <h3 className="text-base font-bold text-slate-900">2. 2–3 Year Australian Manufacturer Warranty</h3>
+            <h3 className="text-base font-bold text-slate-900">2. 2 Year Australian Manufacturer Warranty</h3>
             <p>
-              All domestic units are protected by a 2-Year Full Replacement Warranty, while commercial outdoor alfresco units carry a 3-Year Australian Commercial Warranty. Should any component or compressor experience defect, our mobile technician network will service or replace the unit promptly.
+              All units are protected by a 2 Year Parts & Labour Warranty. Should any component or compressor experience defect, our mobile technician network will service or replace the unit promptly.
             </p>
 
             <h3 className="text-base font-bold text-slate-900">3. How to Initiate a Return</h3>
@@ -181,7 +181,7 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
           <div className="space-y-4">
             <h3 className="text-base font-bold text-slate-900">1. Currency & Pricing</h3>
             <p>
-              All prices displayed across the site are in United States Dollars (USD) as designated. For cryptocurrency payments (BTC, USDT, ETH, SOL), a 10% direct discount is automatically computed upon order form submission.
+              All prices displayed across the site are in Australian Dollars (AUD) as designated. For cryptocurrency payments (BTC, USDT, ETH, SOL), a 10% direct discount is automatically computed upon order form submission.
             </p>
 
             <h3 className="text-base font-bold text-slate-900">2. Installation & Ventilation Clearances</h3>

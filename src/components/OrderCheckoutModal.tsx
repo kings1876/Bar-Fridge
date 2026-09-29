@@ -463,7 +463,7 @@ export const OrderCheckoutModal: React.FC = () => {
                   )}
 
                   <div className="pt-2.5 border-t border-slate-200 flex justify-between items-baseline">
-                    <span className="text-sm font-bold text-slate-900">Total USD Payable:</span>
+                    <span className="text-sm font-bold text-slate-900">Total AUD Payable:</span>
                     <div className="text-right">
                       <span className="text-2xl font-black text-sky-700">{formatPrice(totalAfterDiscount)}</span>
                       <div className="text-xs text-amber-800 font-mono font-bold">

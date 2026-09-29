@@ -79,7 +79,7 @@ export const CartDrawer: React.FC = () => {
                 <div>
                   <h3 className="text-base font-bold text-slate-900">Your cart is empty</h3>
                   <p className="text-xs text-slate-500 mt-1 max-w-xs mx-auto">
-                    Explore our commercial bar fridges, 304 stainless outdoor alfresco coolers, and deep freezers for sale.
+                    Explore our commercial bar fridges, 316 stainless outdoor alfresco coolers, and mini freezers for sale.
                   </p>
                 </div>
                 <button

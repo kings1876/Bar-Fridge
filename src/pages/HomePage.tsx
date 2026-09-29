@@ -47,31 +47,31 @@ const HERO_SLIDES: HeroSlide[] = [
   {
     id: 1,
     bgImage: PEXELS_HERO_IMAGE,
-    theme: 'Tropical Retro & Alfresco Living',
-    subtitle: 'High-efficiency retro styling built for Australian entertainment spaces',
-    tag: 'Tropical Ambient Tested & Insulated',
-    productName: 'PolarChill Retro 140L Mint Beverage Cooler',
-    productPrice: '$649 USD',
-    productId: 'polarchill-138l-glass',
+    theme: 'Tropical Alfresco Living',
+    subtitle: 'Genuine Schmick & Rhino bar fridges built for Australian entertainment spaces',
+    tag: 'Tropical Rated & Triple Glazed',
+    productName: 'Schmick HUS-SC70-SS Tropical Glass Door Bar Fridge',
+    productPrice: '$747',
+    productId: 'schmick-hus-sc70-ss',
     productImage: PEXELS_HERO_IMAGE,
-    capacity: '140 Litres • 135 Cans',
-    stat1: { label: 'Style & Finish', value: 'Mint Gloss' },
-    stat2: { label: 'Insulation', value: 'High Density' },
+    capacity: '70 Litres • 85 Cans',
+    stat1: { label: 'Glass', value: 'Triple Glazed' },
+    stat2: { label: 'Energy Rating', value: '9 Stars' },
     stat3: { label: 'Crypto Rebate', value: '-10% Instantly' }
   },
   {
     id: 2,
     bgImage: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2000&q=80',
     theme: 'Commercial Hospitality & Bars',
-    subtitle: 'Double heated low-E glass display back-bar coolers for pubs & clubs',
-    tag: 'Anti-Sweat Heated Low-E Glass',
-    productName: 'ArcticVault 210L Double Sliding Door',
-    productPrice: '$949 USD',
-    productId: 'arc-vault-210l-sliding',
-    productImage: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80',
-    capacity: '210 Litres • 220 Cans',
+    subtitle: 'Space-saving sliding double door back-bar coolers for pubs & clubs',
+    tag: 'Energy Efficient Sliding Doors',
+    productName: 'Rhino SG2S-B Black Sliding 2 Door Bar Fridge',
+    productPrice: '$1,877',
+    productId: 'rhino-sg2s-b',
+    productImage: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80',
+    capacity: '208 Litres • 240 Cans',
     stat1: { label: 'Door System', value: 'Double Sliding' },
-    stat2: { label: 'Internal Temp', value: '-2°C to 10°C' },
+    stat2: { label: 'Internal Temp', value: '1°C to 10°C' },
     stat3: { label: 'Sound Output', value: '42dB Quiet' }
   },
   {
@@ -80,13 +80,13 @@ const HERO_SLIDES: HeroSlide[] = [
     theme: 'Man Caves & Entertainment Lounges',
     subtitle: 'Underbench whisper-quiet beverage center with LED illumination',
     tag: 'Whisper-Quiet Embraco Inverter',
-    productName: 'PolarChill Pro 138L Single Glass Door',
-    productPrice: '$489 USD',
-    productId: 'polarchill-138l-glass',
-    productImage: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=1000&q=80',
-    capacity: '138 Litres • 142 Cans',
-    stat1: { label: 'Noise Level', value: '38dB Silent' },
-    stat2: { label: 'Lock & Key', value: 'Security Lock' },
+    productName: 'Rhino SG1R-HD Heated Glass Door Bar Fridge',
+    productPrice: '$1,867',
+    productId: 'rhino-sg1r-hd',
+    productImage: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1000&q=80',
+    capacity: '129 Litres • 140 Cans',
+    stat1: { label: 'Noise Level', value: '40dB Quiet' },
+    stat2: { label: 'Glass Door', value: 'Heated, Fog-Free' },
     stat3: { label: 'Warranty', value: '2-Year Direct' }
   },
   {
@@ -95,14 +95,14 @@ const HERO_SLIDES: HeroSlide[] = [
     theme: 'Craft Brewery & Wine Cellars',
     subtitle: 'Dual zone independent temperature control for beers and fine wines',
     tag: 'Dual Zone Wine & Beer Chill',
-    productName: 'DualZone Vintner 150L Beverage Hub',
-    productPrice: '$779 USD',
-    productId: 'dualzone-vintner-150l',
-    productImage: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80',
-    capacity: '150 Litres • 42 Bottles + 60 Cans',
-    stat1: { label: 'Dual Temps', value: '1°C & 12°C' },
-    stat2: { label: 'Shelves', value: 'Beechwood + Wire' },
-    stat3: { label: 'Energy Rating', value: '5-Star Eco' }
+    productName: 'Schmick SK198D-B-HD Dual Zone Beer & Wine Fridge',
+    productPrice: '$1,567',
+    productId: 'schmick-sk198d-b-hd',
+    productImage: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1000&q=80',
+    capacity: '215 Litres • 28 Bottles + 88 Cans',
+    stat1: { label: 'Dual Zones', value: '1-10°C & 5-18°C' },
+    stat2: { label: 'Door', value: 'Heated Glass' },
+    stat3: { label: 'Energy Rating', value: '7 Stars' }
   },
   {
     id: 5,
@@ -110,14 +110,14 @@ const HERO_SLIDES: HeroSlide[] = [
     theme: 'Poolside Cabanas & BBQ Islands',
     subtitle: 'Sub-zero frosted glassware and rapid pull-down freezing',
     tag: 'Deep Frost Sub-Zero Technology',
-    productName: 'GlacierBank 200L Heavy Duty Bar Freezer',
-    productPrice: '$699 USD',
-    productId: 'glacierbank-200l-freezer',
-    productImage: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=1000&q=80',
-    capacity: '200 Litres Sub-Zero Vault',
-    stat1: { label: 'Freezing Temp', value: '-18°C to -24°C' },
-    stat2: { label: 'Insulation', value: 'Cyclopentane 70mm' },
-    stat3: { label: 'Drainage', value: 'Front Defrost Plug' }
+    productName: 'Schmick BD36 Mini Solid Door Freezer',
+    productPrice: '$427',
+    productId: 'schmick-bd36',
+    productImage: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=1000&q=80',
+    capacity: '36 Litres Compact Freezer',
+    stat1: { label: 'Freezing Temp', value: '-15°C to -18°C' },
+    stat2: { label: 'Door', value: 'Reversible & Lockable' },
+    stat3: { label: 'Footprint', value: 'Smallest on Market' }
   }
 ];
 
@@ -263,7 +263,7 @@ export const HomePage: React.FC = () => {
 
               {/* Subheading */}
               <p className="text-sm sm:text-base text-slate-100 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal drop-shadow-md">
-                {activeSlideData.subtitle}. Explore heavy-duty 304 marine stainless outdoor coolers, whisper-quiet glass display back-bar fridges, and sub-zero bar freezers tested across Australia. Free nationwide tailgate delivery.
+                {activeSlideData.subtitle}. Explore heavy-duty 316 marine stainless outdoor coolers, whisper-quiet glass display back-bar fridges, and compact bar freezers tested across Australia. Free nationwide tailgate delivery.
               </p>
 
               {/* Value Points Pill Grid */}
@@ -278,7 +278,7 @@ export const HomePage: React.FC = () => {
                 </span>
                 <span className="flex items-center gap-1.5 bg-slate-900/90 backdrop-blur-md border border-slate-700/90 px-3.5 py-2 rounded-xl shadow-md">
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                  <span>2–3 Year Australian Warranty</span>
+                  <span>2 Year Australian Warranty</span>
                 </span>
               </div>
 
@@ -617,7 +617,7 @@ export const HomePage: React.FC = () => {
             onClick={() => navigateTo('shop')}
             className="px-8 py-4 bg-white hover:bg-slate-50 text-sky-800 border border-slate-300 hover:border-sky-400 rounded-2xl font-bold text-xs transition-all shadow-sm"
           >
-            Explore Full Range of 12+ Units in Shop →
+            Explore Full Range of 18+ Units in Shop →
           </button>
         </div>
       </section>
@@ -680,7 +680,7 @@ export const HomePage: React.FC = () => {
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white">304 Marine Grade Stainless Steel</h4>
+                  <h4 className="text-sm font-bold text-white">316 Marine Grade Stainless Steel</h4>
                   <p className="text-xs text-slate-300 mt-0.5">High nickel and chromium content defends against coastal sea spray and poolside chlorine corrosion.</p>
                 </div>
               </div>

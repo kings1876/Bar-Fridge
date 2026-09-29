@@ -150,7 +150,7 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>(initial.subcategory ?? 'all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [badgeFilter, setBadgeFilter] = useState<string>('all');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 2000]);
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 4000]);
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc' | 'rating'>('featured');
 
   // Cart State with localStorage persistence
@@ -169,7 +169,7 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
 
   const cryptoDiscountPercent = 10;
-  const currency = 'USD';
+  const currency = 'AUD';
 
   useEffect(() => {
     try {
@@ -297,9 +297,9 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const cartSubtotal = cart.reduce((total, item) => total + item.product.price * item.quantity, 0);
 
   const formatPrice = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-AU', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'AUD',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0
     }).format(amount);
