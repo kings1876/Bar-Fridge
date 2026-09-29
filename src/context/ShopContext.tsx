@@ -1,7 +1,77 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
 import { Product, CartItem, PageView, BlogPost } from '../types';
 import { PRODUCTS } from '../data/products';
 import { BLOG_POSTS } from '../data/blogPosts';
+
+interface ParsedLocation {
+  page: PageView;
+  product: Product | null;
+  blogPost: BlogPost | null;
+  category?: string;
+  subcategory?: string;
+}
+
+function buildPath(
+  page: PageView,
+  options?: { categoryId?: string; subcategory?: string; productSlug?: string; blogSlug?: string }
+): string {
+  switch (page) {
+    case 'home':
+      return '/';
+    case 'shop': {
+      const params = new URLSearchParams();
+      if (options?.categoryId && options.categoryId !== 'all') params.set('category', options.categoryId);
+      if (options?.subcategory && options.subcategory !== 'all') params.set('subcategory', options.subcategory);
+      const qs = params.toString();
+      return qs ? `/shop?${qs}` : '/shop';
+    }
+    case 'product-detail':
+      return options?.productSlug ? `/product/${options.productSlug}` : '/shop';
+    case 'blog':
+      return '/blog';
+    case 'blog-post':
+      return options?.blogSlug ? `/blog/${options.blogSlug}` : '/blog';
+    default:
+      return `/${page}`;
+  }
+}
+
+function parseLocation(pathname: string, search: string): ParsedLocation {
+  const params = new URLSearchParams(search);
+  const [first, second] = pathname.split('/').filter(Boolean);
+
+  switch (first) {
+    case undefined:
+      return { page: 'home', product: null, blogPost: null };
+    case 'shop':
+      return {
+        page: 'shop',
+        product: null,
+        blogPost: null,
+        category: params.get('category') || 'all',
+        subcategory: params.get('subcategory') || 'all'
+      };
+    case 'product': {
+      const product = second ? PRODUCTS.find((p) => p.slug === second) || null : null;
+      return { page: product ? 'product-detail' : 'shop', product, blogPost: null };
+    }
+    case 'blog': {
+      if (!second) return { page: 'blog', product: null, blogPost: null };
+      const blogPost = BLOG_POSTS.find((b) => b.slug === second) || null;
+      return { page: blogPost ? 'blog-post' : 'blog', product: null, blogPost };
+    }
+    case 'about':
+    case 'contact':
+    case 'faq':
+    case 'shipping':
+    case 'refund':
+    case 'privacy':
+    case 'terms':
+      return { page: first as PageView, product: null, blogPost: null };
+    default:
+      return { page: 'home', product: null, blogPost: null };
+  }
+}
 
 interface ToastMessage {
   id: string;
@@ -65,13 +135,19 @@ interface ShopContextType {
 const ShopContext = createContext<ShopContextType | undefined>(undefined);
 
 export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [currentPage, setCurrentPage] = useState<PageView>('home');
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [selectedBlogPost, setSelectedBlogPost] = useState<BlogPost | null>(null);
+  const initialRef = useRef<ParsedLocation | null>(null);
+  if (!initialRef.current) {
+    initialRef.current = parseLocation(window.location.pathname, window.location.search);
+  }
+  const initial = initialRef.current;
+
+  const [currentPage, setCurrentPage] = useState<PageView>(initial.page);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(initial.product);
+  const [selectedBlogPost, setSelectedBlogPost] = useState<BlogPost | null>(initial.blogPost);
 
   // Shop Filters
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>(initial.category ?? 'all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string>(initial.subcategory ?? 'all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [badgeFilter, setBadgeFilter] = useState<string>('all');
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 2000]);
@@ -119,21 +195,49 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     page: PageView,
     options?: { productId?: string; blogId?: string; categoryId?: string; subcategory?: string }
   ) => {
+    let product: Product | undefined;
+    let blogPost: BlogPost | undefined;
+
     if (options?.productId) {
-      const found = PRODUCTS.find((p) => p.id === options.productId || p.slug === options.productId);
-      if (found) setSelectedProduct(found);
+      product = PRODUCTS.find((p) => p.id === options.productId || p.slug === options.productId);
+      if (product) setSelectedProduct(product);
     }
     if (options?.blogId) {
-      const found = BLOG_POSTS.find((b) => b.id === options.blogId || b.slug === options.blogId);
-      if (found) setSelectedBlogPost(found);
+      blogPost = BLOG_POSTS.find((b) => b.id === options.blogId || b.slug === options.blogId);
+      if (blogPost) setSelectedBlogPost(blogPost);
     }
     if (options?.categoryId) {
       setSelectedCategory(options.categoryId);
       setSelectedSubcategory(options.subcategory || 'all');
     }
     setCurrentPage(page);
+
+    const path = buildPath(page, {
+      categoryId: options?.categoryId,
+      subcategory: options?.subcategory,
+      productSlug: product?.slug,
+      blogSlug: blogPost?.slug
+    });
+    if (window.location.pathname + window.location.search !== path) {
+      window.history.pushState({}, '', path);
+    }
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    const handlePopState = () => {
+      const parsed = parseLocation(window.location.pathname, window.location.search);
+      setCurrentPage(parsed.page);
+      setSelectedProduct(parsed.product);
+      setSelectedBlogPost(parsed.blogPost);
+      if (parsed.category !== undefined) setSelectedCategory(parsed.category);
+      if (parsed.subcategory !== undefined) setSelectedSubcategory(parsed.subcategory);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   const addToCart = (product: Product, quantity = 1) => {
     setCart((prev) => {
