@@ -617,7 +617,7 @@ export const HomePage: React.FC = () => {
             onClick={() => navigateTo('shop')}
             className="px-8 py-4 bg-white hover:bg-slate-50 text-sky-800 border border-slate-300 hover:border-sky-400 rounded-2xl font-bold text-xs transition-all shadow-sm"
           >
-            Explore Full Range of 18+ Units in Shop →
+            Explore Full Range of 200+ Units in Shop →
           </button>
         </div>
       </section>

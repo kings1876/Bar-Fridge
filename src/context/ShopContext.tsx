@@ -150,7 +150,7 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>(initial.subcategory ?? 'all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [badgeFilter, setBadgeFilter] = useState<string>('all');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 4000]);
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc' | 'rating'>('featured');
 
   // Cart State with localStorage persistence

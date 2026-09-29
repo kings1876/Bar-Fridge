@@ -179,7 +179,7 @@ export const Navbar: React.FC = () => {
                       }}
                       className="w-full py-2 text-center text-xs font-bold text-sky-700 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
                     >
-                      Browse All 18+ Fridges & Freezers →
+                      Browse All 200+ Fridges & Freezers →
                     </button>
                   </div>
                 </div>
@@ -321,7 +321,7 @@ export const Navbar: React.FC = () => {
               }`}
             >
               <span>Shop All Bar Fridges & Freezers</span>
-              <span className="text-xs text-sky-600 font-semibold">18 Products</span>
+              <span className="text-xs text-sky-600 font-semibold">200 Products</span>
             </button>
 
             <button
