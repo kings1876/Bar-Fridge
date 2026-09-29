@@ -1,0 +1,7 @@
+{
+  "name": "Bar Fridges For Sale",
+  "description": "Australia's leading online store for commercial, alfresco, and home bar fridges, beverage coolers, and bar freezers for sale with free shipping and crypto discounts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
