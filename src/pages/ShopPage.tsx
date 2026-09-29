@@ -1,16 +1,20 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useShop } from '../context/ShopContext';
 import { PRODUCTS, CATEGORIES } from '../data/products';
 import { ProductCard } from '../components/ProductCard';
-import { 
-  Filter, 
-  Search, 
-  X, 
-  RotateCcw, 
-  Snowflake, 
-  SlidersHorizontal, 
-  Bitcoin
+import {
+  Filter,
+  Search,
+  X,
+  RotateCcw,
+  Snowflake,
+  SlidersHorizontal,
+  Bitcoin,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
+
+const PRODUCTS_PER_PAGE = 12;
 
 export const ShopPage: React.FC = () => {
   const { 
@@ -31,6 +35,7 @@ export const ShopPage: React.FC = () => {
 
   const [onlyTropical, setOnlyTropical] = useState(false);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
 
   // Active Category details
   const activeCategoryObj = CATEGORIES.find(c => c.id === selectedCategory);
@@ -77,6 +82,23 @@ export const ShopPage: React.FC = () => {
       return 0; // featured default order
     });
   }, [selectedCategory, selectedSubcategory, searchQuery, badgeFilter, priceRange, onlyTropical, sortBy]);
+
+  // Reset to page 1 whenever the filtered result set changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, selectedSubcategory, searchQuery, badgeFilter, priceRange, onlyTropical, sortBy]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE));
+  const paginatedProducts = filteredProducts.slice(
+    (currentPage - 1) * PRODUCTS_PER_PAGE,
+    currentPage * PRODUCTS_PER_PAGE
+  );
+
+  const goToPage = (page: number) => {
+    const clamped = Math.min(Math.max(1, page), totalPages);
+    setCurrentPage(clamped);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const handleResetFilters = () => {
     setSelectedCategory('all');
@@ -322,7 +344,13 @@ export const ShopPage: React.FC = () => {
           {/* Top Control Bar: Sort and Results Count */}
           <div className="bg-white border border-slate-200 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
             <div className="text-xs text-slate-600 font-medium">
-              Showing <strong className="text-slate-900 font-bold">{filteredProducts.length}</strong> bar fridges & freezers
+              Showing{' '}
+              <strong className="text-slate-900 font-bold">
+                {filteredProducts.length === 0
+                  ? 0
+                  : `${(currentPage - 1) * PRODUCTS_PER_PAGE + 1}–${Math.min(currentPage * PRODUCTS_PER_PAGE, filteredProducts.length)}`}
+              </strong>{' '}
+              of <strong className="text-slate-900 font-bold">{filteredProducts.length}</strong> bar fridges & freezers
               {selectedCategory !== 'all' && (
                 <span className="text-sky-700 font-bold"> in {activeCategoryObj?.name}</span>
               )}
@@ -363,11 +391,73 @@ export const ShopPage: React.FC = () => {
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {paginatedProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+
+              {/* Pagination Controls */}
+              {totalPages > 1 && (
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                  <div className="text-xs text-slate-500 font-medium">
+                    Page <strong className="text-slate-900">{currentPage}</strong> of{' '}
+                    <strong className="text-slate-900">{totalPages}</strong>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      onClick={() => goToPage(currentPage - 1)}
+                      disabled={currentPage === 1}
+                      aria-label="Previous page"
+                      className="p-2 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                    >
+                      <ChevronLeft className="w-4 h-4" />
+                    </button>
+
+                    {Array.from({ length: totalPages }, (_, i) => i + 1)
+                      .filter((page) => {
+                        if (totalPages <= 7) return true;
+                        if (page === 1 || page === totalPages) return true;
+                        return Math.abs(page - currentPage) <= 1;
+                      })
+                      .reduce<(number | 'ellipsis')[]>((acc, page, idx, arr) => {
+                        if (idx > 0 && page - (arr[idx - 1] as number) > 1) acc.push('ellipsis');
+                        acc.push(page);
+                        return acc;
+                      }, [])
+                      .map((item, idx) =>
+                        item === 'ellipsis' ? (
+                          <span key={`ellipsis-${idx}`} className="px-2 text-slate-400 text-xs">
+                            …
+                          </span>
+                        ) : (
+                          <button
+                            key={item}
+                            onClick={() => goToPage(item)}
+                            className={`min-w-[2.25rem] h-9 px-2 rounded-xl text-xs font-bold transition-colors ${
+                              currentPage === item
+                                ? 'bg-sky-600 text-white shadow-sm'
+                                : 'text-slate-700 border border-slate-200 hover:bg-slate-50'
+                            }`}
+                          >
+                            {item}
+                          </button>
+                        )
+                      )}
+
+                    <button
+                      onClick={() => goToPage(currentPage + 1)}
+                      disabled={currentPage === totalPages}
+                      aria-label="Next page"
+                      className="p-2 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                    >
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </main>
       </div>
