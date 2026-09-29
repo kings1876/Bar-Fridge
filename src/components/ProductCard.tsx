@@ -1,7 +1,8 @@
 import React from 'react';
 import { Product } from '../types';
 import { useShop } from '../context/ShopContext';
-import { 
+import { NavLink } from './NavLink';
+import {
   Star, 
   Snowflake, 
   ShoppingBag, 
@@ -14,7 +15,7 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const { navigateTo, addToCart, formatPrice, openOrderModalWithProduct } = useShop();
+  const { addToCart, formatPrice, openOrderModalWithProduct } = useShop();
 
   const badgeColor = {
     'Popular': 'bg-amber-100 text-amber-900 border-amber-300',
@@ -54,12 +55,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
         {/* Overlay hover action */}
         <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3 p-4">
-          <button
-            onClick={() => navigateTo('product-detail', { productId: product.id })}
+          <NavLink
+            page="product-detail"
+            options={{ productId: product.id }}
             className="px-4 py-2.5 bg-white hover:bg-slate-50 text-slate-900 font-bold text-xs rounded-xl shadow-lg transition-transform hover:scale-105"
           >
             Full Specs & Dimensions
-          </button>
+          </NavLink>
         </div>
       </div>
 
@@ -79,12 +81,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
 
           {/* Product Title */}
-          <h3 
-            onClick={() => navigateTo('product-detail', { productId: product.id })}
-            className="font-bold text-base text-slate-900 hover:text-sky-600 transition-colors line-clamp-2 cursor-pointer leading-snug"
+          <NavLink
+            page="product-detail"
+            options={{ productId: product.id }}
+            className="block"
           >
-            {product.name}
-          </h3>
+            <h3 className="font-bold text-base text-slate-900 hover:text-sky-600 transition-colors line-clamp-2 leading-snug">
+              {product.name}
+            </h3>
+          </NavLink>
 
           {/* Key Specs Pills */}
           <div className="flex flex-wrap items-center gap-2 mt-2.5 text-[11px] text-slate-600">

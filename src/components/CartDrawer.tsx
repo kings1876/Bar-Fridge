@@ -1,6 +1,7 @@
 import React from 'react';
 import { useShop } from '../context/ShopContext';
-import { 
+import { NavLink } from './NavLink';
+import {
   X, 
   Trash2, 
   Plus, 
@@ -20,8 +21,7 @@ export const CartDrawer: React.FC = () => {
     updateQuantity,
     cartSubtotal,
     formatPrice,
-    setIsOrderModalOpen,
-    navigateTo
+    setIsOrderModalOpen
   } = useShop();
 
   if (!isCartDrawerOpen) return null;
@@ -82,15 +82,13 @@ export const CartDrawer: React.FC = () => {
                     Explore our commercial bar fridges, 316 stainless outdoor alfresco coolers, and mini freezers for sale.
                   </p>
                 </div>
-                <button
-                  onClick={() => {
-                    setIsCartDrawerOpen(false);
-                    navigateTo('shop');
-                  }}
-                  className="px-5 py-2.5 bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-xl text-xs transition-colors shadow-sm"
+                <NavLink
+                  page="shop"
+                  onBeforeNavigate={() => setIsCartDrawerOpen(false)}
+                  className="inline-block px-5 py-2.5 bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-xl text-xs transition-colors shadow-sm"
                 >
                   Browse Bar Fridges
-                </button>
+                </NavLink>
               </div>
             ) : (
               cart.map((item) => (

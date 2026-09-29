@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useShop } from '../context/ShopContext';
 import { BLOG_POSTS } from '../data/blogPosts';
-import { 
+import { NavLink } from '../components/NavLink';
+import {
   Calendar, 
   Clock, 
   Tag, 
@@ -12,12 +13,10 @@ import {
 } from 'lucide-react';
 
 export const BlogPage: React.FC = () => {
-  const { 
-    currentPage, 
-    navigateTo, 
-    selectedBlogPost, 
-    setSelectedBlogPost,
-    addToast 
+  const {
+    currentPage,
+    selectedBlogPost,
+    addToast
   } = useShop();
 
   const [activeCategory, setActiveCategory] = useState<string>('all');
@@ -43,13 +42,13 @@ export const BlogPage: React.FC = () => {
     return (
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-10">
         {/* Back Button */}
-        <button
-          onClick={() => navigateTo('blog')}
+        <NavLink
+          page="blog"
           className="inline-flex items-center gap-2 text-xs font-bold text-sky-700 hover:text-sky-800 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to All Bar Fridge Articles</span>
-        </button>
+        </NavLink>
 
         {/* Article Header */}
         <header className="space-y-4">
@@ -127,12 +126,12 @@ export const BlogPage: React.FC = () => {
             Enjoy 100% Free Nationwide Freight across Australia, plus an extra 10% instant discount when you pay with Bitcoin, USDT, or Ethereum.
           </p>
           <div className="pt-2 flex justify-center gap-4">
-            <button
-              onClick={() => navigateTo('shop')}
+            <NavLink
+              page="shop"
               className="px-7 py-3.5 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-slate-950 font-black text-xs rounded-xl shadow-lg transition-transform hover:scale-105"
             >
               Browse Bar Fridges & Freezers
-            </button>
+            </NavLink>
           </div>
         </div>
 
@@ -141,13 +140,11 @@ export const BlogPage: React.FC = () => {
           <h3 className="text-lg font-bold text-slate-900">Recommended Reading</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {relatedPosts.map((rel) => (
-              <div
+              <NavLink
                 key={rel.id}
-                onClick={() => {
-                  setSelectedBlogPost(rel);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="group cursor-pointer bg-white border border-slate-200 hover:border-sky-400 rounded-3xl p-4 transition-all space-y-3 shadow-sm hover:shadow-md"
+                page="blog-post"
+                options={{ blogId: rel.id }}
+                className="group bg-white border border-slate-200 hover:border-sky-400 rounded-3xl p-4 transition-all space-y-3 shadow-sm hover:shadow-md"
               >
                 <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100">
                   <img src={rel.image} alt={rel.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
@@ -156,7 +153,7 @@ export const BlogPage: React.FC = () => {
                 <h4 className="text-sm font-bold text-slate-900 group-hover:text-sky-700 transition-colors line-clamp-2">
                   {rel.title}
                 </h4>
-              </div>
+              </NavLink>
             ))}
           </div>
         </div>
@@ -226,10 +223,11 @@ export const BlogPage: React.FC = () => {
       {/* Posts Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredPosts.map((post) => (
-          <article
+          <NavLink
             key={post.id}
-            onClick={() => navigateTo('blog-post', { blogId: post.id })}
-            className="group cursor-pointer bg-white border border-slate-200 hover:border-sky-400 rounded-3xl overflow-hidden shadow-sm transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-sky-500/10"
+            page="blog-post"
+            options={{ blogId: post.id }}
+            className="group block bg-white border border-slate-200 hover:border-sky-400 rounded-3xl overflow-hidden shadow-sm transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-sky-500/10"
           >
             <div className="aspect-[16/10] overflow-hidden bg-slate-100 relative">
               <img
@@ -264,7 +262,7 @@ export const BlogPage: React.FC = () => {
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </div>
-          </article>
+          </NavLink>
         ))}
       </div>
     </div>

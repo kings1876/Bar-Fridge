@@ -3,7 +3,8 @@ import { useShop } from '../context/ShopContext';
 import { PRODUCTS } from '../data/products';
 import { REVIEWS_DATA } from '../data/reviews';
 import { ProductCard } from '../components/ProductCard';
-import { 
+import { NavLink } from '../components/NavLink';
+import {
   Star, 
   Truck, 
   ShieldCheck, 
@@ -16,12 +17,11 @@ import {
 } from 'lucide-react';
 
 export const ProductDetailPage: React.FC = () => {
-  const { 
-    selectedProduct, 
-    navigateTo, 
-    addToCart, 
-    formatPrice, 
-    openOrderModalWithProduct 
+  const {
+    selectedProduct,
+    addToCart,
+    formatPrice,
+    openOrderModalWithProduct
   } = useShop();
 
   const [quantity, setQuantity] = useState(1);
@@ -45,16 +45,17 @@ export const ProductDetailPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-xs text-slate-500 font-medium">
-        <button onClick={() => navigateTo('home')} className="hover:text-slate-900">Home</button>
+        <NavLink page="home" className="hover:text-slate-900">Home</NavLink>
         <ChevronRight className="w-3 h-3 text-slate-400" />
-        <button onClick={() => navigateTo('shop')} className="hover:text-slate-900">Shop</button>
+        <NavLink page="shop" className="hover:text-slate-900">Shop</NavLink>
         <ChevronRight className="w-3 h-3 text-slate-400" />
-        <button 
-          onClick={() => navigateTo('shop', { categoryId: product.category })} 
+        <NavLink
+          page="shop"
+          options={{ categoryId: product.category }}
           className="hover:text-slate-900 truncate max-w-[150px]"
         >
           {product.categoryName}
-        </button>
+        </NavLink>
         <ChevronRight className="w-3 h-3 text-slate-400" />
         <span className="text-sky-700 font-bold truncate max-w-[200px]">{product.name}</span>
       </nav>

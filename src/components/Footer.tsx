@@ -12,9 +12,10 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { CATEGORIES } from '../data/products';
+import { NavLink } from './NavLink';
 
 export const Footer: React.FC = () => {
-  const { navigateTo, setSelectedCategory } = useShop();
+  const { setSelectedCategory } = useShop();
 
   const seoSearchKeywords = [
     'bar fridges for sale',
@@ -149,27 +150,23 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-xs">
               {CATEGORIES.map((cat) => (
                 <li key={cat.id}>
-                  <button
-                    onClick={() => {
-                      setSelectedCategory(cat.id);
-                      navigateTo('shop', { categoryId: cat.id });
-                    }}
+                  <NavLink
+                    page="shop"
+                    options={{ categoryId: cat.id }}
                     className="hover:text-sky-400 transition-colors text-left"
                   >
                     {cat.name}
-                  </button>
+                  </NavLink>
                 </li>
               ))}
               <li>
-                <button
-                  onClick={() => {
-                    setSelectedCategory('all');
-                    navigateTo('shop');
-                  }}
+                <NavLink
+                  page="shop"
+                  onBeforeNavigate={() => setSelectedCategory('all')}
                   className="text-sky-400 font-semibold hover:underline"
                 >
-                  View All Products (12) →
-                </button>
+                  View All Products (200) →
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -179,25 +176,25 @@ export const Footer: React.FC = () => {
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Quick Navigation</h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <button onClick={() => navigateTo('shop')} className="hover:text-sky-400">Shop Catalog</button>
+                <NavLink page="shop" className="hover:text-sky-400">Shop Catalog</NavLink>
               </li>
               <li>
-                <button onClick={() => navigateTo('blog')} className="hover:text-sky-400">Blog & Buying Guides</button>
+                <NavLink page="blog" className="hover:text-sky-400">Blog & Buying Guides</NavLink>
               </li>
               <li>
-                <button onClick={() => navigateTo('about')} className="hover:text-sky-400">About Us & Brand Story</button>
+                <NavLink page="about" className="hover:text-sky-400">About Us & Brand Story</NavLink>
               </li>
               <li>
-                <button onClick={() => navigateTo('contact')} className="hover:text-sky-400">Contact Us & Orders</button>
+                <NavLink page="contact" className="hover:text-sky-400">Contact Us & Orders</NavLink>
               </li>
               <li>
-                <button onClick={() => navigateTo('faq')} className="hover:text-sky-400">Frequently Asked Questions</button>
+                <NavLink page="faq" className="hover:text-sky-400">Frequently Asked Questions</NavLink>
               </li>
               <li>
-                <button onClick={() => navigateTo('shipping')} className="hover:text-sky-400">Shipping Policy (Free Delivery)</button>
+                <NavLink page="shipping" className="hover:text-sky-400">Shipping Policy (Free Delivery)</NavLink>
               </li>
               <li>
-                <button onClick={() => navigateTo('refund')} className="hover:text-sky-400">Refunds & 30-Day Returns</button>
+                <NavLink page="refund" className="hover:text-sky-400">Refunds & 30-Day Returns</NavLink>
               </li>
             </ul>
           </div>
@@ -207,16 +204,16 @@ export const Footer: React.FC = () => {
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Customer Policies</h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <button onClick={() => navigateTo('shipping')} className="hover:text-sky-400">Australia Freight Rates</button>
+                <NavLink page="shipping" className="hover:text-sky-400">Australia Freight Rates</NavLink>
               </li>
               <li>
-                <button onClick={() => navigateTo('refund')} className="hover:text-sky-400">Warranty Registration</button>
+                <NavLink page="refund" className="hover:text-sky-400">Warranty Registration</NavLink>
               </li>
               <li>
-                <button onClick={() => navigateTo('privacy')} className="hover:text-sky-400">Privacy Policy (GDPR/APP)</button>
+                <NavLink page="privacy" className="hover:text-sky-400">Privacy Policy (GDPR/APP)</NavLink>
               </li>
               <li>
-                <button onClick={() => navigateTo('terms')} className="hover:text-sky-400">Terms of Service</button>
+                <NavLink page="terms" className="hover:text-sky-400">Terms of Service</NavLink>
               </li>
               <li className="pt-2 text-slate-400">
                 <span className="block text-[11px] text-slate-500">Australian Business Number</span>
@@ -238,14 +235,12 @@ export const Footer: React.FC = () => {
           <div className="flex flex-wrap gap-x-3 gap-y-1.5 text-xs text-slate-400">
             {seoSearchKeywords.map((kw, i) => (
               <span key={i} className="inline-flex items-center">
-                <button
-                  onClick={() => {
-                    navigateTo('shop');
-                  }}
+                <NavLink
+                  page="shop"
                   className="hover:text-sky-400 hover:underline capitalize"
                 >
                   {kw}
-                </button>
+                </NavLink>
                 {i < seoSearchKeywords.length - 1 && <span className="ml-3 text-slate-700">•</span>}
               </span>
             ))}
@@ -256,11 +251,11 @@ export const Footer: React.FC = () => {
         <div className="mt-8 pt-6 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <p>© 2018–2026 Bar Fridges For Sale Australia. All rights reserved. Prices displayed in AUD. All trademarks and brand names are property of their respective owners.</p>
           <div className="flex items-center gap-4 text-slate-400">
-            <button onClick={() => navigateTo('privacy')} className="hover:text-white">Privacy</button>
+            <NavLink page="privacy" className="hover:text-white">Privacy</NavLink>
             <span>•</span>
-            <button onClick={() => navigateTo('terms')} className="hover:text-white">Terms</button>
+            <NavLink page="terms" className="hover:text-white">Terms</NavLink>
             <span>•</span>
-            <button onClick={() => navigateTo('shipping')} className="hover:text-white">Shipping</button>
+            <NavLink page="shipping" className="hover:text-white">Shipping</NavLink>
           </div>
         </div>
       </div>

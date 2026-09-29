@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { useShop } from '../context/ShopContext';
 import { FAQS_DATA } from '../data/faqs';
-import { 
-  ChevronDown, 
+import { NavLink } from '../components/NavLink';
+import {
+  ChevronDown,
   Search
 } from 'lucide-react';
 
 export const FAQPage: React.FC = () => {
-  const { navigateTo } = useShop();
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedId, setExpandedId] = useState<string | null>(FAQS_DATA[0].id);
@@ -116,12 +115,12 @@ export const FAQPage: React.FC = () => {
           Our Sydney cooling support specialists are on standby to answer your questions or provide a tailored quote.
         </p>
         <div className="flex justify-center gap-4 pt-2">
-          <button
-            onClick={() => navigateTo('contact')}
+          <NavLink
+            page="contact"
             className="px-6 py-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-slate-950 font-black text-xs rounded-xl shadow-lg transition-transform hover:scale-105"
           >
             Contact Customer Support
-          </button>
+          </NavLink>
         </div>
       </div>
     </div>

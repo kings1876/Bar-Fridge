@@ -1,6 +1,6 @@
 import React from 'react';
-import { useShop } from '../context/ShopContext';
 import { TrustpilotBanner } from '../components/TrustpilotBanner';
+import { NavLink } from '../components/NavLink';
 import { 
   Building2, 
   Calendar, 
@@ -9,7 +9,6 @@ import {
 } from 'lucide-react';
 
 export const AboutPage: React.FC = () => {
-  const { navigateTo } = useShop();
 
   const milestones = [
     {
@@ -167,18 +166,18 @@ export const AboutPage: React.FC = () => {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-          <button
-            onClick={() => navigateTo('shop')}
+          <NavLink
+            page="shop"
             className="px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-slate-950 font-black text-xs rounded-2xl shadow-lg transition-transform hover:scale-105"
           >
             Explore The Range
-          </button>
-          <button
-            onClick={() => navigateTo('contact')}
+          </NavLink>
+          <NavLink
+            page="contact"
             className="px-6 py-4 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-bold text-xs rounded-2xl transition-colors"
           >
             Speak With an Engineer
-          </button>
+          </NavLink>
         </div>
       </section>
     </div>

@@ -14,6 +14,7 @@ import {
   ChevronDown
 } from 'lucide-react';
 import { CATEGORIES } from '../data/products';
+import { NavLink } from './NavLink';
 
 export const Navbar: React.FC = () => {
   const { 
@@ -74,8 +75,8 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-4">
           {/* Logo */}
-          <button 
-            onClick={() => navigateTo('home')}
+          <NavLink
+            page="home"
             className="flex items-center gap-3 text-left group focus:outline-none"
           >
             <div className="relative w-11 h-11 rounded-xl bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800 flex items-center justify-center p-2 shadow-md shadow-sky-600/20 group-hover:scale-105 transition-transform duration-200">
@@ -97,7 +98,7 @@ export const Navbar: React.FC = () => {
                 Outdoor Alfresco & Commercial Coolers Australia
               </div>
             </div>
-          </button>
+          </NavLink>
 
           {/* Desktop Navigation - Order: Shop, Blog, About, Contact, FAQ */}
           <nav className="hidden lg:flex items-center gap-1 font-medium text-sm">
@@ -110,8 +111,8 @@ export const Navbar: React.FC = () => {
                 setExpandedNavCategory(null);
               }}
             >
-              <button
-                onClick={() => navigateTo('shop')}
+              <NavLink
+                page="shop"
                 className={`flex items-center gap-1 px-3.5 py-2 rounded-lg transition-colors ${
                   currentPage === 'shop' || currentPage === 'product-detail'
                     ? 'text-sky-700 bg-sky-50 font-semibold'
@@ -120,7 +121,7 @@ export const Navbar: React.FC = () => {
               >
                 <span>Shop</span>
                 <ChevronDown className="w-4 h-4 opacity-70" />
-              </button>
+              </NavLink>
 
               {shopDropdownOpen && (
                 <div className="absolute top-full left-0 w-80 bg-white border border-slate-200 rounded-2xl shadow-2xl p-3 z-50 animate-in fade-in slide-in-from-top-2 duration-150 max-h-[75vh] overflow-y-auto">
@@ -132,16 +133,17 @@ export const Navbar: React.FC = () => {
                     return (
                       <div key={cat.id}>
                         <div className="w-full flex items-center rounded-xl hover:bg-sky-50/80 transition-colors group">
-                          <button
-                            onClick={() => {
-                              navigateTo('shop', { categoryId: cat.id });
+                          <NavLink
+                            page="shop"
+                            options={{ categoryId: cat.id }}
+                            onBeforeNavigate={() => {
                               setShopDropdownOpen(false);
                               setExpandedNavCategory(null);
                             }}
                             className="flex-1 text-left px-3 py-2 text-xs"
                           >
                             <div className="font-semibold group-hover:text-sky-700 text-slate-900">{cat.name}</div>
-                          </button>
+                          </NavLink>
                           <button
                             onClick={() => setExpandedNavCategory(isExpanded ? null : cat.id)}
                             aria-label={`Toggle ${cat.name} subcategories`}
@@ -153,17 +155,18 @@ export const Navbar: React.FC = () => {
                         {isExpanded && (
                           <div className="pl-3 pb-1.5 space-y-0.5">
                             {cat.subcategories.map((sub) => (
-                              <button
+                              <NavLink
                                 key={sub}
-                                onClick={() => {
-                                  navigateTo('shop', { categoryId: cat.id, subcategory: sub });
+                                page="shop"
+                                options={{ categoryId: cat.id, subcategory: sub }}
+                                onBeforeNavigate={() => {
                                   setShopDropdownOpen(false);
                                   setExpandedNavCategory(null);
                                 }}
-                                className="w-full text-left px-3 py-1.5 text-[11px] rounded-lg text-slate-600 hover:text-sky-700 hover:bg-sky-50 transition-colors"
+                                className="block w-full text-left px-3 py-1.5 text-[11px] rounded-lg text-slate-600 hover:text-sky-700 hover:bg-sky-50 transition-colors"
                               >
                                 {sub}
-                              </button>
+                              </NavLink>
                             ))}
                           </div>
                         )}
@@ -171,23 +174,23 @@ export const Navbar: React.FC = () => {
                     );
                   })}
                   <div className="mt-2 pt-2 border-t border-slate-100">
-                    <button
-                      onClick={() => {
+                    <NavLink
+                      page="shop"
+                      onBeforeNavigate={() => {
                         setSelectedCategory('all');
-                        navigateTo('shop');
                         setShopDropdownOpen(false);
                       }}
-                      className="w-full py-2 text-center text-xs font-bold text-sky-700 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
+                      className="block w-full py-2 text-center text-xs font-bold text-sky-700 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
                     >
                       Browse All 200+ Fridges & Freezers →
-                    </button>
+                    </NavLink>
                   </div>
                 </div>
               )}
             </div>
 
-            <button
-              onClick={() => navigateTo('blog')}
+            <NavLink
+              page="blog"
               className={`px-3.5 py-2 rounded-lg transition-colors ${
                 currentPage === 'blog' || currentPage === 'blog-post'
                   ? 'text-sky-700 bg-sky-50 font-semibold'
@@ -195,10 +198,10 @@ export const Navbar: React.FC = () => {
               }`}
             >
               Blog
-            </button>
+            </NavLink>
 
-            <button
-              onClick={() => navigateTo('about')}
+            <NavLink
+              page="about"
               className={`px-3.5 py-2 rounded-lg transition-colors ${
                 currentPage === 'about'
                   ? 'text-sky-700 bg-sky-50 font-semibold'
@@ -206,10 +209,10 @@ export const Navbar: React.FC = () => {
               }`}
             >
               About
-            </button>
+            </NavLink>
 
-            <button
-              onClick={() => navigateTo('contact')}
+            <NavLink
+              page="contact"
               className={`px-3.5 py-2 rounded-lg transition-colors ${
                 currentPage === 'contact'
                   ? 'text-sky-700 bg-sky-50 font-semibold'
@@ -217,10 +220,10 @@ export const Navbar: React.FC = () => {
               }`}
             >
               Contact
-            </button>
+            </NavLink>
 
-            <button
-              onClick={() => navigateTo('faq')}
+            <NavLink
+              page="faq"
               className={`px-3.5 py-2 rounded-lg transition-colors ${
                 currentPage === 'faq'
                   ? 'text-sky-700 bg-sky-50 font-semibold'
@@ -228,7 +231,7 @@ export const Navbar: React.FC = () => {
               }`}
             >
               FAQ
-            </button>
+            </NavLink>
           </nav>
 
           {/* Right Action Buttons */}
@@ -311,66 +314,56 @@ export const Navbar: React.FC = () => {
           </form>
 
           <div className="grid grid-cols-1 gap-1 text-base font-medium">
-            <button
-              onClick={() => {
-                navigateTo('shop');
-                setMobileMenuOpen(false);
-              }}
+            <NavLink
+              page="shop"
+              onBeforeNavigate={() => setMobileMenuOpen(false)}
               className={`text-left px-3.5 py-2.5 rounded-xl flex items-center justify-between ${
                 currentPage === 'shop' ? 'text-sky-700 bg-sky-50 font-bold' : 'text-slate-700'
               }`}
             >
               <span>Shop All Bar Fridges & Freezers</span>
               <span className="text-xs text-sky-600 font-semibold">200 Products</span>
-            </button>
+            </NavLink>
 
-            <button
-              onClick={() => {
-                navigateTo('blog');
-                setMobileMenuOpen(false);
-              }}
+            <NavLink
+              page="blog"
+              onBeforeNavigate={() => setMobileMenuOpen(false)}
               className={`text-left px-3.5 py-2.5 rounded-xl ${
                 currentPage === 'blog' ? 'text-sky-700 bg-sky-50 font-bold' : 'text-slate-700'
               }`}
             >
               Blog & Buying Guides
-            </button>
+            </NavLink>
 
-            <button
-              onClick={() => {
-                navigateTo('about');
-                setMobileMenuOpen(false);
-              }}
+            <NavLink
+              page="about"
+              onBeforeNavigate={() => setMobileMenuOpen(false)}
               className={`text-left px-3.5 py-2.5 rounded-xl ${
                 currentPage === 'about' ? 'text-sky-700 bg-sky-50 font-bold' : 'text-slate-700'
               }`}
             >
               About Our Brand (Est. 2018)
-            </button>
+            </NavLink>
 
-            <button
-              onClick={() => {
-                navigateTo('contact');
-                setMobileMenuOpen(false);
-              }}
+            <NavLink
+              page="contact"
+              onBeforeNavigate={() => setMobileMenuOpen(false)}
               className={`text-left px-3.5 py-2.5 rounded-xl ${
                 currentPage === 'contact' ? 'text-sky-700 bg-sky-50 font-bold' : 'text-slate-700'
               }`}
             >
               Contact Us & Order Inquiries
-            </button>
+            </NavLink>
 
-            <button
-              onClick={() => {
-                navigateTo('faq');
-                setMobileMenuOpen(false);
-              }}
+            <NavLink
+              page="faq"
+              onBeforeNavigate={() => setMobileMenuOpen(false)}
               className={`text-left px-3.5 py-2.5 rounded-xl ${
                 currentPage === 'faq' ? 'text-sky-700 bg-sky-50 font-bold' : 'text-slate-700'
               }`}
             >
               FAQ & Technical Support
-            </button>
+            </NavLink>
           </div>
 
           <div className="pt-3 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">

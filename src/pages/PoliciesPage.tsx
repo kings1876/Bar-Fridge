@@ -1,6 +1,7 @@
 import React from 'react';
 import { useShop } from '../context/ShopContext';
-import { 
+import { NavLink } from '../components/NavLink';
+import {
   Truck, 
   RotateCcw, 
   ShieldCheck, 
@@ -12,7 +13,7 @@ interface PoliciesPageProps {
 }
 
 export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shipping' }) => {
-  const { currentPage, navigateTo } = useShop();
+  const { currentPage } = useShop();
 
   const activePolicy = (['shipping', 'refund', 'privacy', 'terms'].includes(currentPage))
     ? currentPage as 'shipping' | 'refund' | 'privacy' | 'terms'
@@ -22,8 +23,8 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-10">
       {/* Policy Navigation Tabs */}
       <div className="flex flex-wrap gap-2 justify-center border-b border-slate-200 pb-6">
-        <button
-          onClick={() => navigateTo('shipping')}
+        <NavLink
+          page="shipping"
           className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             activePolicy === 'shipping'
               ? 'bg-sky-600 text-white shadow-sm'
@@ -32,10 +33,10 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
         >
           <Truck className="w-4 h-4" />
           <span>Shipping & Freight Policy</span>
-        </button>
+        </NavLink>
 
-        <button
-          onClick={() => navigateTo('refund')}
+        <NavLink
+          page="refund"
           className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             activePolicy === 'refund'
               ? 'bg-sky-600 text-white shadow-sm'
@@ -44,10 +45,10 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
         >
           <RotateCcw className="w-4 h-4" />
           <span>Refund & 30-Day Returns</span>
-        </button>
+        </NavLink>
 
-        <button
-          onClick={() => navigateTo('privacy')}
+        <NavLink
+          page="privacy"
           className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             activePolicy === 'privacy'
               ? 'bg-sky-600 text-white shadow-sm'
@@ -56,10 +57,10 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
         >
           <ShieldCheck className="w-4 h-4" />
           <span>Privacy & GDPR / APP</span>
-        </button>
+        </NavLink>
 
-        <button
-          onClick={() => navigateTo('terms')}
+        <NavLink
+          page="terms"
           className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             activePolicy === 'terms'
               ? 'bg-sky-600 text-white shadow-sm'
@@ -68,7 +69,7 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
         >
           <FileText className="w-4 h-4" />
           <span>Terms of Service</span>
-        </button>
+        </NavLink>
       </div>
 
       {/* Shipping Policy View */}

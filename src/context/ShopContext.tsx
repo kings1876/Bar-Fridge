@@ -3,6 +3,13 @@ import { Product, CartItem, PageView, BlogPost } from '../types';
 import { PRODUCTS } from '../data/products';
 import { BLOG_POSTS } from '../data/blogPosts';
 
+export interface NavOptions {
+  productId?: string;
+  blogId?: string;
+  categoryId?: string;
+  subcategory?: string;
+}
+
 interface ParsedLocation {
   page: PageView;
   product: Product | null;
@@ -83,7 +90,8 @@ interface ToastMessage {
 interface ShopContextType {
   currentPage: PageView;
   setCurrentPage: (page: PageView) => void;
-  navigateTo: (page: PageView, options?: { productId?: string; blogId?: string; categoryId?: string; subcategory?: string }) => void;
+  navigateTo: (page: PageView, options?: NavOptions) => void;
+  getPath: (page: PageView, options?: NavOptions) => string;
   selectedProduct: Product | null;
   setSelectedProduct: (product: Product | null) => void;
   selectedBlogPost: BlogPost | null;
@@ -191,9 +199,24 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     setToasts((prev) => prev.filter((t) => t.id !== id));
   };
 
+  const getPath = (page: PageView, options?: NavOptions): string => {
+    const product = options?.productId
+      ? PRODUCTS.find((p) => p.id === options.productId || p.slug === options.productId)
+      : undefined;
+    const blogPost = options?.blogId
+      ? BLOG_POSTS.find((b) => b.id === options.blogId || b.slug === options.blogId)
+      : undefined;
+    return buildPath(page, {
+      categoryId: options?.categoryId,
+      subcategory: options?.subcategory,
+      productSlug: product?.slug,
+      blogSlug: blogPost?.slug
+    });
+  };
+
   const navigateTo = (
     page: PageView,
-    options?: { productId?: string; blogId?: string; categoryId?: string; subcategory?: string }
+    options?: NavOptions
   ) => {
     let product: Product | undefined;
     let blogPost: BlogPost | undefined;
@@ -311,6 +334,7 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         currentPage,
         setCurrentPage,
         navigateTo,
+        getPath,
         selectedProduct,
         setSelectedProduct,
         selectedBlogPost,
