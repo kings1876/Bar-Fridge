@@ -10,7 +10,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '14 January 2026',
     readTime: '6 min read',
     category: 'Buying Guides',
-    image: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=1000&q=80',
+    image: '/images/products/schmick-hus-sc70-ss-1.webp',
     tags: ['Bar Fridges For Sale', 'Buying Guide', 'Man Cave', 'Alfresco Coolers'],
     content: [
       'Choosing the right bar fridge in Australia isn’t just about choosing a cool design—it’s about choosing equipment built to withstand extreme summer temperatures. While a standard domestic mini fridge might be okay in an air-conditioned room, a true bar fridge must rapidly pull drinks down to 0°C to 2°C even during 35°C+ heatwaves.',
@@ -31,7 +31,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '28 December 2025',
     readTime: '5 min read',
     category: 'Technical & Engineering',
-    image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=1000&q=80',
+    image: '/images/products/rhino-env2h-ss-1.webp',
     tags: ['Outdoor Entertaining', 'Tropical Rating', '316 Stainless', 'Alfresco'],
     content: [
       'Australian alfresco living is world-renowned. There is nothing better than grilling steaks on the barbecue while grabbing an ice-cold craft beer from your outdoor fridge. However, outdoor kitchen builders frequently make a fatal mistake: installing an indoor beverage fridge outdoors.',
@@ -50,7 +50,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '02 November 2025',
     readTime: '4 min read',
     category: 'Comparisons',
-    image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80',
+    image: '/images/products/dellware-dw-sd50-1.webp',
     tags: ['Bar Fridge Sales', 'Bar Freezer For Sale', 'Chest Freezer', 'Hospitality'],
     content: [
       'When designing an entertainment area, garage workshop, or boutique pub setup, a common dilemma arises: should you buy a beverage bar fridge, a dedicated bar freezer, or both?',
@@ -69,7 +69,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '18 October 2025',
     readTime: '3 min read',
     category: 'Promotions & Crypto',
-    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1000&q=80',
+    image: '/images/products/schmick-sk198d-b-hd-1.webp',
     tags: ['Crypto Payment', 'Discounts', 'Bitcoin', 'Ethereum', 'USDT'],
     content: [
       'At Bar Fridges For Sale Australia, we believe in passing direct cost savings back to our customers. Credit card merchant processors and intermediaries charge hefty 2% to 4% interchange fees plus administrative overhead. By accepting peer-to-peer cryptocurrency payments, we eliminate these parasitic fees entirely.',
@@ -91,7 +91,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '04 September 2025',
     readTime: '4 min read',
     category: 'Maintenance & Energy',
-    image: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=1000&q=80',
+    image: '/images/products/schmick-hus-sc88l-ss-1.webp',
     tags: ['Energy Saving', 'Eco Friendly', 'R600a Refrigerant', 'Maintenance'],
     content: [
       'Older refrigeration units are notorious for guzzling electricity. Fortunately, modern commercial and alfresco bar fridges feature revolutionary technological upgrades that deliver maximum chilling with minimal wattage.',

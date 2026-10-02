@@ -93,8 +93,8 @@ export const BlogPage: React.FC = () => {
         </header>
 
         {/* Hero Image */}
-        <div className="rounded-3xl overflow-hidden aspect-[16/9] border border-slate-200 shadow-md bg-slate-100">
-          <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+        <div className="rounded-3xl overflow-hidden aspect-[16/9] border border-slate-200 shadow-md bg-white">
+          <img src={post.image} alt={post.title} className="w-full h-full object-contain p-4" />
         </div>
 
         {/* Article Body Content */}
@@ -146,8 +146,8 @@ export const BlogPage: React.FC = () => {
                 options={{ blogId: rel.id }}
                 className="group bg-white border border-slate-200 hover:border-sky-400 rounded-3xl p-4 transition-all space-y-3 shadow-sm hover:shadow-md"
               >
-                <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100">
-                  <img src={rel.image} alt={rel.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-white">
+                  <img src={rel.image} alt={rel.title} className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform" />
                 </div>
                 <div className="text-xs text-sky-700 font-bold uppercase tracking-wider">{rel.category}</div>
                 <h4 className="text-sm font-bold text-slate-900 group-hover:text-sky-700 transition-colors line-clamp-2">
@@ -229,11 +229,11 @@ export const BlogPage: React.FC = () => {
             options={{ blogId: post.id }}
             className="group block bg-white border border-slate-200 hover:border-sky-400 rounded-3xl overflow-hidden shadow-sm transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-sky-500/10"
           >
-            <div className="aspect-[16/10] overflow-hidden bg-slate-100 relative">
+            <div className="aspect-[16/10] overflow-hidden bg-white relative">
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-500"
               />
               <span className="absolute top-3 left-3 bg-white/95 backdrop-blur border border-slate-200 text-sky-800 text-[10px] font-bold uppercase px-3 py-1 rounded-lg shadow-2xs">
                 {post.category}

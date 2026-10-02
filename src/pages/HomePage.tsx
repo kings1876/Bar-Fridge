@@ -836,11 +836,11 @@ export const HomePage: React.FC = () => {
               options={{ blogId: post.id }}
               className="group bg-white border border-slate-200 hover:border-sky-400 rounded-3xl overflow-hidden shadow-sm transition-all flex flex-col justify-between hover:shadow-xl hover:shadow-sky-500/10"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-slate-100">
+              <div className="aspect-[16/10] overflow-hidden bg-white">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
 
