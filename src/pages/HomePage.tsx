@@ -170,6 +170,8 @@ export const HomePage: React.FC = () => {
   };
 
   const activeSlideData = HERO_SLIDES[currentSlide];
+  const activeSlideProduct = PRODUCTS.find((p) => p.id === activeSlideData.productId);
+  const activeSlideImage = activeSlideProduct?.image ?? activeSlideData.productImage;
 
   const filteredProducts = PRODUCTS.filter((p) => {
     if (activeTab === 'popular') return p.badge === 'Popular' || p.badge === 'Best Value';
@@ -316,14 +318,14 @@ export const HomePage: React.FC = () => {
             {/* Right Hero Visual Feature (Synchronized with Active Slide) */}
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-md lg:max-w-none rounded-3xl p-3 bg-slate-900/90 backdrop-blur-xl border border-white/15 shadow-2xl">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-white">
                   <img
-                    key={activeSlideData.productImage}
-                    src={activeSlideData.productImage}
+                    key={activeSlideImage}
+                    src={activeSlideImage}
                     alt={activeSlideData.productName}
-                    className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
+                    className="w-full h-full object-contain p-4 pb-24 transition-all duration-700 hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
 
                   {/* Floating badge on image */}
                   <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">
