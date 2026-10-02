@@ -2932,8 +2932,8 @@ export const PRODUCTS: Product[] = [
     energyStars: 9,
     finish: 'Black Cabinet Finish',
     inStock: true,
-    image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80',
-    galleryImages: ['https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80'],
+    image: '/images/products/rhino-sg2h-nc-1.webp',
+    galleryImages: ['/images/products/rhino-sg2h-nc-1.webp', '/images/products/rhino-sg2h-nc-2.webp'],
     description: 'The Rhino SG2H-NC is a 208 litre multi-door commercial bar fridge, suited to indoor / alfresco installation. Built with genuine Rhino componentry for reliable day-to-day use.',
     features: ['Quiet running compressor', 'Holds up to 240 standard cans', 'Reversible door hinge for flexible installation'],
     specs: {
