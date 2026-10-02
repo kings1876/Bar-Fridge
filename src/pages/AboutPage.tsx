@@ -113,7 +113,7 @@ export const AboutPage: React.FC = () => {
         <div className="lg:col-span-6 space-y-4">
           <div className="rounded-3xl overflow-hidden aspect-[4/3] border border-slate-200 shadow-xl relative bg-slate-100">
             <img
-              src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80"
+              src="/images/products/rhino-sg3h-hd-1.webp"
               alt="Bar fridge warehouse and engineering testing in Australia"
               className="w-full h-full object-cover"
             />

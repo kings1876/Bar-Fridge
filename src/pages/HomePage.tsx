@@ -27,34 +27,27 @@ import {
 
 interface HeroSlide {
   id: number;
-  bgImage: string;
   theme: string;
   subtitle: string;
   tag: string;
   productName: string;
   productPrice: string;
   productId: string;
-  productImage: string;
   capacity: string;
   stat1: { label: string; value: string };
   stat2: { label: string; value: string };
   stat3: { label: string; value: string };
 }
 
-const PEXELS_HERO_IMAGE = '/images/pexels-dogukan-melik-sevindik-1121476372-27798034.jpg';
-const PEXELS_HERO_FALLBACK = 'https://images.pexels.com/photos/27798034/pexels-photo-27798034.jpeg?auto=compress&cs=tinysrgb&w=1920';
-
 const HERO_SLIDES: HeroSlide[] = [
   {
     id: 1,
-    bgImage: PEXELS_HERO_IMAGE,
     theme: 'Tropical Alfresco Living',
     subtitle: 'Genuine Schmick & Rhino bar fridges built for Australian entertainment spaces',
     tag: 'Tropical Rated & Triple Glazed',
     productName: 'Schmick HUS-SC70-SS Tropical Glass Door Bar Fridge',
     productPrice: '$747',
     productId: 'schmick-hus-sc70-ss',
-    productImage: PEXELS_HERO_IMAGE,
     capacity: '70 Litres • 85 Cans',
     stat1: { label: 'Glass', value: 'Triple Glazed' },
     stat2: { label: 'Energy Rating', value: '9 Stars' },
@@ -62,14 +55,12 @@ const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: 2,
-    bgImage: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2000&q=80',
     theme: 'Commercial Hospitality & Bars',
     subtitle: 'Space-saving sliding double door back-bar coolers for pubs & clubs',
     tag: 'Energy Efficient Sliding Doors',
     productName: 'Rhino SG2S-B Black Sliding 2 Door Bar Fridge',
     productPrice: '$1,877',
     productId: 'rhino-sg2s-b',
-    productImage: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80',
     capacity: '208 Litres • 240 Cans',
     stat1: { label: 'Door System', value: 'Double Sliding' },
     stat2: { label: 'Internal Temp', value: '1°C to 10°C' },
@@ -77,14 +68,12 @@ const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: 3,
-    bgImage: 'https://images.unsplash.com/photo-1572025442646-866d16c84a54?auto=format&fit=crop&w=2000&q=80',
     theme: 'Man Caves & Entertainment Lounges',
     subtitle: 'Underbench whisper-quiet beverage center with LED illumination',
     tag: 'Whisper-Quiet Embraco Inverter',
     productName: 'Rhino SG1R-HD Heated Glass Door Bar Fridge',
     productPrice: '$1,867',
     productId: 'rhino-sg1r-hd',
-    productImage: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1000&q=80',
     capacity: '129 Litres • 140 Cans',
     stat1: { label: 'Noise Level', value: '40dB Quiet' },
     stat2: { label: 'Glass Door', value: 'Heated, Fog-Free' },
@@ -92,14 +81,12 @@ const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: 4,
-    bgImage: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=2000&q=80',
     theme: 'Craft Brewery & Wine Cellars',
     subtitle: 'Dual zone independent temperature control for beers and fine wines',
     tag: 'Dual Zone Wine & Beer Chill',
     productName: 'Schmick SK198D-B-HD Dual Zone Beer & Wine Fridge',
     productPrice: '$1,567',
     productId: 'schmick-sk198d-b-hd',
-    productImage: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1000&q=80',
     capacity: '215 Litres • 28 Bottles + 88 Cans',
     stat1: { label: 'Dual Zones', value: '1-10°C & 5-18°C' },
     stat2: { label: 'Door', value: 'Heated Glass' },
@@ -107,14 +94,12 @@ const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: 5,
-    bgImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80',
     theme: 'Poolside Cabanas & BBQ Islands',
     subtitle: 'Sub-zero frosted glassware and rapid pull-down freezing',
     tag: 'Deep Frost Sub-Zero Technology',
     productName: 'Schmick BD36 Mini Solid Door Freezer',
     productPrice: '$427',
     productId: 'schmick-bd36',
-    productImage: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=1000&q=80',
     capacity: '36 Litres Compact Freezer',
     stat1: { label: 'Freezing Temp', value: '-15°C to -18°C' },
     stat2: { label: 'Door', value: 'Reversible & Lockable' },
@@ -171,7 +156,7 @@ export const HomePage: React.FC = () => {
 
   const activeSlideData = HERO_SLIDES[currentSlide];
   const activeSlideProduct = PRODUCTS.find((p) => p.id === activeSlideData.productId);
-  const activeSlideImage = activeSlideProduct?.image ?? activeSlideData.productImage;
+  const activeSlideImage = activeSlideProduct?.image ?? '';
 
   const filteredProducts = PRODUCTS.filter((p) => {
     if (activeTab === 'popular') return p.badge === 'Popular' || p.badge === 'Best Value';
@@ -190,21 +175,6 @@ export const HomePage: React.FC = () => {
       >
         {/* Full-Bleed Slideshow Background Images with Smooth Crossfade and Subtle Zoom */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          {/* Base Background Image: pexels-dogukan-melik-sevindik-1121476372-27798034 at High Opacity */}
-          <div 
-            className="absolute inset-0 w-full h-full transition-opacity duration-300"
-            style={{ opacity: bgOpacity / 100 }}
-          >
-            <img
-              src={PEXELS_HERO_IMAGE}
-              onError={(e) => {
-                e.currentTarget.src = PEXELS_HERO_FALLBACK;
-              }}
-              alt="Bar Fridges Alfresco Background"
-              className="w-full h-full object-cover object-center brightness-105 contrast-105"
-            />
-          </div>
-
           {HERO_SLIDES.map((slide, index) => {
             const isActive = index === currentSlide;
             return (
@@ -216,15 +186,10 @@ export const HomePage: React.FC = () => {
                 style={{ opacity: isActive ? bgOpacity / 100 : 0 }}
               >
                 <img
-                  src={slide.bgImage}
-                  onError={(e) => {
-                    if (slide.bgImage === PEXELS_HERO_IMAGE) {
-                      e.currentTarget.src = PEXELS_HERO_FALLBACK;
-                    }
-                  }}
+                  src={PRODUCTS.find((p) => p.id === slide.productId)?.image}
                   alt={slide.theme}
-                  className={`w-full h-full object-cover object-center transform transition-transform duration-[6500ms] ease-out brightness-105 contrast-105 ${
-                    isActive ? 'scale-105' : 'scale-100'
+                  className={`w-full h-full object-cover object-center blur-3xl brightness-50 saturate-125 transform transition-transform duration-[6500ms] ease-out ${
+                    isActive ? 'scale-150' : 'scale-125'
                   }`}
                 />
               </div>
@@ -307,9 +272,9 @@ export const HomePage: React.FC = () => {
               {/* Trustpilot Social Proof Snippet */}
               <div className="pt-2 flex items-center justify-center lg:justify-start gap-3 text-xs text-slate-200">
                 <div className="flex -space-x-2">
-                  <img className="w-7 h-7 rounded-full border-2 border-slate-900 object-cover shadow-sm" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Customer" />
-                  <img className="w-7 h-7 rounded-full border-2 border-slate-900 object-cover shadow-sm" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Customer" />
-                  <img className="w-7 h-7 rounded-full border-2 border-slate-900 object-cover shadow-sm" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Customer" />
+                  <img className="w-7 h-7 rounded-full border-2 border-slate-900 object-contain bg-white shadow-sm" src="/images/products/schmick-hus-sc70-ss-1.webp" alt="Bar fridge" />
+                  <img className="w-7 h-7 rounded-full border-2 border-slate-900 object-contain bg-white shadow-sm" src="/images/products/rhino-env1r-ss-1.webp" alt="Bar fridge" />
+                  <img className="w-7 h-7 rounded-full border-2 border-slate-900 object-contain bg-white shadow-sm" src="/images/products/schmick-sk198d-b-hd-1.webp" alt="Bar fridge" />
                 </div>
                 <span>Over <strong className="text-white font-bold">2,148+ verified Australian buyers</strong> rated us 4.9/5 on Trustpilot</span>
               </div>
@@ -630,12 +595,9 @@ export const HomePage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 transition-opacity duration-1000 ease-in-out">
             <img
-              src={PEXELS_HERO_IMAGE}
-              onError={(e) => {
-                e.currentTarget.src = PEXELS_HERO_FALLBACK;
-              }}
+              src="/images/products/rhino-gsp2h-ss-1.webp"
               alt="Australian Tropical Climate Testing"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center blur-3xl brightness-50 scale-125"
             />
           </div>
           {/* Light Ambient Scrim for high image opacity */}
@@ -692,9 +654,9 @@ export const HomePage: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="relative rounded-3xl overflow-hidden border border-slate-700/90 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80"
+                src="/images/products/rhino-env1r-ss-1.webp"
                 alt="Tropical rated alfresco outdoor bar fridge testing"
-                className="w-full h-80 object-cover"
+                className="w-full h-80 object-contain bg-white p-4 pb-24"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent flex items-end p-6">
                 <div className="bg-slate-900/95 backdrop-blur-md p-4 rounded-2xl border border-slate-700 w-full flex items-center justify-between">
