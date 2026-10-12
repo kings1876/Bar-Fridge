@@ -16,6 +16,14 @@ import {
 import { CATEGORIES } from '../data/products';
 import { NavLink } from './NavLink';
 
+const CATEGORY_SHORT_NAMES: Record<string, string> = {
+  'single-door': 'Single Door',
+  'double-triple-door': 'Double & Triple Door',
+  'alfresco-outdoor': 'Alfresco & Outdoor',
+  'wine-dual-zone': 'Wine & Dual Zone',
+  'bar-freezers': 'Freezers'
+};
+
 export const Navbar: React.FC = () => {
   const { 
     currentPage, 
@@ -24,12 +32,12 @@ export const Navbar: React.FC = () => {
     setIsCartDrawerOpen,
     searchQuery,
     setSearchQuery,
-    setSelectedCategory
+    selectedCategory
   } = useShop();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [shopDropdownOpen, setShopDropdownOpen] = useState(false);
-  const [expandedNavCategory, setExpandedNavCategory] = useState<string | null>(null);
+  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
+  const [mobileExpandedCategory, setMobileExpandedCategory] = useState<string | null>(null);
   const [showSearchInput, setShowSearchInput] = useState(false);
 
   const handleSearchSubmit = (e: React.FormEvent) => {
@@ -77,7 +85,7 @@ export const Navbar: React.FC = () => {
           {/* Logo */}
           <NavLink
             page="home"
-            className="flex items-center gap-3 text-left group focus:outline-none"
+            className="flex items-center gap-3 text-left group focus:outline-none shrink-0"
           >
             <div className="relative w-11 h-11 rounded-xl bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800 flex items-center justify-center p-2 shadow-md shadow-sky-600/20 group-hover:scale-105 transition-transform duration-200">
               <svg viewBox="0 0 24 24" className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -90,148 +98,70 @@ export const Navbar: React.FC = () => {
               <div className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-amber-400 border-2 border-white"></div>
             </div>
             <div>
-              <div className="font-extrabold text-xl sm:text-2xl tracking-tight text-slate-950 flex items-center gap-1.5">
+              <div className="font-extrabold text-xl sm:text-2xl tracking-tight text-slate-950 flex items-center gap-1.5 whitespace-nowrap">
                 <span>BAR FRIDGES</span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-700">FOR SALE</span>
               </div>
-              <div className="text-[10px] sm:text-xs text-sky-700 font-semibold tracking-wider uppercase">
+              <div className="text-[10px] sm:text-xs text-sky-700 font-semibold tracking-wider uppercase hidden 2xl:block">
                 Outdoor Alfresco & Commercial Coolers Australia
               </div>
             </div>
           </NavLink>
 
-          {/* Desktop Navigation - Order: Shop, Blog, About, Contact, FAQ */}
-          <nav className="hidden lg:flex items-center gap-1 font-medium text-sm">
-            {/* Shop with Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setShopDropdownOpen(true)}
-              onMouseLeave={() => {
-                setShopDropdownOpen(false);
-                setExpandedNavCategory(null);
-              }}
-            >
-              <NavLink
-                page="shop"
-                className={`flex items-center gap-1 px-3.5 py-2 rounded-lg transition-colors ${
-                  currentPage === 'shop' || currentPage === 'product-detail'
-                    ? 'text-sky-700 bg-sky-50 font-semibold'
-                    : 'text-slate-700 hover:text-sky-700 hover:bg-slate-100'
-                }`}
-              >
-                <span>Shop</span>
-                <ChevronDown className="w-4 h-4 opacity-70" />
-              </NavLink>
+          {/* Desktop Navigation - Product categories with subcategory dropdowns */}
+          <nav className="hidden xl:flex items-center gap-0.5 font-medium text-sm" aria-label="Product categories">
+            {CATEGORIES.map((cat) => {
+              const isActive = currentPage === 'shop' && selectedCategory === cat.id;
+              const isOpen = hoveredCategory === cat.id;
+              return (
+                <div
+                  key={cat.id}
+                  className="relative"
+                  onMouseEnter={() => setHoveredCategory(cat.id)}
+                  onMouseLeave={() => setHoveredCategory(null)}
+                >
+                  <NavLink
+                    page="shop"
+                    options={{ categoryId: cat.id }}
+                    onBeforeNavigate={() => setHoveredCategory(null)}
+                    className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-colors whitespace-nowrap ${
+                      isActive
+                        ? 'text-sky-700 bg-sky-50 font-semibold'
+                        : 'text-slate-700 hover:text-sky-700 hover:bg-slate-100'
+                    }`}
+                  >
+                    <span>{CATEGORY_SHORT_NAMES[cat.id] ?? cat.name}</span>
+                    <ChevronDown className={`w-3.5 h-3.5 opacity-70 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                  </NavLink>
 
-              {shopDropdownOpen && (
-                <div className="absolute top-full left-0 w-80 bg-white border border-slate-200 rounded-2xl shadow-2xl p-3 z-50 animate-in fade-in slide-in-from-top-2 duration-150 max-h-[75vh] overflow-y-auto">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-slate-400 px-3 py-1.5 mb-1 border-b border-slate-100">
-                    Product Categories
-                  </div>
-                  {CATEGORIES.map((cat) => {
-                    const isExpanded = expandedNavCategory === cat.id;
-                    return (
-                      <div key={cat.id}>
-                        <div className="w-full flex items-center rounded-xl hover:bg-sky-50/80 transition-colors group">
+                  {isOpen && (
+                    <div className="absolute top-full left-0 min-w-[16rem] bg-white border border-slate-200 rounded-2xl shadow-2xl p-2 z-50">
+                      <NavLink
+                        page="shop"
+                        options={{ categoryId: cat.id }}
+                        onBeforeNavigate={() => setHoveredCategory(null)}
+                        className="block px-3 py-2 text-xs font-bold text-sky-700 bg-sky-50 hover:bg-sky-100 rounded-xl transition-colors"
+                      >
+                        All {cat.name} →
+                      </NavLink>
+                      <div className="mt-1 space-y-0.5">
+                        {cat.subcategories.map((sub) => (
                           <NavLink
+                            key={sub}
                             page="shop"
-                            options={{ categoryId: cat.id }}
-                            onBeforeNavigate={() => {
-                              setShopDropdownOpen(false);
-                              setExpandedNavCategory(null);
-                            }}
-                            className="flex-1 text-left px-3 py-2 text-xs"
+                            options={{ categoryId: cat.id, subcategory: sub }}
+                            onBeforeNavigate={() => setHoveredCategory(null)}
+                            className="block px-3 py-2 text-xs rounded-lg text-slate-700 hover:text-sky-700 hover:bg-sky-50 transition-colors"
                           >
-                            <div className="font-semibold group-hover:text-sky-700 text-slate-900">{cat.name}</div>
+                            {sub}
                           </NavLink>
-                          <button
-                            onClick={() => setExpandedNavCategory(isExpanded ? null : cat.id)}
-                            aria-label={`Toggle ${cat.name} subcategories`}
-                            className="p-2 mr-1 text-slate-400 group-hover:text-sky-600"
-                          >
-                            <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
-                          </button>
-                        </div>
-                        {isExpanded && (
-                          <div className="pl-3 pb-1.5 space-y-0.5">
-                            {cat.subcategories.map((sub) => (
-                              <NavLink
-                                key={sub}
-                                page="shop"
-                                options={{ categoryId: cat.id, subcategory: sub }}
-                                onBeforeNavigate={() => {
-                                  setShopDropdownOpen(false);
-                                  setExpandedNavCategory(null);
-                                }}
-                                className="block w-full text-left px-3 py-1.5 text-[11px] rounded-lg text-slate-600 hover:text-sky-700 hover:bg-sky-50 transition-colors"
-                              >
-                                {sub}
-                              </NavLink>
-                            ))}
-                          </div>
-                        )}
+                        ))}
                       </div>
-                    );
-                  })}
-                  <div className="mt-2 pt-2 border-t border-slate-100">
-                    <NavLink
-                      page="shop"
-                      onBeforeNavigate={() => {
-                        setSelectedCategory('all');
-                        setShopDropdownOpen(false);
-                      }}
-                      className="block w-full py-2 text-center text-xs font-bold text-sky-700 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors"
-                    >
-                      Browse All 200+ Fridges & Freezers →
-                    </NavLink>
-                  </div>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-
-            <NavLink
-              page="blog"
-              className={`px-3.5 py-2 rounded-lg transition-colors ${
-                currentPage === 'blog' || currentPage === 'blog-post'
-                  ? 'text-sky-700 bg-sky-50 font-semibold'
-                  : 'text-slate-700 hover:text-sky-700 hover:bg-slate-100'
-              }`}
-            >
-              Blog
-            </NavLink>
-
-            <NavLink
-              page="about"
-              className={`px-3.5 py-2 rounded-lg transition-colors ${
-                currentPage === 'about'
-                  ? 'text-sky-700 bg-sky-50 font-semibold'
-                  : 'text-slate-700 hover:text-sky-700 hover:bg-slate-100'
-              }`}
-            >
-              About
-            </NavLink>
-
-            <NavLink
-              page="contact"
-              className={`px-3.5 py-2 rounded-lg transition-colors ${
-                currentPage === 'contact'
-                  ? 'text-sky-700 bg-sky-50 font-semibold'
-                  : 'text-slate-700 hover:text-sky-700 hover:bg-slate-100'
-              }`}
-            >
-              Contact
-            </NavLink>
-
-            <NavLink
-              page="faq"
-              className={`px-3.5 py-2 rounded-lg transition-colors ${
-                currentPage === 'faq'
-                  ? 'text-sky-700 bg-sky-50 font-semibold'
-                  : 'text-slate-700 hover:text-sky-700 hover:bg-slate-100'
-              }`}
-            >
-              FAQ
-            </NavLink>
+              );
+            })}
           </nav>
 
           {/* Right Action Buttons */}
@@ -268,7 +198,7 @@ export const Navbar: React.FC = () => {
             </div>
 
             {/* Crypto 10% Discount Badge Button */}
-            <div className="hidden xl:flex items-center gap-1.5 bg-amber-50 border border-amber-300 text-amber-800 text-xs px-3 py-1.5 rounded-xl font-semibold">
+            <div className="hidden 2xl:flex items-center gap-1.5 bg-amber-50 border border-amber-300 text-amber-800 text-xs px-3 py-1.5 rounded-xl font-semibold">
               <Bitcoin className="w-3.5 h-3.5 text-amber-600" />
               <span>10% Crypto Off</span>
             </div>
@@ -290,7 +220,7 @@ export const Navbar: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-slate-700 hover:text-slate-950 hover:bg-slate-100 rounded-xl"
+              className="xl:hidden p-2 text-slate-700 hover:text-slate-950 hover:bg-slate-100 rounded-xl"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -301,7 +231,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-xl">
+        <div className="xl:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-xl">
           <form onSubmit={handleSearchSubmit} className="relative mb-3">
             <input
               type="text"
@@ -314,56 +244,48 @@ export const Navbar: React.FC = () => {
           </form>
 
           <div className="grid grid-cols-1 gap-1 text-base font-medium">
-            <NavLink
-              page="shop"
-              onBeforeNavigate={() => setMobileMenuOpen(false)}
-              className={`text-left px-3.5 py-2.5 rounded-xl flex items-center justify-between ${
-                currentPage === 'shop' ? 'text-sky-700 bg-sky-50 font-bold' : 'text-slate-700'
-              }`}
-            >
-              <span>Shop All Bar Fridges & Freezers</span>
-              <span className="text-xs text-sky-600 font-semibold">200 Products</span>
-            </NavLink>
-
-            <NavLink
-              page="blog"
-              onBeforeNavigate={() => setMobileMenuOpen(false)}
-              className={`text-left px-3.5 py-2.5 rounded-xl ${
-                currentPage === 'blog' ? 'text-sky-700 bg-sky-50 font-bold' : 'text-slate-700'
-              }`}
-            >
-              Blog & Buying Guides
-            </NavLink>
-
-            <NavLink
-              page="about"
-              onBeforeNavigate={() => setMobileMenuOpen(false)}
-              className={`text-left px-3.5 py-2.5 rounded-xl ${
-                currentPage === 'about' ? 'text-sky-700 bg-sky-50 font-bold' : 'text-slate-700'
-              }`}
-            >
-              About Our Brand (Est. 2018)
-            </NavLink>
-
-            <NavLink
-              page="contact"
-              onBeforeNavigate={() => setMobileMenuOpen(false)}
-              className={`text-left px-3.5 py-2.5 rounded-xl ${
-                currentPage === 'contact' ? 'text-sky-700 bg-sky-50 font-bold' : 'text-slate-700'
-              }`}
-            >
-              Contact Us & Order Inquiries
-            </NavLink>
-
-            <NavLink
-              page="faq"
-              onBeforeNavigate={() => setMobileMenuOpen(false)}
-              className={`text-left px-3.5 py-2.5 rounded-xl ${
-                currentPage === 'faq' ? 'text-sky-700 bg-sky-50 font-bold' : 'text-slate-700'
-              }`}
-            >
-              FAQ & Technical Support
-            </NavLink>
+            {CATEGORIES.map((cat) => {
+              const isOpen = mobileExpandedCategory === cat.id;
+              return (
+                <div key={cat.id} className="rounded-xl">
+                  <div className="flex items-center">
+                    <NavLink
+                      page="shop"
+                      options={{ categoryId: cat.id }}
+                      onBeforeNavigate={() => setMobileMenuOpen(false)}
+                      className={`flex-1 text-left px-3.5 py-2.5 rounded-xl ${
+                        currentPage === 'shop' && selectedCategory === cat.id ? 'text-sky-700 bg-sky-50 font-bold' : 'text-slate-700'
+                      }`}
+                    >
+                      {cat.name}
+                    </NavLink>
+                    <button
+                      onClick={() => setMobileExpandedCategory(isOpen ? null : cat.id)}
+                      aria-label={`Toggle ${cat.name} subcategories`}
+                      aria-expanded={isOpen}
+                      className="p-3 text-slate-500"
+                    >
+                      <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                  </div>
+                  {isOpen && (
+                    <div className="pl-5 pb-2 space-y-0.5">
+                      {cat.subcategories.map((sub) => (
+                        <NavLink
+                          key={sub}
+                          page="shop"
+                          options={{ categoryId: cat.id, subcategory: sub }}
+                          onBeforeNavigate={() => setMobileMenuOpen(false)}
+                          className="block px-3 py-2 text-sm text-slate-600 rounded-lg hover:bg-sky-50 hover:text-sky-700"
+                        >
+                          {sub}
+                        </NavLink>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           <div className="pt-3 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
