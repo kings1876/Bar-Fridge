@@ -212,8 +212,8 @@ for (const route of allRoutes()) {
     .replace(/\s*<meta name="description"[^>]*>/, '')
     .replace(/\s*<meta property="og:[^>]*>/g, '')
     .replace(/\s*<meta name="twitter:card"[^>]*>/, '')
-    .replace('</head>', `    ${head(m)}\n    ${preloadHints(route, m)}\n    <noscript><style>[data-prerender-wrap]{position:static!important;width:auto!important;height:auto!important;margin:0!important;overflow:visible!important;clip:auto!important;white-space:normal!important}</style></noscript>\n  </head>`)
-    .replace('<div id="root"></div>', `<div id="root"><div data-prerender-wrap style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">${fallback(route, m)}</div></div>`);
+    .replace('</head>', `    ${head(m)}\n    ${preloadHints(route, m)}\n    <noscript><style>[data-prerender-wrap]{position:static!important;width:auto!important;height:auto!important;margin:0!important;overflow:visible!important;clip:auto!important;white-space:normal!important;content-visibility:visible!important}</style></noscript>\n  </head>`)
+    .replace('<div id="root"></div>', `<div id="root"><div data-prerender-wrap style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;content-visibility:hidden;contain-intrinsic-size:1px 1px">${fallback(route, m)}</div></div>`);
 
   const file = route === '/' ? path.join(dist, 'index.html') : path.join(dist, route.slice(1), 'index.html');
   fs.mkdirSync(path.dirname(file), { recursive: true });
