@@ -181,7 +181,7 @@ export const HomePage: React.FC = () => {
         </div>
 
         {/* Live Slideshow Badge on Top Right */}
-        <div className="absolute top-4 right-4 sm:top-6 sm:right-8 z-30 flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/85 backdrop-blur-md border border-white/15 text-[11px] font-medium text-slate-200 shadow-lg">
+        <div className="absolute top-4 right-4 sm:top-6 sm:right-8 z-30 flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/85 border border-white/15 text-[11px] font-medium text-slate-200 shadow-lg">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span className="hidden sm:inline">Living Scene:</span>
           <span className="text-white font-bold">{activeSlideData.theme}</span>
@@ -191,9 +191,9 @@ export const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Hero Text Box inside High-Opacity Glass Card for crystal clear reading */}
-            <div className="lg:col-span-7 bg-slate-950/75 sm:bg-slate-950/70 backdrop-blur-xl p-6 sm:p-9 rounded-3xl border border-white/15 shadow-2xl space-y-6 text-center lg:text-left">
+            <div className="lg:col-span-7 bg-slate-950/75 sm:bg-slate-950/70 p-6 sm:p-9 rounded-3xl border border-white/15 shadow-2xl space-y-6 text-center lg:text-left">
               {/* Trust Badge with Active Slide Tag */}
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-sky-400/50 text-sky-300 text-xs font-bold shadow-lg backdrop-blur-md">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-sky-400/50 text-sky-300 text-xs font-bold shadow-lg">
                 <ThermometerSnowflake className="w-4 h-4 text-sky-400 shrink-0" />
                 <span>Engineered for 43°C Aussie Summer Heat</span>
                 <span className="hidden sm:inline text-slate-500">•</span>
@@ -212,15 +212,15 @@ export const HomePage: React.FC = () => {
 
               {/* Value Points Pill Grid */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-2.5 text-xs font-bold text-slate-200 pt-1">
-                <span className="flex items-center gap-1.5 bg-slate-900/90 backdrop-blur-md border border-slate-700/90 px-3.5 py-2 rounded-xl shadow-md">
+                <span className="flex items-center gap-1.5 bg-slate-900/90 border border-slate-700/90 px-3.5 py-2 rounded-xl shadow-md">
                   <Truck className="w-4 h-4 text-sky-400" />
                   <span>Free Freight Nationwide</span>
                 </span>
-                <span className="flex items-center gap-1.5 bg-amber-500/30 backdrop-blur-md border border-amber-400/60 px-3.5 py-2 rounded-xl text-amber-200 shadow-md">
+                <span className="flex items-center gap-1.5 bg-amber-500/30 border border-amber-400/60 px-3.5 py-2 rounded-xl text-amber-200 shadow-md">
                   <Bitcoin className="w-4 h-4 text-amber-400" />
                   <span>Instant 10% Crypto Discount</span>
                 </span>
-                <span className="flex items-center gap-1.5 bg-slate-900/90 backdrop-blur-md border border-slate-700/90 px-3.5 py-2 rounded-xl shadow-md">
+                <span className="flex items-center gap-1.5 bg-slate-900/90 border border-slate-700/90 px-3.5 py-2 rounded-xl shadow-md">
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />
                   <span>2 Year Australian Warranty</span>
                 </span>
@@ -238,7 +238,7 @@ export const HomePage: React.FC = () => {
 
                 <button
                   onClick={() => setIsOrderModalOpen(true)}
-                  className="w-full sm:w-auto px-7 py-4 bg-slate-900/95 hover:bg-slate-800 text-white border border-slate-700 font-bold rounded-2xl flex items-center justify-center gap-2 transition-all text-sm shadow-lg backdrop-blur-md"
+                  className="w-full sm:w-auto px-7 py-4 bg-slate-900/95 hover:bg-slate-800 text-white border border-slate-700 font-bold rounded-2xl flex items-center justify-center gap-2 transition-all text-sm shadow-lg"
                 >
                   <Bitcoin className="w-4 h-4 text-amber-400" />
                   <span>Direct Order Form (10% Off)</span>
@@ -258,7 +258,7 @@ export const HomePage: React.FC = () => {
 
             {/* Right Hero Visual Feature (Synchronized with Active Slide) */}
             <div className="lg:col-span-5 relative">
-              <div className="relative mx-auto max-w-md lg:max-w-none rounded-3xl p-3 bg-slate-900/90 backdrop-blur-xl border border-white/15 shadow-2xl">
+              <div className="relative mx-auto max-w-md lg:max-w-none rounded-3xl p-3 bg-slate-900/90 border border-white/15 shadow-2xl">
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-white">
                   <img
                     key={activeSlideImage}
@@ -270,7 +270,7 @@ export const HomePage: React.FC = () => {
 
                   {/* Floating badge on image */}
                   <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">
-                    <div className="bg-slate-950/90 backdrop-blur-md p-3.5 rounded-xl border border-slate-700/80 shadow-xl max-w-[75%]">
+                    <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-700/80 shadow-xl max-w-[75%]">
                       <div className="text-[10px] uppercase font-bold text-sky-400 flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-ping"></span>
                         <span>Setting: {activeSlideData.theme}</span>
@@ -586,7 +586,7 @@ export const HomePage: React.FC = () => {
           </div>
           {/* Light Ambient Scrim for high image opacity */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-sky-950/40 to-slate-950/70" />
-          <div className="absolute inset-0 bg-slate-950/20 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-slate-950/20" />
         </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
@@ -603,7 +603,7 @@ export const HomePage: React.FC = () => {
             </p>
 
             <div className="space-y-3.5 pt-2">
-              <div className="flex items-start gap-3 bg-slate-900/80 border border-slate-700/80 p-3.5 rounded-2xl backdrop-blur-md shadow-md">
+              <div className="flex items-start gap-3 bg-slate-900/80 border border-slate-700/80 p-3.5 rounded-2xl shadow-md">
                 <div className="p-2 rounded-xl bg-sky-950 border border-sky-700 text-sky-400 shrink-0">
                   <ThermometerSnowflake className="w-5 h-5" />
                 </div>
@@ -613,7 +613,7 @@ export const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 bg-slate-900/80 border border-slate-700/80 p-3.5 rounded-2xl backdrop-blur-md shadow-md">
+              <div className="flex items-start gap-3 bg-slate-900/80 border border-slate-700/80 p-3.5 rounded-2xl shadow-md">
                 <div className="p-2 rounded-xl bg-sky-950 border border-sky-700 text-sky-400 shrink-0">
                   <Snowflake className="w-5 h-5" />
                 </div>
@@ -623,7 +623,7 @@ export const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 bg-slate-900/80 border border-slate-700/80 p-3.5 rounded-2xl backdrop-blur-md shadow-md">
+              <div className="flex items-start gap-3 bg-slate-900/80 border border-slate-700/80 p-3.5 rounded-2xl shadow-md">
                 <div className="p-2 rounded-xl bg-emerald-950 border border-emerald-700 text-emerald-400 shrink-0">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
@@ -643,7 +643,7 @@ export const HomePage: React.FC = () => {
                 className="w-full h-80 object-contain bg-white p-4 pb-24"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent flex items-end p-6">
-                <div className="bg-slate-900/95 backdrop-blur-md p-4 rounded-2xl border border-slate-700 w-full flex items-center justify-between">
+                <div className="bg-slate-900/95 p-4 rounded-2xl border border-slate-700 w-full flex items-center justify-between">
                   <div>
                     <div className="text-xs text-sky-400 font-bold uppercase">Field Tested In QLD & WA</div>
                     <div className="text-white text-sm font-bold">Sub-Zero -2°C Cold Mode for Craft Beer</div>
