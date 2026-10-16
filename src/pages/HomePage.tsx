@@ -160,18 +160,11 @@ export const HomePage: React.FC = () => {
       >
         {/* Full-Bleed Slideshow Background Images with Smooth Crossfade and Subtle Zoom */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          {/* Only the active slide's blurred wash is rendered: one filtered layer instead of five keeps paint and layout cheap. */}
+          {/* Static gradient backdrop: no decoded photo, blur filter or per-slide repaint, which keeps the first render light. */}
           <div
-            key={activeSlideData.id}
-            className="hero-wash absolute inset-0 w-full h-full z-10"
+            className="absolute inset-0 w-full h-full z-10 bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950"
             style={{ opacity: bgOpacity / 100 }}
-          >
-            <img
-              src={activeSlideImage}
-              alt=""
-              className="w-full h-full object-cover object-center blur-3xl brightness-50 saturate-125 scale-150"
-            />
-          </div>
+          />
 
           {/* Ultra-Light Ambient Scrim ensuring maximum photo opacity and visibility */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/45 via-slate-950/20 to-transparent z-20 pointer-events-none" />
@@ -183,7 +176,7 @@ export const HomePage: React.FC = () => {
 
         {/* Live Slideshow Badge on Top Right */}
         <div className="absolute top-4 right-4 sm:top-6 sm:right-8 z-30 flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/85 border border-white/15 text-[11px] font-medium text-slate-200 shadow-lg">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-emerald-400" />
           <span className="hidden sm:inline">Living Scene:</span>
           <span className="text-white font-bold">{activeSlideData.theme}</span>
         </div>
@@ -273,7 +266,7 @@ export const HomePage: React.FC = () => {
                   <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">
                     <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-700/80 shadow-xl max-w-[75%]">
                       <div className="text-[10px] uppercase font-bold text-sky-400 flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-ping"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
                         <span>Setting: {activeSlideData.theme}</span>
                       </div>
                       <div className="text-xs font-bold text-white mt-0.5 truncate">{activeSlideData.productName}</div>
