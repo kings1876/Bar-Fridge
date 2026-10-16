@@ -3,6 +3,7 @@ import { useShop } from '../context/ShopContext';
 import { PRODUCTS } from '../data/products';
 import { REVIEWS_DATA } from '../data/reviews';
 import { ProductCard } from '../components/ProductCard';
+import { Staged } from '../components/Staged';
 import { NavLink } from '../components/NavLink';
 import { RichText } from '../components/RichText';
 import { longDescriptionFor } from '../data/productLongDescriptions';
@@ -272,14 +273,17 @@ export const ProductDetailPage: React.FC = () => {
       </div>
 
       {/* Longer description (best-selling products) */}
+      <Staged stage={1} minHeight={700}>
       {longDescriptionFor(product.slug) && (
         <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 space-y-4 shadow-sm text-sm text-slate-700 leading-relaxed">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900">{aboutHeading(product.slug)}</h2>
           <RichText lines={longDescriptionFor(product.slug)!} />
         </div>
       )}
+      </Staged>
 
       {/* Full Technical Specifications Table */}
+      <Staged stage={2} minHeight={500}>
       <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 space-y-6 shadow-sm">
         <div className="flex items-center justify-between pb-4 border-b border-slate-100">
           <div>
@@ -310,6 +314,7 @@ export const ProductDetailPage: React.FC = () => {
           )}
         </div>
       </div>
+      </Staged>
 
       {/* Verified Reviews for this product */}
       <div className="space-y-6">
@@ -346,6 +351,7 @@ export const ProductDetailPage: React.FC = () => {
       </div>
 
       {/* Related Products */}
+      <Staged stage={3} minHeight={520}>
       {relatedProducts.length > 0 && (
         <div className="space-y-6 pt-6 border-t border-slate-200">
           <h3 className="text-lg sm:text-xl font-bold text-slate-900">
@@ -358,6 +364,7 @@ export const ProductDetailPage: React.FC = () => {
           </div>
         </div>
       )}
+      </Staged>
     </div>
   );
 };
