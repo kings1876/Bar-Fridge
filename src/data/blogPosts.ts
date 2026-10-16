@@ -1,6 +1,7 @@
 import { BlogPost } from '../types';
 import { GUIDE_POSTS } from './blogPostsGuides';
 import { GUIDE_POSTS_2 } from './blogPostsGuides2';
+import { GUIDE_POSTS_3 } from './blogPostsGuides3';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -104,5 +105,6 @@ export const BLOG_POSTS: BlogPost[] = [
     ]
   },
   ...GUIDE_POSTS,
-  ...GUIDE_POSTS_2
+  ...GUIDE_POSTS_2,
+  ...GUIDE_POSTS_3
 ];

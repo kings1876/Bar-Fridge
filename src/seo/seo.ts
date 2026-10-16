@@ -133,6 +133,42 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Looking for a VB beer fridge or other branded bar fridge for your man cave? Compare Cub mini, glass door and skinny upright designs and sizes.'
   },
+  'bar-fridge-dimensions-guide': {
+    keyword: 'bar fridge dimensions',
+    title: 'Bar Fridge Dimensions: Width, Height and Depth by Size',
+    description:
+      'Real bar fridge dimensions by size, from 23 litre minis to triple door units, with width, depth and height ranges and tips for measuring your space.'
+  },
+  'stainless-steel-bar-fridge-guide': {
+    keyword: 'stainless steel bar fridge',
+    title: 'Stainless Steel Bar Fridge Guide: 304 vs 316 and Finishes',
+    description:
+      'Choosing a stainless steel bar fridge? Compare 304 and 316 marine grade steel, solid stainless vs glass doors, and models for indoor and outdoor use.'
+  },
+  'black-bar-fridge-guide': {
+    keyword: 'black bar fridge',
+    title: 'Black Bar Fridge Guide: Sizes, Finishes and Styling',
+    description:
+      'Looking for a black bar fridge? Compare black mini, glass door and double door models from 31 to 473 litres, and how black compares with stainless.'
+  },
+  'slimline-bar-fridge-guide': {
+    keyword: 'slimline bar fridge',
+    title: 'Slimline Bar Fridge Guide: Narrow and Tall Upright Models',
+    description:
+      'Short on space? Compare slimline and narrow upright bar fridges, including 390 mm wide 160 litre models, with dimensions, brands and placement tips.'
+  },
+  'outdoor-bar-with-refrigerator-guide': {
+    keyword: 'outdoor bar with refrigerator',
+    title: 'Outdoor Bar With Refrigerator: How to Set One Up',
+    description:
+      'Planning an outdoor bar with a refrigerator? Learn how to choose the fridge, where to put it, what power and cover it needs and which models suit.'
+  },
+  'small-bar-freezer-guide': {
+    keyword: 'small bar freezer',
+    title: 'Small Bar Freezers: Mini, Under Counter and Upright Options',
+    description:
+      'Choosing a small bar freezer? Compare mini glass and solid door freezers, under counter built in models and uprights, with sizes and temperatures.'
+  },
   'energy-efficiency-bar-fridge-power-bills': {
     keyword: 'energy efficient bar fridge',
     title: 'Energy Efficient Bar Fridge: Cut Running Costs',

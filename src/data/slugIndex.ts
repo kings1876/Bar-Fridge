@@ -219,7 +219,13 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "mini-bar-fridge-guide": "mini-bar-fridge-guide",
   "lockable-bar-fridge-guide": "lockable-bar-fridge-guide",
   "rhino-bar-fridge-guide": "rhino-bar-fridge-guide",
-  "branded-beer-fridge-guide": "branded-beer-fridge-guide"
+  "branded-beer-fridge-guide": "branded-beer-fridge-guide",
+  "bar-fridge-dimensions-guide": "bar-fridge-dimensions-guide",
+  "stainless-steel-bar-fridge-guide": "stainless-steel-bar-fridge-guide",
+  "black-bar-fridge-guide": "black-bar-fridge-guide",
+  "slimline-bar-fridge-guide": "slimline-bar-fridge-guide",
+  "outdoor-bar-with-refrigerator-guide": "outdoor-bar-with-refrigerator-guide",
+  "small-bar-freezer-guide": "small-bar-freezer-guide"
 };
 
 export interface BlogCard {
@@ -385,6 +391,60 @@ export const BLOG_CARDS: BlogCard[] = [
     "image": "/images/products/cub-sc70-b-vb-v1-1.webp",
     "category": "Buying Guides",
     "readTime": "5 min read"
+  },
+  {
+    "id": "bar-fridge-dimensions-guide",
+    "slug": "bar-fridge-dimensions-guide",
+    "title": "Bar Fridge Dimensions: Width, Height and Depth by Size",
+    "excerpt": "What size is a bar fridge? Real bar fridge dimensions by capacity, from 23 litre minis to triple door units, with width, depth and height ranges and measuring tips.",
+    "image": "/images/products/schmick-sk146r-sd-1.webp",
+    "category": "Buying Guides",
+    "readTime": "6 min read"
+  },
+  {
+    "id": "stainless-steel-bar-fridge-guide",
+    "slug": "stainless-steel-bar-fridge-guide",
+    "title": "Stainless Steel Bar Fridge Guide: 304 vs 316 and Finishes",
+    "excerpt": "Choosing a stainless steel bar fridge? Compare 304 and 316 marine grade steel, solid stainless doors vs glass doors, and which models suit indoors, alfresco areas and coastal homes.",
+    "image": "/images/products/rhino-env2h-ss-1.webp",
+    "category": "Buying Guides",
+    "readTime": "6 min read"
+  },
+  {
+    "id": "black-bar-fridge-guide",
+    "slug": "black-bar-fridge-guide",
+    "title": "Black Bar Fridge Guide: Sizes, Finishes and Styling",
+    "excerpt": "Looking for a black bar fridge? Compare black mini fridges, glass door and double door models, from 31 to 473 litres, and how black compares with stainless steel.",
+    "image": "/images/products/schmick-hus-sc70-b-1.webp",
+    "category": "Buying Guides",
+    "readTime": "5 min read"
+  },
+  {
+    "id": "slimline-bar-fridge-guide",
+    "slug": "slimline-bar-fridge-guide",
+    "title": "Slimline Bar Fridge Guide: Narrow and Tall Upright Models",
+    "excerpt": "Short on space? Compare slimline and narrow upright bar fridges, including 390 mm wide 160 litre models, with dimensions, brands and placement tips.",
+    "image": "/images/products/cub-ss-p160-gold-1.webp",
+    "category": "Buying Guides",
+    "readTime": "5 min read"
+  },
+  {
+    "id": "outdoor-bar-with-refrigerator-guide",
+    "slug": "outdoor-bar-with-refrigerator-guide",
+    "title": "Outdoor Bar With Refrigerator: How to Set One Up",
+    "excerpt": "Planning an outdoor bar with a refrigerator? Learn how to choose the fridge, where to put it, what power and cover it needs and which outdoor bar fridge models suit.",
+    "image": "/images/products/rhino-gsp1h-ss-1.webp",
+    "category": "Buying Guides",
+    "readTime": "6 min read"
+  },
+  {
+    "id": "small-bar-freezer-guide",
+    "slug": "small-bar-freezer-guide",
+    "title": "Small Bar Freezers: Mini, Under Counter and Upright Options",
+    "excerpt": "Choosing a small bar freezer? Compare mini glass door and solid door freezers, under counter built in models and upright freezers, with sizes, dimensions and temperatures.",
+    "image": "/images/products/schmick-bd36-1.webp",
+    "category": "Buying Guides",
+    "readTime": "6 min read"
   }
 ];
 

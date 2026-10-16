@@ -42,3 +42,15 @@ Products: unique model-name titles; description = first sentence + free shipping
 | lockable-bar-fridge-guide | lockable bar fridge (90, KD 12) | mini fridge with lock (210, KD 14), bar fridge with lock (50, KD 11) |
 | rhino-bar-fridge-guide | rhino bar fridge (210, KD 6) | rhino fridges (110), rhino bar fridges (70), rhino fridge (70) |
 | branded-beer-fridge-guide | vb beer fridge (170, KD 15) | vb fridge (210, KD 16), man cave fridges (70, KD 3) |
+
+## Guide posts batch 3 (src/data/blogPostsGuides3.ts)
+| Post | Primary keyword | Also |
+|---|---|---|
+| bar-fridge-dimensions-guide | bar fridge dimensions (480, KD 9) | bar fridge width (90, KD 9), bar fridge height (70, KD 7) |
+| stainless-steel-bar-fridge-guide | stainless steel bar fridge (320, KD 14) | stainless bar fridge (170, KD 10), outdoor stainless fridge (30, KD 5) |
+| black-bar-fridge-guide | black bar fridge (1,000, KD 17) | black mini fridge (140, KD 19) |
+| slimline-bar-fridge-guide | slimline bar fridge (210, KD 16) | narrow bar fridge (50, KD 17), upright bar fridge (50, KD 5), tall slim fridge (110, KD 8) |
+| outdoor-bar-with-refrigerator-guide | outdoor bar with refrigerator (320, KD 6) | outdoor bar and fridge (50, KD 5), outdoor bar fridge cabinet (90, KD 6) |
+| small-bar-freezer-guide | small bar freezer (110, KD 16) | mini bar freezer (70, KD 15), bar freezers (480, KD 13) |
+
+Data quirk found 2026-10-18: schmick-yf-nl35-35l / yf-nl42-42l (Ice Boxes), schmick-ss-p160fa-pb-160l (Police Box skinny bar fridge) and dellcool-dw100cd-100l (bar fridge with mini freezer) are filed under bar-freezers with freezer temperature data that contradicts their names. Long descriptions are written from the names; category/data not changed.

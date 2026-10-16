@@ -205,6 +205,49 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
     tail(p, 'bar freezers', 'bar-freezers')
   ],
 
+  // Filed under bar freezers in the catalogue, but the product names say otherwise (ice boxes, a bar fridge,
+  // a bar fridge with a mini freezer). Written from the names and physical specs only; the freezer-style
+  // temperature, energy and noise data is deliberately left out because it contradicts the names.
+  'schmick-yf-nl35-35l': (p) => [
+    `The Schmick YF-NL35 is a ${p.capacityLitres} litre heavy duty roto mould ice box with a temperature gauge. It is listed for indoor or outdoor use.`,
+    '### Key features',
+    '- Heavy duty roto mould construction.',
+    '- Built-in temperature gauge.',
+    `- Capacity: ${p.capacityLitres} litres (${cans(p)}).`,
+    '### Size and fit',
+    `The ice box measures ${dims(p)}. Check the dimensions against the space or vehicle where you plan to use it.`,
+    tail(p, 'bar freezers', 'bar-freezers')
+  ],
+  'schmick-yf-nl42-42l': (p) => [
+    `The Schmick YF-NL42 is a ${p.capacityLitres} litre heavy duty roto mould ice box, listed for indoor or outdoor use.`,
+    '### Key features',
+    '- Heavy duty roto mould construction.',
+    `- Capacity: ${p.capacityLitres} litres.`,
+    '### Size and fit',
+    `The ice box measures ${dims(p)}. Check the dimensions against the space or vehicle where you plan to use it.`,
+    tail(p, 'bar freezers', 'bar-freezers')
+  ],
+  'schmick-ss-p160fa-pb-160l': (p) => [
+    `The Schmick SS-P160FA-PB is a ${p.capacityLitres} litre branded skinny upright bar fridge with a Police Box design. Its slim ${p.dimensions.width} mm width gives you generous storage in a narrow space.`,
+    '### Key features',
+    `- Holds ${cans(p)}.`,
+    '- Reversible door hinge for flexible installation.',
+    '- Tropical rated, listed for indoor or alfresco use.',
+    '### Size and fit',
+    `At ${dims(p)}, it stands tall and takes up very little floor space. Leave the manufacturer's ventilation clearance around the cabinet. Our [slimline bar fridge guide](/slimline-bar-fridge-guide) covers the narrow upright range.`,
+    tail(p, 'single door bar fridges', 'single-door')
+  ],
+  'dellcool-dw100cd-100l': (p) => [
+    `The Dellcool DW100CD is a ${p.capacityLitres} litre silent bar fridge with a mini freezer, listed for indoor use.`,
+    '### Key features',
+    '- Quiet running compressor.',
+    `- Holds ${cans(p)}.`,
+    '- Reversible door hinge for flexible installation.',
+    '### Size and fit',
+    `The cabinet measures ${dims(p)}. Allow the ventilation clearance the manufacturer specifies, and check the specifications table for the full details.`,
+    tail(p, 'bar freezers', 'bar-freezers')
+  ],
+
   // Retro and novelty
   'schmick-hus-bc46w-ret-46l': retroMini('white retro styling and a bottle opener'),
   'schmick-bc46b-travel-46l': retroMini('a vintage luggage case design'),
