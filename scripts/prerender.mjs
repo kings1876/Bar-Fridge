@@ -43,6 +43,7 @@ function renderStatic(route) {
     history: { pushState() {}, replaceState() {} }, matchMedia: () => ({ matches: false, addEventListener() {}, removeEventListener() {} })
   };
   globalThis.localStorage = { getItem: () => null, setItem() {}, removeItem() {} };
+  globalThis.__SSR__ = true; // staged sections render immediately in the server copy
   try {
     // Decorative icon SVGs make up a large share of the markup; the pre-built copy keeps the text and drops them.
     return ssr.renderStatic(route)

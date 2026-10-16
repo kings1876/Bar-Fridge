@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useShop } from '../context/ShopContext';
 import { PRODUCTS, CATEGORIES } from '../data/products';
 import { BLOG_CARDS } from '../data/slugIndex';
+import { Staged } from '../components/Staged';
 import { REVIEWS_DATA } from '../data/reviews';
 import { ProductCard } from '../components/ProductCard';
 import { TrustpilotBanner } from '../components/TrustpilotBanner';
@@ -476,6 +477,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* Categories Grid (A = Category -> Subcategory -> Product) */}
+      <Staged stage={1}>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
@@ -525,8 +527,10 @@ export const HomePage: React.FC = () => {
           ))}
         </div>
       </section>
+      </Staged>
 
       {/* Featured Products Showcase with Category Tabs */}
+      <Staged stage={2}>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
@@ -589,8 +593,10 @@ export const HomePage: React.FC = () => {
           </NavLink>
         </div>
       </section>
+      </Staged>
 
       {/* Technical Engineering Spotlight: Aussie Tropical Climate with Ambient Slideshow Background */}
+      <Staged stage={3}>
       <section className="relative overflow-hidden border-y border-slate-800 py-16 px-4 sm:px-6 lg:px-8 text-white">
         {/* Climate Section Background Slideshow */}
         <div className="absolute inset-0 z-0">
@@ -678,8 +684,10 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
+      </Staged>
 
       {/* Crypto Payment Promotion Banner (10% OFF) */}
+      <Staged stage={4}>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-50 via-amber-100/60 to-amber-50 border border-amber-300 p-8 sm:p-10 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -721,6 +729,7 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
+      </Staged>
 
       {/* Trustpilot Customer Reviews Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
@@ -776,6 +785,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* Latest Blog & Guides Section */}
+      <Staged stage={5}>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
@@ -832,8 +842,10 @@ export const HomePage: React.FC = () => {
           ))}
         </div>
       </section>
+      </Staged>
 
       {/* SEO Authority & Keywords Text Section */}
+      <Staged stage={6}>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white border border-slate-200 rounded-3xl p-8 space-y-6 text-xs text-slate-600 leading-relaxed shadow-sm">
           <h3 className="text-base sm:text-lg font-bold text-slate-900">
@@ -858,6 +870,7 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
+      </Staged>
     </div>
   );
 };
