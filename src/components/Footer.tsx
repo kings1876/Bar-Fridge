@@ -11,7 +11,7 @@ import {
   Award,
   CheckCircle2
 } from 'lucide-react';
-import { CATEGORIES } from '../data/products';
+import { CATEGORIES } from '../data/categories';
 import { NavLink } from './NavLink';
 
 export const Footer: React.FC = () => {

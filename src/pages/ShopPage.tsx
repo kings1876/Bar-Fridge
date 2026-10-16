@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { useShop } from '../context/ShopContext';
 import { PRODUCTS, CATEGORIES } from '../data/products';
 import { ProductCard } from '../components/ProductCard';
-import { CATEGORY_SEO } from '../seo/seo';
+import { CATEGORY_SEO } from '../seo/categorySeo';
 import { CategoryGuide } from '../components/CategoryGuide';
 import {
   Filter,

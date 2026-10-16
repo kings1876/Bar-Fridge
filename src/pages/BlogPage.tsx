@@ -16,7 +16,7 @@ import {
 export const BlogPage: React.FC = () => {
   const {
     currentPage,
-    selectedBlogPost,
+    selectedBlogSlug,
     addToast
   } = useShop();
 
@@ -25,6 +25,7 @@ export const BlogPage: React.FC = () => {
   const [copiedLink, setCopiedLink] = useState(false);
 
   // If in 'blog-post' view and selectedBlogPost exists, display single post view
+  const selectedBlogPost = BLOG_POSTS.find((b) => b.slug === selectedBlogSlug) || null;
   if (currentPage === 'blog-post' && selectedBlogPost) {
     const post = selectedBlogPost;
     const relatedPosts = BLOG_POSTS.filter(p => p.id !== post.id).slice(0, 2);

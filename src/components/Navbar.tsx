@@ -13,7 +13,7 @@ import {
   Flame,
   ChevronDown
 } from 'lucide-react';
-import { CATEGORIES } from '../data/products';
+import { CATEGORIES } from '../data/categories';
 import { NavLink } from './NavLink';
 
 const CATEGORY_SHORT_NAMES: Record<string, string> = {

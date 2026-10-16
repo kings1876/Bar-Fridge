@@ -1,8 +1,9 @@
 import React, { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
-import { Product, CartItem, PageView, BlogPost } from '../types';
-import { PRODUCTS, CATEGORIES } from '../data/products';
-import { slugify } from '../seo/seo';
-import { BLOG_POSTS } from '../data/blogPosts';
+import { Product, CartItem, PageView } from '../types';
+import { CATEGORIES } from '../data/categories';
+import { slugify } from '../seo/slug';
+// Only tiny id->slug maps live in the app shell; the full catalogue and article text load with the pages that use them.
+import { PRODUCT_SLUG_BY_ID, BLOG_SLUG_BY_ID, PRODUCT_SLUGS, BLOG_SLUGS } from '../data/slugIndex';
 
 export interface NavOptions {
   productId?: string;
@@ -13,11 +14,16 @@ export interface NavOptions {
 
 interface ParsedLocation {
   page: PageView;
-  product: Product | null;
-  blogPost: BlogPost | null;
+  productSlug: string | null;
+  blogSlug: string | null;
   category?: string;
   subcategory?: string;
 }
+
+const resolveProductSlug = (idOrSlug?: string) =>
+  idOrSlug ? PRODUCT_SLUG_BY_ID[idOrSlug] ?? (PRODUCT_SLUGS.has(idOrSlug) ? idOrSlug : undefined) : undefined;
+const resolveBlogSlug = (idOrSlug?: string) =>
+  idOrSlug ? BLOG_SLUG_BY_ID[idOrSlug] ?? (BLOG_SLUGS.has(idOrSlug) ? idOrSlug : undefined) : undefined;
 
 function buildPath(
   page: PageView,
@@ -51,29 +57,29 @@ function parseLocation(pathname: string, search: string): ParsedLocation {
 
   switch (first) {
     case undefined:
-      return { page: 'home', product: null, blogPost: null };
+      return { page: 'home', productSlug: null, blogSlug: null };
     case 'shop':
       return {
         page: 'shop',
-        product: null,
-        blogPost: null,
+        productSlug: null,
+        blogSlug: null,
         category: params.get('category') || 'all',
         subcategory: params.get('subcategory') || 'all'
       };
     case 'category': {
       const cat = CATEGORIES.find((c) => c.id === second);
-      if (!cat) return { page: 'shop', product: null, blogPost: null, category: 'all', subcategory: 'all' };
+      if (!cat) return { page: 'shop', productSlug: null, blogSlug: null, category: 'all', subcategory: 'all' };
       const sub = third ? cat.subcategories.find((x) => slugify(x) === third) : undefined;
-      return { page: 'shop', product: null, blogPost: null, category: cat.id, subcategory: sub ?? 'all' };
+      return { page: 'shop', productSlug: null, blogSlug: null, category: cat.id, subcategory: sub ?? 'all' };
     }
     case 'product': {
-      const product = second ? PRODUCTS.find((p) => p.slug === second) || null : null;
-      return { page: product ? 'product-detail' : 'shop', product, blogPost: null };
+      const productSlug = second && PRODUCT_SLUGS.has(second) ? second : null;
+      return { page: productSlug ? 'product-detail' : 'shop', productSlug, blogSlug: null };
     }
     case 'blog': {
-      if (!second) return { page: 'blog', product: null, blogPost: null };
-      const blogPost = BLOG_POSTS.find((b) => b.slug === second) || null;
-      return { page: blogPost ? 'blog-post' : 'blog', product: null, blogPost };
+      if (!second) return { page: 'blog', productSlug: null, blogSlug: null };
+      const blogSlug = BLOG_SLUGS.has(second) ? second : null;
+      return { page: blogSlug ? 'blog-post' : 'blog', productSlug: null, blogSlug };
     }
     case 'about':
     case 'contact':
@@ -82,14 +88,12 @@ function parseLocation(pathname: string, search: string): ParsedLocation {
     case 'refund':
     case 'privacy':
     case 'terms':
-      return { page: first as PageView, product: null, blogPost: null };
+      return { page: first as PageView, productSlug: null, blogSlug: null };
     default: {
       // Post-name permalinks: /{slug} resolves to a product or a blog post.
-      const product = PRODUCTS.find((p) => p.slug === first) || null;
-      if (product) return { page: 'product-detail', product, blogPost: null };
-      const blogPost = BLOG_POSTS.find((b) => b.slug === first) || null;
-      if (blogPost) return { page: 'blog-post', product: null, blogPost };
-      return { page: 'home', product: null, blogPost: null };
+      if (PRODUCT_SLUGS.has(first)) return { page: 'product-detail', productSlug: first, blogSlug: null };
+      if (BLOG_SLUGS.has(first)) return { page: 'blog-post', productSlug: null, blogSlug: first };
+      return { page: 'home', productSlug: null, blogSlug: null };
     }
   }
 }
@@ -106,10 +110,10 @@ interface ShopContextType {
   setCurrentPage: (page: PageView) => void;
   navigateTo: (page: PageView, options?: NavOptions) => void;
   getPath: (page: PageView, options?: NavOptions) => string;
-  selectedProduct: Product | null;
-  setSelectedProduct: (product: Product | null) => void;
-  selectedBlogPost: BlogPost | null;
-  setSelectedBlogPost: (post: BlogPost | null) => void;
+  selectedProductSlug: string | null;
+  setSelectedProductSlug: (slug: string | null) => void;
+  selectedBlogSlug: string | null;
+  setSelectedBlogSlug: (slug: string | null) => void;
   
   // Filtering & Search
   selectedCategory: string;
@@ -164,8 +168,8 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const initial = initialRef.current;
 
   const [currentPage, setCurrentPage] = useState<PageView>(initial.page);
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(initial.product);
-  const [selectedBlogPost, setSelectedBlogPost] = useState<BlogPost | null>(initial.blogPost);
+  const [selectedProductSlug, setSelectedProductSlug] = useState<string | null>(initial.productSlug);
+  const [selectedBlogSlug, setSelectedBlogSlug] = useState<string | null>(initial.blogSlug);
 
   // Shop Filters
   const [selectedCategory, setSelectedCategory] = useState<string>(initial.category ?? 'all');
@@ -214,17 +218,11 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   const getPath = (page: PageView, options?: NavOptions): string => {
-    const product = options?.productId
-      ? PRODUCTS.find((p) => p.id === options.productId || p.slug === options.productId)
-      : undefined;
-    const blogPost = options?.blogId
-      ? BLOG_POSTS.find((b) => b.id === options.blogId || b.slug === options.blogId)
-      : undefined;
     return buildPath(page, {
       categoryId: options?.categoryId,
       subcategory: options?.subcategory,
-      productSlug: product?.slug,
-      blogSlug: blogPost?.slug
+      productSlug: resolveProductSlug(options?.productId),
+      blogSlug: resolveBlogSlug(options?.blogId)
     });
   };
 
@@ -232,17 +230,10 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     page: PageView,
     options?: NavOptions
   ) => {
-    let product: Product | undefined;
-    let blogPost: BlogPost | undefined;
-
-    if (options?.productId) {
-      product = PRODUCTS.find((p) => p.id === options.productId || p.slug === options.productId);
-      if (product) setSelectedProduct(product);
-    }
-    if (options?.blogId) {
-      blogPost = BLOG_POSTS.find((b) => b.id === options.blogId || b.slug === options.blogId);
-      if (blogPost) setSelectedBlogPost(blogPost);
-    }
+    const productSlug = resolveProductSlug(options?.productId);
+    const blogSlug = resolveBlogSlug(options?.blogId);
+    if (productSlug) setSelectedProductSlug(productSlug);
+    if (blogSlug) setSelectedBlogSlug(blogSlug);
     if (options?.categoryId) {
       setSelectedCategory(options.categoryId);
       setSelectedSubcategory(options.subcategory || 'all');
@@ -252,8 +243,8 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const path = buildPath(page, {
       categoryId: options?.categoryId,
       subcategory: options?.subcategory,
-      productSlug: product?.slug,
-      blogSlug: blogPost?.slug
+      productSlug,
+      blogSlug
     });
     if (window.location.pathname + window.location.search !== path) {
       window.history.pushState({}, '', path);
@@ -264,7 +255,7 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
   // Old /product/{slug} and /blog/{slug} links still resolve; rewrite them to /{slug}.
   useEffect(() => {
-    const slug = initial.product?.slug ?? initial.blogPost?.slug;
+    const slug = initial.productSlug ?? initial.blogSlug;
     if (slug && window.location.pathname !== `/${slug}`) {
       window.history.replaceState({}, '', `/${slug}`);
     }
@@ -274,8 +265,8 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const handlePopState = () => {
       const parsed = parseLocation(window.location.pathname, window.location.search);
       setCurrentPage(parsed.page);
-      setSelectedProduct(parsed.product);
-      setSelectedBlogPost(parsed.blogPost);
+      setSelectedProductSlug(parsed.productSlug);
+      setSelectedBlogSlug(parsed.blogSlug);
       if (parsed.category !== undefined) setSelectedCategory(parsed.category);
       if (parsed.subcategory !== undefined) setSelectedSubcategory(parsed.subcategory);
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -357,10 +348,10 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         setCurrentPage,
         navigateTo,
         getPath,
-        selectedProduct,
-        setSelectedProduct,
-        selectedBlogPost,
-        setSelectedBlogPost,
+        selectedProductSlug,
+        setSelectedProductSlug,
+        selectedBlogSlug,
+        setSelectedBlogSlug,
         selectedCategory,
         setSelectedCategory,
         selectedSubcategory,

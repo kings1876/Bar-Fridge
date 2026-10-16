@@ -24,6 +24,42 @@ await build({
 const { seoForPath, allRoutes, PRODUCTS, CATEGORIES, CATEGORY_GUIDES, BLOG_POSTS, FAQS_DATA, SITE, slugify, richToHtml, longDescriptionFor } = await import(pathToFileURL(outfile).href);
 
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
+const manifest = JSON.parse(fs.readFileSync(path.join(dist, '.vite', 'manifest.json'), 'utf8'));
+const entryFiles = new Set();
+const collect = (key, seen = new Set(), out = new Set()) => {
+  const c = manifest[key];
+  if (!c || seen.has(key)) return out;
+  seen.add(key);
+  out.add(c.file);
+  (c.imports || []).forEach((k) => collect(k, seen, out));
+  return out;
+};
+const entryKey = Object.keys(manifest).find((k) => manifest[k].isEntry);
+collect(entryKey).forEach((f) => entryFiles.add(f));
+const PAGE_FILE = {
+  home: 'src/pages/HomePage.tsx', shop: 'src/pages/ShopPage.tsx', product: 'src/pages/ProductDetailPage.tsx',
+  blog: 'src/pages/BlogPage.tsx', about: 'src/pages/AboutPage.tsx', contact: 'src/pages/ContactPage.tsx',
+  faq: 'src/pages/FAQPage.tsx', policies: 'src/pages/PoliciesPage.tsx'
+};
+function pageKind(route, m) {
+  if (route === '/') return 'home';
+  if (route === '/shop' || route.startsWith('/category/')) return 'shop';
+  if (m.ogType === 'product') return 'product';
+  if (route === '/blog' || m.ogType === 'article') return 'blog';
+  if (['/about', '/contact', '/faq'].includes(route)) return route.slice(1);
+  return 'policies';
+}
+function preloadHints(route, m) {
+  const key = PAGE_FILE[pageKind(route, m)];
+  const files = [...collect(key)].filter((f) => !entryFiles.has(f));
+  const links = files.map((f) => `<link rel="modulepreload" crossorigin href="/${f}" />`);
+  const kind = pageKind(route, m);
+  if (['home', 'product', 'shop'].includes(kind) && m.image) {
+    const img = m.image.replace(/^https?:\/\/[^/]+/, '');
+    links.push(`<link rel="preload" as="image" href="${esc(img)}" fetchpriority="high" />`);
+  }
+  return links.join('\n    ');
+}
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const jsonSafe = (o) => JSON.stringify(o).replace(/</g, '\\u003c');
 
@@ -109,7 +145,7 @@ for (const route of allRoutes()) {
     .replace(/\s*<meta name="description"[^>]*>/, '')
     .replace(/\s*<meta property="og:[^>]*>/g, '')
     .replace(/\s*<meta name="twitter:card"[^>]*>/, '')
-    .replace('</head>', `    ${head(m)}\n  </head>`)
+    .replace('</head>', `    ${head(m)}\n    ${preloadHints(route, m)}\n  </head>`)
     .replace('<div id="root"></div>', `<div id="root">${fallback(route, m)}</div>`);
 
   const file = route === '/' ? path.join(dist, 'index.html') : path.join(dist, route.slice(1), 'index.html');

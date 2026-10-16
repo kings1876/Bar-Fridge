@@ -8,28 +8,44 @@ import { ShopProvider, useShop } from './context/ShopContext';
 import { Seo } from './components/Seo';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
-import { CartDrawer } from './components/CartDrawer';
-import { OrderCheckoutModal } from './components/OrderCheckoutModal';
-import { LiveChatWidget } from './components/LiveChatWidget';
 import { CookieBanner } from './components/CookieBanner';
 import { ToastContainer } from './components/ToastContainer';
 
-// Pages
-import { HomePage } from './pages/HomePage';
-import { ShopPage } from './pages/ShopPage';
-import { ProductDetailPage } from './pages/ProductDetailPage';
-import { BlogPage } from './pages/BlogPage';
-import { AboutPage } from './pages/AboutPage';
-import { ContactPage } from './pages/ContactPage';
-import { FAQPage } from './pages/FAQPage';
-import { PoliciesPage } from './pages/PoliciesPage';
+// Pages are split per route so a visitor only downloads the page they open.
+const HomePage = lazy(() => import('./pages/HomePage').then((m) => ({ default: m.HomePage })));
+const ShopPage = lazy(() => import('./pages/ShopPage').then((m) => ({ default: m.ShopPage })));
+const ProductDetailPage = lazy(() => import('./pages/ProductDetailPage').then((m) => ({ default: m.ProductDetailPage })));
+const BlogPage = lazy(() => import('./pages/BlogPage').then((m) => ({ default: m.BlogPage })));
+const AboutPage = lazy(() => import('./pages/AboutPage').then((m) => ({ default: m.AboutPage })));
+const ContactPage = lazy(() => import('./pages/ContactPage').then((m) => ({ default: m.ContactPage })));
+const FAQPage = lazy(() => import('./pages/FAQPage').then((m) => ({ default: m.FAQPage })));
+const PoliciesPage = lazy(() => import('./pages/PoliciesPage').then((m) => ({ default: m.PoliciesPage })));
+// Overlays are only needed after interaction: load them once the browser is idle (or when first opened).
+const CartDrawer = lazy(() => import('./components/CartDrawer').then((m) => ({ default: m.CartDrawer })));
+const OrderCheckoutModal = lazy(() => import('./components/OrderCheckoutModal').then((m) => ({ default: m.OrderCheckoutModal })));
+const LiveChatWidget = lazy(() => import('./components/LiveChatWidget').then((m) => ({ default: m.LiveChatWidget })));
+
+function useIdle(): boolean {
+  const [idle, setIdle] = React.useState(false);
+  React.useEffect(() => {
+    const w = window as unknown as { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number; cancelIdleCallback?: (id: number) => void };
+    if (w.requestIdleCallback) {
+      const id = w.requestIdleCallback(() => setIdle(true), { timeout: 3000 });
+      return () => w.cancelIdleCallback?.(id);
+    }
+    const t = setTimeout(() => setIdle(true), 2000);
+    return () => clearTimeout(t);
+  }, []);
+  return idle;
+}
 // Admin and order-confirmation pages are rarely used: load them on demand to keep the public bundle small.
 const AdminApp = lazy(() => import('./admin/AdminApp').then((m) => ({ default: m.AdminApp })));
 const PaymentDetailsPage = lazy(() => import('./pages/OrderPublic').then((m) => ({ default: m.PaymentDetailsPage })));
 const ConfirmPaymentPage = lazy(() => import('./pages/OrderPublic').then((m) => ({ default: m.ConfirmPaymentPage })));
 
 const AppContent: React.FC = () => {
-  const { currentPage } = useShop();
+  const { currentPage, isCartDrawerOpen, isOrderModalOpen } = useShop();
+  const idle = useIdle();
 
   const renderCurrentPage = () => {
     switch (currentPage) {
@@ -63,14 +79,16 @@ const AppContent: React.FC = () => {
       <Seo />
       <Navbar />
       <main className="flex-1">
-        {renderCurrentPage()}
+        <Suspense fallback={<div className="min-h-[60vh]" />}>{renderCurrentPage()}</Suspense>
       </main>
       <Footer />
 
       {/* Global Overlays & Utilities */}
-      <CartDrawer />
-      <OrderCheckoutModal />
-      <LiveChatWidget />
+      <Suspense fallback={null}>
+        {(idle || isCartDrawerOpen) && <CartDrawer />}
+        {(idle || isOrderModalOpen) && <OrderCheckoutModal />}
+        {idle && <LiveChatWidget />}
+      </Suspense>
       <CookieBanner />
       <ToastContainer />
     </div>

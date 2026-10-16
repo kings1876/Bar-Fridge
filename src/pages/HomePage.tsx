@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useShop } from '../context/ShopContext';
 import { PRODUCTS, CATEGORIES } from '../data/products';
-import { BLOG_POSTS } from '../data/blogPosts';
+import { BLOG_CARDS } from '../data/slugIndex';
 import { REVIEWS_DATA } from '../data/reviews';
 import { ProductCard } from '../components/ProductCard';
 import { TrustpilotBanner } from '../components/TrustpilotBanner';
@@ -793,7 +793,7 @@ export const HomePage: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {BLOG_POSTS.slice(0, 3).map((post) => (
+          {BLOG_CARDS.slice(0, 3).map((post) => (
             <NavLink
               key={post.id}
               page="blog-post"

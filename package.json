@@ -8,7 +8,10 @@
     "build": "vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "gen:index": "node scripts/gen-slug-index.mjs",
+    "predev": "npm run gen:index",
+    "prebuild": "npm run gen:index"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

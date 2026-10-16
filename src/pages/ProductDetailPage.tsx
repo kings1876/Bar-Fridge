@@ -20,7 +20,7 @@ import {
 
 export const ProductDetailPage: React.FC = () => {
   const {
-    selectedProduct,
+    selectedProductSlug,
     addToCart,
     formatPrice,
     openOrderModalWithProduct
@@ -29,7 +29,7 @@ export const ProductDetailPage: React.FC = () => {
   const [quantity, setQuantity] = useState(1);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
-  const product = selectedProduct || PRODUCTS[0];
+  const product = PRODUCTS.find((p) => p.slug === selectedProductSlug) || PRODUCTS[0];
   const images = product.galleryImages && product.galleryImages.length > 0 
     ? product.galleryImages 
     : [product.image];
