@@ -1,5 +1,6 @@
 import { BlogPost } from '../types';
 import { GUIDE_POSTS } from './blogPostsGuides';
+import { GUIDE_POSTS_2 } from './blogPostsGuides2';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -102,5 +103,6 @@ export const BLOG_POSTS: BlogPost[] = [
       '4. Set Realistic Target Temperatures: For beer and soft drinks, 2°C to 4°C is exceptionally cold and refreshing. Setting your thermostat to -2°C increases energy usage needlessly unless you are actively preparing for an afternoon gathering.'
     ]
   },
-  ...GUIDE_POSTS
+  ...GUIDE_POSTS,
+  ...GUIDE_POSTS_2
 ];

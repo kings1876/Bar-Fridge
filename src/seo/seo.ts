@@ -138,6 +138,42 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Retro bar fridge guide: compare 46 litre and 70 litre retro mini bar fridges, branded designs and what to check before you buy.'
   },
+  'dual-zone-wine-and-beverage-fridge-guide': {
+    keyword: 'dual zone wine and beverage fridge',
+    title: 'Dual Zone Wine and Beverage Fridge: How to Choose One',
+    description:
+      'A dual zone wine and beverage fridge holds wine and beer at different temperatures. Learn how zones work, sizes to consider and under bench fitting.'
+  },
+  'commercial-bar-fridge-guide': {
+    keyword: 'commercial bar fridge',
+    title: 'Commercial Bar Fridge Guide for Pubs, Cafes and Venues',
+    description:
+      'Choosing a commercial bar fridge? Compare double, sliding and triple door models from 190 to 473 litres, plus noise, heat and running costs.'
+  },
+  'mini-bar-fridge-guide': {
+    keyword: 'mini bar fridges',
+    title: 'Mini Bar Fridge Guide: 31, 46 and 70 Litre Sizes Compared',
+    description:
+      'Choosing a mini bar fridge? Compare compact sizes from 23 to 70 litres, how many cans each holds, glass door vs retro styles and where they fit.'
+  },
+  'lockable-bar-fridge-guide': {
+    keyword: 'lockable bar fridge',
+    title: 'Lockable Bar Fridge: Mini Fridges With a Lock Explained',
+    description:
+      'Need a lockable bar fridge or a mini fridge with a lock? See where a lock helps, which of our models have a lockable door and how to pick a size.'
+  },
+  'rhino-bar-fridge-guide': {
+    keyword: 'rhino bar fridge',
+    title: 'Rhino Bar Fridges: ENVY, SG, GSP and SGT Ranges Explained',
+    description:
+      'A guide to Rhino bar fridges: how the ENVY, SG, GSP and SGT model codes work and which Rhino fridge suits indoor, alfresco or commercial use.'
+  },
+  'branded-beer-fridge-guide': {
+    keyword: 'vb beer fridge',
+    title: 'Branded Beer Fridges: VB, Carlton & Great Northern',
+    description:
+      'Looking for a VB beer fridge or other branded bar fridge for your man cave? Compare Cub mini, glass door and skinny upright designs and sizes.'
+  },
   'energy-efficiency-bar-fridge-power-bills': {
     keyword: 'energy efficient bar fridge',
     title: 'Energy Efficient Bar Fridge: Cut Running Costs',

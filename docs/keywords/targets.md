@@ -32,3 +32,13 @@ Fallback for Shop if it underperforms: outdoor bar refrigerator.
 | Blog: retro-bar-fridge-guide | retro bar fridge (480, KD 11) | mini retro fridge, retro style fridge |
 Guide posts live in src/data/blogPostsGuides.ts (markup: ## h2, ### h3, - list, [label](/path)).
 Products: unique model-name titles; description = first sentence + free shipping.
+
+## Guide posts batch 2 (src/data/blogPostsGuides2.ts)
+| Post | Primary keyword | Also |
+|---|---|---|
+| dual-zone-wine-and-beverage-fridge-guide | dual zone wine and beverage fridge (390, KD 4-12) | wine fridge dual zone (210, KD 10) |
+| commercial-bar-fridge-guide | commercial bar fridge (590, KD 6) | commercial bar fridges (260, KD 12) |
+| mini-bar-fridge-guide | mini bar fridges (320, KD 17) | mini fridge vintage (210, KD 6) |
+| lockable-bar-fridge-guide | lockable bar fridge (90, KD 12) | mini fridge with lock (210, KD 14), bar fridge with lock (50, KD 11) |
+| rhino-bar-fridge-guide | rhino bar fridge (210, KD 6) | rhino fridges (110), rhino bar fridges (70), rhino fridge (70) |
+| branded-beer-fridge-guide | vb beer fridge (170, KD 15) | vb fridge (210, KD 16), man cave fridges (70, KD 3) |
