@@ -97,7 +97,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               {product.capacityLitres}L Capacity
             </span>
             <span className="bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200/80 font-medium">
-              {product.noiseLevelDb}dB Quiet
+              {product.noiseLevelDb > 0 ? `${product.noiseLevelDb}dB Quiet` : product.subcategory}
             </span>
             <span className="bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200/80 font-medium truncate max-w-[130px]">
               {product.dimensions.width}×{product.dimensions.height}mm

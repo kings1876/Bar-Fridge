@@ -4,7 +4,7 @@ export const CATEGORIES = [
     id: 'single-door',
     name: 'Single Door Bar Fridges',
     description: 'Compact and underbench single door glass, solid, and novelty bar fridges for homes and bars.',
-    subcategories: ['Glass Door Display', 'Novelty & Branded Mini Bar', 'Skinny Upright', 'Solid Stainless Steel Door', 'Night Club Multi-Colour LED']
+    subcategories: ['Glass Door Display', 'Novelty & Branded Mini Bar', 'Skinny Upright', 'Solid Stainless Steel Door', 'Night Club Multi-Colour LED', 'Bar Fridge With Freezer', 'Ice Boxes & Coolers']
   },
   {
     id: 'double-triple-door',

@@ -340,19 +340,26 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
     if (sub) {
       const subProducts = inCat.filter((p) => p.subcategory === sub);
       const path = `/category/${second}/${slugify(sub)}`;
+      const SUB_OVERRIDE: Record<string, { h1: string; desc: string }> = {
+        'Ice Boxes & Coolers': { h1: 'Ice Boxes & Coolers', desc: 'Heavy duty roto mould ice boxes and coolers in 35 and 42 litre sizes, with free shipping across Australia.' },
+        'Bar Fridge With Freezer': { h1: 'Bar Fridge With Freezer', desc: 'A bar fridge with a mini freezer in one cabinet: compare capacity, dimensions and ratings, with free shipping across Australia.' }
+      };
+      const ov = SUB_OVERRIDE[sub];
       const h1 = `${sub} ${plan.keyword === 'wine fridge' ? 'Fridges' : 'Bar Fridges'}`.replace('Bar Fridges Bar Fridges', 'Bar Fridges');
       return {
         title: trim(`${sub} | ${cat.name}`, 60),
-        description: trim(
-          `${sub}: ${subProducts.length} ${plan.keyword} models in the ${cat.name} range. Compare sizes and prices with free shipping across Australia.`,
-          158
-        ),
+        description: ov
+          ? ov.desc
+          : trim(
+              `${sub}: ${subProducts.length} ${plan.keyword} models in the ${cat.name} range. Compare sizes and prices with free shipping across Australia.`,
+              158
+            ),
         canonical: abs(path),
         image: abs(subProducts[0]?.image ?? DEFAULT_IMAGE),
         // thin lists (1-2 products) just duplicate the product pages: keep crawlable but out of the index
         robots: subProducts.length < 3 ? 'noindex, follow' : INDEX,
         ogType: 'website',
-        h1,
+        h1: ov ? ov.h1 : h1,
         keyword: plan.keyword,
         lead: `${sub}: ${subProducts.length} models in our ${cat.name} range.`,
         jsonLd: [

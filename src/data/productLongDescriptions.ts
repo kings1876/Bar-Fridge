@@ -216,7 +216,7 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
     `- Capacity: ${p.capacityLitres} litres (${cans(p)}).`,
     '### Size and fit',
     `The ice box measures ${dims(p)}. Check the dimensions against the space or vehicle where you plan to use it.`,
-    tail(p, 'bar freezers', 'bar-freezers')
+    tail(p, 'single door bar fridges, ice boxes and coolers', 'single-door')
   ],
   'schmick-yf-nl42-42l': (p) => [
     `The Schmick YF-NL42 is a ${p.capacityLitres} litre heavy duty roto mould ice box, listed for indoor or outdoor use.`,
@@ -225,7 +225,7 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
     `- Capacity: ${p.capacityLitres} litres.`,
     '### Size and fit',
     `The ice box measures ${dims(p)}. Check the dimensions against the space or vehicle where you plan to use it.`,
-    tail(p, 'bar freezers', 'bar-freezers')
+    tail(p, 'single door bar fridges, ice boxes and coolers', 'single-door')
   ],
   'schmick-ss-p160fa-pb-160l': (p) => [
     `The Schmick SS-P160FA-PB is a ${p.capacityLitres} litre branded skinny upright bar fridge with a Police Box design. Its slim ${p.dimensions.width} mm width gives you generous storage in a narrow space.`,
@@ -245,7 +245,7 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
     '- Reversible door hinge for flexible installation.',
     '### Size and fit',
     `The cabinet measures ${dims(p)}. Allow the ventilation clearance the manufacturer specifies, and check the specifications table for the full details.`,
-    tail(p, 'bar freezers', 'bar-freezers')
+    tail(p, 'single door bar fridges', 'single-door')
   ],
 
   // Retro and novelty

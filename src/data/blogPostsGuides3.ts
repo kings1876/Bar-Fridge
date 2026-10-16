@@ -25,7 +25,7 @@ export const GUIDE_POSTS_3: BlogPost[] = [
       'All measurements are exterior dimensions in millimetres, taken from the product specifications:',
       '- Mini, up to 50 litres (28 models): about 350 to 520 mm wide, 370 to 500 mm deep and 462 to 785 mm high.',
       '- 60 to 70 litres (33 models): about 430 to 460 mm wide, 445 to 500 mm deep and 605 to 960 mm high.',
-      '- 89 to 132 litres, single door (37 models): about 470 to 600 mm wide, 500 to 586 mm deep and 650 to 875 mm high.',
+      '- 89 to 132 litres, single door (38 models): about 470 to 600 mm wide, 500 to 595 mm deep and 650 to 875 mm high.',
       '- Alfresco and outdoor, 129 to 248 litres (11 models): about 598 to 900 mm wide, 500 to 618 mm deep and 840 to 865 mm high.',
       '- Double door, 208 litres and up (18 models): about 870 to 900 mm wide and 500 to 590 mm deep, with heights from 800 mm to 1,820 mm for the tall models.',
       '- Triple door, 190 to 399 litres (11 models): about 870 to 1,350 mm wide, 500 to 590 mm deep and 800 to 875 mm high.',

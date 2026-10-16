@@ -196,10 +196,12 @@ export const ProductDetailPage: React.FC = () => {
               <div className="text-slate-500 text-[10px] font-medium">Capacity</div>
               <div className="text-slate-900 font-black text-sm mt-0.5">{product.capacityLitres}L</div>
             </div>
-            <div className="bg-slate-50 p-3 rounded-2xl border border-slate-200">
-              <div className="text-slate-500 text-[10px] font-medium">Sound Rating</div>
-              <div className="text-slate-900 font-black text-sm mt-0.5">{product.noiseLevelDb}dB</div>
-            </div>
+            {product.noiseLevelDb > 0 && (
+              <div className="bg-slate-50 p-3 rounded-2xl border border-slate-200">
+                <div className="text-slate-500 text-[10px] font-medium">Sound Rating</div>
+                <div className="text-slate-900 font-black text-sm mt-0.5">{product.noiseLevelDb}dB</div>
+              </div>
+            )}
             <div className="bg-slate-50 p-3 rounded-2xl border border-slate-200">
               <div className="text-slate-500 text-[10px] font-medium">Temp Range</div>
               <div className="text-sky-700 font-bold text-xs mt-0.5 truncate">{product.temperatureRange.split('(')[0]}</div>
@@ -299,10 +301,12 @@ export const ProductDetailPage: React.FC = () => {
             <span className="text-slate-500 font-medium">Finish & Construction:</span>
             <span className="text-slate-900 font-semibold text-right max-w-[60%]">{product.finish}</span>
           </div>
-          <div className="flex justify-between py-2 border-b border-slate-100">
-            <span className="text-slate-500 font-medium">Noise Level Rating:</span>
-            <span className="text-slate-900 font-semibold text-right">{product.noiseLevelDb} Decibels (Whisper Quiet)</span>
-          </div>
+          {product.noiseLevelDb > 0 && (
+            <div className="flex justify-between py-2 border-b border-slate-100">
+              <span className="text-slate-500 font-medium">Noise Level Rating:</span>
+              <span className="text-slate-900 font-semibold text-right">{product.noiseLevelDb} Decibels (Whisper Quiet)</span>
+            </div>
+          )}
         </div>
       </div>
 

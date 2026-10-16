@@ -11,7 +11,8 @@ export const CategoryGuide: React.FC<{ categoryId: string }> = ({ categoryId }) 
   const cat = CATEGORIES.find((c) => c.id === categoryId);
   if (!guide || !cat) return null;
 
-  const inCat = PRODUCTS.filter((p) => p.category === categoryId);
+  // Ice boxes live in this category for navigation but aren't bar fridges: keep them out of the count and from-price.
+  const inCat = PRODUCTS.filter((p) => p.category === categoryId && p.subcategory !== 'Ice Boxes & Coolers');
   const from = inCat.length ? Math.min(...inCat.map((p) => p.price)) : 0;
 
   return (
