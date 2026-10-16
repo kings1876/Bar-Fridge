@@ -21,7 +21,7 @@ await build({
   outfile,
   logLevel: 'error'
 });
-const { seoForPath, allRoutes, PRODUCTS, CATEGORIES, CATEGORY_GUIDES, BLOG_POSTS, FAQS_DATA, SITE, slugify, richToHtml, longDescriptionFor } = await import(pathToFileURL(outfile).href);
+const { seoForPath, allRoutes, PRODUCTS, CATEGORIES, CATEGORY_GUIDES, SUBCATEGORY_GUIDES, subStats, BLOG_POSTS, FAQS_DATA, SITE, slugify, richToHtml, longDescriptionFor } = await import(pathToFileURL(outfile).href);
 
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
 const manifest = JSON.parse(fs.readFileSync(path.join(dist, '.vite', 'manifest.json'), 'utf8'));
@@ -138,8 +138,17 @@ function fallback(route, m) {
         `<h3>Frequently asked questions</h3>` + g.faqs.map((f) => `<h4>${esc(f.q)}</h4><p>${esc(f.a)}</p>`).join('')
       : '';
     const cat = CATEGORIES.find((c) => c.id === id);
+    let subGuide = '';
+    if (route.split('/').length === 4) {
+      const subName = cat.subcategories.find((s) => slugify(s) === route.split('/')[3]);
+      const sg = subName && SUBCATEGORY_GUIDES[subName];
+      if (sg) {
+        const items = PRODUCTS.filter((p) => p.category === id && p.subcategory === subName);
+        subGuide = `<h2>${esc(sg.heading)}</h2><p>${esc(subStats(items, sg.showRatings !== false))}</p>${sg.intro.map((t) => `<p>${esc(t)}</p>`).join('')}<h3>What to look for</h3><ul>${sg.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>${li(sg.links.map((l) => [l.path, l.label]))}`;
+      }
+    }
     const subs = route.split('/').length === 3 ? `<h2>Browse ${esc(cat.name)} by type</h2>${li(cat.subcategories.map((s) => [`/category/${id}/${slugify(s)}`, s]))}` : `<p>${link(`/category/${id}`, `All ${cat.name}`)}</p><h2>Other types</h2>${li(cat.subcategories.filter((s) => `/category/${id}/${slugify(s)}` !== route).map((s) => [`/category/${id}/${slugify(s)}`, s]))}`;
-    extra = guide + subs + `<ul>${PRODUCTS.filter((p) => p.category === id && (route.split('/').length === 3 || `/category/${id}/${slugify(p.subcategory)}` === route)).map((p) => `<li>${link(`/${p.slug}`, p.name)}</li>`).join('')}</ul>`;
+    extra = guide + subGuide + subs + `<ul>${PRODUCTS.filter((p) => p.category === id && (route.split('/').length === 3 || `/category/${id}/${slugify(p.subcategory)}` === route)).map((p) => `<li>${link(`/${p.slug}`, p.name)}</li>`).join('')}</ul>`;
   } else if (m.ogType === 'product') {
     const p = PRODUCTS.find((x) => `/${x.slug}` === route);
     const long = longDescriptionFor(p.slug);

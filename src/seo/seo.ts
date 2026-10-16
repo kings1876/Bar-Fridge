@@ -6,11 +6,12 @@ import { PRODUCTS, CATEGORIES } from '../data/products';
 import { BLOG_POSTS } from '../data/blogPosts';
 import { FAQS_DATA } from '../data/faqs';
 import { CATEGORY_GUIDES } from '../data/categoryContent';
+import { SUBCATEGORY_GUIDES, subStats } from '../data/subcategoryContent';
 import { richToHtml, richToText } from './richtext';
 import { longDescriptionFor } from '../data/productLongDescriptions';
 import { SITE, REPLY } from '../../shared/reply.config.js';
 
-export { PRODUCTS, CATEGORIES, CATEGORY_GUIDES, BLOG_POSTS, FAQS_DATA, SITE, richToHtml, longDescriptionFor };
+export { PRODUCTS, CATEGORIES, CATEGORY_GUIDES, SUBCATEGORY_GUIDES, subStats, BLOG_POSTS, FAQS_DATA, SITE, richToHtml, longDescriptionFor };
 
 export interface SeoMeta {
   title: string;

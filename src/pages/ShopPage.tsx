@@ -4,6 +4,7 @@ import { PRODUCTS, CATEGORIES } from '../data/products';
 import { ProductCard } from '../components/ProductCard';
 import { CATEGORY_SEO } from '../seo/categorySeo';
 import { CategoryGuide } from '../components/CategoryGuide';
+import { SubcategoryGuide } from '../components/SubcategoryGuide';
 import {
   Filter,
   Search,
@@ -467,6 +468,9 @@ export const ShopPage: React.FC = () => {
       </div>
 
       {activeCategoryObj && selectedSubcategory === 'all' && <CategoryGuide categoryId={activeCategoryObj.id} />}
+      {activeCategoryObj && selectedSubcategory !== 'all' && (
+        <SubcategoryGuide categoryId={activeCategoryObj.id} subcategory={selectedSubcategory} />
+      )}
     </div>
   );
 };
