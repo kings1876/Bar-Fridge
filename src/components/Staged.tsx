@@ -1,23 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-// Renders heavy below-the-fold sections in consecutive short tasks instead of one long one, which keeps the
-// main thread responsive during the first load (lower Total Blocking Time). Every section still renders
-// within a fraction of a second, never depends on scrolling or idle callbacks, and the build-time
-// server render (flagged with globalThis.__SSR__) includes everything immediately.
-let firstLoadDone = false;
-
-export const Staged: React.FC<{ stage: number; minHeight?: number; children: React.ReactNode }> = ({ stage, minHeight = 480, children }) => {
-  const immediate = stage <= 0 || firstLoadDone || Boolean((globalThis as { __SSR__?: boolean }).__SSR__);
+// Below-the-fold sections render when they approach the viewport instead of during the first load, which keeps
+// the main thread free while the page becomes interactive (lower Total Blocking Time). Crawlers and no-JS
+// visitors get the full prerendered copy, and the build-time server render (globalThis.__SSR__) includes everything.
+export const Staged: React.FC<{ stage: number; minHeight?: number; children: React.ReactNode }> = ({ stage, minHeight = 600, children }) => {
+  const immediate = stage <= 0 || Boolean((globalThis as { __SSR__?: boolean }).__SSR__) || typeof IntersectionObserver === 'undefined';
   const [ready, setReady] = useState(immediate);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (ready) return;
-    const t = setTimeout(() => {
-      setReady(true);
-      firstLoadDone = true;
-    }, stage * 70);
-    return () => clearTimeout(t);
-  }, [ready, stage]);
+    if (ready || !ref.current) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setReady(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: '900px 0px' }
+    );
+    io.observe(ref.current);
+    return () => io.disconnect();
+  }, [ready]);
 
-  return ready ? <>{children}</> : <div aria-hidden="true" style={{ minHeight }} />;
+  return ready ? <>{children}</> : <div ref={ref} aria-hidden="true" style={{ minHeight }} />;
 };
