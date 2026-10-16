@@ -252,7 +252,7 @@ export const GUIDE_POSTS_3: BlogPost[] = [
       '## Upright freezers',
       'For more storage in a small footprint, upright freezers go up instead of out. The [Schmick MSLF241](/schmick-mslf241-241l) is a 241 litre upright, and the Schmick MSF230 is a 214 litre upright, both 540 x 550 x 1,770 mm.',
       '## Portable camping freezers',
-      'The [Cub BDC60-GNBC](/cub-bdc60-gnbc-60l) is a 60 litre portable camping fridge freezer that runs on 12 to 24V or 240V power.',
+      'The [Cub BDC60-GNBC](/cub-bdc60-gnbc-60l) is a 60 litre portable camping fridge freezer that runs on 12 to 24V or 240V power. If you only need a rugged portable cooler, our heavy duty roto mould ice boxes, the [Schmick YF-NL35](/schmick-yf-nl35-35l) at 35 litres and the [Schmick YF-NL42](/schmick-yf-nl42-42l) at 42 litres, are listed for indoor or outdoor use.',
       '## What temperature does a bar freezer run at?',
       'The freezers listed above run at -15°C to -18°C according to their specifications. Check the temperature range on the product page for the model you choose.',
       '## Ratings at a glance',

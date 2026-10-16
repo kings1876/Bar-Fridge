@@ -36,6 +36,7 @@ export const GUIDE_POSTS_2: BlogPost[] = [
       '- 215 litres: the [Schmick SK198D-B-HD](/schmick-sk198d-b-hd-215l) holds 88 cans or 28 wine bottles.',
       '- 244 litres: the [Schmick SK228D-B-HD](/schmick-sk228d-b-hd-244l) holds 110 cans or 34 wine bottles.',
       '## Under bench fitting and ventilation',
+      'See all of our [under bench dual zone fridges](/category/wine-dual-zone/under-bench-dual-zone) side by side.',
       'Most dual zone fridges are bought to sit under a bench, which makes ventilation the first thing to check. The larger models are around 750 to 900 mm wide and 800 to 865 mm high, so measure your space carefully. Choose a front-breathing design for enclosed cabinetry and leave the clearance the manufacturer lists. Our [built in bar fridge guide](/built-in-bar-fridge-guide) walks through the measurements.',
       '## Indoor or alfresco?',
       'Some dual zone models are listed for indoor use only, while others are tropical rated and suitable for indoor or alfresco installation. If it will sit on a covered patio or in a warm bar area, check the suitability and climate rating on the product page.',
