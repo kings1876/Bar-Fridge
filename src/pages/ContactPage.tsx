@@ -263,6 +263,38 @@ export const ContactPage: React.FC = () => {
           )}
         </div>
       </div>
+      <section className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm space-y-4 max-w-4xl mx-auto mt-10" aria-labelledby="contact-how-heading">
+        <h2 id="contact-how-heading" className="text-2xl font-extrabold text-slate-900 tracking-tight">
+          How Ordering and Enquiries Work
+        </h2>
+        <p className="text-slate-600 text-sm leading-relaxed">
+          Use the form for sizing advice, trade enquiries, delivery questions or warranty help. Include your benchtop dimensions or outdoor
+          location where relevant, and your order reference if you already have one.
+        </p>
+        <h3 className="text-base font-bold text-slate-900">Placing an order</h3>
+        <p className="text-slate-600 text-sm leading-relaxed">
+          Add your bar fridges to the cart and complete the order form with your delivery details. We confirm your order by email and,
+          once we have reviewed it, email you the payment details for your chosen method. Pay the exact amount shown, upload a screenshot
+          of your payment using the confirmation link, and we dispatch within 24 hours of confirmed payment.
+        </p>
+        <h3 className="text-base font-bold text-slate-900">What to include in your message</h3>
+        <p className="text-slate-600 text-sm leading-relaxed">
+          For sizing help, tell us the width, depth and height of the space and whether the fridge will sit under a bench, in a cabinet or
+          freestanding. For outdoor use, tell us whether the area is covered. For trade enquiries, tell us roughly how many units you need
+          and the model or size you are considering, and we will point you to the right range.
+        </p>
+        <h3 className="text-base font-bold text-slate-900">Warranty and returns</h3>
+        <p className="text-slate-600 text-sm leading-relaxed">
+          Every bar fridge and freezer carries the warranty listed on its product page. If you need to make a warranty claim or return a
+          unit, email us with your order reference and the model name, and include photos if the unit arrived damaged or has a fault.
+        </p>
+        <h3 className="text-base font-bold text-slate-900">Before you contact us</h3>
+        <p className="text-slate-600 text-sm leading-relaxed">
+          Many questions are answered in our FAQ, shipping and returns pages, and our buying guides cover sizing, ventilation and
+          climate ratings. If you still need help, send us a message and we will reply by email.
+        </p>
+      </section>
+
     </div>
   );
 };

@@ -11,7 +11,7 @@ export const FAQS_DATA: FAQItem[] = [
     id: 'faq-2',
     category: 'Ordering & Payment',
     question: 'How do customers order on your website?',
-    answer: 'Ordering is completed directly via our streamlined online Order Form. Simply add your desired bar fridges, beverage coolers, or bar freezers to your cart, click "Proceed to Order Form", fill out your delivery details, and submit. You will immediately receive a digital order invoice with tracking setup.'
+    answer: 'Ordering is completed directly via our online Order Form. Add your desired bar fridges, beverage coolers, or bar freezers to your cart, click "Proceed to Order Form", fill out your delivery details, and submit. We confirm your order by email straight away. Once we have reviewed it, we email you the payment details for your chosen method; pay the exact amount shown, then upload a screenshot of your payment using the confirmation link. Dispatch occurs within 24 hours of confirmed payment.'
   },
   {
     id: 'faq-3',
@@ -54,5 +54,41 @@ export const FAQS_DATA: FAQItem[] = [
     category: 'Warranty & Returns',
     question: 'What is your 30-day return policy?',
     answer: 'We want you to be 100% satisfied. If your unit does not fit your space or meets any issue, you can return it within 30 days of delivery in original packaging for an exchange or full refund. Transit insurance is also included on all shipments.'
+  },
+  {
+    id: 'faq-10',
+    category: 'Product & Technical',
+    question: 'How do I choose the right size bar fridge?',
+    answer: 'Start with the space: measure the width, depth and height of the spot where the fridge will sit, and allow the ventilation clearance listed by the manufacturer. Then think about capacity. Every product page lists the capacity in litres and how many cans it holds, and our bar fridge dimensions guide shows the real width, height and depth ranges for each size.'
+  },
+  {
+    id: 'faq-11',
+    category: 'Product & Technical',
+    question: 'What is the difference between a bar fridge and a bar freezer?',
+    answer: 'A bar fridge chills drinks and food to a cold but not frozen temperature, while a bar freezer holds items frozen, typically around minus 15 to minus 18 degrees. Many home bars use both: a bar fridge for drinks and a small bar freezer for ice and frozen items.'
+  },
+  {
+    id: 'faq-12',
+    category: 'Product & Technical',
+    question: 'Does a bar fridge need ventilation space around it?',
+    answer: 'Yes. Every fridge has to release heat. Front venting models are designed to sit under a bench or inside joinery, while rear venting models need open space around them. Always follow the clearance in the manufacturer instructions, because blocking the vents can make the fridge work harder and shorten its life.'
+  },
+  {
+    id: 'faq-13',
+    category: 'Ordering & Payment',
+    question: 'Which payment methods do you accept?',
+    answer: 'We accept Bitcoin (BTC), USDT, Ethereum (ETH) and Solana (SOL). Choosing any of these on the order form takes 10% off your order. After you place your order we email you the exact payment details for your chosen method, so please do not send any payment until you have received them.'
+  },
+  {
+    id: 'faq-14',
+    category: 'Shipping & Delivery',
+    question: 'When will my order be dispatched?',
+    answer: 'Dispatch occurs within 24 hours of confirmed payment. After you pay, upload a screenshot of your payment using the confirmation link in your email so we can confirm it quickly. Delivery times then depend on your location, as set out on our shipping page.'
+  },
+  {
+    id: 'faq-15',
+    category: 'Warranty & Returns',
+    question: 'How do I start a return or warranty claim?',
+    answer: 'Email us with your order number and photos of the unit, and we will guide you through the next steps. Our returns page explains the change of mind period and the warranty that comes with every bar fridge and freezer.'
   }
 ];

@@ -26,7 +26,7 @@ export const SubcategoryGuide: React.FC<{ categoryId: string; subcategory: strin
       </h2>
       {stats && <p className="text-sm font-semibold text-sky-800">{stats}</p>}
       <div className="space-y-3 max-w-3xl">
-        {guide.intro.map((t, i) => (
+        {[...guide.intro, ...(guide.extra ?? [])].map((t, i) => (
           <p key={i} className="text-slate-600 text-sm sm:text-base leading-relaxed">
             {t}
           </p>
@@ -34,12 +34,26 @@ export const SubcategoryGuide: React.FC<{ categoryId: string; subcategory: strin
       </div>
       <div className="max-w-3xl space-y-2">
         <h3 className="text-lg font-bold text-slate-900">What to look for</h3>
-        <ul className="list-disc pl-5 space-y-1.5 text-slate-600 text-sm leading-relaxed">
+        <div className="space-y-1.5 text-slate-600 text-sm leading-relaxed">
           {guide.points.map((p, i) => (
-            <li key={i}>{p}</li>
+            <p key={i} className="flex gap-2">
+              <span aria-hidden="true">•</span>
+              <span>{p}</span>
+            </p>
           ))}
-        </ul>
+        </div>
       </div>
+      {guide.faqs && guide.faqs.length > 0 && (
+        <div className="max-w-3xl space-y-3">
+          <h3 className="text-lg font-bold text-slate-900">Frequently asked questions</h3>
+          {guide.faqs.map((f) => (
+            <div key={f.q}>
+              <h4 className="font-bold text-slate-900 text-sm sm:text-base">{f.q}</h4>
+              <p className="text-slate-600 text-sm leading-relaxed mt-1">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      )}
       <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm pt-2 border-t border-slate-100">
         {guide.links.map((l) => (
           <a key={l.path} href={l.path} onClick={(e) => go(e, l.path)} className="font-bold text-sky-700 hover:text-sky-800">

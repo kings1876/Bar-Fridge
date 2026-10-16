@@ -378,7 +378,7 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
       ogType: 'website',
       h1: plan.h1,
       keyword: plan.keyword,
-      lead: `${cat.description} ${inCat.length} models: ${cat.subcategories.join(', ')}.`,
+      lead: `${cat.description} ${inCat.length} models${cat.subcategories.length ? `: ${cat.subcategories.join(', ')}` : ''}.`,
       jsonLd: [
         crumbs([['Home', '/'], ['Bar Fridges For Sale', '/shop'], [cat.name, `/category/${second}`]]),
         {
@@ -511,7 +511,7 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
       description: st.description,
       canonical: abs(path),
       image: abs(DEFAULT_IMAGE),
-      robots: first === 'privacy' || first === 'terms' ? 'noindex, follow' : INDEX,
+      robots: INDEX,
       ogType: 'website',
       h1: st.h1,
       keyword: st.keyword,

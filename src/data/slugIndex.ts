@@ -323,7 +323,7 @@ export const BLOG_CARDS: BlogCard[] = [
   {
     "id": "quiet-bar-fridge-guide",
     "slug": "quiet-bar-fridge-guide",
-    "title": "Quiet Bar Fridge: How to Choose a Low-Noise Model",
+    "title": "How to Choose a Quiet Bar Fridge (Low-Noise Models)",
     "excerpt": "Need a quiet bar fridge for the lounge, bedroom or home theatre? Learn what affects fridge noise, what decibel ratings mean and how to pick a quiet running model.",
     "image": "/images/products/schmick-hus-rnd70b-1.webp",
     "category": "Buying Guides",
@@ -341,7 +341,7 @@ export const BLOG_CARDS: BlogCard[] = [
   {
     "id": "dual-zone-wine-and-beverage-fridge-guide",
     "slug": "dual-zone-wine-and-beverage-fridge-guide",
-    "title": "Dual Zone Wine and Beverage Fridge: How to Choose One",
+    "title": "How to Choose a Dual Zone Wine and Beverage Fridge",
     "excerpt": "A dual zone wine and beverage fridge holds wine and beer at different temperatures in one cabinet. Learn how zones work, what sizes to look at and how to fit one under a bench.",
     "image": "/images/products/schmick-jc165-1.webp",
     "category": "Buying Guides",
@@ -350,7 +350,7 @@ export const BLOG_CARDS: BlogCard[] = [
   {
     "id": "commercial-bar-fridge-guide",
     "slug": "commercial-bar-fridge-guide",
-    "title": "Commercial Bar Fridge Guide for Pubs, Cafes and Venues",
+    "title": "Commercial Bar Fridge Guide: Choosing One for Pubs, Cafes and Venues",
     "excerpt": "Choosing a commercial bar fridge? Compare double, sliding and triple door models, capacities from 190 to 473 litres, noise levels and what to check for a hot venue.",
     "image": "/images/products/rhino-sg3h-b-1.webp",
     "category": "Buying Guides",
@@ -359,7 +359,7 @@ export const BLOG_CARDS: BlogCard[] = [
   {
     "id": "mini-bar-fridge-guide",
     "slug": "mini-bar-fridge-guide",
-    "title": "Mini Bar Fridge Guide: 31, 46 and 70 Litre Sizes Compared",
+    "title": "Mini Bar Fridge Guide: Comparing 31, 46 and 70 Litre Sizes",
     "excerpt": "Choosing a mini bar fridge? Compare compact sizes from 23 to 70 litres, how many cans each holds, glass door vs retro styles and where each one fits.",
     "image": "/images/products/schmick-sk40-b-1.webp",
     "category": "Buying Guides",
@@ -368,7 +368,7 @@ export const BLOG_CARDS: BlogCard[] = [
   {
     "id": "lockable-bar-fridge-guide",
     "slug": "lockable-bar-fridge-guide",
-    "title": "Lockable Bar Fridge: Mini Fridges With a Lock Explained",
+    "title": "Lockable Bar Fridges: Mini Fridges With a Lock, Explained",
     "excerpt": "Need a lockable bar fridge or mini fridge with a lock? See where a lock helps, which of our models have a lockable door and how to choose the right size.",
     "image": "/images/products/schmick-hus-sc50ab-1.webp",
     "category": "Buying Guides",
@@ -377,7 +377,7 @@ export const BLOG_CARDS: BlogCard[] = [
   {
     "id": "rhino-bar-fridge-guide",
     "slug": "rhino-bar-fridge-guide",
-    "title": "Rhino Bar Fridges: ENVY, SG, GSP and SGT Ranges Explained",
+    "title": "Rhino Bar Fridges Explained: ENVY, SG, GSP and SGT Ranges",
     "excerpt": "A guide to Rhino bar fridges: how the ENVY, SG, GSP and SGT model codes work, what sizes each range covers and which Rhino fridge suits indoor, alfresco or commercial use.",
     "image": "/images/products/rhino-env1r-ss-1.webp",
     "category": "Buying Guides",
@@ -395,7 +395,7 @@ export const BLOG_CARDS: BlogCard[] = [
   {
     "id": "bar-fridge-dimensions-guide",
     "slug": "bar-fridge-dimensions-guide",
-    "title": "Bar Fridge Dimensions: Width, Height and Depth by Size",
+    "title": "Bar Fridge Dimensions: A Size Guide With Real Width, Height and Depth Ranges",
     "excerpt": "What size is a bar fridge? Real bar fridge dimensions by capacity, from 23 litre minis to triple door units, with width, depth and height ranges and measuring tips.",
     "image": "/images/products/schmick-sk146r-sd-1.webp",
     "category": "Buying Guides",
@@ -404,7 +404,7 @@ export const BLOG_CARDS: BlogCard[] = [
   {
     "id": "stainless-steel-bar-fridge-guide",
     "slug": "stainless-steel-bar-fridge-guide",
-    "title": "Stainless Steel Bar Fridge Guide: 304 vs 316 and Finishes",
+    "title": "Stainless Steel Bar Fridges: 304 vs 316, Finishes and Door Styles",
     "excerpt": "Choosing a stainless steel bar fridge? Compare 304 and 316 marine grade steel, solid stainless doors vs glass doors, and which models suit indoors, alfresco areas and coastal homes.",
     "image": "/images/products/rhino-env2h-ss-1.webp",
     "category": "Buying Guides",
@@ -413,7 +413,7 @@ export const BLOG_CARDS: BlogCard[] = [
   {
     "id": "black-bar-fridge-guide",
     "slug": "black-bar-fridge-guide",
-    "title": "Black Bar Fridge Guide: Sizes, Finishes and Styling",
+    "title": "Black Bar Fridge Guide: Sizes, Finishes and How to Style One",
     "excerpt": "Looking for a black bar fridge? Compare black mini fridges, glass door and double door models, from 31 to 473 litres, and how black compares with stainless steel.",
     "image": "/images/products/schmick-hus-sc70-b-1.webp",
     "category": "Buying Guides",
@@ -422,7 +422,7 @@ export const BLOG_CARDS: BlogCard[] = [
   {
     "id": "slimline-bar-fridge-guide",
     "slug": "slimline-bar-fridge-guide",
-    "title": "Slimline Bar Fridge Guide: Narrow and Tall Upright Models",
+    "title": "Slimline Bar Fridges: Narrow and Tall Upright Models Compared",
     "excerpt": "Short on space? Compare slimline and narrow upright bar fridges, including 390 mm wide 160 litre models, with dimensions, brands and placement tips.",
     "image": "/images/products/cub-ss-p160-gold-1.webp",
     "category": "Buying Guides",
@@ -431,7 +431,7 @@ export const BLOG_CARDS: BlogCard[] = [
   {
     "id": "outdoor-bar-with-refrigerator-guide",
     "slug": "outdoor-bar-with-refrigerator-guide",
-    "title": "Outdoor Bar With Refrigerator: How to Set One Up",
+    "title": "How to Set Up an Outdoor Bar With a Refrigerator",
     "excerpt": "Planning an outdoor bar with a refrigerator? Learn how to choose the fridge, where to put it, what power and cover it needs and which outdoor bar fridge models suit.",
     "image": "/images/products/rhino-gsp1h-ss-1.webp",
     "category": "Buying Guides",
@@ -440,7 +440,7 @@ export const BLOG_CARDS: BlogCard[] = [
   {
     "id": "small-bar-freezer-guide",
     "slug": "small-bar-freezer-guide",
-    "title": "Small Bar Freezers: Mini, Under Counter and Upright Options",
+    "title": "Small Bar Freezers: Mini, Under Counter and Upright Options Compared",
     "excerpt": "Choosing a small bar freezer? Compare mini glass door and solid door freezers, under counter built in models and upright freezers, with sizes, dimensions and temperatures.",
     "image": "/images/products/schmick-bd36-1.webp",
     "category": "Buying Guides",

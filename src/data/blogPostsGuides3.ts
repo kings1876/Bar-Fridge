@@ -10,7 +10,7 @@ export const GUIDE_POSTS_3: BlogPost[] = [
   {
     id: 'bar-fridge-dimensions-guide',
     slug: 'bar-fridge-dimensions-guide',
-    title: 'Bar Fridge Dimensions: Width, Height and Depth by Size',
+    title: 'Bar Fridge Dimensions: A Size Guide With Real Width, Height and Depth Ranges',
     excerpt:
       'What size is a bar fridge? Real bar fridge dimensions by capacity, from 23 litre minis to triple door units, with width, depth and height ranges and measuring tips.',
     author: AUTHOR,
@@ -60,7 +60,7 @@ export const GUIDE_POSTS_3: BlogPost[] = [
   {
     id: 'stainless-steel-bar-fridge-guide',
     slug: 'stainless-steel-bar-fridge-guide',
-    title: 'Stainless Steel Bar Fridge Guide: 304 vs 316 and Finishes',
+    title: 'Stainless Steel Bar Fridges: 304 vs 316, Finishes and Door Styles',
     excerpt:
       'Choosing a stainless steel bar fridge? Compare 304 and 316 marine grade steel, solid stainless doors vs glass doors, and which models suit indoors, alfresco areas and coastal homes.',
     author: AUTHOR,
@@ -99,7 +99,7 @@ export const GUIDE_POSTS_3: BlogPost[] = [
   {
     id: 'black-bar-fridge-guide',
     slug: 'black-bar-fridge-guide',
-    title: 'Black Bar Fridge Guide: Sizes, Finishes and Styling',
+    title: 'Black Bar Fridge Guide: Sizes, Finishes and How to Style One',
     excerpt:
       'Looking for a black bar fridge? Compare black mini fridges, glass door and double door models, from 31 to 473 litres, and how black compares with stainless steel.',
     author: AUTHOR,
@@ -144,7 +144,7 @@ export const GUIDE_POSTS_3: BlogPost[] = [
   {
     id: 'slimline-bar-fridge-guide',
     slug: 'slimline-bar-fridge-guide',
-    title: 'Slimline Bar Fridge Guide: Narrow and Tall Upright Models',
+    title: 'Slimline Bar Fridges: Narrow and Tall Upright Models Compared',
     excerpt:
       'Short on space? Compare slimline and narrow upright bar fridges, including 390 mm wide 160 litre models, with dimensions, brands and placement tips.',
     author: AUTHOR,
@@ -190,7 +190,7 @@ export const GUIDE_POSTS_3: BlogPost[] = [
   {
     id: 'outdoor-bar-with-refrigerator-guide',
     slug: 'outdoor-bar-with-refrigerator-guide',
-    title: 'Outdoor Bar With Refrigerator: How to Set One Up',
+    title: 'How to Set Up an Outdoor Bar With a Refrigerator',
     excerpt:
       'Planning an outdoor bar with a refrigerator? Learn how to choose the fridge, where to put it, what power and cover it needs and which outdoor bar fridge models suit.',
     author: AUTHOR,
@@ -231,7 +231,7 @@ export const GUIDE_POSTS_3: BlogPost[] = [
   {
     id: 'small-bar-freezer-guide',
     slug: 'small-bar-freezer-guide',
-    title: 'Small Bar Freezers: Mini, Under Counter and Upright Options',
+    title: 'Small Bar Freezers: Mini, Under Counter and Upright Options Compared',
     excerpt:
       'Choosing a small bar freezer? Compare mini glass door and solid door freezers, under counter built in models and upright freezers, with sizes, dimensions and temperatures.',
     author: AUTHOR,

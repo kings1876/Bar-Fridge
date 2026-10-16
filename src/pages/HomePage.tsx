@@ -517,7 +517,7 @@ export const HomePage: React.FC = () => {
               </div>
 
               <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-sky-700 font-bold">
-                <span>{cat.subcategories.length} Subcategories</span>
+                <span>{cat.subcategories.length > 0 ? `${cat.subcategories.length} Subcategories` : 'View all models'}</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </NavLink>

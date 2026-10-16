@@ -10,7 +10,7 @@ export const GUIDE_POSTS_2: BlogPost[] = [
   {
     id: 'dual-zone-wine-and-beverage-fridge-guide',
     slug: 'dual-zone-wine-and-beverage-fridge-guide',
-    title: 'Dual Zone Wine and Beverage Fridge: How to Choose One',
+    title: 'How to Choose a Dual Zone Wine and Beverage Fridge',
     excerpt:
       'A dual zone wine and beverage fridge holds wine and beer at different temperatures in one cabinet. Learn how zones work, what sizes to look at and how to fit one under a bench.',
     author: AUTHOR,
@@ -58,7 +58,7 @@ export const GUIDE_POSTS_2: BlogPost[] = [
   {
     id: 'commercial-bar-fridge-guide',
     slug: 'commercial-bar-fridge-guide',
-    title: 'Commercial Bar Fridge Guide for Pubs, Cafes and Venues',
+    title: 'Commercial Bar Fridge Guide: Choosing One for Pubs, Cafes and Venues',
     excerpt:
       'Choosing a commercial bar fridge? Compare double, sliding and triple door models, capacities from 190 to 473 litres, noise levels and what to check for a hot venue.',
     author: AUTHOR,
@@ -98,7 +98,7 @@ export const GUIDE_POSTS_2: BlogPost[] = [
   {
     id: 'mini-bar-fridge-guide',
     slug: 'mini-bar-fridge-guide',
-    title: 'Mini Bar Fridge Guide: 31, 46 and 70 Litre Sizes Compared',
+    title: 'Mini Bar Fridge Guide: Comparing 31, 46 and 70 Litre Sizes',
     excerpt:
       'Choosing a mini bar fridge? Compare compact sizes from 23 to 70 litres, how many cans each holds, glass door vs retro styles and where each one fits.',
     author: AUTHOR,
@@ -146,7 +146,7 @@ export const GUIDE_POSTS_2: BlogPost[] = [
   {
     id: 'lockable-bar-fridge-guide',
     slug: 'lockable-bar-fridge-guide',
-    title: 'Lockable Bar Fridge: Mini Fridges With a Lock Explained',
+    title: 'Lockable Bar Fridges: Mini Fridges With a Lock, Explained',
     excerpt:
       'Need a lockable bar fridge or mini fridge with a lock? See where a lock helps, which of our models have a lockable door and how to choose the right size.',
     author: AUTHOR,
@@ -194,7 +194,7 @@ export const GUIDE_POSTS_2: BlogPost[] = [
   {
     id: 'rhino-bar-fridge-guide',
     slug: 'rhino-bar-fridge-guide',
-    title: 'Rhino Bar Fridges: ENVY, SG, GSP and SGT Ranges Explained',
+    title: 'Rhino Bar Fridges Explained: ENVY, SG, GSP and SGT Ranges',
     excerpt:
       'A guide to Rhino bar fridges: how the ENVY, SG, GSP and SGT model codes work, what sizes each range covers and which Rhino fridge suits indoor, alfresco or commercial use.',
     author: AUTHOR,

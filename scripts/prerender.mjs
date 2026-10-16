@@ -23,6 +23,29 @@ await build({
 });
 const { seoForPath, allRoutes, PRODUCTS, CATEGORIES, CATEGORY_GUIDES, SUBCATEGORY_GUIDES, subStats, BLOG_POSTS, FAQS_DATA, SITE, slugify, richToHtml, longDescriptionFor } = await import(pathToFileURL(outfile).href);
 
+// Server-render the real page components for the static routes, so crawlers that don't run JS get exactly
+// what visitors see (home, shop, blog index, about, contact, FAQ and the policy pages).
+const ssrDir = path.join(root, 'node_modules', '.cache', 'bar-ssr');
+fs.mkdirSync(ssrDir, { recursive: true });
+const ssrFile = path.join(ssrDir, 'entry.mjs');
+await build({
+  entryPoints: [path.join(root, 'src/ssr/entry.tsx')],
+  bundle: true, format: 'esm', platform: 'node', outfile: ssrFile, jsx: 'automatic',
+  external: ['react', 'react-dom', 'react/jsx-runtime', 'react-dom/server'],
+  mainFields: ['module', 'main'],
+  banner: { js: "import { createRequire as __cr } from 'node:module'; const require = __cr(import.meta.url);" },
+  logLevel: 'error'
+});
+const ssr = await import(pathToFileURL(ssrFile).href + '?t=' + Date.now());
+function renderStatic(route) {
+  globalThis.window = {
+    location: { pathname: route, search: '' }, addEventListener() {}, removeEventListener() {}, scrollTo() {},
+    history: { pushState() {}, replaceState() {} }, matchMedia: () => ({ matches: false, addEventListener() {}, removeEventListener() {} })
+  };
+  globalThis.localStorage = { getItem: () => null, setItem() {}, removeItem() {} };
+  try { return ssr.renderStatic(route); } catch (e) { console.warn('SSR failed for ' + route + ': ' + e.message); return null; }
+}
+
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
 const manifest = JSON.parse(fs.readFileSync(path.join(dist, '.vite', 'manifest.json'), 'utf8'));
 const entryFiles = new Set();
@@ -146,10 +169,10 @@ function fallback(route, m) {
       const sg = subName && SUBCATEGORY_GUIDES[subName];
       if (sg) {
         const items = PRODUCTS.filter((p) => p.category === id && p.subcategory === subName);
-        subGuide = `<h2>${esc(sg.heading)}</h2><p>${esc(subStats(items, sg.showRatings !== false))}</p>${sg.intro.map((t) => `<p>${esc(t)}</p>`).join('')}<h3>What to look for</h3><ul>${sg.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>${li(sg.links.map((l) => [l.path, l.label]))}`;
+        subGuide = `<h2>${esc(sg.heading)}</h2><p>${esc(subStats(items, sg.showRatings !== false))}</p>${[...sg.intro, ...(sg.extra || [])].map((t) => `<p>${esc(t)}</p>`).join('')}<h3>What to look for</h3>${sg.points.map((p) => `<p>• ${esc(p)}</p>`).join('')}${(sg.faqs || []).length ? `<h3>Frequently asked questions</h3>${sg.faqs.map((f) => `<h4>${esc(f.q)}</h4><p>${esc(f.a)}</p>`).join('')}` : ''}${li(sg.links.map((l) => [l.path, l.label]))}`;
       }
     }
-    const subs = route.split('/').length === 3 ? `<h2>Browse ${esc(cat.name)} by type</h2>${li(cat.subcategories.map((s) => [`/category/${id}/${slugify(s)}`, s]))}` : `<p>${link(`/category/${id}`, `All ${cat.name}`)}</p><h2>Other types</h2>${li(cat.subcategories.filter((s) => `/category/${id}/${slugify(s)}` !== route).map((s) => [`/category/${id}/${slugify(s)}`, s]))}`;
+    const subs = route.split('/').length === 3 ? (cat.subcategories.length ? `<h2>Browse ${esc(cat.name)} by type</h2>${li(cat.subcategories.map((s) => [`/category/${id}/${slugify(s)}`, s]))}` : '') : `<p>${link(`/category/${id}`, `All ${cat.name}`)}</p><h2>Other types</h2>${li(cat.subcategories.filter((s) => `/category/${id}/${slugify(s)}` !== route).map((s) => [`/category/${id}/${slugify(s)}`, s]))}`;
     extra = guide + subGuide + subs + `<ul>${PRODUCTS.filter((p) => p.category === id && (route.split('/').length === 3 || `/category/${id}/${slugify(p.subcategory)}` === route)).map((p) => `<li>${link(`/${p.slug}`, p.name)}</li>`).join('')}</ul>`;
   } else if (m.ogType === 'product') {
     const p = PRODUCTS.find((x) => `/${x.slug}` === route);
@@ -161,6 +184,10 @@ function fallback(route, m) {
   if (m.ogType === 'article') {
     const post = BLOG_POSTS.find((b) => `/${b.slug}` === route);
     if (post) extra = richToHtml(post.content) + `<h2>More guides</h2>${li(relatedGuides(post).map((b) => [`/${b.slug}`, b.title]))}`;
+  }
+  if (ssr.SSR_ROUTES.includes(route)) {
+    const html = renderStatic(route);
+    if (html) return `${NAV}<main data-prerender>${html}</main>${FOOT}`;
   }
   return `${NAV}<main data-prerender><h1>${esc(m.h1)}</h1>${m.ogType === 'article' ? '' : `<p>${esc(m.lead ?? m.description)}</p>`}${extra}</main>${FOOT}`;
 }
@@ -191,6 +218,33 @@ const sitemap =
   urls.map((u) => `  <url><loc>${esc(u.loc)}</loc><lastmod>${new Date().toISOString().slice(0, 10)}</lastmod><image:image><image:loc>${esc(u.image)}</image:loc></image:image></url>`).join('\n') +
   `\n</urlset>\n`;
 fs.writeFileSync(path.join(dist, 'sitemap.xml'), sitemap);
+
+// llms.txt: a plain-text map of the site for AI assistants (generated from the same data as the pages).
+const LL = SITE.origin;
+const llms = [
+  '# ' + SITE.name,
+  '',
+  '> Australian online store for outdoor and alfresco bar fridges, commercial bar fridges, wine and dual zone beverage fridges and bar freezers. Every product page lists capacity, dimensions, sound and energy ratings and warranty. Prices are in AUD, shipping is free across Australia, and ordering is by online order form with payment in cryptocurrency (Bitcoin, USDT, Ethereum, Solana) at 10% off.',
+  '',
+  '## Shop',
+  '- [Shop all bar fridges](' + LL + '/shop): the full range with filters by category',
+  ...CATEGORIES.map((c) => '- [' + c.name + '](' + LL + '/category/' + c.id + '): ' + c.description),
+  '',
+  '## Buying guides',
+  ...BLOG_POSTS.map((b) => '- [' + b.title + '](' + LL + '/' + b.slug + '): ' + b.excerpt),
+  '',
+  '## Help and policies',
+  '- [FAQ](' + LL + '/faq): ordering, payment, delivery, warranty and technical questions',
+  '- [Shipping](' + LL + '/shipping): free Australia-wide freight and delivery details',
+  '- [Returns and refunds](' + LL + '/refund): change of mind period and warranty',
+  '- [Contact](' + LL + '/contact): ' + SITE.email,
+  '- [About](' + LL + '/about): about ' + SITE.name,
+  '',
+  '## Optional',
+  '- [Sitemap](' + LL + '/sitemap.xml): every indexable page',
+  ''
+].join('\n');
+fs.writeFileSync(path.join(dist, 'llms.txt'), llms);
 
 // Real 404 page (served with status 404 for any URL that has no prerendered file).
 const notFoundLinks = li([

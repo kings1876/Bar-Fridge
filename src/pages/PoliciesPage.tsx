@@ -109,6 +109,18 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
             <p>
               Every single shipment dispatched by Bar Fridges For Sale Australia includes full transit insurance at no extra cost. In the rare event of in-transit cosmetic or mechanical freight damage, we provide an immediate no-cost replacement.
             </p>
+            <h3 className="text-base font-bold text-slate-900">5. Order Confirmation and Dispatch</h3>
+            <p>
+              After you place an order we email a confirmation with your order reference. Once we have reviewed your order, we email your payment details, and dispatch occurs within 24 hours of confirmed payment. Free shipping applies to our bar fridges, beverage centres and bar freezers across Australia.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">6. Before Your Delivery Arrives</h3>
+            <p>
+              Measure the doorways, hallways and the final position before delivery day, and check the ventilation clearance listed on the product page. Heavy fridges are best moved by two people. If there are access limits such as stairs or a narrow driveway, please let us know when you order.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">7. Questions About Delivery</h3>
+            <p>
+              Our FAQ answers common delivery questions, and you can email us with your order reference for an update on your order.
+            </p>
           </div>
         </div>
       )}
@@ -139,6 +151,22 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
             <p>
               Simply email our support desk at <span className="text-sky-700 font-bold">support@barfridgesforsale.com.au</span> with your Order Number and photos of the unit in original packaging. We will coordinate a courier collection from your premises.
             </p>
+            <h3 className="text-base font-bold text-slate-900">4. Before You Return a Unit</h3>
+            <p>
+              Keep the original packaging where possible, and take photos of the unit and the packaging if anything arrives damaged. Include your order reference and the model name in your email so we can find your order quickly.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">5. Warranty Claims</h3>
+            <p>
+              For a defect during the warranty period, email us with your order reference, the model, a description of the problem and photos or a short video if possible, and we will guide you through the next steps. The warranty covers parts and labour for 2 years, as listed on each product page.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">6. Choosing the Right Model</h3>
+            <p>
+              Many returns can be avoided by checking the dimensions, ventilation clearance and climate rating before you order. Our buying guides cover measuring, venting and sizing, and every product page lists the exterior dimensions.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">7. Our Aim</h3>
+            <p>
+              We want every customer to end up with a bar fridge or freezer that fits their space and works the way they expect. If something is not right, please contact us with your order reference and we will work through it with you, using the change of mind period and the warranty described on this page.
+            </p>
           </div>
         </div>
       )}
@@ -164,6 +192,26 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
             <h3 className="text-base font-bold text-slate-900">No Selling of Data</h3>
             <p>
               We never sell, rent, or trade your personal data to marketing third parties. Cryptocurrency order records are stored with high-grade encryption and processed on decentralized networks without storing private banking details.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">How We Use Your Information</h3>
+            <p>
+              We use the details you give us on the order form and contact form to confirm and process your order, email you payment instructions, arrange delivery and answer your questions. Order details are recorded in our order system so we can manage your order, and emails are sent through an email delivery service.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">Payment Information</h3>
+            <p>
+              We do not collect card numbers on this site. After you order, we email payment details for your chosen cryptocurrency, and you may upload a screenshot of your payment so we can confirm it.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">Cookies and Local Storage</h3>
+            <p>
+              Your browser stores your shopping cart and your cookie preference on your device so the site can remember them. You can clear this at any time in your browser settings.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">Your Choices</h3>
+            <p>
+              To ask us to correct or delete the information we hold about you, email info@barfridgesforsale.com.au and we will respond.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">Sharing Your Information</h3>
+            <p>
+              We share your delivery details with the courier that delivers your order, and we use an email delivery service to send you order confirmations and payment details. We do not share your information for any other purpose, and you can contact us at any time with questions about how your information is handled.
             </p>
           </div>
         </div>
@@ -193,6 +241,26 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
             <h3 className="text-base font-bold text-slate-900">3. Governing Law</h3>
             <p>
               These conditions are governed by and construed in accordance with the laws of Australia and the states in which distribution centers operate.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">How Ordering Works</h3>
+            <p>
+              Add products to your cart and submit the order form with your delivery details. We email an order confirmation with your reference number, review the order, and then email you the payment details for your chosen method.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">Payment</h3>
+            <p>
+              Payment is made in cryptocurrency (Bitcoin, USDT, Ethereum or Solana) to the details we email you. Pay the exact amount shown and upload a screenshot of your payment using the confirmation link. Please do not send any payment until you have received our details.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">Dispatch</h3>
+            <p>
+              Dispatch occurs within 24 hours of confirmed payment. Shipping on our bar fridges, beverage centres and bar freezers is free across Australia.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">Product Information</h3>
+            <p>
+              We describe each product using the specifications supplied with the model. Dimensions, capacities and ratings are listed on every product page; please check them against your space before ordering.
+            </p>
+            <h3 className="text-base font-bold text-slate-900">Delivery and Returns</h3>
+            <p>
+              Delivery is described on our shipping page and returns and warranty on our refund page. Please read them before ordering. Any questions about an order can be sent to info@barfridgesforsale.com.au with your order reference.
             </p>
           </div>
         </div>

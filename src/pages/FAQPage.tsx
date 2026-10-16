@@ -98,11 +98,12 @@ export const FAQPage: React.FC = () => {
                 />
               </button>
 
-              {isOpen && (
-                <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
-                  {faq.answer}
-                </div>
-              )}
+              <div
+                hidden={!isOpen}
+                className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50"
+              >
+                <p>{faq.answer}</p>
+              </div>
             </div>
           );
         })}

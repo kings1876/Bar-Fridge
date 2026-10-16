@@ -258,14 +258,41 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
   'schmick-bc70b-roadie-aus-70l': retroMini('a music roadie case design')
 };
 
-/** Hand-written description if one exists, otherwise a spec-driven one. */
+/** A one-paragraph, sentence-form summary of the product's own specifications. */
+function glance(p: Product): string {
+  const short = `${p.specs['Brand'] ?? p.name.split(' ')[0]} ${p.specs['Model'] ?? ''}`.trim();
+  const cans = (p.specs['Gross Capacity'] ?? '').match(/\((.*?)\)/)?.[1];
+  const parts: string[] = [];
+  parts.push(`The ${short} has a capacity of ${p.capacityLitres} litres${cans ? `, holding ${cans}` : ''}, and measures ${dims(p)}.`);
+  const ratings: string[] = [];
+  if (p.energyStars > 0) ratings.push(`a ${art(p.energyStars)} ${p.energyStars} star energy rating`);
+  if (p.noiseLevelDb > 0) ratings.push(`a sound rating of ${p.noiseLevelDb} dB`);
+  if (ratings.length) parts.push(`It has ${ratings.join(' and ')}.`);
+  const suit = (p.specs['Suitability'] ?? '').toLowerCase();
+  if (suit) parts.push(`It is listed for ${suit} installation${p.tropicalRated ? ' and is tropical rated for Australian climates' : ''}.`);
+  if (p.energyStars > 0 && p.temperatureRange) parts.push(`The listed temperature range is ${p.temperatureRange.replace(/\s*\|\s*/g, '; ')}.`);
+  parts.push(`Warranty: ${warranty(p)}. Check the full specifications table below before you order.`);
+  return parts.join(' ');
+}
+
+/** How ordering, delivery and warranty work on this site (matches the order flow and the published terms). */
+function ordering(p: Product): string {
+  return `Add the ${p.specs['Brand'] ?? ''} ${p.specs['Model'] ?? ''} to your cart and complete the order form with your delivery details. We confirm your order by email and, once we have reviewed it, email you the payment details for your chosen method: pay the exact amount shown and upload a screenshot of your payment using the confirmation link. Dispatch occurs within 24 hours of confirmed payment. Shipping on our bar fridges and freezers is free across Australia, paying with Bitcoin, USDT, Ethereum or Solana takes 10% off, and every unit carries the warranty above. Our [shipping](/shipping) and [returns](/refund) pages explain delivery and returns in full, and our [FAQ](/faq) answers common questions.`.replace(/\s+/g, ' ');
+}
+
+/** Hand-written description if one exists, otherwise a spec-driven one; every product also gets the same two closing sections. */
 export function longDescriptionFor(slug: string): string[] | undefined {
   const w = LONG_DESCRIPTIONS[slug] as Writer | undefined;
   const p = PRODUCTS.find((x) => x.slug === slug);
   if (!p) return undefined;
-  if (!w) return generateLongDescription(p);
-  const lines = w(p);
-  const details = familyDetails(p);
-  // hand-written copy: slot the family details in before the closing line
-  return details.length ? [...lines.slice(0, -1), ...details, lines[lines.length - 1]] : lines;
+  let lines: string[];
+  if (!w) lines = generateLongDescription(p);
+  else {
+    lines = w(p);
+    const details = familyDetails(p);
+    // hand-written copy: slot the family details in before the closing line
+    if (details.length) lines = [...lines.slice(0, -1), ...details, lines[lines.length - 1]];
+  }
+  const closing = lines[lines.length - 1];
+  return [...lines.slice(0, -1), '### At a glance', glance(p), '### Ordering, delivery and warranty', ordering(p), closing];
 }

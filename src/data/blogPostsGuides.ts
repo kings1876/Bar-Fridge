@@ -152,7 +152,7 @@ export const GUIDE_POSTS: BlogPost[] = [
   {
     id: 'quiet-bar-fridge-guide',
     slug: 'quiet-bar-fridge-guide',
-    title: 'Quiet Bar Fridge: How to Choose a Low-Noise Model',
+    title: 'How to Choose a Quiet Bar Fridge (Low-Noise Models)',
     excerpt:
       'Need a quiet bar fridge for the lounge, bedroom or home theatre? Learn what affects fridge noise, what decibel ratings mean and how to pick a quiet running model.',
     author: AUTHOR,
