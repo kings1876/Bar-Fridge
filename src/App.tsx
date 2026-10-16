@@ -27,15 +27,18 @@ const OrderCheckoutModal = lazy(() => import('./components/OrderCheckoutModal').
 const LiveChatWidget = lazy(() => import('./components/LiveChatWidget').then((m) => ({ default: m.LiveChatWidget })));
 
 function useIdle(): boolean {
+  // Overlays mount on the visitor's first interaction (scroll, tap, key press) or after 8 seconds, so they never
+  // compete with the first render and its measured main-thread work.
   const [idle, setIdle] = React.useState(false);
   React.useEffect(() => {
-    const w = window as unknown as { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number; cancelIdleCallback?: (id: number) => void };
-    if (w.requestIdleCallback) {
-      const id = w.requestIdleCallback(() => setIdle(true), { timeout: 3000 });
-      return () => w.cancelIdleCallback?.(id);
-    }
-    const t = setTimeout(() => setIdle(true), 2000);
-    return () => clearTimeout(t);
+    const events = ['scroll', 'pointerdown', 'keydown', 'touchstart'] as const;
+    const go = () => setIdle(true);
+    events.forEach((ev) => window.addEventListener(ev, go, { once: true, passive: true }));
+    const t = setTimeout(go, 8000);
+    return () => {
+      clearTimeout(t);
+      events.forEach((ev) => window.removeEventListener(ev, go));
+    };
   }, []);
   return idle;
 }
