@@ -178,7 +178,7 @@ function fallback(route, m) {
     const p = PRODUCTS.find((x) => `/${x.slug}` === route);
     const long = longDescriptionFor(p.slug);
     extra = (long ? `<h2>About the ${esc(p.name.split(' ').slice(0, 2).join(' '))}</h2>${richToHtml(long)}` : '') +
-      `<p>${link(`/category/${p.category}`, p.categoryName)} · ${link(`/category/${p.category}/${slugify(p.subcategory)}`, p.subcategory)} · ${link('/shop', 'Bar fridges for sale')}</p>` +
+      `<p>${link(`/category/${p.category}`, p.categoryName)}${CATEGORIES.find((c) => c.id === p.category)?.subcategories.includes(p.subcategory) ? ` · ${link(`/category/${p.category}/${slugify(p.subcategory)}`, p.subcategory)}` : ''} · ${link('/shop', 'Bar fridges for sale')}</p>` +
       `<h2>Similar bar fridges</h2>${li(relatedProducts(p).map((x) => [`/${x.slug}`, x.name]))}`;
   }
   if (m.ogType === 'article') {
