@@ -96,7 +96,7 @@ export const ProductDetailPage: React.FC = () => {
                     activeImageIndex === idx ? 'border-sky-600 scale-105 shadow-sm' : 'border-slate-200 opacity-60 hover:opacity-100'
                   }`}
                 >
-                  <img src={img} alt={`${product.name} thumbnail ${idx}`} className="w-full h-full object-cover" />
+                  <img src={img} alt={`${product.name} thumbnail ${idx}`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                 </button>
               ))}
             </div>

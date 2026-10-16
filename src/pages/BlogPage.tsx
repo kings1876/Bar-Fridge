@@ -144,7 +144,7 @@ export const BlogPage: React.FC = () => {
                 className="group bg-white border border-slate-200 hover:border-sky-400 rounded-3xl p-4 transition-all space-y-3 shadow-sm hover:shadow-md"
               >
                 <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-white">
-                  <img src={rel.image} alt={rel.title} className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform" />
+                  <img src={rel.image} alt={rel.title} loading="lazy" decoding="async" className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform" />
                 </div>
                 <div className="text-xs text-sky-700 font-bold uppercase tracking-wider">{rel.category}</div>
                 <h4 className="text-sm font-bold text-slate-900 group-hover:text-sky-700 transition-colors line-clamp-2">
@@ -230,6 +230,8 @@ export const BlogPage: React.FC = () => {
               <img
                 src={post.image}
                 alt={post.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-500"
               />
               <span className="absolute top-3 left-3 bg-white/95 backdrop-blur border border-slate-200 text-sky-800 text-[10px] font-bold uppercase px-3 py-1 rounded-lg shadow-2xs">

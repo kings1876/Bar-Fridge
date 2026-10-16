@@ -21,7 +21,7 @@ await build({
   outfile,
   logLevel: 'error'
 });
-const { seoForPath, allRoutes, PRODUCTS, CATEGORIES, CATEGORY_GUIDES, BLOG_POSTS, richToHtml, longDescriptionFor } = await import(pathToFileURL(outfile).href);
+const { seoForPath, allRoutes, PRODUCTS, CATEGORIES, CATEGORY_GUIDES, BLOG_POSTS, FAQS_DATA, SITE, slugify, richToHtml, longDescriptionFor } = await import(pathToFileURL(outfile).href);
 
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -47,11 +47,24 @@ function head(m) {
 }
 
 const link = (href, text) => `<a href="${esc(href)}">${esc(text)}</a>`;
+const li = (items) => `<ul>${items.map(([h, t]) => `<li>${link(h, t)}</li>`).join('')}</ul>`;
+const NAV = `<nav aria-label="Main">${li([['/', 'Home'], ['/shop', 'Shop bar fridges'], ...CATEGORIES.map((c) => [`/category/${c.id}`, c.name]), ['/blog', 'Guides and advice']])}</nav>`;
+const FOOT = `<footer><nav aria-label="Footer">${li([['/about', 'About us'], ['/contact', 'Contact'], ['/faq', 'FAQ'], ['/shipping', 'Shipping'], ['/refund', 'Returns and refunds'], ['/privacy', 'Privacy policy'], ['/terms', 'Terms and conditions'], ['/blog', 'Blog']])}</nav><p>${esc(SITE.name)} · <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a></p></footer>`;
+const popular = PRODUCTS.filter((p) => p.badge === 'Popular' || p.badge === 'Best Value');
+
 function fallback(route, m) {
   let extra = '';
-  if (route === '/' || route === '/shop') {
-    extra = `<ul>${CATEGORIES.map((c) => `<li>${link(`/category/${c.id}`, c.name)}</li>`).join('')}</ul>` +
-      (route === '/shop' ? `<ul>${PRODUCTS.slice(0, 48).map((p) => `<li>${link(`/${p.slug}`, p.name)}</li>`).join('')}</ul>` : '');
+  if (route === '/') {
+    extra =
+      CATEGORIES.map((c) => `<h2>${link(`/category/${c.id}`, c.name)}</h2><p>${esc(c.description)}</p>${li(c.subcategories.map((s) => [`/category/${c.id}/${slugify(s)}`, s]))}`).join('') +
+      `<h2>Popular bar fridges</h2>${li(popular.map((p) => [`/${p.slug}`, p.name]))}` +
+      `<h2>Buying guides</h2>${li(BLOG_POSTS.map((b) => [`/${b.slug}`, b.title]))}`;
+  } else if (route === '/blog') {
+    extra = BLOG_POSTS.map((b) => `<h2>${link(`/${b.slug}`, b.title)}</h2><p>${esc(b.excerpt)}</p>`).join('');
+  } else if (route === '/faq') {
+    extra = FAQS_DATA.map((f) => `<h2>${esc(f.question)}</h2><p>${esc(f.answer)}</p>`).join('');
+  } else if (route === '/shop') {
+    extra = li(CATEGORIES.map((c) => [`/category/${c.id}`, c.name])) + li(PRODUCTS.slice(0, 48).map((p) => [`/${p.slug}`, p.name]));
   } else if (route.startsWith('/category/')) {
     const id = route.split('/')[2];
     const g = route.split('/').length === 3 ? CATEGORY_GUIDES[id] : null;
@@ -60,7 +73,9 @@ function fallback(route, m) {
         g.sections.map((s) => `<h3>${esc(s.h)}</h3>${s.p.map((t) => `<p>${esc(t)}</p>`).join('')}`).join('') +
         `<h3>Frequently asked questions</h3>` + g.faqs.map((f) => `<h4>${esc(f.q)}</h4><p>${esc(f.a)}</p>`).join('')
       : '';
-    extra = guide + `<ul>${PRODUCTS.filter((p) => p.category === id).map((p) => `<li>${link(`/${p.slug}`, p.name)}</li>`).join('')}</ul>`;
+    const cat = CATEGORIES.find((c) => c.id === id);
+    const subs = route.split('/').length === 3 ? `<h2>Browse ${esc(cat.name)} by type</h2>${li(cat.subcategories.map((s) => [`/category/${id}/${slugify(s)}`, s]))}` : `<p>${link(`/category/${id}`, `All ${cat.name}`)}</p>`;
+    extra = guide + subs + `<ul>${PRODUCTS.filter((p) => p.category === id && (route.split('/').length === 3 || `/category/${id}/${slugify(p.subcategory)}` === route)).map((p) => `<li>${link(`/${p.slug}`, p.name)}</li>`).join('')}</ul>`;
   } else if (m.ogType === 'product') {
     const p = PRODUCTS.find((x) => `/${x.slug}` === route);
     const long = longDescriptionFor(p.slug);
@@ -71,7 +86,7 @@ function fallback(route, m) {
     const post = BLOG_POSTS.find((b) => `/${b.slug}` === route);
     if (post) extra = richToHtml(post.content);
   }
-  return `<main data-prerender><h1>${esc(m.h1)}</h1>${m.ogType === 'article' ? '' : `<p>${esc(m.lead ?? m.description)}</p>`}${extra}</main>`;
+  return `${NAV}<main data-prerender><h1>${esc(m.h1)}</h1>${m.ogType === 'article' ? '' : `<p>${esc(m.lead ?? m.description)}</p>`}${extra}</main>${FOOT}`;
 }
 
 const warnings = [];
@@ -97,9 +112,31 @@ for (const route of allRoutes()) {
 
 const sitemap =
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n` +
-  urls.map((u) => `  <url><loc>${esc(u.loc)}</loc><image:image><image:loc>${esc(u.image)}</image:loc></image:image></url>`).join('\n') +
+  urls.map((u) => `  <url><loc>${esc(u.loc)}</loc><lastmod>${new Date().toISOString().slice(0, 10)}</lastmod><image:image><image:loc>${esc(u.image)}</image:loc></image:image></url>`).join('\n') +
   `\n</urlset>\n`;
 fs.writeFileSync(path.join(dist, 'sitemap.xml'), sitemap);
+
+// Real 404 page (served with status 404 for any URL that has no prerendered file).
+const notFoundLinks = li([
+  ['/', 'Home'],
+  ['/shop', 'Shop bar fridges'],
+  ...CATEGORIES.map((c) => ['/category/' + c.id, c.name]),
+  ['/blog', 'Guides and advice'],
+  ['/contact', 'Contact us']
+]);
+fs.writeFileSync(
+  path.join(dist, '404.html'),
+  '<!doctype html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />' +
+    '<title>Page not found | ' + esc(SITE.name) + '</title><meta name="robots" content="noindex, follow" />' +
+    '<style>body{font-family:system-ui,Arial,sans-serif;max-width:720px;margin:12vh auto;padding:0 20px;color:#0f172a;line-height:1.6}a{color:#0284c7}li{margin:.3em 0}</style></head>' +
+    '<body><h1>Page not found</h1><p>Sorry, we could not find that page. Try one of these instead:</p>' + notFoundLinks + '</body></html>'
+);
+
+// App shell for client-only routes (/admin, /order/*): the original SPA HTML, not indexable.
+fs.writeFileSync(
+  path.join(dist, 'app-shell.html'),
+  template.replace('<head>', '<head>\n    <meta name="robots" content="noindex, nofollow" />')
+);
 
 fs.rmSync(tmp, { recursive: true, force: true });
 console.log(`prerender: ${allRoutes().length} routes, ${urls.length} in sitemap`);

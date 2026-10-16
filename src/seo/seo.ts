@@ -10,7 +10,7 @@ import { richToHtml, richToText } from './richtext';
 import { longDescriptionFor } from '../data/productLongDescriptions';
 import { SITE, REPLY } from '../../shared/reply.config.js';
 
-export { PRODUCTS, CATEGORIES, CATEGORY_GUIDES, BLOG_POSTS, richToHtml, longDescriptionFor };
+export { PRODUCTS, CATEGORIES, CATEGORY_GUIDES, BLOG_POSTS, FAQS_DATA, SITE, richToHtml, longDescriptionFor };
 
 export interface SeoMeta {
   title: string;
@@ -537,7 +537,7 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
 
 // Every indexable route, used by the prerender + sitemap.
 export function allRoutes(): string[] {
-  const routes = ['/', '/shop', '/blog', '/about', '/contact', '/faq', '/shipping', '/refund'];
+  const routes = ['/', '/shop', '/blog', '/about', '/contact', '/faq', '/shipping', '/refund', '/privacy', '/terms'];
   for (const c of CATEGORIES) {
     routes.push(`/category/${c.id}`);
     for (const s of c.subcategories) routes.push(`/category/${c.id}/${slugify(s)}`);

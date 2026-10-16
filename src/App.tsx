@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { ShopProvider, useShop } from './context/ShopContext';
 import { Seo } from './components/Seo';
 import { Navbar } from './components/Navbar';
@@ -23,8 +23,10 @@ import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { FAQPage } from './pages/FAQPage';
 import { PoliciesPage } from './pages/PoliciesPage';
-import { AdminApp } from './admin/AdminApp';
-import { PaymentDetailsPage, ConfirmPaymentPage } from './pages/OrderPublic';
+// Admin and order-confirmation pages are rarely used: load them on demand to keep the public bundle small.
+const AdminApp = lazy(() => import('./admin/AdminApp').then((m) => ({ default: m.AdminApp })));
+const PaymentDetailsPage = lazy(() => import('./pages/OrderPublic').then((m) => ({ default: m.PaymentDetailsPage })));
+const ConfirmPaymentPage = lazy(() => import('./pages/OrderPublic').then((m) => ({ default: m.ConfirmPaymentPage })));
 
 const AppContent: React.FC = () => {
   const { currentPage } = useShop();
@@ -77,9 +79,9 @@ const AppContent: React.FC = () => {
 
 export default function App() {
   const path = window.location.pathname.replace(/\/+$/, '');
-  if (path === '/admin' || path.startsWith('/admin/')) return <AdminApp />;
-  if (path === '/order/payment-details') return <PaymentDetailsPage />;
-  if (path === '/order/confirm-payment') return <ConfirmPaymentPage />;
+  if (path === '/admin' || path.startsWith('/admin/')) return <Suspense fallback={null}><AdminApp /></Suspense>;
+  if (path === '/order/payment-details') return <Suspense fallback={null}><PaymentDetailsPage /></Suspense>;
+  if (path === '/order/confirm-payment') return <Suspense fallback={null}><ConfirmPaymentPage /></Suspense>;
   return (
     <ShopProvider>
       <AppContent />
