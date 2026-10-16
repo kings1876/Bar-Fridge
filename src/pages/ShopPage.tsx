@@ -3,6 +3,7 @@ import { useShop } from '../context/ShopContext';
 import { PRODUCTS, CATEGORIES } from '../data/products';
 import { ProductCard } from '../components/ProductCard';
 import { CATEGORY_SEO } from '../seo/seo';
+import { CategoryGuide } from '../components/CategoryGuide';
 import {
   Filter,
   Search,
@@ -464,6 +465,8 @@ export const ShopPage: React.FC = () => {
           )}
         </main>
       </div>
+
+      {activeCategoryObj && selectedSubcategory === 'all' && <CategoryGuide categoryId={activeCategoryObj.id} />}
     </div>
   );
 };

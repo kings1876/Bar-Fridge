@@ -5,9 +5,10 @@
 import { PRODUCTS, CATEGORIES } from '../data/products';
 import { BLOG_POSTS } from '../data/blogPosts';
 import { FAQS_DATA } from '../data/faqs';
+import { CATEGORY_GUIDES } from '../data/categoryContent';
 import { SITE, REPLY } from '../../shared/reply.config.js';
 
-export { PRODUCTS, CATEGORIES };
+export { PRODUCTS, CATEGORIES, CATEGORY_GUIDES };
 
 export interface SeoMeta {
   title: string;
@@ -309,7 +310,20 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
           url: abs(`/category/${second}`),
           description: plan.description
         },
-        itemList(inCat)
+        itemList(inCat),
+        ...(CATEGORY_GUIDES[second]
+          ? [
+              {
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: CATEGORY_GUIDES[second].faqs.map((f) => ({
+                  '@type': 'Question',
+                  name: f.q,
+                  acceptedAnswer: { '@type': 'Answer', text: f.a }
+                }))
+              }
+            ]
+          : [])
       ]
     };
   }
