@@ -401,12 +401,12 @@ export const ShopPage: React.FC = () => {
             <>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* The first cards render at once; the rest render as the grid nears the viewport (keeps the first render short). */}
-                {paginatedProducts.slice(0, 6).map((product) => (
+                {paginatedProducts.slice(0, 4).map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}
-                {paginatedProducts.length > 6 && (
+                {paginatedProducts.length > 4 && (
                   <Staged stage={1} minHeight={640} className="col-span-full">
-                    {paginatedProducts.slice(6).map((product) => (
+                    {paginatedProducts.slice(4).map((product) => (
                       <ProductCard key={product.id} product={product} />
                     ))}
                   </Staged>
@@ -478,9 +478,16 @@ export const ShopPage: React.FC = () => {
       </div>
 
       {!activeCategoryObj && !isFiltered && <ShopOverview />}
-      {activeCategoryObj && selectedSubcategory === 'all' && <CategoryGuide categoryId={activeCategoryObj.id} />}
+      {/* The long buyer's guides sit below the products: render them when they near the viewport. */}
+      {activeCategoryObj && selectedSubcategory === 'all' && (
+        <Staged stage={2} minHeight={900}>
+          <CategoryGuide categoryId={activeCategoryObj.id} />
+        </Staged>
+      )}
       {activeCategoryObj && selectedSubcategory !== 'all' && (
-        <SubcategoryGuide categoryId={activeCategoryObj.id} subcategory={selectedSubcategory} />
+        <Staged stage={2} minHeight={900}>
+          <SubcategoryGuide categoryId={activeCategoryObj.id} subcategory={selectedSubcategory} />
+        </Staged>
       )}
     </div>
   );
