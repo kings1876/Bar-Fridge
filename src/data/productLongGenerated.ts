@@ -1,5 +1,6 @@
 import { Product } from '../types';
 import { PRODUCTS } from './products';
+import { FAMILY_NOTES } from './productFamilyNotes';
 
 // Spec-driven long descriptions for products without a hand-written one.
 // Every claim comes from the product's own data (features, specs, name, subcategory);
@@ -245,6 +246,55 @@ function sizeFit(p: Product): string {
   return parts.join(' ');
 }
 
+/**
+ * "How this version differs" for products in a family of 4+ versions of the same cabinet:
+ * a hand-written note (from the product photo and listing) plus data-driven comparisons
+ * of sound level, energy rating and heated glass against the sibling versions.
+ */
+export function familyDetails(p: Product): string[] {
+  const fam = familyOf(p);
+  if (fam.length < 4) return [];
+  const parts: string[] = [];
+  const note = FAMILY_NOTES[p.slug];
+  if (note) parts.push(note);
+
+  const dbs = fam.map((x) => x.noiseLevelDb);
+  const minDb = Math.min(...dbs);
+  const maxDb = Math.max(...dbs);
+  if (minDb !== maxDb) {
+    const rank = dbs.filter((d) => d < p.noiseLevelDb).length + 1;
+    const tie = dbs.filter((d) => d === p.noiseLevelDb).length > 1;
+    const quiet = `${tie ? 'joint ' : ''}${rank === 1 ? 'quietest' : `${ord(rank)} quietest`}`;
+    parts.push(
+      pick(
+        [
+          `At ${p.noiseLevelDb} dB it is the ${quiet} of the ${fam.length} versions (the family ranges from ${minDb} to ${maxDb} dB).`,
+          `Across the ${fam.length} versions of this cabinet, sound ratings run from ${minDb} to ${maxDb} dB, and this one is rated at ${p.noiseLevelDb} dB.`
+        ],
+        p,
+        11
+      )
+    );
+  }
+  const stars = fam.map((x) => x.energyStars);
+  const minS = Math.min(...stars);
+  const maxS = Math.max(...stars);
+  if (minS !== maxS) {
+    parts.push(`Its ${p.energyStars} star energy rating compares with ${minS} to ${maxS} stars across the family.`);
+  }
+  const heated = (x: Product) => x.features.some((f) => /heated glass/i.test(f));
+  const nHeated = fam.filter(heated).length;
+  if (nHeated > 0 && nHeated < fam.length) {
+    parts.push(
+      heated(p)
+        ? `It is one of ${nHeated} heated glass versions of this cabinet.`
+        : `It does not list the heated glass feature that ${nHeated} of its sibling versions have.`
+    );
+  }
+  if (/left hing/i.test(p.name)) parts.push('Its listing describes it as left hinged.');
+  return parts.length ? ['### How this version differs', parts.join(' ')] : [];
+}
+
 export function generateLongDescription(p: Product): string[] {
   const label = CAT_LABEL[p.category] ?? 'bar fridges';
   const h1 = pick(['Key features', 'Highlights', 'What you get'], p, 6);
@@ -271,5 +321,5 @@ export function generateLongDescription(p: Product): string[] {
         )}`
       ]
     : [];
-  return [intro(p), `### ${h1}`, ...bullets(p), `### ${h2}`, sizeFit(p), ...sibBlock, tailLine];
+  return [intro(p), `### ${h1}`, ...bullets(p), `### ${h2}`, sizeFit(p), ...familyDetails(p), ...sibBlock, tailLine];
 }

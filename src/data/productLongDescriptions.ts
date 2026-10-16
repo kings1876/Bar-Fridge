@@ -1,6 +1,6 @@
 import { Product } from '../types';
 import { PRODUCTS } from './products';
-import { generateLongDescription } from './productLongGenerated';
+import { generateLongDescription, familyDetails } from './productLongGenerated';
 
 // Longer, hand-written descriptions for the products the store already labels
 // "Popular" or "Best Value". Narrative is written per product; every measurement,
@@ -220,5 +220,9 @@ export function longDescriptionFor(slug: string): string[] | undefined {
   const w = LONG_DESCRIPTIONS[slug] as Writer | undefined;
   const p = PRODUCTS.find((x) => x.slug === slug);
   if (!p) return undefined;
-  return w ? w(p) : generateLongDescription(p);
+  if (!w) return generateLongDescription(p);
+  const lines = w(p);
+  const details = familyDetails(p);
+  // hand-written copy: slot the family details in before the closing line
+  return details.length ? [...lines.slice(0, -1), ...details, lines[lines.length - 1]] : lines;
 }
