@@ -88,6 +88,26 @@ const NAV = `<nav aria-label="Main">${li([['/', 'Home'], ['/shop', 'Shop bar fri
 const FOOT = `<footer><nav aria-label="Footer">${li([['/about', 'About us'], ['/contact', 'Contact'], ['/faq', 'FAQ'], ['/shipping', 'Shipping'], ['/refund', 'Returns and refunds'], ['/privacy', 'Privacy policy'], ['/terms', 'Terms and conditions'], ['/blog', 'Blog']])}</nav><p>${esc(SITE.name)} · <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a></p></footer>`;
 const popular = PRODUCTS.filter((p) => p.badge === 'Popular' || p.badge === 'Best Value');
 
+// Every product links to its neighbours by capacity inside its category (a ring, so none is left
+// with a single inbound link), and every guide links to the next two guides plus two tag-related ones.
+function relatedProducts(p) {
+  const group = PRODUCTS.filter((x) => x.category === p.category && x.subcategory !== 'Ice Boxes & Coolers' === (p.subcategory !== 'Ice Boxes & Coolers'))
+    .sort((a, b) => a.capacityLitres - b.capacityLitres || a.slug.localeCompare(b.slug));
+  const i = group.findIndex((x) => x.slug === p.slug);
+  const picks = new Set();
+  for (const k of [1, -1, 2, -2]) { const x = group[(i + k + group.length * 2) % group.length]; if (x && x.slug !== p.slug) picks.add(x); }
+  return [...picks];
+}
+function relatedGuides(post) {
+  const i = BLOG_POSTS.findIndex((b) => b.slug === post.slug);
+  const picks = new Map();
+  [1, 2].forEach((k) => { const x = BLOG_POSTS[(i + k) % BLOG_POSTS.length]; picks.set(x.slug, x); });
+  BLOG_POSTS.filter((b) => b.slug !== post.slug && !picks.has(b.slug))
+    .map((b) => ({ b, n: b.tags.filter((tg) => post.tags.includes(tg)).length }))
+    .sort((a, b) => b.n - a.n).slice(0, 2).forEach(({ b }) => picks.set(b.slug, b));
+  return [...picks.values()].filter((x) => x.slug !== post.slug);
+}
+
 function fallback(route, m) {
   let extra = '';
   if (route === '/') {
@@ -118,17 +138,18 @@ function fallback(route, m) {
         `<h3>Frequently asked questions</h3>` + g.faqs.map((f) => `<h4>${esc(f.q)}</h4><p>${esc(f.a)}</p>`).join('')
       : '';
     const cat = CATEGORIES.find((c) => c.id === id);
-    const subs = route.split('/').length === 3 ? `<h2>Browse ${esc(cat.name)} by type</h2>${li(cat.subcategories.map((s) => [`/category/${id}/${slugify(s)}`, s]))}` : `<p>${link(`/category/${id}`, `All ${cat.name}`)}</p>`;
+    const subs = route.split('/').length === 3 ? `<h2>Browse ${esc(cat.name)} by type</h2>${li(cat.subcategories.map((s) => [`/category/${id}/${slugify(s)}`, s]))}` : `<p>${link(`/category/${id}`, `All ${cat.name}`)}</p><h2>Other types</h2>${li(cat.subcategories.filter((s) => `/category/${id}/${slugify(s)}` !== route).map((s) => [`/category/${id}/${slugify(s)}`, s]))}`;
     extra = guide + subs + `<ul>${PRODUCTS.filter((p) => p.category === id && (route.split('/').length === 3 || `/category/${id}/${slugify(p.subcategory)}` === route)).map((p) => `<li>${link(`/${p.slug}`, p.name)}</li>`).join('')}</ul>`;
   } else if (m.ogType === 'product') {
     const p = PRODUCTS.find((x) => `/${x.slug}` === route);
     const long = longDescriptionFor(p.slug);
     extra = (long ? `<h2>About the ${esc(p.name.split(' ').slice(0, 2).join(' '))}</h2>${richToHtml(long)}` : '') +
-      `<p>${link(`/category/${p.category}`, p.categoryName)} · ${link('/shop', 'Bar fridges for sale')}</p>`;
+      `<p>${link(`/category/${p.category}`, p.categoryName)} · ${link('/shop', 'Bar fridges for sale')}</p>` +
+      `<h2>Similar bar fridges</h2>${li(relatedProducts(p).map((x) => [`/${x.slug}`, x.name]))}`;
   }
   if (m.ogType === 'article') {
     const post = BLOG_POSTS.find((b) => `/${b.slug}` === route);
-    if (post) extra = richToHtml(post.content);
+    if (post) extra = richToHtml(post.content) + `<h2>More guides</h2>${li(relatedGuides(post).map((b) => [`/${b.slug}`, b.title]))}`;
   }
   return `${NAV}<main data-prerender><h1>${esc(m.h1)}</h1>${m.ogType === 'article' ? '' : `<p>${esc(m.lead ?? m.description)}</p>`}${extra}</main>${FOOT}`;
 }
