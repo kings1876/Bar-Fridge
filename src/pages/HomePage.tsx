@@ -3,6 +3,7 @@ import { useShop } from '../context/ShopContext';
 import { PRODUCTS, CATEGORIES } from '../data/products';
 import { BLOG_CARDS } from '../data/slugIndex';
 import { Staged } from '../components/Staged';
+import { AfterLoad } from '../components/AfterLoad';
 import { REVIEWS_DATA } from '../data/reviews';
 import { ProductCard } from '../components/ProductCard';
 import { TrustpilotBanner } from '../components/TrustpilotBanner';
@@ -313,6 +314,7 @@ export const HomePage: React.FC = () => {
           </div>
 
           {/* Interactive Slideshow Control Bar with Animated Progress Timers & Thumbnails */}
+          <AfterLoad minHeight={300}>
           <div className="mt-10 pt-6 border-t border-white/10">
             {/* Quick Navigation Tabs with Progress Timers */}
             <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 sm:gap-3">
@@ -445,6 +447,7 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
           </div>
+          </AfterLoad>
         </div>
       </section>
 
