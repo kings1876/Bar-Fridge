@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
 import { Product, CartItem, PageView, BlogPost } from '../types';
-import { PRODUCTS } from '../data/products';
+import { PRODUCTS, CATEGORIES } from '../data/products';
+import { slugify } from '../seo/seo';
 import { BLOG_POSTS } from '../data/blogPosts';
 
 export interface NavOptions {
@@ -26,11 +27,12 @@ function buildPath(
     case 'home':
       return '/';
     case 'shop': {
-      const params = new URLSearchParams();
-      if (options?.categoryId && options.categoryId !== 'all') params.set('category', options.categoryId);
-      if (options?.subcategory && options.subcategory !== 'all') params.set('subcategory', options.subcategory);
-      const qs = params.toString();
-      return qs ? `/shop?${qs}` : '/shop';
+      // Clean, keyword-bearing category URLs: /category/{id}[/{subcategory-slug}]
+      if (options?.categoryId && options.categoryId !== 'all') {
+        const sub = options.subcategory && options.subcategory !== 'all' ? `/${slugify(options.subcategory)}` : '';
+        return `/category/${options.categoryId}${sub}`;
+      }
+      return '/shop';
     }
     case 'product-detail':
       return options?.productSlug ? `/${options.productSlug}` : '/shop';
@@ -45,7 +47,7 @@ function buildPath(
 
 function parseLocation(pathname: string, search: string): ParsedLocation {
   const params = new URLSearchParams(search);
-  const [first, second] = pathname.split('/').filter(Boolean);
+  const [first, second, third] = pathname.split('/').filter(Boolean);
 
   switch (first) {
     case undefined:
@@ -58,6 +60,12 @@ function parseLocation(pathname: string, search: string): ParsedLocation {
         category: params.get('category') || 'all',
         subcategory: params.get('subcategory') || 'all'
       };
+    case 'category': {
+      const cat = CATEGORIES.find((c) => c.id === second);
+      if (!cat) return { page: 'shop', product: null, blogPost: null, category: 'all', subcategory: 'all' };
+      const sub = third ? cat.subcategories.find((x) => slugify(x) === third) : undefined;
+      return { page: 'shop', product: null, blogPost: null, category: cat.id, subcategory: sub ?? 'all' };
+    }
     case 'product': {
       const product = second ? PRODUCTS.find((p) => p.slug === second) || null : null;
       return { page: product ? 'product-detail' : 'shop', product, blogPost: null };

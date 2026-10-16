@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { ShopProvider, useShop } from './context/ShopContext';
+import { Seo } from './components/Seo';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { CartDrawer } from './components/CartDrawer';
@@ -57,6 +58,7 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-sky-500 selection:text-white font-sans">
+      <Seo />
       <Navbar />
       <main className="flex-1">
         {renderCurrentPage()}

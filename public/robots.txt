@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /admin
 Disallow: /api/
 Disallow: /order/
+
+Sitemap: https://www.barfridgesforsale.com.au/sitemap.xml

@@ -187,7 +187,7 @@ export const HomePage: React.FC = () => {
               >
                 <img
                   src={PRODUCTS.find((p) => p.id === slide.productId)?.image}
-                  alt={slide.theme}
+                  alt=""
                   className={`w-full h-full object-cover object-center blur-3xl brightness-50 saturate-125 transform transition-transform duration-[6500ms] ease-out ${
                     isActive ? 'scale-150' : 'scale-125'
                   }`}
@@ -226,7 +226,7 @@ export const HomePage: React.FC = () => {
 
               {/* Main Headline with High Contrast Styling */}
               <h1 className="text-3xl sm:text-5xl lg:text-[3.25rem] font-black text-white tracking-tight leading-[1.12] drop-shadow-xl">
-                Premium Commercial & Alfresco <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-cyan-200 to-sky-400">Bar Fridges For Sale</span>
+                Premium Outdoor Bar Fridges: <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-cyan-200 to-sky-400">Alfresco & Commercial Bar Fridges For Sale</span>
               </h1>
 
               {/* Subheading */}
@@ -596,7 +596,7 @@ export const HomePage: React.FC = () => {
           <div className="absolute inset-0 transition-opacity duration-1000 ease-in-out">
             <img
               src="/images/products/rhino-gsp2h-ss-1.webp"
-              alt="Australian Tropical Climate Testing"
+              alt=""
               className="w-full h-full object-cover object-center blur-3xl brightness-50 scale-125"
             />
           </div>

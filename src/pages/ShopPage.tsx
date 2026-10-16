@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { useShop } from '../context/ShopContext';
 import { PRODUCTS, CATEGORIES } from '../data/products';
 import { ProductCard } from '../components/ProductCard';
+import { CATEGORY_SEO } from '../seo/seo';
 import {
   Filter,
   Search,
@@ -122,12 +123,14 @@ export const ShopPage: React.FC = () => {
               <span>Category → Subcategory → Product Hierarchy</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight">
-              {activeCategoryObj ? activeCategoryObj.name : 'All Bar Fridges & Freezers For Sale'}
+              {activeCategoryObj
+                ? (selectedSubcategory !== 'all' ? `${selectedSubcategory} — ${activeCategoryObj.name}` : CATEGORY_SEO[activeCategoryObj.id]?.h1 ?? activeCategoryObj.name)
+                : 'Bar Fridges For Sale in Australia'}
             </h1>
             <p className="text-slate-600 text-xs sm:text-sm max-w-2xl leading-relaxed">
               {activeCategoryObj 
                 ? activeCategoryObj.description 
-                : 'Browse our full catalog of Australian commercial beverage chillers, outdoor alfresco fridges, and heavy-duty bar freezers with 100% Free Nationwide Freight.'}
+                : 'Bar fridges for sale across Australia: outdoor and alfresco bar fridges, glass door and under bench models, beer fridges, drinks fridges and heavy-duty bar freezers with 100% Free Nationwide Freight.'}
             </p>
           </div>
 
