@@ -21,6 +21,7 @@ export const ContactPage: React.FC = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [honeypot, setHoneypot] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,16 +38,33 @@ export const ContactPage: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      await new Promise(res => setTimeout(res, 850));
-
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formName: 'contact',
+          name: formState.fullName,
+          email: formState.email,
+          phone: formState.phone,
+          inquiryType: formState.inquiryType,
+          message: formState.message,
+          website: honeypot
+        })
+      });
+      const result = await res.json().catch(() => ({}));
+      if (!res.ok || result.ok !== true) throw new Error('submit failed');
       setSubmitted(true);
       addToast({
         type: 'success',
         title: 'Message Sent!',
-        message: 'Our Sydney engineering support team will reply within 2 business hours.'
+        message: 'Thanks — we have your message and will reply by email.'
       });
     } catch {
-      setSubmitted(true);
+      addToast({
+        type: 'warning',
+        title: 'Message not sent',
+        message: 'Sorry, something went wrong. Please try again or email info@barfridgesforsale.com.au.'
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -153,6 +171,7 @@ export const ContactPage: React.FC = () => {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
               <div>
                 <h3 className="text-xl font-bold text-slate-900">Send Us a Direct Message</h3>
                 <p className="text-xs text-slate-500 mt-0.5">Fill out the form below and we will respond promptly.</p>

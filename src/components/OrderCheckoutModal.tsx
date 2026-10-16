@@ -1,35 +1,36 @@
 import React, { useState } from 'react';
 import { useShop } from '../context/ShopContext';
-import { 
-  X, 
-  Bitcoin, 
-  Check, 
-  Copy, 
-  ShieldCheck, 
-  Truck, 
-  CheckCircle2, 
-  Send, 
-  Sparkles
+import { REPLY, SITE } from '../../shared/reply.config.js';
+import { findMethod, makeOrderNumber, waOrderLink, whatsappEnabled } from '../../shared/order.js';
+import {
+  X,
+  Bitcoin,
+  ShieldCheck,
+  Truck,
+  CheckCircle2,
+  Send,
+  Sparkles,
+  MessageCircle
 } from 'lucide-react';
 
 export const OrderCheckoutModal: React.FC = () => {
-  const { 
-    isOrderModalOpen, 
-    setIsOrderModalOpen, 
-    cart, 
-    cartSubtotal, 
+  const {
+    isOrderModalOpen,
+    setIsOrderModalOpen,
+    cart,
+    cartSubtotal,
     clearCart,
     formatPrice,
     addToast
   } = useShop();
 
-  const [selectedCrypto, setSelectedCrypto] = useState<'USDT' | 'BTC' | 'ETH' | 'SOL'>('USDT');
-  const [copiedAddress, setCopiedAddress] = useState(false);
+  const [methodId, setMethodId] = useState<string>(REPLY.paymentMethods[0].id);
   const [promoCode, setPromoCode] = useState('');
   const [extraDiscount, setExtraDiscount] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [orderComplete, setOrderComplete] = useState(false);
   const [orderId, setOrderId] = useState('');
+  const [submitError, setSubmitError] = useState('');
 
   // Form Fields
   const [formData, setFormData] = useState({
@@ -42,39 +43,16 @@ export const OrderCheckoutModal: React.FC = () => {
     postcode: '',
     country: 'Australia',
     deliveryInstructions: '',
-    txHash: ''
+    website: '' // honeypot — real users never see or fill this
   });
 
   if (!isOrderModalOpen) return null;
 
-  // 10% Crypto discount calculation
-  const cryptoDiscountPercent = 10;
-  const cryptoDiscountAmount = (cartSubtotal * cryptoDiscountPercent) / 100;
+  const method = findMethod(methodId);
+  const discountPercent = method.discountPct;
+  const cryptoDiscountAmount = (cartSubtotal * discountPercent) / 100;
   const totalAfterDiscount = Math.max(0, cartSubtotal - cryptoDiscountAmount - extraDiscount);
-
-  // Mock exchange rates for estimation
-  const cryptoRates: Record<string, { rate: number; address: string; network: string }> = {
-    USDT: { rate: 1, address: 'TQ7aX9vZ3M4rKp8yLmNw2j5Bq9fRtE21pQ', network: 'TRC20 (Tron) or ERC20' },
-    BTC: { rate: 68500, address: 'bc1q8w7d5v9x4m3k2l1z0a9s8d7f6g5h4j3k2l1', network: 'Bitcoin Native' },
-    ETH: { rate: 3500, address: '0x8B7c90F623d9B7D311F5a30B2c8428F9732b1E83', network: 'Ethereum Mainnet' },
-    SOL: { rate: 160, address: 'Fr9KQzK4pXnF81v3mZb6w7yC2tR1xP5kH9qN0sE8aB4', network: 'Solana Network' }
-  };
-
-  const currentCrypto = cryptoRates[selectedCrypto];
-  const cryptoAmount = selectedCrypto === 'USDT' 
-    ? totalAfterDiscount.toFixed(2) 
-    : (totalAfterDiscount / currentCrypto.rate).toFixed(6);
-
-  const handleCopyAddress = () => {
-    navigator.clipboard.writeText(currentCrypto.address);
-    setCopiedAddress(true);
-    addToast({
-      type: 'success',
-      title: 'Address Copied',
-      message: `${selectedCrypto} merchant wallet address copied to clipboard.`
-    });
-    setTimeout(() => setCopiedAddress(false), 3000);
-  };
+  const whatsappOn = whatsappEnabled();
 
   const handleApplyPromo = (e: React.FormEvent) => {
     e.preventDefault();
@@ -94,9 +72,36 @@ export const OrderCheckoutModal: React.FC = () => {
     }
   };
 
-  const handleSubmitOrder = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.fullName || !formData.email || !formData.phone || !formData.streetAddress || !formData.suburb || !formData.postcode) {
+  const requiredFilled = () =>
+    formData.fullName && formData.email && formData.phone && formData.streetAddress && formData.suburb && formData.postcode;
+
+  const buildPayload = (ref: string, channel: 'email' | 'whatsapp') => ({
+    formName: 'order',
+    channel,
+    orderNumber: ref,
+    customerName: formData.fullName,
+    customerEmail: formData.email,
+    customerPhone: formData.phone,
+    address: `${formData.streetAddress}, ${formData.suburb} ${formData.state} ${formData.postcode}, ${formData.country}`,
+    notes: formData.deliveryInstructions,
+    paymentMethod: methodId,
+    amountDue: Math.round(totalAfterDiscount * 100) / 100,
+    items: cart.map((i) => ({ name: i.product.name, quantity: i.quantity, lineTotal: i.product.price * i.quantity })),
+    website: formData.website
+  });
+
+  const postOrder = async (payload: ReturnType<typeof buildPayload>) => {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) return false;
+    try { return (await res.json()).ok === true; } catch { return false; }
+  };
+
+  const submit = async (channel: 'email' | 'whatsapp') => {
+    if (!requiredFilled()) {
       addToast({
         type: 'warning',
         title: 'Missing Required Fields',
@@ -104,27 +109,43 @@ export const OrderCheckoutModal: React.FC = () => {
       });
       return;
     }
+    setSubmitError('');
+    const ref = makeOrderNumber();
+    const payload = buildPayload(ref, channel);
+
+    // window.open must run synchronously in the click handler or pop-up blockers stop it.
+    if (channel === 'whatsapp') {
+      window.open(
+        waOrderLink({ ...payload, items: payload.items }),
+        '_blank',
+        'noopener'
+      );
+    }
 
     setIsSubmitting(true);
-    const newOrderId = 'BFFS-' + Math.floor(100000 + Math.random() * 900000);
+    let ok = false;
+    try { ok = await postOrder(payload); } catch { ok = false; }
+    setIsSubmitting(false);
 
-    try {
-      await new Promise(res => setTimeout(res, 1100));
-      setOrderId(newOrderId);
-      setOrderComplete(true);
-      clearCart();
-      addToast({
-        type: 'success',
-        title: 'Order Form Submitted!',
-        message: `Order #${newOrderId} received. Check your email for confirmation.`
-      });
-    } catch {
-      setOrderId(newOrderId);
-      setOrderComplete(true);
-      clearCart();
-    } finally {
-      setIsSubmitting(false);
+    if (!ok) {
+      setSubmitError(
+        `We couldn't submit your order just now. Please try again, or email ${SITE.email} with your order details.`
+      );
+      return;
     }
+    setOrderId(ref);
+    setOrderComplete(true);
+    clearCart();
+    addToast({
+      type: 'success',
+      title: 'Order Received',
+      message: `Order #${ref} received. Watch your email for payment details.`
+    });
+  };
+
+  const handleSubmitOrder = (e: React.FormEvent) => {
+    e.preventDefault();
+    submit('email');
   };
 
   return (
@@ -138,8 +159,8 @@ export const OrderCheckoutModal: React.FC = () => {
               <Bitcoin className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-bold text-lg text-white">Direct Order & Crypto Checkout Form</h3>
-              <p className="text-xs text-amber-300 font-medium">Automatic 10% Discount Applied for Crypto Payments</p>
+              <h3 className="font-bold text-lg text-white">Direct Order Form</h3>
+              <p className="text-xs text-amber-300 font-medium">Automatic 10% Discount for Crypto Payments</p>
             </div>
           </div>
           <button 
@@ -161,37 +182,20 @@ export const OrderCheckoutModal: React.FC = () => {
               <span className="text-xs uppercase tracking-widest text-emerald-700 font-bold">Order Received & Reserved</span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Thank You, {formData.fullName}!</h2>
               <p className="text-slate-600 text-sm mt-2 max-w-lg mx-auto">
-                Your order reference is <span className="font-mono font-bold text-sky-700">{orderId}</span>. A full itemized confirmation invoice has been sent to <span className="text-slate-900 font-semibold">{formData.email}</span>.
+                Your order reference is <span className="font-mono font-bold text-sky-700">{orderId}</span>. A confirmation has been emailed to <span className="text-slate-900 font-semibold">{formData.email}</span>.
               </p>
             </div>
 
-            {/* Payment Transfer Instructions Box */}
-            <div className="max-w-xl mx-auto bg-amber-50/60 border border-amber-300 rounded-2xl p-6 text-left space-y-4">
-              <div className="flex items-center justify-between border-b border-amber-200 pb-3">
-                <span className="text-xs font-bold uppercase text-amber-900">Total Due via {selectedCrypto}</span>
-                <span className="text-lg font-mono font-black text-slate-900">{cryptoAmount} {selectedCrypto}</span>
+            {/* What happens next — payment details are sent by us after order review */}
+            <div className="max-w-xl mx-auto bg-sky-50 border border-sky-200 rounded-2xl p-6 text-left space-y-3">
+              <div className="flex items-center justify-between border-b border-sky-200 pb-3">
+                <span className="text-xs font-bold uppercase text-sky-900">Total due ({method.label})</span>
+                <span className="text-lg font-mono font-black text-slate-900">{formatPrice(totalAfterDiscount)}</span>
               </div>
-
-              <div>
-                <label className="text-xs text-slate-700 font-medium block mb-1">
-                  Send to Official Merchant Deposit Address ({currentCrypto.network}):
-                </label>
-                <div className="flex items-center gap-2 bg-white border border-amber-300 rounded-xl p-2.5 font-mono text-xs text-amber-950">
-                  <span className="truncate">{currentCrypto.address}</span>
-                  <button 
-                    onClick={handleCopyAddress}
-                    className="p-1.5 hover:bg-slate-100 rounded-lg text-slate-600 hover:text-slate-950 shrink-0"
-                    title="Copy Address"
-                  >
-                    {copiedAddress ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
-                  </button>
-                </div>
-              </div>
-
-              <div className="text-xs text-slate-700 space-y-1">
-                <p>• Once transaction is transmitted, dispatch occurs within 24h via Northline / Direct Freight.</p>
+              <div className="text-xs text-slate-700 space-y-1.5">
+                <p>• <strong className="text-slate-900">Watch your email</strong> — we will send your payment details to <strong className="text-slate-900">{formData.email}</strong> shortly.</p>
+                <p>• Please don't send any payment until you've received those details from us.</p>
                 <p>• Delivery destination: <strong className="text-slate-900">{formData.streetAddress}, {formData.suburb}, {formData.state} {formData.postcode}</strong></p>
-                <p>• Tailgate courier tracking will be SMS text messaged to <strong className="text-slate-900">{formData.phone}</strong>.</p>
               </div>
             </div>
 
@@ -210,6 +214,16 @@ export const OrderCheckoutModal: React.FC = () => {
         ) : (
           /* Checkout Form View */
           <form onSubmit={handleSubmitOrder} className="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 text-slate-800">
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              value={formData.website}
+              onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+              className="hidden"
+            />
             {/* Left Column: Delivery & Customer Info */}
             <div className="lg:col-span-7 space-y-5">
               <div>
@@ -323,64 +337,37 @@ export const OrderCheckoutModal: React.FC = () => {
                 </div>
               </div>
 
-              {/* Crypto Payment Method Selection */}
+              {/* Payment Method Selection */}
               <div className="pt-2 border-t border-slate-200">
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-bold text-slate-900 text-sm flex items-center gap-1.5">
                     <Bitcoin className="w-4 h-4 text-amber-600" />
-                    <span>Select Payment Cryptocurrency</span>
+                    <span>Select Payment Method</span>
                   </span>
-                  <span className="text-xs text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">10% Off Included</span>
+                  <span className="text-xs text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">{discountPercent}% Off Included</span>
                 </div>
 
-                <div className="grid grid-cols-4 gap-2">
-                  {(['USDT', 'BTC', 'ETH', 'SOL'] as const).map((crypto) => (
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                  {REPLY.paymentMethods.map((m) => (
                     <button
-                      key={crypto}
+                      key={m.id}
                       type="button"
-                      onClick={() => setSelectedCrypto(crypto)}
+                      onClick={() => setMethodId(m.id)}
                       className={`p-2.5 rounded-xl border text-center transition-all ${
-                        selectedCrypto === crypto
+                        methodId === m.id
                           ? 'border-amber-400 bg-amber-50 text-amber-950 font-black shadow-sm ring-2 ring-amber-400/20'
                           : 'border-slate-200 bg-slate-50 text-slate-600 hover:border-slate-300'
                       }`}
                     >
-                      <div className="text-xs sm:text-sm font-bold">{crypto}</div>
-                      <div className="text-[10px] text-slate-500">{cryptoRates[crypto].network.split(' ')[0]}</div>
+                      <div className="text-xs sm:text-sm font-bold">{m.label.split(' ')[0]}</div>
+                      <div className="text-[10px] text-slate-500">{m.label.includes('(') ? m.label.slice(m.label.indexOf('(')) : ''}</div>
                     </button>
                   ))}
                 </div>
 
-                {/* Wallet Preview Box */}
-                <div className="mt-3 bg-slate-50 border border-slate-200 rounded-2xl p-3.5 space-y-2">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-slate-600 font-medium">Official Merchant Deposit Address ({currentCrypto.network}):</span>
-                    <button
-                      type="button"
-                      onClick={handleCopyAddress}
-                      className="text-sky-700 hover:text-sky-800 flex items-center gap-1 font-bold"
-                    >
-                      {copiedAddress ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-                      <span>{copiedAddress ? 'Copied!' : 'Copy'}</span>
-                    </button>
-                  </div>
-                  <div className="font-mono text-xs text-slate-900 break-all bg-white p-2.5 rounded-xl border border-slate-200 font-semibold">
-                    {currentCrypto.address}
-                  </div>
-                </div>
-
-                <div className="mt-3">
-                  <label className="block text-slate-700 text-xs font-medium mb-1">
-                    Transaction ID / TX Hash (Optional if sending right now, or provide via email):
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.txHash}
-                    onChange={(e) => setFormData({ ...formData, txHash: e.target.value })}
-                    placeholder="e.g. 0x48f92b... or submit now and transfer after invoice"
-                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-900 focus:outline-none focus:border-sky-500 focus:bg-white text-xs font-mono"
-                  />
-                </div>
+                <p className="mt-3 text-xs text-slate-600 bg-slate-50 border border-slate-200 rounded-xl p-3">
+                  <strong className="text-slate-900">How payment works:</strong> after you place your order we email you the exact payment details for your chosen method. Please don't send any payment before you receive them.
+                </p>
               </div>
             </div>
 
@@ -466,9 +453,6 @@ export const OrderCheckoutModal: React.FC = () => {
                     <span className="text-sm font-bold text-slate-900">Total AUD Payable:</span>
                     <div className="text-right">
                       <span className="text-2xl font-black text-sky-700">{formatPrice(totalAfterDiscount)}</span>
-                      <div className="text-xs text-amber-800 font-mono font-bold">
-                        ≈ {cryptoAmount} {selectedCrypto}
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -484,15 +468,31 @@ export const OrderCheckoutModal: React.FC = () => {
                   {isSubmitting ? (
                     <>
                       <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      <span>Generating Order Invoice...</span>
+                      <span>Submitting your order...</span>
                     </>
                   ) : (
                     <>
                       <Send className="w-4 h-4" />
-                      <span>Submit Order & Lock 10% Discount</span>
+                      <span>Place Order & Lock 10% Discount</span>
                     </>
                   )}
                 </button>
+
+                {whatsappOn && (
+                  <button
+                    type="button"
+                    disabled={isSubmitting || cart.length === 0}
+                    onClick={() => submit('whatsapp')}
+                    className="w-full py-3 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white font-black text-sm rounded-xl flex items-center justify-center gap-2 transition-all"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    <span>Order via WhatsApp</span>
+                  </button>
+                )}
+
+                {submitError && (
+                  <p role="alert" className="text-xs text-rose-600 bg-rose-50 border border-rose-200 rounded-xl p-2.5">{submitError}</p>
+                )}
 
                 <div className="flex items-center justify-center gap-2 text-[11px] text-slate-500">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />

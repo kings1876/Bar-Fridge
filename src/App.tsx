@@ -22,6 +22,8 @@ import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { FAQPage } from './pages/FAQPage';
 import { PoliciesPage } from './pages/PoliciesPage';
+import { AdminApp } from './admin/AdminApp';
+import { PaymentDetailsPage, ConfirmPaymentPage } from './pages/OrderPublic';
 
 const AppContent: React.FC = () => {
   const { currentPage } = useShop();
@@ -72,6 +74,10 @@ const AppContent: React.FC = () => {
 };
 
 export default function App() {
+  const path = window.location.pathname.replace(/\/+$/, '');
+  if (path === '/admin' || path.startsWith('/admin/')) return <AdminApp />;
+  if (path === '/order/payment-details') return <PaymentDetailsPage />;
+  if (path === '/order/confirm-payment') return <ConfirmPaymentPage />;
   return (
     <ShopProvider>
       <AppContent />
