@@ -33,11 +33,11 @@ function buildPath(
       return qs ? `/shop?${qs}` : '/shop';
     }
     case 'product-detail':
-      return options?.productSlug ? `/product/${options.productSlug}` : '/shop';
+      return options?.productSlug ? `/${options.productSlug}` : '/shop';
     case 'blog':
       return '/blog';
     case 'blog-post':
-      return options?.blogSlug ? `/blog/${options.blogSlug}` : '/blog';
+      return options?.blogSlug ? `/${options.blogSlug}` : '/blog';
     default:
       return `/${page}`;
   }
@@ -75,8 +75,14 @@ function parseLocation(pathname: string, search: string): ParsedLocation {
     case 'privacy':
     case 'terms':
       return { page: first as PageView, product: null, blogPost: null };
-    default:
+    default: {
+      // Post-name permalinks: /{slug} resolves to a product or a blog post.
+      const product = PRODUCTS.find((p) => p.slug === first) || null;
+      if (product) return { page: 'product-detail', product, blogPost: null };
+      const blogPost = BLOG_POSTS.find((b) => b.slug === first) || null;
+      if (blogPost) return { page: 'blog-post', product: null, blogPost };
       return { page: 'home', product: null, blogPost: null };
+    }
   }
 }
 
@@ -247,6 +253,14 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  // Old /product/{slug} and /blog/{slug} links still resolve; rewrite them to /{slug}.
+  useEffect(() => {
+    const slug = initial.product?.slug ?? initial.blogPost?.slug;
+    if (slug && window.location.pathname !== `/${slug}`) {
+      window.history.replaceState({}, '', `/${slug}`);
+    }
+  }, []);
 
   useEffect(() => {
     const handlePopState = () => {
