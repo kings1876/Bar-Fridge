@@ -43,6 +43,11 @@ export const ShopOverview: React.FC = () => (
     </div>
     <div className="max-w-3xl space-y-3 text-slate-600 text-sm sm:text-base leading-relaxed">
       <p>
+        Every bar fridge and freezer carries the warranty listed on its product page, and our shipping and returns pages explain delivery
+        and returns in full. If you cannot find the size or style you need, contact us with the space you have in mind and we will help
+        you find the right model.
+      </p>
+      <p>
         If you are not sure where to start, our buying guides explain the choices in plain language: how climate ratings work, why front
         venting matters for built in fridges, how glass door fridges handle condensation, and how to read the dimensions on a product page
         so the fridge fits the first time.

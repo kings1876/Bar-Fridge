@@ -9,6 +9,56 @@
       "source": "/blog/:slug",
       "destination": "/:slug",
       "permanent": true
+    },
+    {
+      "source": "/category/single-door/night-club-multi-colour-led",
+      "destination": "/category/single-door",
+      "permanent": true
+    },
+    {
+      "source": "/category/single-door/bar-fridge-with-freezer",
+      "destination": "/category/single-door",
+      "permanent": true
+    },
+    {
+      "source": "/category/single-door/ice-boxes-and-coolers",
+      "destination": "/category/single-door",
+      "permanent": true
+    },
+    {
+      "source": "/category/double-triple-door/sliding-double-door",
+      "destination": "/category/double-triple-door",
+      "permanent": true
+    },
+    {
+      "source": "/category/wine-dual-zone/dual-zone-wine-and-beer",
+      "destination": "/category/wine-dual-zone",
+      "permanent": true
+    },
+    {
+      "source": "/category/wine-dual-zone/wine-only-cabinet",
+      "destination": "/category/wine-dual-zone",
+      "permanent": true
+    },
+    {
+      "source": "/category/bar-freezers/compact-underbench-freezer",
+      "destination": "/category/bar-freezers",
+      "permanent": true
+    },
+    {
+      "source": "/category/bar-freezers/glass-door-display-freezer",
+      "destination": "/category/bar-freezers",
+      "permanent": true
+    },
+    {
+      "source": "/category/bar-freezers/commercial-upright-freezer",
+      "destination": "/category/bar-freezers",
+      "permanent": true
+    },
+    {
+      "source": "/category/bar-freezers/portable-12v-camping-freezer",
+      "destination": "/category/bar-freezers",
+      "permanent": true
     }
   ],
   "rewrites": [

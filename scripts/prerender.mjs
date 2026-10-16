@@ -43,7 +43,10 @@ function renderStatic(route) {
     history: { pushState() {}, replaceState() {} }, matchMedia: () => ({ matches: false, addEventListener() {}, removeEventListener() {} })
   };
   globalThis.localStorage = { getItem: () => null, setItem() {}, removeItem() {} };
-  try { return ssr.renderStatic(route); } catch (e) { console.warn('SSR failed for ' + route + ': ' + e.message); return null; }
+  try {
+    // Decorative icon SVGs make up a large share of the markup; the pre-built copy keeps the text and drops them.
+    return ssr.renderStatic(route).replace(/<svg[\s\S]*?<\/svg>/g, '');
+  } catch (e) { console.warn('SSR failed for ' + route + ': ' + e.message); return null; }
 }
 
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
