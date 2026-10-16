@@ -9,9 +9,10 @@ import { CATEGORY_GUIDES } from '../data/categoryContent';
 import { SUBCATEGORY_GUIDES, subStats } from '../data/subcategoryContent';
 import { richToHtml, richToText } from './richtext';
 import { longDescriptionFor } from '../data/productLongDescriptions';
+import { keywordFor, titleCase, aboutHeading } from '../data/productKeywords';
 import { SITE, REPLY } from '../../shared/reply.config.js';
 
-export { PRODUCTS, CATEGORIES, CATEGORY_GUIDES, SUBCATEGORY_GUIDES, subStats, BLOG_POSTS, FAQS_DATA, SITE, richToHtml, longDescriptionFor };
+export { PRODUCTS, CATEGORIES, CATEGORY_GUIDES, SUBCATEGORY_GUIDES, subStats, BLOG_POSTS, FAQS_DATA, SITE, richToHtml, longDescriptionFor, aboutHeading };
 
 export interface SeoMeta {
   title: string;
@@ -428,11 +429,11 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
   if (product && first !== 'blog') {
     const cat = CATEGORIES.find((c) => c.id === product.category)!;
     const url = abs(`/${product.slug}`);
-    const title =
-      product.name.length + 23 <= 60 ? `${product.name} | Bar Fridges For Sale` : product.name.slice(0, 60).replace(/\s+\S*$/, '');
-    const lead = firstSentence(product.description);
-    const tail = ' Free shipping Australia-wide.';
-    const desc = lead.length + tail.length <= 158 ? lead + tail : trim(lead, 158);
+    const pk = keywordFor(product.slug)!;
+    const head = titleCase(pk.primary);
+    const title = head.length + 23 <= 60 ? `${head} | Bar Fridges For Sale` : head.length <= 60 ? head : head.slice(0, 60).replace(/\s+\S*$/, '');
+    const d = product.dimensions;
+    const desc = trim(`${head}: ${product.capacityLitres}L ${product.finish.replace(/ finish$/i, '').toLowerCase()}, ${d.width}x${d.depth}x${d.height}mm. Free shipping Australia-wide.`, 158);
     const brand = product.name.split(' ')[0];
     return {
       title,
@@ -442,7 +443,7 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
       robots: INDEX,
       ogType: 'product',
       h1: product.name,
-      keyword: CATEGORY_SEO[product.category].keyword,
+      keyword: pk.keyword,
       lead: product.description,
       jsonLd: [
         crumbs([['Home', '/'], ['Bar Fridges For Sale', '/shop'], [cat.name, `/category/${product.category}`], [product.name, `/${product.slug}`]]),

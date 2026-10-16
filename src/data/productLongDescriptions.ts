@@ -1,4 +1,6 @@
 import { Product } from '../types';
+import { keywordFor } from './productKeywords';
+import { supportingFor, joinKeywords } from './productSupportKeywords';
 import { PRODUCTS } from './products';
 import { generateLongDescription, familyDetails } from './productLongGenerated';
 
@@ -281,6 +283,13 @@ function ordering(p: Product): string {
 }
 
 /** Hand-written description if one exists, otherwise a spec-driven one; every product also gets the same two closing sections. */
+/** Opening paragraph that carries the product's own primary keyword. */
+export function keywordIntro(p: Product): string | undefined {
+  const k = keywordFor(p.slug);
+  if (!k) return undefined;
+  return `If you are looking for a ${k.keyword}, the ${k.brand} ${k.model} is a ${p.capacityLitres} litre ${p.subcategory.toLowerCase()} model you can buy online here with free shipping across Australia. Buyers also search for ${joinKeywords(supportingFor(p.slug))}, and all of those describe this model.`;
+}
+
 export function longDescriptionFor(slug: string): string[] | undefined {
   const w = LONG_DESCRIPTIONS[slug] as Writer | undefined;
   const p = PRODUCTS.find((x) => x.slug === slug);
@@ -294,5 +303,6 @@ export function longDescriptionFor(slug: string): string[] | undefined {
     if (details.length) lines = [...lines.slice(0, -1), ...details, lines[lines.length - 1]];
   }
   const closing = lines[lines.length - 1];
-  return [...lines.slice(0, -1), '### At a glance', glance(p), '### Ordering, delivery and warranty', ordering(p), closing];
+  const intro = keywordIntro(p);
+  return [...(intro ? [intro] : []), ...lines.slice(0, -1), '### At a glance', glance(p), '### Ordering, delivery and warranty', ordering(p), closing];
 }

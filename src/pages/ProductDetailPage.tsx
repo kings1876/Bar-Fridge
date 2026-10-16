@@ -6,6 +6,7 @@ import { ProductCard } from '../components/ProductCard';
 import { NavLink } from '../components/NavLink';
 import { RichText } from '../components/RichText';
 import { longDescriptionFor } from '../data/productLongDescriptions';
+import { aboutHeading } from '../data/productKeywords';
 import {
   Star, 
   Truck, 
@@ -273,7 +274,7 @@ export const ProductDetailPage: React.FC = () => {
       {/* Longer description (best-selling products) */}
       {longDescriptionFor(product.slug) && (
         <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 space-y-4 shadow-sm text-sm text-slate-700 leading-relaxed">
-          <h2 className="text-lg sm:text-xl font-bold text-slate-900">About the {product.name.split(' ').slice(0, 2).join(' ')}</h2>
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900">{aboutHeading(product.slug)}</h2>
           <RichText lines={longDescriptionFor(product.slug)!} />
         </div>
       )}

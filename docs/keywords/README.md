@@ -19,3 +19,8 @@ Sorted High-fit first, then by volume.
 bar fridge (22,200, KD 23) · bar fridges (4,400, KD 23) · bar fridges australia (3,600, KD 32 / blank) ·
 small bar fridge (1,600, KD 28) · glass door bar fridge (1,600, KD 26) · bar fridge for sale (720, KD 27) ·
 black bar fridge (1,000, KD 20) · bar fridge with freezer (1,000, KD 21) · cheap bar fridge (590, KD 20)
+
+## Product keywords
+Every product has one transactional primary keyword (bank keyword + brand + model code, unique per product) and four commercial supporting keywords.
+Source: src/data/productKeywords.ts (primary) and src/data/productSupportKeywords.ts (supporting). Full map with volume/KD: product-keywords.csv.
+Placement: SEO title, meta description, the "About" H2, and the opening paragraph of each product page (supporting keywords in that paragraph).

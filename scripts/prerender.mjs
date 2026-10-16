@@ -21,7 +21,7 @@ await build({
   outfile,
   logLevel: 'error'
 });
-const { seoForPath, allRoutes, PRODUCTS, CATEGORIES, CATEGORY_GUIDES, SUBCATEGORY_GUIDES, subStats, BLOG_POSTS, FAQS_DATA, SITE, slugify, richToHtml, longDescriptionFor } = await import(pathToFileURL(outfile).href);
+const { seoForPath, allRoutes, PRODUCTS, CATEGORIES, CATEGORY_GUIDES, SUBCATEGORY_GUIDES, subStats, BLOG_POSTS, FAQS_DATA, SITE, slugify, richToHtml, longDescriptionFor, aboutHeading } = await import(pathToFileURL(outfile).href);
 
 // Server-render the real page components for the static routes, so crawlers that don't run JS get exactly
 // what visitors see (home, shop, blog index, about, contact, FAQ and the policy pages).
@@ -185,7 +185,7 @@ function fallback(route, m) {
   } else if (m.ogType === 'product') {
     const p = PRODUCTS.find((x) => `/${x.slug}` === route);
     const long = longDescriptionFor(p.slug);
-    extra = (long ? `<h2>About the ${esc(p.name.split(' ').slice(0, 2).join(' '))}</h2>${richToHtml(long)}` : '') +
+    extra = (long ? `<h2>${esc(aboutHeading(p.slug))}</h2>${richToHtml(long)}` : '') +
       `<p>${link(`/category/${p.category}`, p.categoryName)}${CATEGORIES.find((c) => c.id === p.category)?.subcategories.includes(p.subcategory) ? ` · ${link(`/category/${p.category}/${slugify(p.subcategory)}`, p.subcategory)}` : ''} · ${link('/shop', 'Bar fridges for sale')}</p>` +
       `<h2>Similar bar fridges</h2>${li(relatedProducts(p).map((x) => [`/${x.slug}`, x.name]))}`;
   }
