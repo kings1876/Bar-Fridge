@@ -159,33 +159,25 @@ export const HomePage: React.FC = () => {
       >
         {/* Full-Bleed Slideshow Background Images with Smooth Crossfade and Subtle Zoom */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          {HERO_SLIDES.map((slide, index) => {
-            const isActive = index === currentSlide;
-            return (
-              <div
-                key={slide.id}
-                className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-                  isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-                }`}
-                style={{ opacity: isActive ? bgOpacity / 100 : 0 }}
-              >
-                <img
-                  src={PRODUCTS.find((p) => p.id === slide.productId)?.image}
-                  alt=""
-                  className={`w-full h-full object-cover object-center blur-3xl brightness-50 saturate-125 transform transition-transform duration-[6500ms] ease-out ${
-                    isActive ? 'scale-150' : 'scale-125'
-                  }`}
-                />
-              </div>
-            );
-          })}
+          {/* Only the active slide's blurred wash is rendered: one filtered layer instead of five keeps paint and layout cheap. */}
+          <div
+            key={activeSlideData.id}
+            className="hero-wash absolute inset-0 w-full h-full z-10"
+            style={{ opacity: bgOpacity / 100 }}
+          >
+            <img
+              src={activeSlideImage}
+              alt=""
+              className="w-full h-full object-cover object-center blur-3xl brightness-50 saturate-125 scale-150"
+            />
+          </div>
 
           {/* Ultra-Light Ambient Scrim ensuring maximum photo opacity and visibility */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/45 via-slate-950/20 to-transparent z-20 pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-950/30 z-20 pointer-events-none" />
           
           {/* Subtle Ambient Radial Glow */}
-          <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-sky-500/15 blur-[140px] pointer-events-none rounded-full z-20" />
+          <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[radial-gradient(closest-side,rgba(14,165,233,0.18),transparent)] pointer-events-none rounded-full z-20" />
         </div>
 
         {/* Live Slideshow Badge on Top Right */}

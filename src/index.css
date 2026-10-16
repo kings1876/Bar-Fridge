@@ -8,3 +8,7 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-progress { animation: none; width: 100%; }
 }
+@keyframes hero-wash-in {
+  from { opacity: 0; }
+}
+.hero-wash { animation: hero-wash-in 600ms ease-out; }
