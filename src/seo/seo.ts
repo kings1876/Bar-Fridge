@@ -324,6 +324,7 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
         {
           '@context': 'https://schema.org',
           '@type': 'CollectionPage',
+          inLanguage: 'en-AU',
           name: SHOP.h1,
           url: SHOP.canonical,
           description: SHOP.description
@@ -385,6 +386,7 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
         {
           '@context': 'https://schema.org',
           '@type': 'CollectionPage',
+          inLanguage: 'en-AU',
           name: plan.h1,
           url: abs(`/category/${second}`),
           description: plan.description
@@ -492,6 +494,7 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
         {
           '@context': 'https://schema.org',
           '@type': 'Article',
+          inLanguage: 'en-AU',
           headline: trim(post.title, 110),
           description: plan?.description ?? post.excerpt,
           image: abs(post.image),

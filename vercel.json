@@ -95,6 +95,15 @@
       ]
     },
     {
+      "source": "/((?!assets/|images/).*)",
+      "headers": [
+        {
+          "key": "Content-Language",
+          "value": "en-AU"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         {

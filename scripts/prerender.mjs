@@ -100,9 +100,12 @@ function head(m) {
     `<meta name="description" content="${esc(m.description)}" />`,
     `<meta name="robots" content="${esc(m.robots)}" />`,
     `<link rel="canonical" href="${esc(m.canonical)}" />`,
+    // one market, one language: each indexable page declares itself as the en-AU version and the default
+    ...(m.robots.startsWith('index') ? [`<link rel="alternate" hreflang="en-AU" href="${esc(m.canonical)}" />`, `<link rel="alternate" hreflang="x-default" href="${esc(m.canonical)}" />`] : []),
     `<meta property="og:title" content="${esc(m.title)}" />`,
     `<meta property="og:description" content="${esc(m.description)}" />`,
     `<meta property="og:type" content="${m.ogType}" />`,
+    `<meta property="og:locale" content="en_AU" />`,
     `<meta property="og:url" content="${esc(m.canonical)}" />`,
     `<meta property="og:image" content="${esc(m.image)}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
@@ -264,7 +267,7 @@ const notFoundLinks = li([
 ]);
 fs.writeFileSync(
   path.join(dist, '404.html'),
-  '<!doctype html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />' +
+  '<!doctype html><html lang="en-AU"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />' +
     '<title>Page not found | ' + esc(SITE.name) + '</title><meta name="robots" content="noindex, follow" />' +
     '<style>body{font-family:system-ui,Arial,sans-serif;max-width:720px;margin:12vh auto;padding:0 20px;color:#0f172a;line-height:1.6}a{color:#0284c7}li{margin:.3em 0}</style></head>' +
     '<body><h1>Page not found</h1><p>Sorry, we could not find that page. Try one of these instead:</p>' + notFoundLinks + '</body></html>'

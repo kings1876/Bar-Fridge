@@ -19,6 +19,7 @@ function apply(m: SeoMeta) {
   setMeta('property', 'og:title', m.title);
   setMeta('property', 'og:description', m.description);
   setMeta('property', 'og:type', m.ogType);
+  setMeta('property', 'og:locale', 'en_AU');
   setMeta('property', 'og:url', m.canonical);
   setMeta('property', 'og:image', m.image);
   setMeta('name', 'twitter:card', 'summary_large_image');
@@ -33,6 +34,18 @@ function apply(m: SeoMeta) {
     document.head.appendChild(link);
   }
   link.href = m.canonical;
+
+  // hreflang: indexable pages are their own en-AU / x-default version (single market)
+  document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((n) => n.remove());
+  if (m.robots.startsWith('index')) {
+    ['en-AU', 'x-default'].forEach((lang) => {
+      const alt = document.createElement('link');
+      alt.rel = 'alternate';
+      alt.hreflang = lang;
+      alt.href = m.canonical;
+      document.head.appendChild(alt);
+    });
+  }
 
   document.head.querySelectorAll('script[data-seo]').forEach((n) => n.remove());
   m.jsonLd.forEach((obj) => {
