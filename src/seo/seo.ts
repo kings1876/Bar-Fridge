@@ -6,10 +6,11 @@ import { PRODUCTS, CATEGORIES } from '../data/products';
 import { BLOG_POSTS } from '../data/blogPosts';
 import { FAQS_DATA } from '../data/faqs';
 import { CATEGORY_GUIDES } from '../data/categoryContent';
-import { richToHtml } from './richtext';
+import { richToHtml, richToText } from './richtext';
+import { longDescriptionFor } from '../data/productLongDescriptions';
 import { SITE, REPLY } from '../../shared/reply.config.js';
 
-export { PRODUCTS, CATEGORIES, CATEGORY_GUIDES, BLOG_POSTS, richToHtml };
+export { PRODUCTS, CATEGORIES, CATEGORY_GUIDES, BLOG_POSTS, richToHtml, longDescriptionFor };
 
 export interface SeoMeta {
   title: string;
@@ -411,7 +412,10 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
           name: product.name,
           sku: product.id,
           image: [product.image, ...product.galleryImages].filter(Boolean).map(abs),
-          description: product.description,
+          description: (() => {
+            const long = longDescriptionFor(product.slug);
+            return long ? `${product.description} ${richToText(long)}`.slice(0, 5000) : product.description;
+          })(),
           brand: { '@type': 'Brand', name: brand },
           category: cat.name,
           offers: {

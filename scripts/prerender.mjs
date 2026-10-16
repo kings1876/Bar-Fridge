@@ -21,7 +21,7 @@ await build({
   outfile,
   logLevel: 'error'
 });
-const { seoForPath, allRoutes, PRODUCTS, CATEGORIES, CATEGORY_GUIDES, BLOG_POSTS, richToHtml } = await import(pathToFileURL(outfile).href);
+const { seoForPath, allRoutes, PRODUCTS, CATEGORIES, CATEGORY_GUIDES, BLOG_POSTS, richToHtml, longDescriptionFor } = await import(pathToFileURL(outfile).href);
 
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -63,7 +63,9 @@ function fallback(route, m) {
     extra = guide + `<ul>${PRODUCTS.filter((p) => p.category === id).map((p) => `<li>${link(`/${p.slug}`, p.name)}</li>`).join('')}</ul>`;
   } else if (m.ogType === 'product') {
     const p = PRODUCTS.find((x) => `/${x.slug}` === route);
-    extra = `<p>${link(`/category/${p.category}`, p.categoryName)} · ${link('/shop', 'Bar fridges for sale')}</p>`;
+    const long = longDescriptionFor(p.slug);
+    extra = (long ? `<h2>About the ${esc(p.name.split(' ').slice(0, 2).join(' '))}</h2>${richToHtml(long)}` : '') +
+      `<p>${link(`/category/${p.category}`, p.categoryName)} · ${link('/shop', 'Bar fridges for sale')}</p>`;
   }
   if (m.ogType === 'article') {
     const post = BLOG_POSTS.find((b) => `/${b.slug}` === route);

@@ -24,4 +24,11 @@ Fallback for Shop if it underperforms: outdoor bar refrigerator.
 | Blog: fridge vs freezer | upright bar freezer | |
 | Blog: crypto 10% | bar fridge au | no stronger data-backed term |
 | Blog: energy | energy efficient bar fridge | |
+| Blog: outdoor-kitchen-fridge-guide | outdoor kitchen fridge (320, KD 11) | fridge for outdoor kitchen, outdoor kitchen refrigerator |
+| Blog: glass-door-fridge-guide | glass door fridge (1,300, KD 8) | fridge with glass door, glass door drink cooler |
+| Blog: built-in-bar-fridge-guide | built in bar fridge (90, KD 16) | bar fridge height, built in wine and beverage fridge |
+| Blog: beer-fridge-guide | beer fridge (1,600, KD 11) | drinks fridge, best temperature for beverage refrigerator |
+| Blog: quiet-bar-fridge-guide | quiet bar fridge (70, KD 1) | best bar fridges |
+| Blog: retro-bar-fridge-guide | retro bar fridge (480, KD 11) | mini retro fridge, retro style fridge |
+Guide posts live in src/data/blogPostsGuides.ts (markup: ## h2, ### h3, - list, [label](/path)).
 Products: unique model-name titles; description = first sentence + free shipping.
