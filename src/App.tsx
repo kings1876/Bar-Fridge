@@ -78,10 +78,12 @@ const AppContent: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-sky-500 selection:text-white font-sans">
       <Seo />
       <Navbar />
-      <main className="flex-1">
-        <Suspense fallback={<div className="min-h-[60vh]" />}>{renderCurrentPage()}</Suspense>
-      </main>
-      <Footer />
+      {/* The footer shares the page's loading boundary so it appears together with the page content
+          instead of sitting under a placeholder and jumping down (a layout shift) when the page loads. */}
+      <Suspense fallback={<div className="flex-1 min-h-screen" />}>
+        <main className="flex-1">{renderCurrentPage()}</main>
+        <Footer />
+      </Suspense>
 
       {/* Global Overlays & Utilities */}
       <Suspense fallback={null}>
