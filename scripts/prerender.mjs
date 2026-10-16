@@ -61,6 +61,14 @@ function fallback(route, m) {
       `<h2>Buying guides</h2>${li(BLOG_POSTS.map((b) => [`/${b.slug}`, b.title]))}`;
   } else if (route === '/blog') {
     extra = BLOG_POSTS.map((b) => `<h2>${link(`/${b.slug}`, b.title)}</h2><p>${esc(b.excerpt)}</p>`).join('');
+  } else if (route === '/shipping' || route === '/refund' || route === '/contact' || route === '/about') {
+    const cats = { '/shipping': ['Shipping & Delivery'], '/refund': ['Warranty & Returns'], '/contact': ['Ordering & Payment'], '/about': ['Product & Technical'] }[route];
+    const faqs = FAQS_DATA.filter((f) => cats.includes(f.category));
+    extra =
+      (route === '/contact' ? `<p>Email us at <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a> for stock, delivery and order help.</p>` : '') +
+      (route === '/about' ? `<h2>What we sell</h2>${CATEGORIES.map((c) => `<h3>${link(`/category/${c.id}`, c.name)}</h3><p>${esc(c.description)}</p>`).join('')}` : '') +
+      `<h2>Common questions</h2>` + faqs.map((f) => `<h3>${esc(f.question)}</h3><p>${esc(f.answer)}</p>`).join('') +
+      `<p>More answers on our ${link('/faq', 'FAQ page')}.</p>`;
   } else if (route === '/faq') {
     extra = FAQS_DATA.map((f) => `<h2>${esc(f.question)}</h2><p>${esc(f.answer)}</p>`).join('');
   } else if (route === '/shop') {

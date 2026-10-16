@@ -354,7 +354,8 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
         ),
         canonical: abs(path),
         image: abs(subProducts[0]?.image ?? DEFAULT_IMAGE),
-        robots: INDEX,
+        // thin lists (1-2 products) just duplicate the product pages: keep crawlable but out of the index
+        robots: subProducts.length < 3 ? 'noindex, follow' : INDEX,
         ogType: 'website',
         h1,
         keyword: plan.keyword,
