@@ -10,6 +10,13 @@ export default defineConfig(() => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
+        // Client bundle runs on Preact's React-compatible layer (about 4 KB instead of react-dom's 200 KB):
+        // far less script to parse and run on first load. The build-time server render still uses react-dom/server.
+        'react-dom/client': 'preact/compat/client',
+        'react-dom': 'preact/compat',
+        'react/jsx-runtime': 'preact/jsx-runtime',
+        'react/jsx-dev-runtime': 'preact/jsx-runtime',
+        react: 'preact/compat',
       },
     },
     server: {
