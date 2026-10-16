@@ -312,6 +312,7 @@ export const HomePage: React.FC = () => {
                       title="View product details"
                     >
                       <ArrowRight className="w-4 h-4" />
+                      <span className="sr-only">View product details</span>
                     </NavLink>
                   </div>
                 </div>

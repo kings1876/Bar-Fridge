@@ -45,7 +45,11 @@ function renderStatic(route) {
   globalThis.localStorage = { getItem: () => null, setItem() {}, removeItem() {} };
   try {
     // Decorative icon SVGs make up a large share of the markup; the pre-built copy keeps the text and drops them.
-    return ssr.renderStatic(route).replace(/<svg[\s\S]*?<\/svg>/g, '');
+    return ssr.renderStatic(route)
+      .replace(/<svg[\s\S]*?<\/svg>/g, '')
+      .replace(/<\/?(div|span|button)(\s[^>]*)?>/g, '') // non-semantic wrappers carry no meaning for crawlers
+      .replace(/ (class|style|type|disabled|tabindex|role|title|aria-[a-z-]+|data-[a-z-]+)="[^"]*"/g, '')
+      .replace(/ (disabled|hidden)(?=[\s>])/g, '');
   } catch (e) { console.warn('SSR failed for ' + route + ': ' + e.message); return null; }
 }
 
@@ -207,8 +211,8 @@ for (const route of allRoutes()) {
     .replace(/\s*<meta name="description"[^>]*>/, '')
     .replace(/\s*<meta property="og:[^>]*>/g, '')
     .replace(/\s*<meta name="twitter:card"[^>]*>/, '')
-    .replace('</head>', `    ${head(m)}\n    ${preloadHints(route, m)}\n  </head>`)
-    .replace('<div id="root"></div>', `<div id="root">${fallback(route, m)}</div>`);
+    .replace('</head>', `    ${head(m)}\n    ${preloadHints(route, m)}\n    <noscript><style>[data-prerender-wrap]{position:static!important;width:auto!important;height:auto!important;margin:0!important;overflow:visible!important;clip:auto!important;white-space:normal!important}</style></noscript>\n  </head>`)
+    .replace('<div id="root"></div>', `<div id="root"><div data-prerender-wrap style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">${fallback(route, m)}</div></div>`);
 
   const file = route === '/' ? path.join(dist, 'index.html') : path.join(dist, route.slice(1), 'index.html');
   fs.mkdirSync(path.dirname(file), { recursive: true });

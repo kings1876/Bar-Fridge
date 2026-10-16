@@ -28,7 +28,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const cryptoPrice = product.price * 0.9; // 10% discount
 
   return (
-    <div className="group bg-white border border-slate-200/90 hover:border-sky-400 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-sky-500/10 transition-all duration-300 flex flex-col justify-between">
+    <article className="group bg-white border border-slate-200/90 hover:border-sky-400 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-sky-500/10 transition-all duration-300 flex flex-col justify-between">
       {/* Top Image & Badge Container */}
       <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
         <img
@@ -155,6 +155,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
