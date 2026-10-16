@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { useShop } from '../context/ShopContext';
 import { PRODUCTS, CATEGORIES } from '../data/products';
 import { ProductCard } from '../components/ProductCard';
+import { Staged } from '../components/Staged';
 import { CATEGORY_SEO } from '../seo/categorySeo';
 import { CategoryGuide } from '../components/CategoryGuide';
 import { SubcategoryGuide } from '../components/SubcategoryGuide';
@@ -399,9 +400,17 @@ export const ShopPage: React.FC = () => {
           ) : (
             <>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {paginatedProducts.map((product) => (
+                {/* The first cards render at once; the rest render as the grid nears the viewport (keeps the first render short). */}
+                {paginatedProducts.slice(0, 6).map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}
+                {paginatedProducts.length > 6 && (
+                  <Staged stage={1} minHeight={640} className="col-span-full">
+                    {paginatedProducts.slice(6).map((product) => (
+                      <ProductCard key={product.id} product={product} />
+                    ))}
+                  </Staged>
+                )}
               </div>
 
               {/* Pagination Controls */}
