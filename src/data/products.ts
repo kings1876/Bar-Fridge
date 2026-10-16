@@ -4340,7 +4340,7 @@ export const PRODUCTS: Product[] = [
     inStock: true,
     image: '/images/products/schmick-sk86r-sd-1.webp',
     galleryImages: ['/images/products/schmick-sk86r-sd-1.webp', '/images/products/schmick-sk86r-sd-2.webp'],
-    description: 'The Schmick SK86R-SD is a 89 litre single door bar fridge, suited to indoor / alfresco installation. Built with genuine Schmick componentry for reliable day-to-day use.',
+    description: 'The Schmick SK86R-SD is an 89 litre single door bar fridge, suited to indoor / alfresco installation. Built with genuine Schmick componentry for reliable day-to-day use.',
     features: ['Quiet running compressor', 'Holds up to 96 standard cans', 'Reversible door hinge for flexible installation'],
     specs: {
       'Model': 'SK86R-SD',
@@ -4725,7 +4725,7 @@ export const PRODUCTS: Product[] = [
     inStock: true,
     image: '/images/products/schmick-sk86l-b-hd-1.webp',
     galleryImages: ['/images/products/schmick-sk86l-b-hd-1.webp', '/images/products/schmick-sk86l-b-hd-2.webp'],
-    description: 'The Schmick SK86L-B-HD is a 89 litre single door bar fridge, suited to indoor / alfresco installation. Built with genuine Schmick componentry for reliable day-to-day use.',
+    description: 'The Schmick SK86L-B-HD is an 89 litre single door bar fridge, suited to indoor / alfresco installation. Built with genuine Schmick componentry for reliable day-to-day use.',
     features: ['Heated glass door prevents external condensation', 'Quiet running compressor', 'Holds up to 96 standard cans'],
     specs: {
       'Model': 'SK86L-B-HD',
@@ -4899,7 +4899,7 @@ export const PRODUCTS: Product[] = [
     inStock: true,
     image: '/images/products/schmick-sk86r-b-hd-1.webp',
     galleryImages: ['/images/products/schmick-sk86r-b-hd-1.webp', '/images/products/schmick-sk86r-b-hd-2.webp'],
-    description: 'The Schmick SK86R-B-HD is a 89 litre single door bar fridge, suited to indoor / alfresco installation. Built with genuine Schmick componentry for reliable day-to-day use.',
+    description: 'The Schmick SK86R-B-HD is an 89 litre single door bar fridge, suited to indoor / alfresco installation. Built with genuine Schmick componentry for reliable day-to-day use.',
     features: ['Heated glass door prevents external condensation', 'Quiet running compressor', 'Holds up to 96 standard cans'],
     specs: {
       'Model': 'SK86R-B-HD',
@@ -5146,7 +5146,7 @@ export const PRODUCTS: Product[] = [
     inStock: true,
     image: '/images/products/schmick-sk86r-hd-1.webp',
     galleryImages: ['/images/products/schmick-sk86r-hd-1.webp', '/images/products/schmick-sk86r-hd-2.webp'],
-    description: 'The Schmick SK86R-HD is a 89 litre single door bar fridge, suited to indoor / alfresco installation. Built with genuine Schmick componentry for reliable day-to-day use.',
+    description: 'The Schmick SK86R-HD is an 89 litre single door bar fridge, suited to indoor / alfresco installation. Built with genuine Schmick componentry for reliable day-to-day use.',
     features: ['Heated glass door prevents external condensation', 'Quiet running compressor', 'Holds up to 96 standard cans'],
     specs: {
       'Model': 'SK86R-HD',
@@ -5216,7 +5216,7 @@ export const PRODUCTS: Product[] = [
     inStock: true,
     image: '/images/products/schmick-sk86l-hd-1.webp',
     galleryImages: ['/images/products/schmick-sk86l-hd-1.webp', '/images/products/schmick-sk86l-hd-2.webp'],
-    description: 'The Schmick SK86L-HD is a 89 litre single door bar fridge, suited to indoor / alfresco installation. Built with genuine Schmick componentry for reliable day-to-day use.',
+    description: 'The Schmick SK86L-HD is an 89 litre single door bar fridge, suited to indoor / alfresco installation. Built with genuine Schmick componentry for reliable day-to-day use.',
     features: ['Heated glass door prevents external condensation', 'Quiet running compressor', 'Holds up to 96 standard cans'],
     specs: {
       'Model': 'SK86L-HD',

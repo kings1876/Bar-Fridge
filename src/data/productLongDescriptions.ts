@@ -1,11 +1,13 @@
 import { Product } from '../types';
 import { PRODUCTS } from './products';
+import { generateLongDescription } from './productLongGenerated';
 
 // Longer, hand-written descriptions for the products the store already labels
 // "Popular" or "Best Value". Narrative is written per product; every measurement,
 // capacity, noise, energy and warranty figure is read from the product's own data so
 // it cannot drift from the specs table. Markup: "### h3", "- bullet", "[label](/path)".
 
+const art = (n: number) => (n === 8 || n === 11 || n === 18 || (n >= 80 && n <= 89) || (n >= 800 && n <= 899) ? 'an' : 'a');
 const warranty = (p: Product) => p.specs['Warranty'] ?? '2 Years Parts & Labour';
 const dims = (p: Product) =>
   `${p.dimensions.width} mm wide, ${p.dimensions.depth} mm deep and ${p.dimensions.height} mm high`;
@@ -17,7 +19,7 @@ type Writer = (p: Product) => string[];
 
 // --- Under bench heated-glass / front-venting glass door models -------------------
 const underBenchGlass: Writer = (p) => [
-    `The ${p.name.split(' ').slice(0, 2).join(' ')} is a ${p.capacityLitres} litre under bench bar fridge with a glass door that doubles as a display. It is designed to vent from the front, so it can sit under a bench or inside joinery without the clearance a rear-venting fridge needs.`,
+    `The ${p.name.split(' ').slice(0, 2).join(' ')} is ${art(p.capacityLitres)} ${p.capacityLitres} litre under bench bar fridge with a glass door that doubles as a display. It is designed to vent from the front, so it can sit under a bench or inside joinery without the clearance a rear-venting fridge needs.`,
     '### Key features',
     '- Heated glass door that prevents external condensation, so the glass stays clear in humid weather.',
     '- Quiet running compressor, rated at ' + p.noiseLevelDb + ' dB.',
@@ -30,10 +32,10 @@ const underBenchGlass: Writer = (p) => [
 
 // --- Skinny uprights -------------------------------------------------------------
 const skinnyUpright: Writer = (p) => [
-  `The ${p.name.split(' ').slice(0, 2).join(' ')} is a ${p.capacityLitres} litre skinny upright bar fridge. Its slim footprint gives you a lot of storage in a narrow space, which suits entertaining areas, garages, games rooms and corners where a wide fridge will not fit.`,
+  `The ${p.name.split(' ').slice(0, 2).join(' ')} is ${art(p.capacityLitres)} ${p.capacityLitres} litre skinny upright bar fridge. Its slim footprint gives you a lot of storage in a narrow space, which suits entertaining areas, garages, games rooms and corners where a wide fridge will not fit.`,
   '### Key features',
   ...p.features.map((f) => `- ${f}.`),
-  `- ${p.noiseLevelDb} dB sound rating and a ${p.energyStars} star energy rating.`,
+  `- ${p.noiseLevelDb} dB sound rating and ${art(p.energyStars)} ${p.energyStars} star energy rating.`,
   '### Size and fit',
   `At ${dims(p)}, it stands tall and takes up very little floor space. ${p.tropicalRated ? 'It is tropical rated, so it copes with warm Australian rooms and covered alfresco spaces.' : 'It is built for indoor installation.'} Leave the manufacturer's clearance around the cabinet for ventilation.`,
   tail(p, 'single door bar fridges', 'single-door')
@@ -43,10 +45,10 @@ const skinnyUpright: Writer = (p) => [
 const multiDoor =
   (doors: string, uses: string): Writer =>
   (p) => [
-    `The ${p.name.split(' ').slice(0, 2).join(' ')} is a ${p.capacityLitres} litre ${doors} bar fridge for ${uses}. It combines a large capacity with a glass front, so stock is easy to see and serve.`,
+    `The ${p.name.split(' ').slice(0, 2).join(' ')} is ${art(p.capacityLitres)} ${p.capacityLitres} litre ${doors} bar fridge for ${uses}. It combines a large capacity with a glass front, so stock is easy to see and serve.`,
     '### Key features',
     ...p.features.map((f) => `- ${f}.`),
-    `- ${p.noiseLevelDb} dB sound rating and a ${p.energyStars} star energy rating.`,
+    `- ${p.noiseLevelDb} dB sound rating and ${art(p.energyStars)} ${p.energyStars} star energy rating.`,
     '### Size and fit',
     `The cabinet is ${dims(p)}. Check the width carefully against your bar or service area, and allow for ventilation and for the door swing. A fridge of this size can be a significant electricity load, so see our tips on [cutting bar fridge running costs](/energy-efficiency-bar-fridge-power-bills).`,
     tail(p, 'double and triple door bar fridges', 'double-triple-door')
@@ -56,10 +58,10 @@ const multiDoor =
 const retroMini =
   (look: string): Writer =>
   (p) => [
-    `The ${p.name.split(' ').slice(0, 2).join(' ')} is a ${p.capacityLitres} litre mini bar fridge with ${look}. It is a fun, practical fridge for a man cave, games room, shed, office or home bar.`,
+    `The ${p.name.split(' ').slice(0, 2).join(' ')} is ${art(p.capacityLitres)} ${p.capacityLitres} litre mini bar fridge with ${look}. It is a fun, practical fridge for a man cave, games room, shed, office or home bar.`,
     '### Key features',
     ...p.features.map((f) => `- ${f}.`),
-    `- ${p.noiseLevelDb} dB sound rating and a ${p.energyStars} star energy rating.`,
+    `- ${p.noiseLevelDb} dB sound rating and ${art(p.energyStars)} ${p.energyStars} star energy rating.`,
     '### Size and fit',
     `It measures ${dims(p)}, so it is easy to place on a bench or in a corner. It is listed as suitable for ${(p.specs['Suitability'] ?? 'indoor').toLowerCase()} use, so keep it out of direct sun and leave the manufacturer's ventilation clearance. Thinking about the whole range? Read our [retro bar fridge guide](/retro-bar-fridge-guide).`,
     tail(p, 'single door bar fridges', 'single-door')
@@ -71,20 +73,20 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
   'schmick-sk86r-hd-89l': underBenchGlass,
   'schmick-sk86l-hd-89l': underBenchGlass,
   'schmick-sk146l-hd-164l': (p) => [
-    `The Schmick SK146L-HD is a ${p.capacityLitres} litre stainless steel under bench bar fridge with a heated glass door and quiet, front venting design. It is a step up in capacity for kitchens, bars and alfresco areas that need to hold plenty of drinks.`,
+    `The Schmick SK146L-HD is ${art(p.capacityLitres)} ${p.capacityLitres} litre stainless steel under bench bar fridge with a heated glass door and quiet, front venting design. It is a step up in capacity for kitchens, bars and alfresco areas that need to hold plenty of drinks.`,
     '### Key features',
     '- Heated glass door that prevents external condensation.',
     `- Quiet running compressor, ${p.noiseLevelDb} dB.`,
     `- Holds ${cans(p)}.`,
-    `- Tropical rated, with a ${p.energyStars} star energy rating.`,
+    `- Tropical rated, with ${art(p.energyStars)} ${p.energyStars} star energy rating.`,
     '### Size and fit',
     `The cabinet is ${dims(p)}. Being front venting, it is intended for built in installation under a bench. Measure the opening and follow the manufacturer's clearance. Our [built in bar fridge guide](/built-in-bar-fridge-guide) walks through the measurements.`,
     tail(p, 'single door bar fridges', 'single-door')
   ],
   'schmick-sk146r-sd-164l': (p) => [
-    `The Schmick SK146R-SD is a ${p.capacityLitres} litre under bench bar fridge with a solid stainless steel door. It suits spots where you want a clean, uniform look and do not need the contents on display.`,
+    `The Schmick SK146R-SD is ${art(p.capacityLitres)} ${p.capacityLitres} litre under bench bar fridge with a solid stainless steel door. It suits spots where you want a clean, uniform look and do not need the contents on display.`,
     '### Key features',
-    `- Solid stainless steel door and a ${p.energyStars} star energy rating.`,
+    `- Solid stainless steel door and ${art(p.energyStars)} ${p.energyStars} star energy rating.`,
     `- Quiet running compressor, ${p.noiseLevelDb} dB.`,
     '- Front venting for under bench installation.',
     `- Holds ${cans(p)}, with a reversible door hinge for flexible installation.`,
@@ -94,20 +96,20 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
     tail(p, 'single door bar fridges', 'single-door')
   ],
   'schmick-sk118r-ss-118l': (p) => [
-    `The Schmick SK118R-SS is a ${p.capacityLitres} litre stainless steel glass door bar fridge with heated, triple glazed glass. That combination is aimed at humid conditions where an ordinary glass door would sweat.`,
+    `The Schmick SK118R-SS is ${art(p.capacityLitres)} ${p.capacityLitres} litre stainless steel glass door bar fridge with heated, triple glazed glass. That combination is aimed at humid conditions where an ordinary glass door would sweat.`,
     '### Key features',
     '- 304 stainless steel finish.',
     '- Heated glass door prevents external condensation.',
     '- Triple glazed glass for thermal efficiency.',
     `- Holds ${cans(p)}; tropical rated, ${p.noiseLevelDb} dB.`,
     '### Size and fit',
-    `The cabinet is ${dims(p)}, with a ${p.energyStars} star energy rating. It suits entertaining areas, verandahs and kitchens that get warm. See our [glass door fridge guide](/glass-door-fridge-guide) for how glazing affects condensation and running costs.`,
+    `The cabinet is ${dims(p)}, with ${art(p.energyStars)} ${p.energyStars} star energy rating. It suits entertaining areas, verandahs and kitchens that get warm. See our [glass door fridge guide](/glass-door-fridge-guide) for how glazing affects condensation and running costs.`,
     tail(p, 'single door bar fridges', 'single-door')
   ],
 
   // Compact
   'schmick-hus-sc70-b-70l': (p) => [
-    `The Schmick HUS-SC70-B is a ${p.capacityLitres} litre black glass door bar fridge with double glazed glass and a tropical rating, so it is suited to both indoor and alfresco installation.`,
+    `The Schmick HUS-SC70-B is ${art(p.capacityLitres)} ${p.capacityLitres} litre black glass door bar fridge with double glazed glass and a tropical rating, so it is suited to both indoor and alfresco installation.`,
     '### Key features',
     '- Double glazed glass reduces condensation.',
     '- Tropical rated for Australian climates.',
@@ -118,7 +120,7 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
     tail(p, 'single door bar fridges', 'single-door')
   ],
   'schmick-hus-rnd70b-68l': (p) => [
-    `The Schmick HUS-RND70B is a ${p.capacityLitres} litre black bar fridge with rounded styling, a quiet running compressor and a ${p.energyStars} star energy rating.`,
+    `The Schmick HUS-RND70B is ${art(p.capacityLitres)} ${p.capacityLitres} litre black bar fridge with rounded styling, a quiet running compressor and ${art(p.energyStars)} ${p.energyStars} star energy rating.`,
     '### Key features',
     '- Quiet running compressor, ' + p.noiseLevelDb + ' dB.',
     '- Energy efficient compressor.',
@@ -128,7 +130,7 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
     tail(p, 'single door bar fridges', 'single-door')
   ],
   'schmick-sk40-b-31l': (p) => [
-    `The Schmick SK40-B is a ${p.capacityLitres} litre black glass door mini bar fridge with a shallow depth, designed for accommodation and tight spaces.`,
+    `The Schmick SK40-B is ${art(p.capacityLitres)} ${p.capacityLitres} litre black glass door mini bar fridge with a shallow depth, designed for accommodation and tight spaces.`,
     '### Key features',
     '- Quiet running compressor.',
     `- Holds ${cans(p)}.`,
@@ -141,7 +143,7 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
 
   // Outdoor and alfresco
   'rhino-gsp1h-ss-138l': (p) => [
-    `The Rhino GSP1H-SS is a ${p.capacityLitres} litre outdoor bar fridge built to keep beers cold in 40°C temperatures. It is listed for indoor or outdoor installation and carries a tropical rating.`,
+    `The Rhino GSP1H-SS is ${art(p.capacityLitres)} ${p.capacityLitres} litre outdoor bar fridge built to keep beers cold in 40°C temperatures. It is listed for indoor or outdoor installation and carries a tropical rating.`,
     '### Key features',
     `- Holds ${cans(p)}.`,
     '- Reversible door hinge for flexible installation.',
@@ -152,7 +154,7 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
     tail(p, 'alfresco and outdoor bar fridges', 'alfresco-outdoor')
   ],
   'schmick-sc88-ss-ned-98l': (p) => [
-    `The Schmick SC88-SS-NED is a ${p.capacityLitres} litre Ned Kelly themed alfresco bar fridge. It combines a distinctive design with a tropical rating, so it works as both a feature piece and a working fridge.`,
+    `The Schmick SC88-SS-NED is ${art(p.capacityLitres)} ${p.capacityLitres} litre Ned Kelly themed alfresco bar fridge. It combines a distinctive design with a tropical rating, so it works as both a feature piece and a working fridge.`,
     '### Key features',
     `- Holds ${cans(p)}.`,
     '- Reversible door hinge for flexible installation.',
@@ -166,7 +168,7 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
   'cub-ss-p160-gold-160l': skinnyUpright,
   'schmick-ss-p160fa-joker-160l': skinnyUpright,
   'schmick-hus-sc372b-370l': (p) => [
-    `The Schmick HUS-SC372B is a ${p.capacityLitres} litre upright black glass door bar fridge. It is the largest single door unit in our popular range, built for people who want serious capacity in a quiet cabinet.`,
+    `The Schmick HUS-SC372B is ${art(p.capacityLitres)} ${p.capacityLitres} litre upright black glass door bar fridge. It is the largest single door unit in our popular range, built for people who want serious capacity in a quiet cabinet.`,
     '### Key features',
     '- Quiet running compressor.',
     `- Holds ${cans(p)}.`,
@@ -180,7 +182,7 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
   'schmick-sk246-b-hd-257l': multiDoor('twin door', 'home bars, function rooms and small venues'),
   'schmick-sk386-b-hd-399l': multiDoor('3 door', 'venues, clubs and large entertaining areas'),
   'rhino-env3h-ss-388l': (p) => [
-    `The Rhino ENV3H-SS is a ${p.capacityLitres} litre outdoor ENVY 3 door bar fridge in 316 marine grade stainless steel, designed for the coldest beer in hot weather and installation indoors or outdoors with no condensation.`,
+    `The Rhino ENV3H-SS is ${art(p.capacityLitres)} ${p.capacityLitres} litre outdoor ENVY 3 door bar fridge in 316 marine grade stainless steel, designed for the coldest beer in hot weather and installation indoors or outdoors with no condensation.`,
     '### Key features',
     '- 316 marine grade stainless steel finish.',
     `- Holds ${cans(p)}.`,
@@ -193,7 +195,7 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
 
   // Freezer
   'schmick-mslf241-241l': (p) => [
-    `The Schmick MSLF241 is a ${p.capacityLitres} litre upright freezer listed as an integrated, built in model, with a temperature range of ${p.temperatureRange}. It suits kitchens, bars and utility spaces that need extra frozen storage.`,
+    `The Schmick MSLF241 is ${art(p.capacityLitres)} ${p.capacityLitres} litre upright freezer listed as an integrated, built in model, with a temperature range of ${p.temperatureRange}. It suits kitchens, bars and utility spaces that need extra frozen storage.`,
     '### Key features',
     '- Reversible door hinge for flexible installation.',
     `- ${p.energyStars} star energy rating and ${p.noiseLevelDb} dB sound rating.`,
@@ -213,9 +215,10 @@ export const LONG_DESCRIPTIONS: Record<string, Writer> = {
   'schmick-bc70b-roadie-aus-70l': retroMini('a music roadie case design')
 };
 
-/** Returns the long description for a product, or undefined if it has none. */
+/** Hand-written description if one exists, otherwise a spec-driven one. */
 export function longDescriptionFor(slug: string): string[] | undefined {
   const w = LONG_DESCRIPTIONS[slug] as Writer | undefined;
   const p = PRODUCTS.find((x) => x.slug === slug);
-  return w && p ? w(p) : undefined;
+  if (!p) return undefined;
+  return w ? w(p) : generateLongDescription(p);
 }
