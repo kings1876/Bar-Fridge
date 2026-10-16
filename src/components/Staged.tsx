@@ -17,7 +17,7 @@ export const Staged: React.FC<{ stage: number; minHeight?: number; className?: s
           io.disconnect();
         }
       },
-      { rootMargin: '900px 0px' }
+      { rootMargin: '200px 0px' }
     );
     io.observe(ref.current);
     return () => io.disconnect();
