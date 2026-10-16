@@ -1,3 +1,4 @@
+import { RichText } from '../components/RichText';
 import React, { useState } from 'react';
 import { useShop } from '../context/ShopContext';
 import { BLOG_POSTS } from '../data/blogPosts';
@@ -99,11 +100,7 @@ export const BlogPage: React.FC = () => {
 
         {/* Article Body Content */}
         <div className="space-y-6 text-sm sm:text-base text-slate-700 leading-relaxed font-sans">
-          {post.content.map((paragraph, idx) => (
-            <p key={idx} className="leading-relaxed">
-              {paragraph}
-            </p>
-          ))}
+          <RichText lines={post.content} />
         </div>
 
         {/* Tags */}

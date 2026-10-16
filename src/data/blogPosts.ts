@@ -1,4 +1,5 @@
 import { BlogPost } from '../types';
+import { GUIDE_POSTS } from './blogPostsGuides';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -100,5 +101,6 @@ export const BLOG_POSTS: BlogPost[] = [
       '3. Keep Condenser Coils Dust-Free: The condenser fan draws air across fine cooling fins at the base or back of the fridge. Every six months, take a vacuum brush to clean away pet hair and dust buildup. This simple 2-minute maintenance step can drop your energy draw by up to 25%!',
       '4. Set Realistic Target Temperatures: For beer and soft drinks, 2°C to 4°C is exceptionally cold and refreshing. Setting your thermostat to -2°C increases energy usage needlessly unless you are actively preparing for an afternoon gathering.'
     ]
-  }
+  },
+  ...GUIDE_POSTS
 ];

@@ -21,7 +21,7 @@ await build({
   outfile,
   logLevel: 'error'
 });
-const { seoForPath, allRoutes, PRODUCTS, CATEGORIES, CATEGORY_GUIDES } = await import(pathToFileURL(outfile).href);
+const { seoForPath, allRoutes, PRODUCTS, CATEGORIES, CATEGORY_GUIDES, BLOG_POSTS, richToHtml } = await import(pathToFileURL(outfile).href);
 
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -65,7 +65,11 @@ function fallback(route, m) {
     const p = PRODUCTS.find((x) => `/${x.slug}` === route);
     extra = `<p>${link(`/category/${p.category}`, p.categoryName)} · ${link('/shop', 'Bar fridges for sale')}</p>`;
   }
-  return `<main data-prerender><h1>${esc(m.h1)}</h1><p>${esc(m.lead ?? m.description)}</p>${extra}</main>`;
+  if (m.ogType === 'article') {
+    const post = BLOG_POSTS.find((b) => `/${b.slug}` === route);
+    if (post) extra = richToHtml(post.content);
+  }
+  return `<main data-prerender><h1>${esc(m.h1)}</h1>${m.ogType === 'article' ? '' : `<p>${esc(m.lead ?? m.description)}</p>`}${extra}</main>`;
 }
 
 const warnings = [];

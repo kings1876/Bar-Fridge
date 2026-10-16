@@ -6,9 +6,10 @@ import { PRODUCTS, CATEGORIES } from '../data/products';
 import { BLOG_POSTS } from '../data/blogPosts';
 import { FAQS_DATA } from '../data/faqs';
 import { CATEGORY_GUIDES } from '../data/categoryContent';
+import { richToHtml } from './richtext';
 import { SITE, REPLY } from '../../shared/reply.config.js';
 
-export { PRODUCTS, CATEGORIES, CATEGORY_GUIDES };
+export { PRODUCTS, CATEGORIES, CATEGORY_GUIDES, BLOG_POSTS, richToHtml };
 
 export interface SeoMeta {
   title: string;
@@ -99,6 +100,42 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     title: 'Save 10% on a Bar Fridge (AU) Paying with Crypto',
     description:
       'How the 10% crypto discount works on every bar fridge AU order: accepted coins, how the discount is applied and what happens after you order.'
+  },
+  'outdoor-kitchen-fridge-guide': {
+    keyword: 'outdoor kitchen fridge',
+    title: 'Outdoor Kitchen Fridge Guide for Alfresco BBQ Areas',
+    description:
+      'Choosing an outdoor kitchen fridge? Compare climate ratings, 316 stainless, front venting, size and placement for an Australian alfresco BBQ area.'
+  },
+  'glass-door-fridge-guide': {
+    keyword: 'glass door fridge',
+    title: 'Glass Door Fridge Guide: Glazing & Condensation',
+    description:
+      'A glass door fridge guide for Australian homes and venues: single, double and triple glazing, heated glass, condensation and sizing explained.'
+  },
+  'built-in-bar-fridge-guide': {
+    keyword: 'built in bar fridge',
+    title: 'Built In Bar Fridge Guide: Height, Size & Venting',
+    description:
+      'Choosing a built in bar fridge? Learn how to measure bar fridge height and width, why front venting matters and the clearance to allow.'
+  },
+  'beer-fridge-guide': {
+    keyword: 'beer fridge',
+    title: 'Beer Fridge Guide: Best Temperature, Size & Type',
+    description:
+      'Choosing a beer fridge or drinks fridge? Compare bar fridges, beverage fridges and dual zone models, plus the best temperature for beer.'
+  },
+  'quiet-bar-fridge-guide': {
+    keyword: 'quiet bar fridge',
+    title: 'Quiet Bar Fridge: How to Choose a Low-Noise Model',
+    description:
+      'Need a quiet bar fridge for the lounge or home theatre? Learn what dB ratings mean, what makes fridges noisy and how to choose a quiet model.'
+  },
+  'retro-bar-fridge-guide': {
+    keyword: 'retro bar fridge',
+    title: 'Retro Bar Fridge Guide: 46L & 70L Mini Bar Fridges',
+    description:
+      'Retro bar fridge guide: compare 46 litre and 70 litre retro mini bar fridges, branded designs and what to check before you buy.'
   },
   'energy-efficiency-bar-fridge-power-bills': {
     keyword: 'energy efficient bar fridge',
