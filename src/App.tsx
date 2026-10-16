@@ -8,6 +8,7 @@ import { ShopProvider, useShop } from './context/ShopContext';
 import { Seo } from './components/Seo';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { Staged } from './components/Staged';
 import { CookieBanner } from './components/CookieBanner';
 import { ToastContainer } from './components/ToastContainer';
 
@@ -82,7 +83,9 @@ const AppContent: React.FC = () => {
           instead of sitting under a placeholder and jumping down (a layout shift) when the page loads. */}
       <Suspense fallback={<div className="flex-1 min-h-screen" />}>
         <main className="flex-1">{renderCurrentPage()}</main>
-        <Footer />
+        <Staged stage={1} minHeight={720}>
+          <Footer />
+        </Staged>
       </Suspense>
 
       {/* Global Overlays & Utilities */}
