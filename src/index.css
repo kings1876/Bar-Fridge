@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@keyframes hero-progress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+.hero-progress { width: 0%; animation: hero-progress linear forwards; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-progress { animation: none; width: 100%; }
+}

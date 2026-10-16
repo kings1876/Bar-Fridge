@@ -115,44 +115,27 @@ export const HomePage: React.FC = () => {
   // Hero background slideshow state
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [progress, setProgress] = useState(0);
   const [bgOpacity, setBgOpacity] = useState<number>(100); // 100% full opacity default
 
   const SLIDE_DURATION = 6000; // 6 seconds per slide
 
+  // One timeout per slide; the progress bars are pure CSS animations so the page does not re-render every tick.
   useEffect(() => {
     if (!isAutoPlaying) return;
-
-    setProgress(0);
-    const tickInterval = 50;
-    const increment = (tickInterval / SLIDE_DURATION) * 100;
-
-    const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          setCurrentSlide((curr) => (curr + 1) % HERO_SLIDES.length);
-          return 0;
-        }
-        return prev + increment;
-      });
-    }, tickInterval);
-
-    return () => clearInterval(timer);
+    const timer = setTimeout(() => setCurrentSlide((curr) => (curr + 1) % HERO_SLIDES.length), SLIDE_DURATION);
+    return () => clearTimeout(timer);
   }, [currentSlide, isAutoPlaying]);
 
   const selectSlide = (index: number) => {
     setCurrentSlide(index);
-    setProgress(0);
   };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-    setProgress(0);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
-    setProgress(0);
   };
 
   const activeSlideData = HERO_SLIDES[currentSlide];
@@ -356,8 +339,9 @@ export const HomePage: React.FC = () => {
                     {/* Animated Progress Fill Bar */}
                     {isSelected && (
                       <div 
-                        className="absolute bottom-0 left-0 top-0 bg-sky-500/15 pointer-events-none transition-all duration-75"
-                        style={{ width: `${progress}%` }}
+                        key={currentSlide}
+                        className="hero-progress absolute bottom-0 left-0 top-0 bg-sky-500/15 pointer-events-none"
+                        style={{ animationDuration: `${SLIDE_DURATION}ms`, animationPlayState: isAutoPlaying ? 'running' : 'paused' }}
                       />
                     )}
 
@@ -383,8 +367,9 @@ export const HomePage: React.FC = () => {
                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-slate-800">
                       {isSelected && (
                         <div 
-                          className="h-full bg-gradient-to-r from-sky-400 to-cyan-300 transition-all duration-75"
-                          style={{ width: `${progress}%` }}
+                          key={currentSlide}
+                          className="hero-progress h-full bg-gradient-to-r from-sky-400 to-cyan-300"
+                          style={{ animationDuration: `${SLIDE_DURATION}ms`, animationPlayState: isAutoPlaying ? 'running' : 'paused' }}
                         />
                       )}
                     </div>
