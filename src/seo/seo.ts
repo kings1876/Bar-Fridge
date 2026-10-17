@@ -105,6 +105,18 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'A dual zone wine and beverage fridge holds wine and beer at different temperatures. Learn how zones work, sizes to consider and under bench fitting.'
   },
+  'double-door-bar-fridge-guide': {
+    keyword: 'double door bar fridge',
+    title: 'Double Door Bar Fridge Guide: Sizes, Glass and Venues',
+    description:
+      'A double door bar fridge holds 208 to 473 litres. Compare 2 door bar fridge sizes, heated glass, sliding doors, noise and prices for home bars and venues.'
+  },
+  'bar-fridges-australia-buying-guide': {
+    keyword: 'bar fridges australia',
+    title: 'Bar Fridges Australia: Buying Guide by Type and Budget',
+    description:
+      'Buying bar fridges in Australia? Compare the five types, sizes, climate ratings and budgets, with real prices from $257, and find the best bar fridge for you.'
+  },
   'commercial-bar-fridge-guide': {
     keyword: 'commercial bar fridge',
     title: 'Commercial Bar Fridge Guide for Pubs, Cafes and Venues',

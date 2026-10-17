@@ -2,6 +2,7 @@ import { BlogPost } from '../types';
 import { GUIDE_POSTS } from './blogPostsGuides';
 import { GUIDE_POSTS_2 } from './blogPostsGuides2';
 import { GUIDE_POSTS_3 } from './blogPostsGuides3';
+import { PLAN_POSTS_1 } from './blogPostsPlan1';
 import { BLOG_EXTRAS } from './blogExtras';
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -107,7 +108,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   ...GUIDE_POSTS,
   ...GUIDE_POSTS_2,
-  ...GUIDE_POSTS_3
+  ...GUIDE_POSTS_3,
+  ...PLAN_POSTS_1
 ];
 
 // Closing sections (see blogExtras.ts)

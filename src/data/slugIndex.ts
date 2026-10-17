@@ -225,7 +225,9 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "black-bar-fridge-guide": "black-bar-fridge-guide",
   "slimline-bar-fridge-guide": "slimline-bar-fridge-guide",
   "outdoor-bar-with-refrigerator-guide": "outdoor-bar-with-refrigerator-guide",
-  "small-bar-freezer-guide": "small-bar-freezer-guide"
+  "small-bar-freezer-guide": "small-bar-freezer-guide",
+  "double-door-bar-fridge-guide": "double-door-bar-fridge-guide",
+  "bar-fridges-australia-buying-guide": "bar-fridges-australia-buying-guide"
 };
 
 export interface BlogCard {
@@ -445,6 +447,24 @@ export const BLOG_CARDS: BlogCard[] = [
     "image": "/images/products/schmick-bd36-1.webp",
     "category": "Buying Guides",
     "readTime": "6 min read"
+  },
+  {
+    "id": "double-door-bar-fridge-guide",
+    "slug": "double-door-bar-fridge-guide",
+    "title": "Double Door Bar Fridges: Sizes, Heated Glass and Venue Use Explained",
+    "excerpt": "A double door bar fridge, also called a 2 door bar fridge, holds 208 to 473 litres. See real sizes, door types, noise and price ranges for home bars and venues.",
+    "image": "/images/products/rhino-sg2h-b-1.webp",
+    "category": "Buying Guides",
+    "readTime": "7 min read"
+  },
+  {
+    "id": "bar-fridges-australia-buying-guide",
+    "slug": "bar-fridges-australia-buying-guide",
+    "title": "Bar Fridges Australia: How to Choose by Type, Size and Budget",
+    "excerpt": "Shopping for bar fridges in Australia? See what each type costs, which sizes fit where, and how to pick the best bar fridge for a home, an alfresco area or a venue.",
+    "image": "/images/products/schmick-sk198d-b-hd-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
   }
 ];
 
