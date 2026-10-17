@@ -71,6 +71,8 @@ export const Navbar: React.FC = () => {
               <span>2 Yr Aussie Warranty</span>
             </span>
             <span className="text-slate-700 hidden sm:inline">•</span>
+            <span className="font-medium text-slate-300 whitespace-nowrap">ABN 48 619 448 301</span>
+            <span className="text-slate-700 hidden sm:inline">•</span>
             <span className="flex items-center gap-1.5 text-sky-300">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
               <span>Stockist Direct • Warehouses in SYD, MEL, BNE, PER</span>
