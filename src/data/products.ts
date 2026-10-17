@@ -37,7 +37,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc70-b glass door fridge for sale', 'glass door fridge for sale', '70l bar fridge', 'glass door fridge', 'glass door fridges', 'glass door drinks fridge', 'schmick hus-sc70-b']
   },
   {
     id: 'schmick-hus-sc50ab',
@@ -71,7 +71,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc50ab bar fridge glass door', 'bar fridge glass door', '50l bar fridge', 'fridge glass door', 'glass door drink refrigerator', 'glass door beverage fridge', 'schmick hus-sc50ab']
   },
   {
     id: 'schmick-hus-ex108',
@@ -105,7 +105,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-ex108 beverage fridge glass door', 'beverage fridge glass door', 'bar fridge with glass door', 'glass front bar fridge', 'drinks fridge glass door', 'single glass door fridge', 'schmick hus-ex108']
   },
   {
     id: 'schmick-hus-sc70-ss',
@@ -139,7 +139,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc70-ss glass door refrigerators for sale', 'glass door refrigerators for sale', '70l bar fridge', 'single glass door fridge', 'glass door beer fridge', 'clear door bar fridge', 'schmick hus-sc70-ss']
   },
   {
     id: 'schmick-hus-sc70l-ss',
@@ -173,7 +173,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc70l-ss display fridges for sale', 'display fridges for sale', '70l bar fridge', 'glass bar fridge', 'glass fronted bar fridge', 'glass door fridge', 'schmick hus-sc70l-ss']
   },
   {
     id: 'schmick-hus-sc88l-ss',
@@ -208,7 +208,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc88l-ss clear door fridge', 'clear door fridge', 'glass door fridges', 'glass door drinks fridge', 'fridge glass door', 'glass door drink refrigerator', 'schmick hus-sc88l-ss']
   },
   {
     id: 'schmick-hus-sc88-ss',
@@ -242,7 +242,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc88-ss glass door fridges for sale', 'glass door fridges for sale', 'glass door drink refrigerator', 'glass door beverage fridge', 'bar fridge with glass door', 'glass front bar fridge', 'schmick hus-sc88-ss']
   },
   {
     id: 'schmick-ec68-ssh',
@@ -277,7 +277,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick ec68-ssh drinks fridge for sale', 'drinks fridge for sale', '70l bar fridge', 'glass front bar fridge', 'drinks fridge glass door', 'single glass door fridge', 'schmick ec68-ssh']
   },
   {
     id: 'schmick-jc165',
@@ -313,7 +313,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'wine dual zone', 'bar fridge australia']
+    seoKeywords: ['schmick jc165 wine fridge for sale', 'wine fridge for sale', 'wine fridge', 'wine fridges', 'wine fridge dual zone', 'dual zone wine and beverage fridge', 'schmick jc165']
   },
   {
     id: 'rhino-sg2h-b',
@@ -347,7 +347,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino sg2h-b double door bar fridge for sale', 'double door bar fridge for sale', 'double door bar fridge', '2 door bar fridge', 'bar fridge 2 door', 'double bar fridge', 'rhino sg2h-b']
   },
   {
     id: 'schmick-jc165b',
@@ -382,7 +382,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'wine dual zone', 'bar fridge australia']
+    seoKeywords: ['schmick jc165b wine fridges for sale', 'wine fridges for sale', 'dual zone wine and beverage fridge', 'two zone wine fridge', 'wine and beer fridge', 'beer wine fridges', 'schmick jc165b']
   },
   {
     id: 'schmick-ec68l-ssh',
@@ -417,7 +417,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick ec68l-ssh glass door fridge for sale', 'glass door fridge for sale', '70l bar fridge', 'glass door beer fridge', 'clear door bar fridge', 'glass bar fridge', 'schmick ec68l-ssh']
   },
   {
     id: 'schmick-ss-p160fa',
@@ -452,7 +452,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick ss-p160fa display fridges for sale', 'display fridges for sale', 'slimline bar fridge', 'slim bar fridge', 'narrow bar fridge', 'tall bar fridge', 'schmick ss-p160fa']
   },
   {
     id: 'schmick-sk190-ss',
@@ -488,7 +488,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk190-ss commercial bar fridge for sale', 'commercial bar fridge for sale', '3 door bar fridge', '3 door commercial fridge', 'commercial bar fridge', 'commercial bar fridges', 'schmick sk190-ss']
   },
   {
     id: 'schmick-hus-sc50w',
@@ -523,7 +523,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc50w bar fridge glass door', 'bar fridge glass door', '50l bar fridge', 'glass fronted bar fridge', 'glass door fridge', 'glass door fridges', 'schmick hus-sc50w']
   },
   {
     id: 'rhino-env2h-ss',
@@ -558,7 +558,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'alfresco outdoor', 'bar fridge australia']
+    seoKeywords: ['rhino env2h-ss stainless steel outdoor fridge', 'stainless steel outdoor fridge', 'outdoor fridge', 'outdoor fridges', 'outdoor refrigerator', 'weatherproof outdoor fridge', 'rhino env2h-ss']
   },
   {
     id: 'schmick-hus-sc50b',
@@ -592,7 +592,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc50b beverage fridge glass door', 'beverage fridge glass door', '50l bar fridge', 'glass door drinks fridge', 'fridge glass door', 'glass door drink refrigerator', 'schmick hus-sc50b']
   },
   {
     id: 'schmick-bd36',
@@ -628,7 +628,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'bar freezers', 'bar fridge australia']
+    seoKeywords: ['schmick bd36 small freezer for sale', 'small freezer for sale', 'small bar freezer', 'mini bar freezer', 'bar freezers', 'freezer under bench', 'schmick bd36']
   },
   {
     id: 'schmick-sk190-b',
@@ -664,7 +664,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk190-b commercial fridge sales', 'commercial fridge sales', 'commercial bar fridges', 'commercial beer fridge', 'commercial drink fridges', '3 door bar fridges', 'schmick sk190-b']
   },
   {
     id: 'rhino-sg2s-b',
@@ -699,7 +699,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino sg2s-b 2 door bar fridge for sale', '2 door bar fridge for sale', 'double bar fridge', 'two door bar fridge', 'bar fridge double door', 'double glass door bar fridge', 'rhino sg2s-b']
   },
   {
     id: 'schmick-sk118r-ss',
@@ -734,7 +734,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk118r-ss glass door refrigerators for sale', 'glass door refrigerators for sale', 'glass door beverage fridge', 'bar fridge with glass door', 'glass front bar fridge', 'drinks fridge glass door', 'schmick sk118r-ss']
   },
   {
     id: 'schmick-sk246-b-hd',
@@ -769,7 +769,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk246-b-hd 2 door commercial fridge for sale', '2 door commercial fridge for sale', 'double glass door bar fridge', '2 door beverage fridge', 'commercial bar fridge', '2 glass door fridge', 'schmick sk246-b-hd']
   },
   {
     id: 'schmick-sk156r-hd',
@@ -805,7 +805,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk156r-hd bar fridge under counter', 'bar fridge under counter', 'under bench fridge', 'under bench bar fridge', 'under counter bar fridge', 'undercounter bar fridge', 'schmick sk156r-hd']
   },
   {
     id: 'schmick-jc190-gg',
@@ -841,7 +841,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'wine dual zone', 'bar fridge australia']
+    seoKeywords: ['schmick jc190-gg wine fridge sale', 'wine fridge sale', 'beer wine fridges', 'wine chiller fridge', 'under bench wine fridges', 'free standing wine fridge', 'schmick jc190-gg']
   },
   {
     id: 'schmick-sk246-hd',
@@ -877,7 +877,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk246-hd double door bar fridge for sale', 'double door bar fridge for sale', '2 glass door fridge', 'double door bar fridge', '2 door bar fridge', 'bar fridge 2 door', 'schmick sk246-hd']
   },
   {
     id: 'schmick-hus-rnd70b',
@@ -912,7 +912,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-rnd70b display fridges for sale', 'display fridges for sale', 'drinks fridge glass door', 'single glass door fridge', 'glass door beer fridge', 'clear door bar fridge', 'schmick hus-rnd70b']
   },
   {
     id: 'rhino-sg2h-hd',
@@ -946,7 +946,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino sg2h-hd 2 door bar fridge for sale', '2 door bar fridge for sale', 'bar fridge 2 door', 'double bar fridge', 'two door bar fridge', 'bar fridge double door', 'rhino sg2h-hd']
   },
   {
     id: 'rhino-gsp2h-ss',
@@ -980,7 +980,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino gsp2h-ss 2 door commercial fridge for sale', '2 door commercial fridge for sale', 'bar fridge double door', 'double glass door bar fridge', '2 door beverage fridge', 'commercial bar fridge', 'rhino gsp2h-ss']
   },
   {
     id: 'rhino-sg3h-b',
@@ -1016,7 +1016,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino sg3h-b commercial bar fridge for sale', 'commercial bar fridge for sale', '3 door bar fridges', 'commercial fridge for drinks', '3 door bar fridge', '3 door commercial fridge', 'rhino sg3h-b']
   },
   {
     id: 'schmick-sk118r-b',
@@ -1052,7 +1052,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk118r-b clear door fridge', 'clear door fridge', 'clear door bar fridge', 'glass bar fridge', 'glass fronted bar fridge', 'glass door fridge', 'schmick sk118r-b']
   },
   {
     id: 'rhino-env1r-ss',
@@ -1087,7 +1087,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'alfresco outdoor', 'bar fridge australia']
+    seoKeywords: ['rhino env1r-ss outdoor stainless steel refrigerator', 'outdoor stainless steel refrigerator', 'weatherproof outdoor fridge', 'waterproof outdoor fridge', 'outdoor fridge cabinet', 'all weather outdoor fridge', 'rhino env1r-ss']
   },
   {
     id: 'schmick-sd36',
@@ -1122,7 +1122,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'bar freezers', 'bar fridge australia']
+    seoKeywords: ['schmick sd36 compact freezers for sale', 'compact freezers for sale', 'bar freezers', 'commercial bar freezer', 'compact freezers', 'small bar freezer', 'schmick sd36']
   },
   {
     id: 'schmick-hus-bc115-b',
@@ -1156,7 +1156,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-bc115-b glass door fridges for sale', 'glass door fridges for sale', 'glass door fridge', 'glass door fridges', 'glass door drinks fridge', 'fridge glass door', 'schmick hus-bc115-b']
   },
   {
     id: 'schmick-sk118l-b',
@@ -1192,7 +1192,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk118l-b drinks fridge for sale', 'drinks fridge for sale', 'fridge glass door', 'glass door drink refrigerator', 'glass door beverage fridge', 'bar fridge with glass door', 'schmick sk118l-b']
   },
   {
     id: 'schmick-sk156l-hd',
@@ -1228,7 +1228,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk156l-hd under counter fridge for sale', 'under counter fridge for sale', 'undercounter bar fridge', 'bar fridge under bench', 'underbench bar fridge', 'under bench fridges', 'schmick sk156l-hd']
   },
   {
     id: 'dellcool-dw-sc25',
@@ -1264,7 +1264,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '2 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'dellcool bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['dellcool dw-sc25 glass door fridge for sale', 'glass door fridge for sale', 'bar fridge with glass door', 'glass front bar fridge', 'drinks fridge glass door', 'single glass door fridge', 'dellcool dw-sc25']
   },
   {
     id: 'rhino-env1l-ss',
@@ -1299,7 +1299,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'alfresco outdoor', 'bar fridge australia']
+    seoKeywords: ['rhino env1l-ss outdoor refrigerator cabinet', 'outdoor refrigerator cabinet', 'all weather outdoor fridge', 'best outdoor fridge', 'outdoor fridge', 'outdoor fridges', 'rhino env1l-ss']
   },
   {
     id: 'schmick-sk118l-ss',
@@ -1335,7 +1335,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk118l-ss bar fridge glass door', 'bar fridge glass door', 'single glass door fridge', 'glass door beer fridge', 'clear door bar fridge', 'glass bar fridge', 'schmick sk118l-ss']
   },
   {
     id: 'schmick-hus-sc23c',
@@ -1369,7 +1369,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc23c beverage fridge glass door', 'beverage fridge glass door', 'glass bar fridge', 'glass fronted bar fridge', 'glass door fridge', 'glass door fridges', 'schmick hus-sc23c']
   },
   {
     id: 'rhino-sg3s-b',
@@ -1405,7 +1405,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['rhino sg3s-b bar fridge under counter', 'bar fridge under counter', 'under bench fridges', 'integrated under bench fridge', 'under counter bar fridges', 'under bench fridge', 'rhino sg3s-b']
   },
   {
     id: 'schmick-sk206-hd',
@@ -1441,7 +1441,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk206-hd double door bar fridge for sale', 'double door bar fridge for sale', 'commercial bar fridge', '2 glass door fridge', 'double door bar fridge', '2 door bar fridge', 'schmick sk206-hd']
   },
   {
     id: 'rhino-gsp2h-840-ss',
@@ -1475,7 +1475,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino gsp2h-840-ss 2 door bar fridge for sale', '2 door bar fridge for sale', '2 door bar fridge', 'bar fridge 2 door', 'double bar fridge', 'two door bar fridge', 'rhino gsp2h-840-ss']
   },
   {
     id: 'rhino-sg1r-b',
@@ -1511,7 +1511,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['rhino sg1r-b glass door refrigerators for sale', 'glass door refrigerators for sale', 'glass door fridges', 'glass door drinks fridge', 'fridge glass door', 'glass door drink refrigerator', 'rhino sg1r-b']
   },
   {
     id: 'cub-ss-p160-crisp',
@@ -1546,7 +1546,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub ss-p160-crisp beverage fridge for sale', 'beverage fridge for sale', 'tall bar fridge', 'upright bar fridge', 'bar fridge dimensions', 'best bar fridge', 'cub ss-p160-crisp']
   },
   {
     id: 'rhino-sg2h-b-hd',
@@ -1581,7 +1581,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino sg2h-b-hd 2 door commercial fridge for sale', '2 door commercial fridge for sale', 'two door bar fridge', 'bar fridge double door', 'double glass door bar fridge', '2 door beverage fridge', 'rhino sg2h-b-hd']
   },
   {
     id: 'schmick-sk40-b',
@@ -1616,7 +1616,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk40-b display fridges for sale', 'display fridges for sale', 'glass door drink refrigerator', 'glass door beverage fridge', 'bar fridge with glass door', 'glass front bar fridge', 'schmick sk40-b']
   },
   {
     id: 'schmick-hus-bc70b-ret',
@@ -1650,7 +1650,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-bc70b-ret retro bar fridge', 'retro bar fridge', '70l bar fridge', 'retro mini fridge', 'retro style mini fridge', 'mini fridge vintage', 'schmick hus-bc70b-ret']
   },
   {
     id: 'schmick-sk116r-b-hd',
@@ -1686,7 +1686,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk116r-b-hd under counter fridge for sale', 'under counter fridge for sale', 'under bench fridge', 'under bench bar fridge', 'under counter bar fridge', 'undercounter bar fridge', 'schmick sk116r-b-hd']
   },
   {
     id: 'schmick-hus-bc46b2',
@@ -1721,7 +1721,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-bc46b2 clear door fridge', 'clear door fridge', 'glass front bar fridge', 'drinks fridge glass door', 'single glass door fridge', 'glass door beer fridge', 'schmick hus-bc46b2']
   },
   {
     id: 'rhino-gsp1h-ss',
@@ -1756,7 +1756,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'alfresco outdoor', 'bar fridge australia']
+    seoKeywords: ['rhino gsp1h-ss outdoor bar fridge', 'outdoor bar fridge', 'outdoor bar fridges', 'alfresco bar fridge', 'outdoor fridges australia', 'bar fridge outdoor', 'rhino gsp1h-ss']
   },
   {
     id: 'schmick-sk156l-b-hd',
@@ -1792,7 +1792,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk156l-b-hd bar fridge under counter', 'bar fridge under counter', 'undercounter bar fridge', 'bar fridge under bench', 'underbench bar fridge', 'under bench fridges', 'schmick sk156l-b-hd']
   },
   {
     id: 'schmick-sk116l-hd',
@@ -1828,7 +1828,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk116l-hd under counter fridge for sale', 'under counter fridge for sale', 'under bench fridges', 'integrated under bench fridge', 'under counter bar fridges', 'under bench fridge', 'schmick sk116l-hd']
   },
   {
     id: 'schmick-msl110',
@@ -1863,7 +1863,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick msl110 bar fridge under counter', 'bar fridge under counter', 'under bench fridge', 'under bench bar fridge', 'under counter bar fridge', 'undercounter bar fridge', 'schmick msl110']
   },
   {
     id: 'schmick-sk206-b-hd',
@@ -1897,7 +1897,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk206-b-hd double door bar fridge for sale', 'double door bar fridge for sale', '2 door beverage fridge', 'commercial bar fridge', '2 glass door fridge', 'double door bar fridge', 'schmick sk206-b-hd']
   },
   {
     id: 'schmick-sk116r-hd',
@@ -1933,7 +1933,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk116r-hd under counter fridge for sale', 'under counter fridge for sale', 'undercounter bar fridge', 'bar fridge under bench', 'underbench bar fridge', 'under bench fridges', 'schmick sk116r-hd']
   },
   {
     id: 'rhino-sg1l-b',
@@ -1969,7 +1969,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['rhino sg1l-b glass door fridges for sale', 'glass door fridges for sale', 'glass door beer fridge', 'clear door bar fridge', 'glass bar fridge', 'glass fronted bar fridge', 'rhino sg1l-b']
   },
   {
     id: 'schmick-sk116r-sd',
@@ -2005,7 +2005,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk116r-sd bar fridge under counter', 'bar fridge under counter', 'under bench fridges', 'integrated under bench fridge', 'under counter bar fridges', 'under bench fridge', 'schmick sk116r-sd']
   },
   {
     id: 'schmick-sk245-b-hd',
@@ -2041,7 +2041,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk245-b-hd 2 door bar fridge for sale', '2 door bar fridge for sale', 'double door bar fridge', '2 door bar fridge', 'bar fridge 2 door', 'double bar fridge', 'schmick sk245-b-hd']
   },
   {
     id: 'schmick-sk156r-b-hd',
@@ -2077,7 +2077,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk156r-b-hd under counter fridge for sale', 'under counter fridge for sale', 'under bench fridge', 'under bench bar fridge', 'under counter bar fridge', 'undercounter bar fridge', 'schmick sk156r-b-hd']
   },
   {
     id: 'cub-sc70-b-gold',
@@ -2111,7 +2111,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub sc70-b-gold drinks fridge for sale', 'drinks fridge for sale', '70l bar fridge', 'glass fronted bar fridge', 'glass door fridge', 'glass door fridges', 'cub sc70-b-gold']
   },
   {
     id: 'cub-ss-p160-gold',
@@ -2146,7 +2146,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub ss-p160-gold drinks fridge for sale', 'drinks fridge for sale', 'best bar fridge', 'drinks fridge', 'beverage fridge', 'quiet bar fridge', 'cub ss-p160-gold']
   },
   {
     id: 'schmick-sk40-sd',
@@ -2180,7 +2180,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk40-sd glass door fridge for sale', 'glass door fridge for sale', 'glass door drinks fridge', 'fridge glass door', 'glass door drink refrigerator', 'glass door beverage fridge', 'schmick sk40-sd']
   },
   {
     id: 'schmick-sk116l-b-hd',
@@ -2216,7 +2216,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk116l-b-hd bar fridge under counter', 'bar fridge under counter', 'undercounter bar fridge', 'bar fridge under bench', 'underbench bar fridge', 'under bench fridges', 'schmick sk116l-b-hd']
   },
   {
     id: 'schmick-sk386-b-hd',
@@ -2251,7 +2251,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk386-b-hd commercial fridge sales', 'commercial fridge sales', '3 door commercial fridge', 'commercial bar fridge', 'commercial bar fridges', 'commercial beer fridge', 'schmick sk386-b-hd']
   },
   {
     id: 'dellware-dw60e',
@@ -2286,7 +2286,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'dellware bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['dellware dw60e bar refrigerator price', 'bar refrigerator price', 'stainless steel bar fridge', 'stainless bar fridge', 'bar fridge stainless steel', 'single door bar fridge', 'dellware dw60e']
   },
   {
     id: 'rhino-gsp1hl-840-ss',
@@ -2321,7 +2321,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'alfresco outdoor', 'bar fridge australia']
+    seoKeywords: ['rhino gsp1hl-840-ss outdoor bar refrigerator', 'outdoor bar refrigerator', 'bar fridge outdoor', 'outdoor beverage fridge', 'outdoor drinks fridge', 'alfresco fridge', 'rhino gsp1hl-840-ss']
   },
   {
     id: 'schmick-sk68r-b',
@@ -2356,7 +2356,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk68r-b bar fridge glass door', 'bar fridge glass door', 'glass door beverage fridge', 'bar fridge with glass door', 'glass front bar fridge', 'drinks fridge glass door', 'schmick sk68r-b']
   },
   {
     id: 'cub-sc70-b-dry',
@@ -2390,7 +2390,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub sc70-b-dry beverage fridge glass door', 'beverage fridge glass door', '70l bar fridge', 'drinks fridge glass door', 'single glass door fridge', 'glass door beer fridge', 'cub sc70-b-dry']
   },
   {
     id: 'rhino-sg1r-hd',
@@ -2426,7 +2426,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['rhino sg1r-hd glass door refrigerators for sale', 'glass door refrigerators for sale', 'clear door bar fridge', 'glass bar fridge', 'glass fronted bar fridge', 'glass door fridge', 'rhino sg1r-hd']
   },
   {
     id: 'rhino-sg2h-sd',
@@ -2460,7 +2460,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino sg2h-sd 2 door commercial fridge for sale', '2 door commercial fridge for sale', 'double bar fridge', 'two door bar fridge', 'bar fridge double door', 'double glass door bar fridge', 'rhino sg2h-sd']
   },
   {
     id: 'rhino-gsp3h-ss',
@@ -2495,7 +2495,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino gsp3h-ss commercial bar fridge for sale', 'commercial bar fridge for sale', 'commercial beer fridge', 'commercial drink fridges', '3 door bar fridges', 'commercial fridge for drinks', 'rhino gsp3h-ss']
   },
   {
     id: 'schmick-hus-bc46b-ret',
@@ -2529,7 +2529,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-bc46b-ret retro bar fridge', 'retro bar fridge', 'bar fridge retro', 'mini fridge retro', 'mini bar fridges', 'bar fridge mini fridge', 'schmick hus-bc46b-ret']
   },
   {
     id: 'dellware-dw-sd50',
@@ -2565,7 +2565,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'dellware bar fridge', 'bar freezers', 'bar fridge australia']
+    seoKeywords: ['dellware dw-sd50 freezers for sale', 'freezers for sale', 'small bar freezer', 'upright bar freezer', 'mini bar freezer', 'bar freezers', 'dellware dw-sd50']
   },
   {
     id: 'schmick-sk206-b',
@@ -2600,7 +2600,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk206-b commercial fridge sales', 'commercial fridge sales', 'commercial fridge for drinks', '3 door bar fridge', '3 door commercial fridge', 'commercial bar fridge', 'schmick sk206-b']
   },
   {
     id: 'schmick-sk245-hd',
@@ -2636,7 +2636,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk245-hd double door bar fridge for sale', 'double door bar fridge for sale', 'double glass door bar fridge', '2 door beverage fridge', 'commercial bar fridge', '2 glass door fridge', 'schmick sk245-hd']
   },
   {
     id: 'cub-sc70-b-vb-v1',
@@ -2671,7 +2671,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub sc70-b-vb-v1 display fridges for sale', 'display fridges for sale', '70l bar fridge', 'glass door fridge', 'glass door fridges', 'glass door drinks fridge', 'cub sc70-b-vb-v1']
   },
   {
     id: 'rhino-env1l-sd',
@@ -2705,7 +2705,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'alfresco outdoor', 'bar fridge australia']
+    seoKeywords: ['rhino env1l-sd stainless steel outdoor fridge', 'stainless steel outdoor fridge', 'outdoor fridges', 'outdoor refrigerator', 'weatherproof outdoor fridge', 'waterproof outdoor fridge', 'rhino env1l-sd']
   },
   {
     id: 'schmick-sk156r-sd',
@@ -2741,7 +2741,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk156r-sd under counter fridge for sale', 'under counter fridge for sale', 'under bench fridges', 'integrated under bench fridge', 'under counter bar fridges', 'under bench fridge', 'schmick sk156r-sd']
   },
   {
     id: 'rhino-gsp1h-840-ss',
@@ -2775,7 +2775,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'alfresco outdoor', 'bar fridge australia']
+    seoKeywords: ['rhino gsp1h-840-ss outdoor fridges for sale', 'outdoor fridges for sale', 'alfresco fridge', 'best outdoor bar fridge', 'weatherproof outdoor bar fridge', 'outdoor beer fridge', 'rhino gsp1h-840-ss']
   },
   {
     id: 'rhino-sg3h-b-hd',
@@ -2809,7 +2809,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino sg3h-b-hd commercial bar fridge for sale', 'commercial bar fridge for sale', 'commercial bar fridge', 'commercial bar fridges', 'commercial beer fridge', 'commercial drink fridges', 'rhino sg3h-b-hd']
   },
   {
     id: 'rhino-env3h-ss',
@@ -2844,7 +2844,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino env3h-ss commercial fridge sales', 'commercial fridge sales', 'commercial drink fridges', '3 door bar fridges', 'commercial fridge for drinks', '3 door bar fridge', 'rhino env3h-ss']
   },
   {
     id: 'schmick-sk126r-hd',
@@ -2880,7 +2880,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk126r-hd bar fridge under counter', 'bar fridge under counter', 'under bench fridge', 'under bench bar fridge', 'under counter bar fridge', 'undercounter bar fridge', 'schmick sk126r-hd']
   },
   {
     id: 'rhino-sg2h-nc',
@@ -2915,7 +2915,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino sg2h-nc 2 door bar fridge for sale', '2 door bar fridge for sale', '2 glass door fridge', 'double door bar fridge', '2 door bar fridge', 'bar fridge 2 door', 'rhino sg2h-nc']
   },
   {
     id: 'rhino-gsp1hl-ss',
@@ -2949,7 +2949,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'alfresco outdoor', 'bar fridge australia']
+    seoKeywords: ['rhino gsp1hl-ss outdoor fridge sale', 'outdoor fridge sale', 'outdoor beer fridge', 'bar fridge alfresco', 'best alfresco bar fridge', 'outdoor bar fridges', 'rhino gsp1hl-ss']
   },
   {
     id: 'schmick-hus-bc46w-ret',
@@ -2984,7 +2984,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-bc46w-ret retro bar fridge', 'retro bar fridge', 'bar fridge mini fridge', 'black mini fridge', 'retro mini fridge', 'retro style mini fridge', 'schmick hus-bc46w-ret']
   },
   {
     id: 'schmick-sk146l-hd',
@@ -3019,7 +3019,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk146l-hd under counter fridge for sale', 'under counter fridge for sale', 'undercounter bar fridge', 'bar fridge under bench', 'underbench bar fridge', 'under bench fridges', 'schmick sk146l-hd']
   },
   {
     id: 'schmick-sk146r-hd',
@@ -3053,7 +3053,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk146r-hd bar fridge under counter', 'bar fridge under counter', 'under bench fridges', 'integrated under bench fridge', 'under counter bar fridges', 'under bench fridge', 'schmick sk146r-hd']
   },
   {
     id: 'schmick-sk246-sd',
@@ -3089,7 +3089,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk246-sd 2 door commercial fridge for sale', '2 door commercial fridge for sale', 'bar fridge 2 door', 'double bar fridge', 'two door bar fridge', 'bar fridge double door', 'schmick sk246-sd']
   },
   {
     id: 'rhino-env1r-sd',
@@ -3124,7 +3124,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'alfresco outdoor', 'bar fridge australia']
+    seoKeywords: ['rhino env1r-sd outdoor stainless steel refrigerator', 'outdoor stainless steel refrigerator', 'waterproof outdoor fridge', 'outdoor fridge cabinet', 'all weather outdoor fridge', 'best outdoor fridge', 'rhino env1r-sd']
   },
   {
     id: 'cub-ss-p160-corona',
@@ -3160,7 +3160,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub ss-p160-corona fridge for beverage', 'fridge for beverage', 'quiet bar fridge', 'slimline bar fridge', 'slim bar fridge', 'narrow bar fridge', 'cub ss-p160-corona']
   },
   {
     id: 'schmick-ss-p160fa-tb',
@@ -3196,7 +3196,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick ss-p160fa-tb drinks fridge for sale', 'drinks fridge for sale', 'mini bar fridges', 'beer fridge', 'drinks fridge', 'bar mini fridge', 'schmick ss-p160fa-tb']
   },
   {
     id: 'schmick-sk126l-hd',
@@ -3232,7 +3232,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk126l-hd under counter fridge for sale', 'under counter fridge for sale', 'under bench fridge', 'under bench bar fridge', 'under counter bar fridge', 'undercounter bar fridge', 'schmick sk126l-hd']
   },
   {
     id: 'rhino-env2h-sd',
@@ -3266,7 +3266,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'alfresco outdoor', 'bar fridge australia']
+    seoKeywords: ['rhino env2h-sd outdoor refrigerator cabinet', 'outdoor refrigerator cabinet', 'best outdoor fridge', 'outdoor fridge', 'outdoor fridges', 'outdoor refrigerator', 'rhino env2h-sd']
   },
   {
     id: 'fuel-ss-p160-fp-fleece',
@@ -3302,7 +3302,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'fuel bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['fuel ss-p160-fp-fleece display fridges for sale', 'display fridges for sale', 'narrow bar fridge', 'tall bar fridge', 'upright bar fridge', 'bar fridge dimensions', 'fuel ss-p160-fp-fleece']
   },
   {
     id: 'schmick-sk386-hd',
@@ -3338,7 +3338,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk386-hd commercial bar fridge for sale', 'commercial bar fridge for sale', '3 door bar fridge', '3 door commercial fridge', 'commercial bar fridge', 'commercial bar fridges', 'schmick sk386-hd']
   },
   {
     id: 'cub-ss-p160-dry',
@@ -3374,7 +3374,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub ss-p160-dry beverage fridge for sale', 'beverage fridge for sale', 'bar fridge dimensions', 'best bar fridge', 'drinks fridge', 'beverage fridge', 'cub ss-p160-dry']
   },
   {
     id: 'rhino-sg1l-hd',
@@ -3410,7 +3410,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['rhino sg1l-hd clear door fridge', 'clear door fridge', 'fridge glass door', 'glass door drink refrigerator', 'glass door beverage fridge', 'bar fridge with glass door', 'rhino sg1l-hd']
   },
   {
     id: 'schmick-msl330',
@@ -3444,7 +3444,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '2 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick msl330 drinks fridge for sale', 'drinks fridge for sale', 'beverage fridge', 'quiet bar fridge', 'slimline bar fridge', 'slim bar fridge', 'schmick msl330']
   },
   {
     id: 'rhino-sg1r-nc',
@@ -3480,7 +3480,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['rhino sg1r-nc beverage fridge for sale', 'beverage fridge for sale', 'beverage fridge', 'drinks fridge', 'bar fridge with glass door', 'mini bar fridges', 'rhino sg1r-nc']
   },
   {
     id: 'schmick-msf90',
@@ -3515,7 +3515,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'bar freezers', 'bar fridge australia']
+    seoKeywords: ['schmick msf90 mini freezer for sale', 'mini freezer for sale', 'freezer under bench', 'underbench freezers', 'under bench freezer australia', 'compact freezers', 'schmick msf90']
   },
   {
     id: 'schmick-mslf241',
@@ -3550,7 +3550,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '3 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'bar freezers', 'bar fridge australia']
+    seoKeywords: ['schmick mslf241 upright freezers for sale', 'upright freezers for sale', 'upright bar freezer', 'bar freezer upright', 'bar freezers', 'compact upright freezers', 'schmick mslf241']
   },
   {
     id: 'schmick-pg-65a',
@@ -3584,7 +3584,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick pg-65a glass door fridges for sale', 'glass door fridges for sale', '65l bar fridge', 'bar fridge with glass door', 'glass front bar fridge', 'drinks fridge glass door', 'schmick pg-65a']
   },
   {
     id: 'schmick-bd425b',
@@ -3620,7 +3620,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bd425b fridge for beverage', 'fridge for beverage', 'slim bar fridge', 'narrow bar fridge', 'tall bar fridge', 'upright bar fridge', 'schmick bd425b']
   },
   {
     id: 'schmick-bc46b-toxic',
@@ -3654,7 +3654,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc46b-toxic drink fridge for sale', 'drink fridge for sale', 'bar mini fridge', 'single door bar fridge', 'bar fridge single door', 'lockable bar fridge', 'schmick bc46b-toxic']
   },
   {
     id: 'schmick-sk116l-sd',
@@ -3688,7 +3688,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk116l-sd bar fridge under counter', 'bar fridge under counter', 'undercounter bar fridge', 'bar fridge under bench', 'underbench bar fridge', 'under bench fridges', 'schmick sk116l-sd']
   },
   {
     id: 'cub-sc70-ss-gold',
@@ -3724,7 +3724,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub sc70-ss-gold drinks fridge for sale', 'drinks fridge for sale', '70l bar fridge', 'single glass door fridge', 'glass door beer fridge', 'clear door bar fridge', 'cub sc70-ss-gold']
   },
   {
     id: 'cub-rf-42-vb-v1',
@@ -3760,7 +3760,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub rf-42-vb-v1 fridge for beverage', 'fridge for beverage', 'lockable bar fridge', 'mini fridge with lock', 'mini bar fridges', 'beer fridge', 'cub rf-42-vb-v1']
   },
   {
     id: 'cub-bdc60-gnbc',
@@ -3796,7 +3796,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'bar freezers', 'bar fridge australia']
+    seoKeywords: ['cub bdc60-gnbc 12 volt freezers australia', '12 volt freezers australia', 'outdoor freezer', 'mini bar freezer', 'compact freezers', 'small bar freezer', 'cub bdc60-gnbc']
   },
   {
     id: 'schmick-sk146r-b-hd',
@@ -3832,7 +3832,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk146r-b-hd under counter fridge for sale', 'under counter fridge for sale', 'under bench fridges', 'integrated under bench fridge', 'under counter bar fridges', 'under bench fridge', 'schmick sk146r-b-hd']
   },
   {
     id: 'schmick-bc46b-acme',
@@ -3866,7 +3866,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc46b-acme beverage fridge for sale', 'beverage fridge for sale', 'beer fridge', 'drinks fridge', 'bar mini fridge', 'single door bar fridge', 'schmick bc46b-acme']
   },
   {
     id: 'schmick-hus-sc372lb',
@@ -3901,7 +3901,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc372lb display fridges for sale', 'display fridges for sale', 'upright bar fridge', 'bar fridge dimensions', 'best bar fridge', 'drinks fridge', 'schmick hus-sc372lb']
   },
   {
     id: 'rhino-sg3h-hd',
@@ -3935,7 +3935,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino sg3h-hd commercial fridge sales', 'commercial fridge sales', 'commercial bar fridges', 'commercial beer fridge', 'commercial drink fridges', '3 door bar fridges', 'rhino sg3h-hd']
   },
   {
     id: 'schmick-hus-sc372b',
@@ -3970,7 +3970,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc372b beverage fridge for sale', 'beverage fridge for sale', 'drinks fridge', 'beverage fridge', 'quiet bar fridge', 'slimline bar fridge', 'schmick hus-sc372b']
   },
   {
     id: 'schmick-msf230',
@@ -4004,7 +4004,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '2 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'bar freezers', 'bar fridge australia']
+    seoKeywords: ['schmick msf230 upright freezer for sale', 'upright freezer for sale', 'compact upright freezers', 'upright compact freezer', 'small compact freezer upright', 'commercial bar freezer', 'schmick msf230']
   },
   {
     id: 'dellcool-dw100cd',
@@ -4040,7 +4040,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'dellcool bar fridge', 'bar fridge with freezer', 'bar fridge australia']
+    seoKeywords: ['dellcool dw100cd fridge and freezer on sale', 'fridge and freezer on sale', 'bar fridge freezer combo', 'bar fridges with freezer', 'mini fridge and freezer', 'freezer bar fridge', 'dellcool dw100cd']
   },
   {
     id: 'rhino-sg1l-sd',
@@ -4075,7 +4075,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['rhino sg1l-sd bar fridges for sale', 'bar fridges for sale', 'single door bar fridge', 'bar fridge single door', 'best bar fridge', 'stainless steel bar fridge', 'rhino sg1l-sd']
   },
   {
     id: 'schmick-hus-sc372w',
@@ -4109,7 +4109,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc372w drinks fridge for sale', 'drinks fridge for sale', 'slimline bar fridge', 'slim bar fridge', 'narrow bar fridge', 'tall bar fridge', 'schmick hus-sc372w']
   },
   {
     id: 'schmick-ss-p160fa-pb',
@@ -4145,7 +4145,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'skinny upright bar fridge', 'bar fridge australia']
+    seoKeywords: ['schmick ss-p160fa-pb bar cooler outdoor', 'bar cooler outdoor', 'bar cooler', 'beverage cooler', 'outdoor drinks fridge', 'outdoor beer fridge', 'schmick ss-p160fa-pb']
   },
   {
     id: 'schmick-sk146l-b-hd',
@@ -4181,7 +4181,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk146l-b-hd bar fridge under counter', 'bar fridge under counter', 'under bench fridge', 'under bench bar fridge', 'under counter bar fridge', 'undercounter bar fridge', 'schmick sk146l-b-hd']
   },
   {
     id: 'rhino-sg1r-sd',
@@ -4216,7 +4216,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['rhino sg1r-sd bar refrigerator price', 'bar refrigerator price', 'stainless steel bar fridge', 'stainless bar fridge', 'bar fridge stainless steel', 'single door bar fridge', 'rhino sg1r-sd']
   },
   {
     id: 'schmick-hus-sc700w',
@@ -4252,7 +4252,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc700w fridge for beverage', 'fridge for beverage', 'tall bar fridge', 'upright bar fridge', 'bar fridge dimensions', 'best bar fridge', 'schmick hus-sc700w']
   },
   {
     id: 'cub-sc70-b-crisp',
@@ -4287,7 +4287,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub sc70-b-crisp glass door fridge for sale', 'glass door fridge for sale', '70l bar fridge', 'glass bar fridge', 'glass fronted bar fridge', 'glass door fridge', 'cub sc70-b-crisp']
   },
   {
     id: 'schmick-sk86r-sd',
@@ -4321,7 +4321,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk86r-sd under counter fridge for sale', 'under counter fridge for sale', 'undercounter bar fridge', 'bar fridge under bench', 'underbench bar fridge', 'under bench fridges', 'schmick sk86r-sd']
   },
   {
     id: 'schmick-sk206-sd',
@@ -4355,7 +4355,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '5 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk206-sd double door bar fridge for sale', 'double door bar fridge for sale', 'bar fridge double door', 'double glass door bar fridge', '2 door beverage fridge', 'commercial bar fridge', 'schmick sk206-sd']
   },
   {
     id: 'schmick-bc70b-safe',
@@ -4389,7 +4389,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc70b-safe retro bar fridge', 'retro bar fridge', '70l bar fridge', 'retro style mini fridge', 'mini fridge vintage', 'bar fridge retro', 'schmick bc70b-safe']
   },
   {
     id: 'schmick-bc46b2-amp',
@@ -4424,7 +4424,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc46b2-amp drinks fridge for sale', 'drinks fridge for sale', 'single door bar fridge', 'bar fridge single door', 'lockable bar fridge', 'mini fridge with lock', 'schmick bc46b2-amp']
   },
   {
     id: 'schmick-sk146r-sd',
@@ -4459,7 +4459,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk146r-sd bar fridge under counter', 'bar fridge under counter', 'under bench fridges', 'integrated under bench fridge', 'under counter bar fridges', 'under bench fridge', 'schmick sk146r-sd']
   },
   {
     id: 'schmick-sk198d-b-hd',
@@ -4495,7 +4495,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'wine dual zone', 'bar fridge australia']
+    seoKeywords: ['schmick sk198d-b-hd wine refrigerators for sale', 'wine refrigerators for sale', 'free standing wine fridge', 'dual zone wine coolers', 'wine cooler small', 'wine fridge', 'schmick sk198d-b-hd']
   },
   {
     id: 'cub-bc46w-gold',
@@ -4529,7 +4529,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub bc46w-gold retro bar fridge', 'retro bar fridge', 'mini fridge retro', 'mini bar fridges', 'bar fridge mini fridge', 'black mini fridge', 'cub bc46w-gold']
   },
   {
     id: 'schmick-sk156l-sd',
@@ -4565,7 +4565,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk156l-sd under counter fridge for sale', 'under counter fridge for sale', 'under bench fridge', 'under bench bar fridge', 'under counter bar fridge', 'undercounter bar fridge', 'schmick sk156l-sd']
   },
   {
     id: 'rhino-sg1l-nc',
@@ -4600,7 +4600,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['rhino sg1l-nc beverage fridge for sale', 'beverage fridge for sale', 'mini bar fridges', 'beer fridge', 'beverage fridge', 'drinks fridge', 'rhino sg1l-nc']
   },
   {
     id: 'cub-ss-p160-vb-v1',
@@ -4636,7 +4636,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub ss-p160-vb-v1 display fridges for sale', 'display fridges for sale', 'best bar fridge', 'drinks fridge', 'beverage fridge', 'quiet bar fridge', 'cub ss-p160-vb-v1']
   },
   {
     id: 'schmick-sk126r-b-hd',
@@ -4671,7 +4671,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk126r-b-hd bar fridge under counter', 'bar fridge under counter', 'undercounter bar fridge', 'bar fridge under bench', 'underbench bar fridge', 'under bench fridges', 'schmick sk126r-b-hd']
   },
   {
     id: 'schmick-sk86l-b-hd',
@@ -4706,7 +4706,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk86l-b-hd under counter fridge for sale', 'under counter fridge for sale', 'under bench fridges', 'integrated under bench fridge', 'under counter bar fridges', 'under bench fridge', 'schmick sk86l-b-hd']
   },
   {
     id: 'cub-bc46w-vb-v1',
@@ -4741,7 +4741,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub bc46w-vb-v1 retro bar fridge', 'retro bar fridge', 'black mini fridge', 'retro mini fridge', 'retro style mini fridge', 'mini fridge vintage', 'cub bc46w-vb-v1']
   },
   {
     id: 'schmick-bc70b-ned',
@@ -4776,7 +4776,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc70b-ned retro bar fridge', 'retro bar fridge', '70l bar fridge', 'mini fridge vintage', 'bar fridge retro', 'mini fridge retro', 'schmick bc70b-ned']
   },
   {
     id: 'schmick-sk386-sd',
@@ -4810,7 +4810,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk386-sd commercial bar fridge for sale', 'commercial bar fridge for sale', '3 door bar fridges', 'commercial fridge for drinks', '3 door bar fridge', '3 door commercial fridge', 'schmick sk386-sd']
   },
   {
     id: 'schmick-sk228d-b-hd',
@@ -4846,7 +4846,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'wine dual zone', 'bar fridge australia']
+    seoKeywords: ['schmick sk228d-b-hd buy wine fridge', 'buy wine fridge', 'wine fridge', 'wine fridges', 'wine fridge dual zone', 'dual zone wine and beverage fridge', 'schmick sk228d-b-hd']
   },
   {
     id: 'schmick-sk86r-b-hd',
@@ -4880,7 +4880,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk86r-b-hd bar fridge under counter', 'bar fridge under counter', 'under bench fridge', 'under bench bar fridge', 'under counter bar fridge', 'undercounter bar fridge', 'schmick sk86r-b-hd']
   },
   {
     id: 'schmick-sc70-ss-ned',
@@ -4915,7 +4915,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sc70-ss-ned bar fridge glass door', 'bar fridge glass door', '70l bar fridge', 'glass door fridges', 'glass door drinks fridge', 'fridge glass door', 'schmick sc70-ss-ned']
   },
   {
     id: 'schmick-bc46b-travel',
@@ -4950,7 +4950,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc46b-travel drink fridge for sale', 'drink fridge for sale', 'mini fridge with lock', 'mini bar fridges', 'beer fridge', 'drinks fridge', 'schmick bc46b-travel']
   },
   {
     id: 'schmick-sk422r-b-hd',
@@ -4986,7 +4986,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk422r-b-hd beverage fridge for sale', 'beverage fridge for sale', 'quiet bar fridge', 'slimline bar fridge', 'slim bar fridge', 'narrow bar fridge', 'schmick sk422r-b-hd']
   },
   {
     id: 'schmick-sk422l-b-hd',
@@ -5022,7 +5022,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk422l-b-hd drinks fridge for sale', 'drinks fridge for sale', 'narrow bar fridge', 'tall bar fridge', 'upright bar fridge', 'bar fridge dimensions', 'schmick sk422l-b-hd']
   },
   {
     id: 'schmick-bd425rb',
@@ -5058,7 +5058,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bd425rb fridge for beverage', 'fridge for beverage', 'bar fridge dimensions', 'best bar fridge', 'drinks fridge', 'beverage fridge', 'schmick bd425rb']
   },
   {
     id: 'holden-sc70-ss-gtsr-maloo',
@@ -5092,7 +5092,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'holden bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['holden sc70-ss-gtsr-maloo fridge for beverage', 'fridge for beverage', '70l bar fridge', 'drinks fridge', 'bar mini fridge', 'single door bar fridge', 'holden sc70-ss-gtsr-maloo']
   },
   {
     id: 'schmick-sk86r-hd',
@@ -5127,7 +5127,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk86r-hd under counter fridge for sale', 'under counter fridge for sale', 'undercounter bar fridge', 'bar fridge under bench', 'underbench bar fridge', 'under bench fridges', 'schmick sk86r-hd']
   },
   {
     id: 'schmick-hus-sc372lw',
@@ -5162,7 +5162,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc372lw display fridges for sale', 'display fridges for sale', 'beverage fridge', 'quiet bar fridge', 'slimline bar fridge', 'slim bar fridge', 'schmick hus-sc372lw']
   },
   {
     id: 'schmick-sk86l-hd',
@@ -5197,7 +5197,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk86l-hd bar fridge under counter', 'bar fridge under counter', 'under bench fridges', 'integrated under bench fridge', 'under counter bar fridges', 'under bench fridge', 'schmick sk86l-hd']
   },
   {
     id: 'cub-bc46w-vb-v2',
@@ -5232,7 +5232,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub bc46w-vb-v2 retro bar fridge', 'retro bar fridge', 'mini bar fridges', 'bar fridge mini fridge', 'black mini fridge', 'retro mini fridge', 'cub bc46w-vb-v2']
   },
   {
     id: 'schmick-sk245-sd',
@@ -5268,7 +5268,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['schmick sk245-sd 2 door bar fridge for sale', '2 door bar fridge for sale', 'commercial bar fridge', '2 glass door fridge', 'double door bar fridge', '2 door bar fridge', 'schmick sk245-sd']
   },
   {
     id: 'cub-ss-p160-draught',
@@ -5304,7 +5304,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub ss-p160-draught beverage fridge for sale', 'beverage fridge for sale', 'slim bar fridge', 'narrow bar fridge', 'tall bar fridge', 'upright bar fridge', 'cub ss-p160-draught']
   },
   {
     id: 'schmick-ss-p160fa-lwf',
@@ -5340,7 +5340,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick ss-p160fa-lwf drinks fridge for sale', 'drinks fridge for sale', 'upright bar fridge', 'bar fridge dimensions', 'best bar fridge', 'drinks fridge', 'schmick ss-p160fa-lwf']
   },
   {
     id: 'holden-sc70-ss-gtsr',
@@ -5375,7 +5375,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'holden bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['holden sc70-ss-gtsr beverage fridge for sale', 'beverage fridge for sale', '70l bar fridge', 'bar fridge single door', 'lockable bar fridge', 'mini fridge with lock', 'holden sc70-ss-gtsr']
   },
   {
     id: 'schmick-sk68r-ss',
@@ -5411,7 +5411,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk68r-ss beverage fridge glass door', 'beverage fridge glass door', 'glass door drink refrigerator', 'glass door beverage fridge', 'bar fridge with glass door', 'glass front bar fridge', 'schmick sk68r-ss']
   },
   {
     id: 'rhino-sgt1l-bs',
@@ -5447,7 +5447,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['rhino sgt1l-bs fridge for beverage', 'fridge for beverage', 'drinks fridge', 'beverage fridge', 'quiet bar fridge', 'slimline bar fridge', 'rhino sgt1l-bs']
   },
   {
     id: 'rhino-sgt2-bs',
@@ -5483,7 +5483,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'double triple door', 'bar fridge australia']
+    seoKeywords: ['rhino sgt2-bs 2 door commercial fridge for sale', '2 door commercial fridge for sale', '2 door bar fridge', 'bar fridge 2 door', 'double bar fridge', 'two door bar fridge', 'rhino sgt2-bs']
   },
   {
     id: 'schmick-sk126l-b-hd',
@@ -5517,7 +5517,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk126l-b-hd under counter fridge for sale', 'under counter fridge for sale', 'under bench fridge', 'under bench bar fridge', 'under counter bar fridge', 'undercounter bar fridge', 'schmick sk126l-b-hd']
   },
   {
     id: 'schmick-hus-sc70-b-x',
@@ -5551,7 +5551,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-sc70-b-x glass door refrigerators for sale', 'glass door refrigerators for sale', '70l bar fridge', 'glass front bar fridge', 'drinks fridge glass door', 'single glass door fridge', 'schmick hus-sc70-b-x']
   },
   {
     id: 'holden-sc70-ss-gtsr-w1',
@@ -5585,7 +5585,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'holden bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['holden sc70-ss-gtsr-w1 drinks fridge for sale', 'drinks fridge for sale', '70l bar fridge', 'mini bar fridges', 'beer fridge', 'drinks fridge', 'holden sc70-ss-gtsr-w1']
   },
   {
     id: 'cub-bc70b-corona-v1',
@@ -5619,7 +5619,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub bc70b-corona-v1 retro bar fridge', 'retro bar fridge', '70l bar fridge', 'retro mini fridge', 'retro style mini fridge', 'mini fridge vintage', 'cub bc70b-corona-v1']
   },
   {
     id: 'schmick-sc88-ss-ned',
@@ -5654,7 +5654,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sc88-ss-ned display fridges for sale', 'display fridges for sale', 'glass door beer fridge', 'clear door bar fridge', 'glass bar fridge', 'glass fronted bar fridge', 'schmick sc88-ss-ned']
   },
   {
     id: 'cub-sc372w-corona',
@@ -5690,7 +5690,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub sc372w-corona display fridges for sale', 'display fridges for sale', 'slimline bar fridge', 'slim bar fridge', 'narrow bar fridge', 'tall bar fridge', 'cub sc372w-corona']
   },
   {
     id: 'schmick-bc70b-acme',
@@ -5724,7 +5724,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc70b-acme retro bar fridge', 'retro bar fridge', '70l bar fridge', 'bar fridge retro', 'mini fridge retro', 'mini bar fridges', 'schmick bc70b-acme']
   },
   {
     id: 'rhino-sgt1r-bs',
@@ -5760,7 +5760,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['rhino sgt1r-bs beverage fridge for sale', 'beverage fridge for sale', 'tall bar fridge', 'upright bar fridge', 'bar fridge dimensions', 'best bar fridge', 'rhino sgt1r-bs']
   },
   {
     id: 'cub-ss-p160-orig',
@@ -5796,7 +5796,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub ss-p160-orig drinks fridge for sale', 'drinks fridge for sale', 'best bar fridge', 'drinks fridge', 'beverage fridge', 'quiet bar fridge', 'cub ss-p160-orig']
   },
   {
     id: 'schmick-sk126r-sd',
@@ -5831,7 +5831,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk126r-sd bar fridge under counter', 'bar fridge under counter', 'undercounter bar fridge', 'bar fridge under bench', 'underbench bar fridge', 'under bench fridges', 'schmick sk126r-sd']
   },
   {
     id: 'schmick-sk198d-hd',
@@ -5865,7 +5865,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'wine dual zone', 'bar fridge australia']
+    seoKeywords: ['schmick sk198d-hd wine coolers for sale', 'wine coolers for sale', 'dual zone wine and beverage fridge', 'two zone wine fridge', 'wine and beer fridge', 'beer wine fridges', 'schmick sk198d-hd']
   },
   {
     id: 'rhino-sg1r-b-hd',
@@ -5899,7 +5899,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['rhino sg1r-b-hd clear door fridge', 'clear door fridge', 'glass fronted bar fridge', 'glass door fridge', 'glass door fridges', 'glass door drinks fridge', 'rhino sg1r-b-hd']
   },
   {
     id: 'schmick-bc46b-footy',
@@ -5934,7 +5934,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc46b-footy retro bar fridge', 'retro bar fridge', 'bar fridge mini fridge', 'black mini fridge', 'retro mini fridge', 'retro style mini fridge', 'schmick bc46b-footy']
   },
   {
     id: 'cub-bc46w-draught-v1',
@@ -5968,7 +5968,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub bc46w-draught-v1 retro bar fridge', 'retro bar fridge', 'retro style mini fridge', 'mini fridge vintage', 'bar fridge retro', 'mini fridge retro', 'cub bc46w-draught-v1']
   },
   {
     id: 'cub-sc372b-crisp',
@@ -6004,7 +6004,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub sc372b-crisp fridge for beverage', 'fridge for beverage', 'quiet bar fridge', 'slimline bar fridge', 'slim bar fridge', 'narrow bar fridge', 'cub sc372b-crisp']
   },
   {
     id: 'cub-ec68l-ssh-dry',
@@ -6038,7 +6038,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub ec68l-ssh-dry glass door fridges for sale', 'glass door fridges for sale', '70l bar fridge', 'glass door drinks fridge', 'fridge glass door', 'glass door drink refrigerator', 'cub ec68l-ssh-dry']
   },
   {
     id: 'cub-sc70-b-vb-v2',
@@ -6073,7 +6073,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub sc70-b-vb-v2 drinks fridge for sale', 'drinks fridge for sale', '70l bar fridge', 'glass door beverage fridge', 'bar fridge with glass door', 'glass front bar fridge', 'cub sc70-b-vb-v2']
   },
   {
     id: 'fuel-sc88-fp-fleece',
@@ -6109,7 +6109,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'fuel bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['fuel sc88-fp-fleece glass door fridge for sale', 'glass door fridge for sale', 'drinks fridge glass door', 'single glass door fridge', 'glass door beer fridge', 'clear door bar fridge', 'fuel sc88-fp-fleece']
   },
   {
     id: 'schmick-sc372w-tb',
@@ -6145,7 +6145,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sc372w-tb drink fridge for sale', 'drink fridge for sale', 'bar mini fridge', 'single door bar fridge', 'bar fridge single door', 'lockable bar fridge', 'schmick sc372w-tb']
   },
   {
     id: 'schmick-jc132d',
@@ -6181,7 +6181,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'wine dual zone', 'bar fridge australia']
+    seoKeywords: ['schmick jc132d wine fridge on sale', 'wine fridge on sale', 'beer wine fridges', 'wine chiller fridge', 'under bench wine fridges', 'free standing wine fridge', 'schmick jc132d']
   },
   {
     id: 'cub-bc46w-corona-v1',
@@ -6216,7 +6216,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub bc46w-corona-v1 retro bar fridge', 'retro bar fridge', 'mini fridge retro', 'mini bar fridges', 'bar fridge mini fridge', 'black mini fridge', 'cub bc46w-corona-v1']
   },
   {
     id: 'fuel-ss-p160-fp-castrol',
@@ -6252,7 +6252,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'fuel bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['fuel ss-p160-fp-castrol display fridges for sale', 'display fridges for sale', 'narrow bar fridge', 'tall bar fridge', 'upright bar fridge', 'bar fridge dimensions', 'fuel ss-p160-fp-castrol']
   },
   {
     id: 'schmick-bc46b-dice',
@@ -6287,7 +6287,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc46b-dice retro bar fridge', 'retro bar fridge', 'black mini fridge', 'retro mini fridge', 'retro style mini fridge', 'mini fridge vintage', 'schmick bc46b-dice']
   },
   {
     id: 'cub-sc70-b-orig',
@@ -6322,7 +6322,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub sc70-b-orig bar fridge glass door', 'bar fridge glass door', '70l bar fridge', 'clear door bar fridge', 'glass bar fridge', 'glass fronted bar fridge', 'cub sc70-b-orig']
   },
   {
     id: 'schmick-bc70b-roadie-aus',
@@ -6357,7 +6357,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc70b-roadie-aus retro bar fridge', 'retro bar fridge', '70l bar fridge', 'mini fridge vintage', 'bar fridge retro', 'mini fridge retro', 'schmick bc70b-roadie-aus']
   },
   {
     id: 'blastcool-ixp1-840-r',
@@ -6391,7 +6391,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'blastcool bar fridge', 'alfresco outdoor', 'bar fridge australia']
+    seoKeywords: ['blastcool ixp1-840-r outdoor bar with refrigerator', 'outdoor bar with refrigerator', '130l bar fridge', 'outdoor bar fridges', 'alfresco bar fridge', 'outdoor fridges australia', 'blastcool ixp1-840-r']
   },
   {
     id: 'cub-ec68l-ssh-gold',
@@ -6426,7 +6426,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub ec68l-ssh-gold beverage fridge glass door', 'beverage fridge glass door', '70l bar fridge', 'glass door fridge', 'glass door fridges', 'glass door drinks fridge', 'cub ec68l-ssh-gold']
   },
   {
     id: 'schmick-yf-nl35',
@@ -6459,7 +6459,7 @@ export const PRODUCTS: Product[] = [
       'Suitability': 'Indoor Or Outdoor',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['ice box', 'heavy duty ice box', 'schmick ice box', 'cooler']
+    seoKeywords: ['schmick yf-nl35 bar cooler outdoor', 'bar cooler outdoor', 'outdoor beer fridge', 'bar fridge outdoor', 'bar cooler', 'beverage cooler', 'schmick yf-nl35']
   },
   {
     id: 'schmick-sk68l-ss',
@@ -6495,7 +6495,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick sk68l-ss glass door refrigerators for sale', 'glass door refrigerators for sale', 'fridge glass door', 'glass door drink refrigerator', 'glass door beverage fridge', 'bar fridge with glass door', 'schmick sk68l-ss']
   },
   {
     id: 'schmick-bc46b2-safe',
@@ -6530,7 +6530,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc46b2-safe retro bar fridge', 'retro bar fridge', 'mini bar fridges', 'bar fridge mini fridge', 'black mini fridge', 'retro mini fridge', 'schmick bc46b2-safe']
   },
   {
     id: 'cub-bc46w-draught-v2',
@@ -6564,7 +6564,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub bc46w-draught-v2 retro bar fridge', 'retro bar fridge', 'retro mini fridge', 'retro style mini fridge', 'mini fridge vintage', 'bar fridge retro', 'cub bc46w-draught-v2']
   },
   {
     id: 'rhino-sg1l-b-hd',
@@ -6599,7 +6599,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '7 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'rhino bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['rhino sg1l-b-hd display fridges for sale', 'display fridges for sale', 'bar fridge with glass door', 'glass front bar fridge', 'drinks fridge glass door', 'single glass door fridge', 'rhino sg1l-b-hd']
   },
   {
     id: 'schmick-bd425w',
@@ -6635,7 +6635,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'wine dual zone', 'bar fridge australia']
+    seoKeywords: ['schmick bd425w wine fridge for sale', 'wine fridge for sale', 'free standing wine fridge', 'dual zone wine coolers', 'wine cooler small', 'wine fridge', 'schmick bd425w']
   },
   {
     id: 'schmick-hus-c5',
@@ -6671,7 +6671,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick hus-c5 beverage fridge for sale', 'beverage fridge for sale', 'bar fridge dimensions', 'best bar fridge', 'drinks fridge', 'beverage fridge', 'schmick hus-c5']
   },
   {
     id: 'schmick-ss-p160fa-lwf2',
@@ -6707,7 +6707,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick ss-p160fa-lwf2 drinks fridge for sale', 'drinks fridge for sale', 'beverage fridge', 'quiet bar fridge', 'slimline bar fridge', 'slim bar fridge', 'schmick ss-p160fa-lwf2']
   },
   {
     id: 'schmick-yf-nl42',
@@ -6741,7 +6741,7 @@ export const PRODUCTS: Product[] = [
       'Suitability': 'Indoor Or Outdoor',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['ice box', 'heavy duty ice box', 'schmick ice box', 'cooler']
+    seoKeywords: ['schmick yf-nl42 bar cooler outdoor', 'bar cooler outdoor', 'beverage cooler', 'outdoor drinks fridge', 'outdoor beer fridge', 'bar fridge outdoor', 'schmick yf-nl42']
   },
   {
     id: 'holden-hus-sc50wh',
@@ -6775,7 +6775,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'holden bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['holden hus-sc50wh fridge for beverage', 'fridge for beverage', '50l bar fridge', 'lockable bar fridge', 'mini fridge with lock', 'mini bar fridges', 'holden hus-sc50wh']
   },
   {
     id: 'schmick-bc70b-rc',
@@ -6809,7 +6809,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc70b-rc retro bar fridge', 'retro bar fridge', '70l bar fridge', 'bar fridge retro', 'mini fridge retro', 'mini bar fridges', 'schmick bc70b-rc']
   },
   {
     id: 'holden-bc46b-hsv',
@@ -6843,7 +6843,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'holden bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['holden bc46b-hsv retro bar fridge', 'retro bar fridge', 'bar fridge mini fridge', 'black mini fridge', 'retro mini fridge', 'retro style mini fridge', 'holden bc46b-hsv']
   },
   {
     id: 'schmick-ss-p160fa-joker',
@@ -6878,7 +6878,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '9 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick ss-p160fa-joker beverage fridge for sale', 'beverage fridge for sale', 'beer fridge', 'drinks fridge', 'bar mini fridge', 'single door bar fridge', 'schmick ss-p160fa-joker']
   },
   {
     id: 'schmick-bc46b-crate',
@@ -6913,7 +6913,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '4 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc46b-crate drinks fridge for sale', 'drinks fridge for sale', 'single door bar fridge', 'bar fridge single door', 'lockable bar fridge', 'mini fridge with lock', 'schmick bc46b-crate']
   },
   {
     id: 'schmick-bc70b-wc',
@@ -6947,7 +6947,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '10 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick bc70b-wc retro bar fridge', 'retro bar fridge', '70l bar fridge', 'retro style mini fridge', 'mini fridge vintage', 'bar fridge retro', 'schmick bc70b-wc']
   },
   {
     id: 'cub-sc372b-gold',
@@ -6983,7 +6983,7 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '8 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'cub bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['cub sc372b-gold fridge for beverage', 'fridge for beverage', 'slim bar fridge', 'narrow bar fridge', 'tall bar fridge', 'upright bar fridge', 'cub sc372b-gold']
   },
   {
     id: 'schmick-rf-42',
@@ -7019,6 +7019,6 @@ export const PRODUCTS: Product[] = [
       'Energy Star Rating': '6 Stars',
       'Warranty': '2 Years Parts & Labour',
     },
-    seoKeywords: ['bar fridges for sale', 'schmick bar fridge', 'single door', 'bar fridge australia']
+    seoKeywords: ['schmick rf-42 drink fridge for sale', 'drink fridge for sale', 'mini fridge with lock', 'mini bar fridges', 'beer fridge', 'drinks fridge', 'schmick rf-42']
   },
 ];
