@@ -217,7 +217,7 @@ export const Footer: React.FC = () => {
               </li>
               <li className="pt-2 text-slate-400">
                 <span className="block text-[11px] text-slate-500">Australian Business Number</span>
-                <span className="font-mono text-slate-300">ABN: 48 619 448 301</span>
+                <span className="font-mono text-slate-300">ABN: 50 024 804 820</span>
               </li>
               <li className="text-[11px] text-emerald-400 flex items-center gap-1">
                 <CheckCircle2 className="w-3.5 h-3.5" />
