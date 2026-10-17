@@ -7,7 +7,6 @@ import {
   X, 
   Sparkles, 
   PhoneCall, 
-  ShieldCheck, 
   Truck, 
   Bitcoin,
   Flame,
@@ -66,15 +65,10 @@ export const Navbar: React.FC = () => {
             </span>
           </div>
           <div className="flex items-center gap-4 text-xs">
-            <span className="hidden sm:inline-flex items-center gap-1 text-slate-300">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              <span>2 Yr Aussie Warranty</span>
-            </span>
-            <span className="text-slate-700 hidden sm:inline">•</span>
             <span className="font-medium text-slate-300 whitespace-nowrap">Brookvale NSW 2100 • ABN 50 024 804 820</span>
             <span className="text-slate-700 hidden sm:inline">•</span>
-            <span className="flex items-center gap-1.5 text-sky-300">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span className="hidden sm:flex items-center gap-1.5 text-sky-300 whitespace-nowrap">
+              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
               <span>Stockist Direct • Warehouses in SYD, MEL, BNE, PER</span>
             </span>
           </div>
