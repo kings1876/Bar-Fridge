@@ -160,7 +160,7 @@ export const ShopPage: React.FC = () => {
                 onClick={() => setSelectedSubcategory('all')}
                 className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
                   selectedSubcategory === 'all'
-                    ? 'bg-sky-600 text-white shadow-sm'
+                    ? 'bg-sky-700 text-white shadow-sm'
                     : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-50'
                 }`}
               >
@@ -172,7 +172,7 @@ export const ShopPage: React.FC = () => {
                   onClick={() => setSelectedSubcategory(sub)}
                   className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
                     selectedSubcategory === sub
-                      ? 'bg-sky-600 text-white shadow-sm'
+                      ? 'bg-sky-700 text-white shadow-sm'
                       : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-50'
                   }`}
                 >
@@ -193,7 +193,7 @@ export const ShopPage: React.FC = () => {
           </span>
           <button
             onClick={() => setMobileFilterOpen(!mobileFilterOpen)}
-            className="flex items-center gap-1.5 px-3.5 py-2 bg-sky-600 text-white text-xs font-bold rounded-xl shadow-sm"
+            className="flex items-center gap-1.5 px-3.5 py-2 bg-sky-700 text-white text-xs font-bold rounded-xl shadow-sm"
           >
             <SlidersHorizontal className="w-3.5 h-3.5" />
             <span>Filters</span>
@@ -313,7 +313,7 @@ export const ShopPage: React.FC = () => {
                     onClick={() => setBadgeFilter(badge)}
                     className={`px-3 py-1 rounded-lg transition-colors font-semibold ${
                       badgeFilter === badge
-                        ? 'bg-sky-600 text-white shadow-2xs'
+                        ? 'bg-sky-700 text-white shadow-2xs'
                         : 'bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200'
                     }`}
                   >
@@ -366,6 +366,7 @@ export const ShopPage: React.FC = () => {
             <div className="flex items-center gap-2 self-end sm:self-auto text-xs">
               <span className="text-slate-500 font-medium">Sort By:</span>
               <select
+                aria-label="Sort products"
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
                 className="bg-slate-50 border border-slate-300 rounded-xl px-3 py-1.5 text-slate-900 focus:outline-none focus:border-sky-500 text-xs font-semibold"
@@ -392,7 +393,7 @@ export const ShopPage: React.FC = () => {
               </div>
               <button
                 onClick={handleResetFilters}
-                className="px-5 py-2.5 bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-xl text-xs transition-colors shadow-sm"
+                className="px-5 py-2.5 bg-sky-700 hover:bg-sky-800 text-white font-bold rounded-xl text-xs transition-colors shadow-sm"
               >
                 Reset All Filters
               </button>
@@ -402,12 +403,12 @@ export const ShopPage: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* The first cards render at once; the rest render as the grid nears the viewport (keeps the first render short). */}
                 {paginatedProducts.slice(0, 4).map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <ProductCard key={product.id} product={product} headingLevel={2} />
                 ))}
                 {paginatedProducts.length > 4 && (
                   <Staged stage={1} minHeight={640} className="col-span-full">
                     {paginatedProducts.slice(4).map((product) => (
-                      <ProductCard key={product.id} product={product} />
+                      <ProductCard key={product.id} product={product} headingLevel={2} />
                     ))}
                   </Staged>
                 )}
@@ -452,7 +453,7 @@ export const ShopPage: React.FC = () => {
                             onClick={() => goToPage(item)}
                             className={`min-w-[2.25rem] h-9 px-2 rounded-xl text-xs font-bold transition-colors ${
                               currentPage === item
-                                ? 'bg-sky-600 text-white shadow-sm'
+                                ? 'bg-sky-700 text-white shadow-sm'
                                 : 'text-slate-700 border border-slate-200 hover:bg-slate-50'
                             }`}
                           >

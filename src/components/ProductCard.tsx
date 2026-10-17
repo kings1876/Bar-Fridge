@@ -12,9 +12,14 @@ import {
 
 interface ProductCardProps {
   product: Product;
+  /** Heading level of the card title: 2 directly under the page h1, 3 (default) under a section heading. */
+  headingLevel?: 2 | 3;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({ product, headingLevel = 3 }) => {
+  // Heading level follows the page: cards sit directly under the page h1 on shop and category pages (level 2),
+  // and under a section h2 elsewhere (level 3). The styling is identical.
+  const Heading = (headingLevel === 2 ? 'h2' : 'h3') as 'h2' | 'h3';
   const { addToCart, formatPrice, openOrderModalWithProduct } = useShop();
 
   const badgeColor = {
@@ -86,9 +91,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             options={{ productId: product.id }}
             className="block"
           >
-            <h3 className="font-bold text-base text-slate-900 hover:text-sky-600 transition-colors line-clamp-2 leading-snug">
+            <Heading className="font-bold text-base text-slate-900 hover:text-sky-600 transition-colors line-clamp-2 leading-snug">
               {product.name}
-            </h3>
+            </Heading>
           </NavLink>
 
           {/* Key Specs Pills */}
@@ -114,7 +119,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                   {formatPrice(product.price)}
                 </span>
                 {product.originalPrice && (
-                  <span className="text-xs text-slate-400 line-through">
+                  <span className="text-xs text-slate-500 line-through">
                     {formatPrice(product.originalPrice)}
                   </span>
                 )}
@@ -129,7 +134,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               <span className="text-[10px] text-emerald-700 font-bold uppercase tracking-wider block bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                 Free Freight
               </span>
-              <span className="text-[10px] text-slate-400 mt-0.5 block">
+              <span className="text-[10px] text-slate-500 mt-0.5 block">
                 In Stock
               </span>
             </div>

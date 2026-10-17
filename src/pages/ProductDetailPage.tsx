@@ -259,7 +259,7 @@ export const ProductDetailPage: React.FC = () => {
 
           {/* Features Checklist */}
           <div className="pt-4 border-t border-slate-200">
-            <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-3">Key Engineering Features</h4>
+            <h2 className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-3">Key Engineering Features</h2>
             <div className="space-y-2">
               {product.features.map((feat, i) => (
                 <div key={i} className="flex items-start gap-2.5 text-xs text-slate-600">
