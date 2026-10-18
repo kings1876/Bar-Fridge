@@ -3,7 +3,7 @@
 export const BLOG_EXTRAS: Record<string, string[]> = {
   'save-10-percent-bar-fridges-with-crypto': [
     '## How the order and payment process works',
-    'When you choose a cryptocurrency on the order form, the 10% discount is applied to your order total automatically. After you submit, we email an order confirmation with your reference number. Once we have reviewed your order, we email you the exact payment details for your chosen coin: USDT, Bitcoin, Ethereum or Solana.',
+    'When you choose a cryptocurrency on the order form, the 10% discount is applied to your order total automatically. After you submit, we email an order confirmation with your reference number. Once we have reviewed your order, we email you the exact payment details for your chosen coin: USDT, Bitcoin or Ethereum.',
     'Pay the exact amount shown, quoting your order reference where the method allows it, then upload a screenshot of your payment using the confirmation link in your email. Dispatch occurs within 24 hours of confirmed payment, and shipping on our bar fridges and freezers is free across Australia.',
     '## Tips before you pay',
     'Please do not send any payment until you have received our payment details. Check the amount and the network carefully, because cryptocurrency transfers generally cannot be reversed. If you have any questions, read our [FAQ](/faq) or [contact us](/contact) before you pay.'

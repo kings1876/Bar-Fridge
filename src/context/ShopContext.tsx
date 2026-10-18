@@ -145,8 +145,8 @@ interface ShopContextType {
   setIsOrderModalOpen: (open: boolean) => void;
   openOrderModalWithProduct?: (product: Product) => void;
   cryptoDiscountPercent: number; // 10%
-  selectedCrypto: 'USDT' | 'BTC' | 'ETH' | 'SOL';
-  setSelectedCrypto: (crypto: 'USDT' | 'BTC' | 'ETH' | 'SOL') => void;
+  selectedCrypto: 'USDT' | 'BTC' | 'ETH';
+  setSelectedCrypto: (crypto: 'USDT' | 'BTC' | 'ETH') => void;
 
   // Currency & Formatting
   currency: string;
@@ -191,7 +191,7 @@ export const ShopProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
   const [isCartDrawerOpen, setIsCartDrawerOpen] = useState(false);
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
-  const [selectedCrypto, setSelectedCrypto] = useState<'USDT' | 'BTC' | 'ETH' | 'SOL'>('USDT');
+  const [selectedCrypto, setSelectedCrypto] = useState<'USDT' | 'BTC' | 'ETH'>('USDT');
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
 
   const cryptoDiscountPercent = 10;

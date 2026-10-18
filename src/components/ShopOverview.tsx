@@ -38,7 +38,7 @@ export const ShopOverview: React.FC = () => (
       <p>
         Next, check the size. Measure the width, depth and height of the space, allow the ventilation clearance the manufacturer lists,
         and compare the litre capacity and the number of cans each model holds. Shipping on our bar fridges and freezers is free across
-        Australia, and paying with Bitcoin, USDT, Ethereum or Solana takes 10% off your order.
+        Australia, and paying with Bitcoin, USDT or Ethereum takes 10% off your order.
       </p>
     </div>
     <div className="max-w-3xl space-y-3 text-slate-600 text-sm sm:text-base leading-relaxed">

@@ -69,7 +69,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: 'save-10-percent-bar-fridges-with-crypto',
     slug: 'save-10-percent-bar-fridges-with-crypto',
     title: 'How to Save 10% on Any Bar Fridge When You Pay with Crypto',
-    excerpt: 'Cut traditional bank processing fees and enjoy an instant 10% discount on all commercial bar fridges and freezers using Bitcoin, Ethereum, USDT, or Solana.',
+    excerpt: 'Cut traditional bank processing fees and enjoy an instant 10% discount on all commercial bar fridges and freezers using Bitcoin, Ethereum or USDT.',
     author: 'Finance & Payments Team',
     date: '18 October 2025',
     readTime: '3 min read',
@@ -83,7 +83,6 @@ export const BLOG_POSTS: BlogPost[] = [
       '• Bitcoin (BTC) on the native Bitcoin network',
       '• Ethereum (ETH) on the Ethereum network',
       '• Tether (USDT) on the Tron (TRC20) network for low fees',
-      '• Solana (SOL) for lightning-fast sub-second settlements',
       'How it works: Simply select "Crypto Payment (10% Discount)" at the checkout order form. The form will automatically slash 10% off your total and generate an exact crypto amount and verified merchant wallet address. Once your transaction is confirmed on-chain, your order is instantly dispatched from our nearest Australian warehouse!'
     ]
   },

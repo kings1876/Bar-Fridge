@@ -177,7 +177,7 @@ export const ProductDetailPage: React.FC = () => {
                 <Bitcoin className="w-5 h-5 text-amber-600 shrink-0" />
                 <div>
                   <span className="font-bold text-amber-900 block">Crypto Order Form Price:</span>
-                  <span className="text-slate-600 text-[11px]">Pay with BTC, USDT, ETH or SOL & save 10%</span>
+                  <span className="text-slate-600 text-[11px]">Pay with BTC, USDT or ETH & save 10%</span>
                 </div>
               </div>
               <div className="text-right">

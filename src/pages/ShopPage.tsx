@@ -144,7 +144,7 @@ export const ShopPage: React.FC = () => {
               <span>10% Crypto Discount</span>
             </div>
             <div className="text-[11px] text-slate-600 font-medium">
-              Direct checkout with BTC, USDT, ETH, SOL
+              Direct checkout with BTC, USDT, ETH
             </div>
           </div>
         </div>

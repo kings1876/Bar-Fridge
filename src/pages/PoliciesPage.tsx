@@ -230,7 +230,7 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
           <div className="space-y-4">
             <h3 className="text-base font-bold text-slate-900">1. Currency & Pricing</h3>
             <p>
-              All prices displayed across the site are in Australian Dollars (AUD) as designated. For cryptocurrency payments (BTC, USDT, ETH, SOL), a 10% direct discount is automatically computed upon order form submission.
+              All prices displayed across the site are in Australian Dollars (AUD) as designated. For cryptocurrency payments (BTC, USDT, ETH), a 10% direct discount is automatically computed upon order form submission.
             </p>
 
             <h3 className="text-base font-bold text-slate-900">2. Installation & Ventilation Clearances</h3>
@@ -248,7 +248,7 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
             </p>
             <h3 className="text-base font-bold text-slate-900">Payment</h3>
             <p>
-              Payment is made in cryptocurrency (Bitcoin, USDT, Ethereum or Solana) to the details we email you. Pay the exact amount shown and upload a screenshot of your payment using the confirmation link. Please do not send any payment until you have received our details.
+              Payment is made in cryptocurrency (Bitcoin, USDT or Ethereum) to the details we email you. Pay the exact amount shown and upload a screenshot of your payment using the confirmation link. Please do not send any payment until you have received our details.
             </p>
             <h3 className="text-base font-bold text-slate-900">Dispatch</h3>
             <p>

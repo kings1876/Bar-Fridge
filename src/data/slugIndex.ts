@@ -272,7 +272,7 @@ export const BLOG_CARDS: BlogCard[] = [
     "id": "save-10-percent-bar-fridges-with-crypto",
     "slug": "save-10-percent-bar-fridges-with-crypto",
     "title": "How to Save 10% on Any Bar Fridge When You Pay with Crypto",
-    "excerpt": "Cut traditional bank processing fees and enjoy an instant 10% discount on all commercial bar fridges and freezers using Bitcoin, Ethereum, USDT, or Solana.",
+    "excerpt": "Cut traditional bank processing fees and enjoy an instant 10% discount on all commercial bar fridges and freezers using Bitcoin, Ethereum or USDT.",
     "image": "/images/products/schmick-sk198d-b-hd-1.webp",
     "category": "Promotions & Crypto",
     "readTime": "3 min read"

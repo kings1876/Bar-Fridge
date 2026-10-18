@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
             </div>
             <div>
               <h4 className="font-semibold text-white text-sm">10% Crypto Discount</h4>
-              <p className="text-xs text-slate-400 mt-1">Instant 10% deduction when paying with Bitcoin, USDT, Ethereum or Solana.</p>
+              <p className="text-xs text-slate-400 mt-1">Instant 10% deduction when paying with Bitcoin, USDT or Ethereum.</p>
             </div>
           </div>
 
@@ -133,9 +133,6 @@ export const Footer: React.FC = () => {
                 </span>
                 <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-medium text-emerald-300 flex items-center gap-1">
                   <span className="w-2 h-2 rounded-full bg-emerald-400"></span> USDT (TRC20)
-                </span>
-                <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-medium text-purple-300 flex items-center gap-1">
-                  <span className="w-2 h-2 rounded-full bg-purple-400"></span> Solana (SOL)
                 </span>
                 <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs text-slate-400">
                   AUD Pricing

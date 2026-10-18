@@ -670,7 +670,7 @@ export const HomePage: React.FC = () => {
                 <span>Instant 10% Crypto Payment Rebate</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
-                Pay With Bitcoin, USDT, ETH or Solana & Save 10% Automatically
+                Pay With Bitcoin, USDT or ETH & Save 10% Automatically
               </h2>
               <p className="text-slate-700 text-sm max-w-2xl leading-relaxed">
                 We pass payment gateway savings directly to you. No bank intermediary fees means you receive an instant 10% reduction on all commercial bar fridges and bar freezers at checkout.
@@ -684,9 +684,6 @@ export const HomePage: React.FC = () => {
                 </span>
                 <span className="px-3.5 py-1.5 bg-white rounded-xl text-xs font-mono text-sky-900 border border-amber-200 font-bold shadow-2xs">
                   ETH (Ethereum)
-                </span>
-                <span className="px-3.5 py-1.5 bg-white rounded-xl text-xs font-mono text-purple-900 border border-amber-200 font-bold shadow-2xs">
-                  SOL (Solana)
                 </span>
               </div>
             </div>

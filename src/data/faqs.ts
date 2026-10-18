@@ -5,7 +5,7 @@ export const FAQS_DATA: FAQItem[] = [
     id: 'faq-1',
     category: 'Ordering & Payment',
     question: 'How does the 10% Crypto payment discount work?',
-    answer: 'When you choose Cryptocurrency as your payment method on our order form, a 10% direct discount is automatically deducted from your order subtotal. We accept Bitcoin (BTC), Ethereum (ETH), Tether (USDT on the Tron TRC20 network), and Solana (SOL). Once you submit the order form, you will receive our merchant deposit address and exact crypto transfer amount.'
+    answer: 'When you choose Cryptocurrency as your payment method on our order form, a 10% direct discount is automatically deducted from your order subtotal. We accept Bitcoin (BTC), Ethereum (ETH) and Tether (USDT on the Tron TRC20 network). Once you submit the order form, you will receive our merchant deposit address and exact crypto transfer amount.'
   },
   {
     id: 'faq-2',
@@ -77,7 +77,7 @@ export const FAQS_DATA: FAQItem[] = [
     id: 'faq-13',
     category: 'Ordering & Payment',
     question: 'Which payment methods do you accept?',
-    answer: 'We accept Bitcoin (BTC), USDT, Ethereum (ETH) and Solana (SOL). Choosing any of these on the order form takes 10% off your order. After you place your order we email you the exact payment details for your chosen method, so please do not send any payment until you have received them.'
+    answer: 'We accept Bitcoin (BTC), USDT and Ethereum (ETH). Choosing any of these on the order form takes 10% off your order. After you place your order we email you the exact payment details for your chosen method, so please do not send any payment until you have received them.'
   },
   {
     id: 'faq-14',

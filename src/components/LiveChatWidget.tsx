@@ -54,7 +54,7 @@ export const LiveChatWidget: React.FC = () => {
       
       const lower = messageText.toLowerCase();
       if (lower.includes('crypto') || lower.includes('discount') || lower.includes('10%')) {
-        reply = "Great news! When you checkout using Bitcoin (BTC), USDT, Ethereum, or Solana, you automatically receive 10% off the total price on our Order Form. No promo code needed!";
+        reply = "Great news! When you checkout using Bitcoin (BTC), USDT or Ethereum, you automatically receive 10% off the total price on our Order Form. No promo code needed!";
       } else if (lower.includes('shipping') || lower.includes('freight') || lower.includes('free') || lower.includes('deliver')) {
         reply = "Yes, freight is 100% FREE on all our fridges and freezers nationwide across Australia! We use specialized tailgate couriers with full transit insurance.";
       } else if (lower.includes('outdoor') || lower.includes('alfresco') || lower.includes('patio') || lower.includes('tropical')) {
