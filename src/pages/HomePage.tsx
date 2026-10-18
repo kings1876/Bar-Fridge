@@ -680,7 +680,7 @@ export const HomePage: React.FC = () => {
                   BTC (Bitcoin)
                 </span>
                 <span className="px-3.5 py-1.5 bg-white rounded-xl text-xs font-mono text-emerald-900 border border-amber-200 font-bold shadow-2xs">
-                  USDT (TRC20 / ERC20)
+                  USDT (TRC20)
                 </span>
                 <span className="px-3.5 py-1.5 bg-white rounded-xl text-xs font-mono text-sky-900 border border-amber-200 font-bold shadow-2xs">
                   ETH (Ethereum)

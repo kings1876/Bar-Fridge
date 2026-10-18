@@ -5,7 +5,7 @@ export const FAQS_DATA: FAQItem[] = [
     id: 'faq-1',
     category: 'Ordering & Payment',
     question: 'How does the 10% Crypto payment discount work?',
-    answer: 'When you choose Cryptocurrency as your payment method on our order form, a 10% direct discount is automatically deducted from your order subtotal. We accept Bitcoin (BTC), Ethereum (ETH), Tether (USDT on TRC20/ERC20), and Solana (SOL). Once you submit the order form, you will receive our merchant deposit address and exact crypto transfer amount.'
+    answer: 'When you choose Cryptocurrency as your payment method on our order form, a 10% direct discount is automatically deducted from your order subtotal. We accept Bitcoin (BTC), Ethereum (ETH), Tether (USDT on the Tron TRC20 network), and Solana (SOL). Once you submit the order form, you will receive our merchant deposit address and exact crypto transfer amount.'
   },
   {
     id: 'faq-2',

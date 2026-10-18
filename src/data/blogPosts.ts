@@ -82,7 +82,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'Which cryptocurrencies do we accept?',
       '• Bitcoin (BTC) on the native Bitcoin network',
       '• Ethereum (ETH) on the Ethereum network',
-      '• Tether (USDT) on TRC20 and ERC20 networks for low gas fees',
+      '• Tether (USDT) on the Tron (TRC20) network for low fees',
       '• Solana (SOL) for lightning-fast sub-second settlements',
       'How it works: Simply select "Crypto Payment (10% Discount)" at the checkout order form. The form will automatically slash 10% off your total and generate an exact crypto amount and verified merchant wallet address. Once your transaction is confirmed on-chain, your order is instantly dispatched from our nearest Australian warehouse!'
     ]

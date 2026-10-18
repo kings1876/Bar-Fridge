@@ -132,7 +132,7 @@ export const Footer: React.FC = () => {
                   <span className="w-2 h-2 rounded-full bg-sky-400"></span> Ethereum (ETH)
                 </span>
                 <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-medium text-emerald-300 flex items-center gap-1">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400"></span> USDT (TRC20/ERC20)
+                  <span className="w-2 h-2 rounded-full bg-emerald-400"></span> USDT (TRC20)
                 </span>
                 <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-medium text-purple-300 flex items-center gap-1">
                   <span className="w-2 h-2 rounded-full bg-purple-400"></span> Solana (SOL)

@@ -20,7 +20,7 @@ export const REPLY = {
   },
   // discountPct applies to the cart subtotal when the customer picks that method
   paymentMethods: [
-    { id: 'usdt', label: 'USDT (TRC20 / ERC20)', discountPct: 10 },
+    { id: 'usdt', label: 'USDT (TRC20)', discountPct: 10, network: 'Tron (TRC20)', wallet: 'TBnrAF6yjaYyUBXFGDzDUdkUG7EZr6qrFN' },
     // wallet + network pre-fill the admin "Send payment details" screen for that method (review, then send)
     { id: 'btc', label: 'Bitcoin (BTC)', discountPct: 10, network: 'Bitcoin', wallet: 'bc1qkh6y6wqm8clgrdg3act8vt8j4d20hnn5up9lzh' },
     { id: 'eth', label: 'Ethereum (ETH)', discountPct: 10 },
