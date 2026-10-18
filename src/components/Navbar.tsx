@@ -9,6 +9,7 @@ import {
   PhoneCall, 
   Truck, 
   Bitcoin,
+  ShieldCheck,
   Flame,
   ChevronDown
 } from 'lucide-react';
@@ -64,8 +65,22 @@ export const Navbar: React.FC = () => {
               <span>Instant 10% Off Crypto Checkout</span>
             </span>
           </div>
-          <div className="flex items-center gap-4 text-xs">
-            <span className="font-medium text-slate-300 whitespace-nowrap">Brookvale NSW 2100 • ABN 50 024 804 820</span>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs min-w-0 max-w-full">
+            <span className="flex flex-wrap items-center gap-x-2 gap-y-0.5 font-medium text-slate-200 min-w-0 max-w-full">
+              <ShieldCheck className="w-3.5 h-3.5 text-rose-400 shrink-0" aria-hidden="true" />
+              <span className="sm:whitespace-nowrap">Bar Fridges for Sale (FRIDGI)</span>
+              <span className="text-slate-600" aria-hidden="true">·</span>
+              <span className="whitespace-nowrap">ABN 50 024 804 820</span>
+              <a
+                href="https://abr.business.gov.au/ABN/View?abn=50024804820"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Verify ABN 50 024 804 820 on the Australian Business Register (opens in a new tab)"
+                className="font-bold text-rose-400 underline underline-offset-2 hover:text-rose-300 whitespace-nowrap"
+              >
+                Verify on ABR
+              </a>
+            </span>
             <span className="text-slate-700 hidden sm:inline">•</span>
             <span className="hidden sm:flex items-center gap-1.5 text-sky-300 whitespace-nowrap">
               <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
@@ -77,11 +92,11 @@ export const Navbar: React.FC = () => {
 
       {/* Main Header Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 gap-4">
+        <div className="flex items-center justify-between h-20 gap-2 min-[360px]:gap-4">
           {/* Logo */}
           <NavLink
             page="home"
-            className="flex items-center gap-3 text-left group focus:outline-none shrink-0"
+            className="flex items-center gap-2 min-[360px]:gap-3 text-left group focus:outline-none shrink-0"
           >
             <div className="relative w-11 h-11 rounded-xl bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800 flex items-center justify-center p-2 shadow-md shadow-sky-600/20 group-hover:scale-105 transition-transform duration-200">
               <svg viewBox="0 0 24 24" className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -94,7 +109,7 @@ export const Navbar: React.FC = () => {
               <div className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-amber-400 border-2 border-white"></div>
             </div>
             <div>
-              <div className="font-extrabold text-xl sm:text-2xl tracking-tight text-slate-950 flex items-center gap-1.5 whitespace-nowrap">
+              <div className="font-extrabold text-base min-[360px]:text-lg leading-tight sm:text-2xl sm:leading-normal tracking-tight text-slate-950 flex flex-col sm:flex-row sm:items-center sm:gap-1.5 whitespace-nowrap">
                 <span>BAR FRIDGES</span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-700">FOR SALE</span>
               </div>
@@ -161,7 +176,7 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Right Action Buttons */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1 min-[360px]:gap-3">
             {/* Search Input / Button */}
             <div className="relative">
               {showSearchInput ? (
