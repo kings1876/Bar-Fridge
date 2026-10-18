@@ -24,6 +24,10 @@ export const REPLY = {
     // wallet + network pre-fill the admin "Send payment details" screen for that method (review, then send)
     { id: 'btc', label: 'Bitcoin (BTC)', discountPct: 10, network: 'Bitcoin', wallet: 'bc1qkh6y6wqm8clgrdg3act8vt8j4d20hnn5up9lzh' },
     { id: 'eth', label: 'Ethereum (ETH)', discountPct: 10, network: 'Ethereum', wallet: '0x71e590e953d8DBf7a2d8a4Fa58Ea55c3c57A6f8C' },
+    // Bank methods carry no discount. The admin screen pre-fills the reference; paste your account / PayID details per order.
+    { id: 'bank', label: 'Bank Transfer (EFT)', short: 'Bank Transfer', sub: 'EFT', kind: 'bank', discountPct: 0 },
+    { id: 'payid', label: 'PayID', short: 'PayID', sub: 'Instant', kind: 'bank', discountPct: 0 },
+    { id: 'osko', label: 'Osko', short: 'Osko', sub: 'Instant', kind: 'bank', discountPct: 0 },
   ],
   terms: [
     'Please pay the exact amount shown, using the details provided.',

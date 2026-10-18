@@ -260,7 +260,8 @@ const SendPayment: React.FC<{ pass: string }> = ({ pass }) => {
   // Pre-fill the saved wallet for this payment method (if one is configured); the admin reviews it before sending.
   useEffect(() => {
     if (!order) return;
-    const m = REPLY.paymentMethods.find((x: { id: string }) => x.id === order.paymentMethod) as { wallet?: string; network?: string } | undefined;
+    const m = REPLY.paymentMethods.find((x: { id: string }) => x.id === order.paymentMethod) as { wallet?: string; network?: string; kind?: string } | undefined;
+    if (m?.kind === 'bank') setDetail((d) => d || 'Reference: ' + id);
     if (m?.wallet) setDetail((d) => d || ['Wallet address: ' + m.wallet, m.network ? 'Network: ' + m.network : '', 'Reference: ' + id].filter(Boolean).join(String.fromCharCode(10)));
   }, [order, id]);
   const fields = useMemo(() => parsePaymentDetail(detail), [detail]);

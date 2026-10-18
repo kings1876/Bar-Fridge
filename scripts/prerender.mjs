@@ -235,7 +235,7 @@ const LL = SITE.origin;
 const llms = [
   '# ' + SITE.name,
   '',
-  '> Australian online store for outdoor and alfresco bar fridges, commercial bar fridges, wine and dual zone beverage fridges and bar freezers. Every product page lists capacity, dimensions, sound and energy ratings and warranty. Prices are in AUD, shipping is free across Australia, and ordering is by online order form with payment in cryptocurrency (Bitcoin, USDT, Ethereum) at 10% off.',
+  '> Australian online store for outdoor and alfresco bar fridges, commercial bar fridges, wine and dual zone beverage fridges and bar freezers. Every product page lists capacity, dimensions, sound and energy ratings and warranty. Prices are in AUD, shipping is free across Australia, and ordering is by online order form with payment by cryptocurrency (Bitcoin, USDT, Ethereum) at 10% off, or by bank transfer, PayID or Osko.',
   '',
   '## Shop',
   '- [Shop all bar fridges](' + LL + '/shop): the full range with filters by category',

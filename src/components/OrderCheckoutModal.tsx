@@ -344,11 +344,11 @@ export const OrderCheckoutModal: React.FC = () => {
                     <Bitcoin className="w-4 h-4 text-amber-600" />
                     <span>Select Payment Method</span>
                   </span>
-                  <span className="text-xs text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">{discountPercent}% Off Included</span>
+                  <span className="text-xs text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">{discountPercent > 0 ? `${discountPercent}% Off Included` : 'Pay with crypto to save 10%'}</span>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                  {REPLY.paymentMethods.map((m) => (
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  {REPLY.paymentMethods.map((m: { id: string; label: string; short?: string; sub?: string }) => (
                     <button
                       key={m.id}
                       type="button"
@@ -359,8 +359,8 @@ export const OrderCheckoutModal: React.FC = () => {
                           : 'border-slate-200 bg-slate-50 text-slate-600 hover:border-slate-300'
                       }`}
                     >
-                      <div className="text-xs sm:text-sm font-bold">{m.label.split(' ')[0]}</div>
-                      <div className="text-[10px] text-slate-500">{m.label.includes('(') ? m.label.slice(m.label.indexOf('(')) : ''}</div>
+                      <div className="text-xs sm:text-sm font-bold">{m.short ?? m.label.split(' ')[0]}</div>
+                      <div className="text-[10px] text-slate-500">{m.sub ?? (m.label.includes('(') ? m.label.slice(m.label.indexOf('(')) : '')}</div>
                     </button>
                   ))}
                 </div>
@@ -434,13 +434,15 @@ export const OrderCheckoutModal: React.FC = () => {
                     <span className="text-emerald-700 font-bold">FREE</span>
                   </div>
 
+                  {discountPercent > 0 && (
                   <div className="flex justify-between text-amber-800 font-bold">
                     <span className="flex items-center gap-1">
                       <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-                      <span>Crypto Payment Discount (-10%):</span>
+                      <span>Crypto Payment Discount (-{discountPercent}%):</span>
                     </span>
                     <span>-{formatPrice(cryptoDiscountAmount)}</span>
                   </div>
+                  )}
 
                   {extraDiscount > 0 && (
                     <div className="flex justify-between text-emerald-700 font-bold">
@@ -473,7 +475,7 @@ export const OrderCheckoutModal: React.FC = () => {
                   ) : (
                     <>
                       <Send className="w-4 h-4" />
-                      <span>Place Order & Lock 10% Discount</span>
+                      <span>{discountPercent > 0 ? `Place Order & Lock ${discountPercent}% Discount` : 'Place Order'}</span>
                     </>
                   )}
                 </button>

@@ -134,6 +134,15 @@ export const Footer: React.FC = () => {
                 <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-medium text-emerald-300 flex items-center gap-1">
                   <span className="w-2 h-2 rounded-full bg-emerald-400"></span> USDT (TRC20)
                 </span>
+                <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300">
+                  Bank Transfer
+                </span>
+                <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300">
+                  PayID
+                </span>
+                <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300">
+                  Osko
+                </span>
                 <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs text-slate-400">
                   AUD Pricing
                 </span>
