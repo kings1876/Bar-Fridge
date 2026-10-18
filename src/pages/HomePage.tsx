@@ -702,7 +702,6 @@ export const HomePage: React.FC = () => {
       </Staged>
 
       {/* Trustpilot Customer Reviews Grid */}
-      <Staged stage={4} minHeight={900}>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <div className="text-xs font-bold text-emerald-700 uppercase tracking-widest">Verified Trustpilot Testimonials</div>
@@ -754,7 +753,6 @@ export const HomePage: React.FC = () => {
           ))}
         </div>
       </section>
-      </Staged>
 
       {/* Latest Blog & Guides Section */}
       <Staged stage={5}>
