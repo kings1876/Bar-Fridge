@@ -75,7 +75,7 @@ export const Navbar: React.FC = () => {
                 href="https://abr.business.gov.au/ABN/View?abn=50024804820"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Verify ABN 50 024 804 820 on the Australian Business Register (opens in a new tab)"
+                aria-label="Verify on ABR: ABN 50 024 804 820, opens in a new tab"
                 className="font-bold text-rose-400 underline underline-offset-2 hover:text-rose-300 whitespace-nowrap"
               >
                 Verify on ABR
