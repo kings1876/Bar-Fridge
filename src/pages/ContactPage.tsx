@@ -96,7 +96,7 @@ export const ContactPage: React.FC = () => {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <strong className="text-slate-900 text-sm block font-bold">support@barfridgesforsale.com.au</strong>
+                  <strong className="text-slate-900 text-sm block font-bold">info@barfridgesforsale.com.au</strong>
                   <span className="text-slate-500">Technical sizing and order status inquiries</span>
                   <div className="text-[11px] text-sky-800 font-bold mt-0.5">Guaranteed 2-hour response during business hours</div>
                 </div>

@@ -149,7 +149,7 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
 
             <h3 className="text-base font-bold text-slate-900">3. How to Initiate a Return</h3>
             <p>
-              Simply email our support desk at <span className="text-sky-700 font-bold">support@barfridgesforsale.com.au</span> with your Order Number and photos of the unit in original packaging. We will coordinate a courier collection from your premises.
+              Simply email our support desk at <span className="text-sky-700 font-bold">info@barfridgesforsale.com.au</span> with your Order Number and photos of the unit in original packaging. We will coordinate a courier collection from your premises.
             </p>
             <h3 className="text-base font-bold text-slate-900">4. Before You Return a Unit</h3>
             <p>
