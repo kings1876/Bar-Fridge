@@ -229,7 +229,9 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "double-door-bar-fridge-guide": "double-door-bar-fridge-guide",
   "bar-fridges-australia-buying-guide": "bar-fridges-australia-buying-guide",
   "three-door-bar-fridge-guide": "three-door-bar-fridge-guide",
-  "drink-fridge-guide": "drink-fridge-guide"
+  "drink-fridge-guide": "drink-fridge-guide",
+  "under-bench-fridge-guide": "under-bench-fridge-guide",
+  "outdoor-bar-refrigerator-guide": "outdoor-bar-refrigerator-guide"
 };
 
 export interface BlogCard {
@@ -483,6 +485,24 @@ export const BLOG_CARDS: BlogCard[] = [
     "title": "Drink Fridges: How to Choose by Size, Door Type and Use",
     "excerpt": "Looking for a drink fridge? Compare sizes from 23 to 737 litres, glass or solid doors, heated glass and prices from $297, with real models for homes, bars and offices.",
     "image": "/images/products/schmick-sk116r-hd-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "under-bench-fridge-guide",
+    "slug": "under-bench-fridge-guide",
+    "title": "Under Bench Fridges: Front Venting, Sizes and Under Counter Fit",
+    "excerpt": "Under bench fridges and under counter bar fridges fit beneath a bench. See real heights, widths, front venting models, noise ratings and prices from $800.",
+    "image": "/images/products/schmick-sk126r-hd-1.webp",
+    "category": "Buying Guides",
+    "readTime": "7 min read"
+  },
+  {
+    "id": "outdoor-bar-refrigerator-guide",
+    "slug": "outdoor-bar-refrigerator-guide",
+    "title": "Outdoor Bar Refrigerators for Sale: 316 Stainless and Weatherproof Models",
+    "excerpt": "Shopping for an outdoor bar refrigerator? Compare 11 alfresco models from 129 to 248 litres, 316 marine grade stainless and weatherproof options, with real prices from $2,057.",
+    "image": "/images/products/rhino-env1r-ss-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
   }

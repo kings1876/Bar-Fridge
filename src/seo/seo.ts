@@ -129,6 +129,18 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Choosing a drink fridge? Compare sizes from 23 to 737 litres, glass or solid doors, heated glass, noise and prices from $297, with real models and can counts.'
   },
+  'under-bench-fridge-guide': {
+    keyword: 'under bench fridges',
+    title: 'Under Bench Fridge Guide: Front Venting, Sizes and Fit',
+    description:
+      'Under bench and under counter bar fridges: real heights, widths and front venting models from 89 to 330 litres, with noise ratings and prices from $800.'
+  },
+  'outdoor-bar-refrigerator-guide': {
+    keyword: 'outdoor bar refrigerator',
+    title: 'Outdoor Bar Refrigerators for Sale: 316 Stainless Guide',
+    description:
+      'Outdoor bar refrigerators for sale in Australia: 11 alfresco models from 129 to 248 litres, 316 stainless and weatherproof, tropical rated, from $2,057.'
+  },
   'commercial-bar-fridge-guide': {
     keyword: 'commercial bar fridge',
     title: 'Commercial Bar Fridge Guide for Pubs, Cafes and Venues',
