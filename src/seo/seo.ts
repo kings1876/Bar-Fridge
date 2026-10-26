@@ -299,6 +299,28 @@ const SHOP: SeoMeta = {
   jsonLd: []
 };
 
+/** Free shipping across Australia, dispatched within 24 hours of confirmed payment, delivered in 2 to 9 business days by region. */
+const OFFER_SHIPPING = {
+  '@type': 'OfferShippingDetails',
+  shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: REPLY.currency.code },
+  shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'AU' },
+  deliveryTime: {
+    '@type': 'ShippingDeliveryTime',
+    handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 1, unitCode: 'DAY' },
+    transitTime: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 9, unitCode: 'DAY' }
+  }
+};
+
+/** 30-day change of mind return window (see the returns page). Return shipping costs are not stated there, so none are declared. */
+const OFFER_RETURNS = {
+  '@type': 'MerchantReturnPolicy',
+  applicableCountry: 'AU',
+  returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+  merchantReturnDays: 30,
+  returnMethod: 'https://schema.org/ReturnByMail',
+  merchantReturnLink: abs('/refund')
+};
+
 const itemList = (products: typeof PRODUCTS) => ({
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -479,7 +501,10 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
             priceCurrency: REPLY.currency.code,
             price: product.price.toFixed(2),
             availability: product.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
-            itemCondition: 'https://schema.org/NewCondition'
+            itemCondition: 'https://schema.org/NewCondition',
+            // Both blocks restate the published shipping and returns pages (/shipping, /refund); keep them in step.
+            shippingDetails: OFFER_SHIPPING,
+            hasMerchantReturnPolicy: OFFER_RETURNS
           }
         }
       ]
