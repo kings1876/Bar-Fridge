@@ -4,7 +4,6 @@ import {
   ShieldCheck, 
   Truck, 
   RotateCcw, 
-  Phone, 
   Mail, 
   MapPin, 
   Bitcoin, 
