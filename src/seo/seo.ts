@@ -131,7 +131,7 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
   },
   'under-bench-fridge-guide': {
     keyword: 'under bench fridges',
-    title: 'Under Bench Fridge Guide: Front Venting, Sizes and Fit',
+    title: 'Under Bench Fridges Guide: Front Venting, Sizes and Fit',
     description:
       'Under bench and under counter bar fridges: real heights, widths and front venting models from 89 to 330 litres, with noise ratings and prices from $800.'
   },

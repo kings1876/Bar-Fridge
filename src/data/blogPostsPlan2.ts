@@ -95,7 +95,7 @@ export const PLAN_POSTS_2: BlogPost[] = [
       "- [Schmick SK146R-SD](/schmick-sk146r-sd-164l): 164 litres, holds about 175 cans, 550 x 586 x 875 mm, $1,327.",
       "- [Schmick HUS-SC372LB](/schmick-hus-sc372lb-370l): 370 litres, holds about 336 cans, 615 x 640 x 1,940 mm, $1,247.",
       "## Glass door or solid door",
-      "A glass door drink fridge shows off what is inside, which makes it popular for home bars and shops. Heated glass reduces condensation on the door, and 30 of our single door models list it. A solid stainless steel door gives a cleaner look and hides the contents, as on the Schmick SK146R-SD. Our [glass door fridge guide](/glass-door-fridge-guide) goes through the glazing options in detail.",
+      "A glass door drink fridge shows off what is inside, so it works as a fridge with drinks on display for guests and customers, which makes it popular for home bars and shops. Heated glass reduces condensation on the door, and 30 of our single door models list it. A solid stainless steel door gives a cleaner look and hides the contents, as on the Schmick SK146R-SD. Our [glass door fridge guide](/glass-door-fridge-guide) goes through the glazing options in detail.",
       "## Upright or under bench",
       "Under bench models are low and wide and fit beneath a bar top. Upright, or skinny, models are tall and narrow, so they suit a gap in a corner or beside a bench. The [Schmick SS-P160FA](/schmick-ss-p160fa-160l) is a good example: it holds about 144 cans in a cabinet only 390 mm wide and 1,880 mm tall. Our [slimline bar fridge guide](/slimline-bar-fridge-guide) lists the narrow models.",
       "## Noise and climate",

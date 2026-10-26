@@ -3,6 +3,7 @@
 Goal: win the unused, low-difficulty commercial and transactional keywords in the bank (docs/keywords) that the 23 existing posts do not target yet, in the weeks that matter for Australian buyers (Black Friday, summer, Christmas).
 
 Rules
+- Standing keyword rule (from 26 Oct): every post uses commercial and transactional keywords from the bank, one primary plus 3 to 5 supporting, all used in the text. The set for each post is in docs/keywords/blog-post-keywords.json, and `node scripts/check-blog-keywords.mjs` must pass after the build.
 - Cadence: 2 posts a week (Tuesday and Friday), 20 posts in total, starting Tuesday 20 Oct.
 - One primary keyword per post, 4 to 5 supporting keywords written into the text naturally. Primary in the title (60 characters or fewer), meta description, H1 (distinct from every other page), first paragraph and one H2.
 - Length 1,200 to 1,600 words, one FAQ block, a comparison table where it helps, product facts only from the catalogue (capacity, size, rating, price). No invented claims, no fake sales.
