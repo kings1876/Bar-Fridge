@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useShop } from '../context/ShopContext';
 import { 
   Mail, 
-  Phone, 
   MapPin, 
   Send, 
   CheckCircle2, 
@@ -92,17 +91,6 @@ export const ContactPage: React.FC = () => {
             </h3>
 
             <div className="space-y-4 text-xs">
-              <div className="flex items-start gap-3">
-                <div className="p-2.5 bg-sky-50 border border-sky-200 rounded-2xl text-sky-700 shrink-0">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <strong className="text-slate-900 text-sm block font-bold">1300 CHILL AUS (1300 244 552)</strong>
-                  <span className="text-slate-500">Toll-free customer & contractor support</span>
-                  <div className="text-[11px] text-emerald-700 font-bold mt-0.5">Mon–Sat 8:00 AM – 7:00 PM AEST</div>
-                </div>
-              </div>
-
               <div className="flex items-start gap-3">
                 <div className="p-2.5 bg-sky-50 border border-sky-200 rounded-2xl text-sky-700 shrink-0">
                   <Mail className="w-5 h-5" />
