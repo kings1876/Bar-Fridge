@@ -17,6 +17,9 @@ export const FAMILY_NOTES: Record<string, string> = {
 
   'schmick-ss-p160fa-pb-160l': 'The Police Box design gives the cabinet a blue print; its photo shows the glass door stocked with drinks.',
 
+  // --- Smaller families: what sets the version apart (from the listing titles) --------------
+  'cub-sc372w-corona-370l': 'This is the Corona branded design of the 370 litre upright. The other two versions of this cabinet carry Great Northern branding and are listed with a black cabinet.',
+
   // --- Cub 70 L glass door, branded --------------------------------------------------------
   'cub-sc70-b-gold-70l': 'This is the Great Northern version, with a black cabinet, a glass door and a cream branded side panel. Interior lighting is visible in the photo.',
   'cub-sc70-b-dry-70l': 'This is the Carlton Dry version, with a navy branded side panel on a black cabinet.',

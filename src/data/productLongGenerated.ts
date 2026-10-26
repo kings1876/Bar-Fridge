@@ -253,9 +253,10 @@ function sizeFit(p: Product): string {
  */
 export function familyDetails(p: Product): string[] {
   const fam = familyOf(p);
-  if (fam.length < 4) return [];
-  const parts: string[] = [];
   const note = FAMILY_NOTES[p.slug];
+  // a written note about what sets this version apart is always shown; the sound / energy comparisons need a family of 4+
+  if (fam.length < 4) return note ? [note] : [];
+  const parts: string[] = [];
   if (note) parts.push(note);
 
   const dbs = fam.map((x) => x.noiseLevelDb);
