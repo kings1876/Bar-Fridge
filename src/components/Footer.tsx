@@ -115,10 +115,6 @@ export const Footer: React.FC = () => {
                 <Mail className="w-4 h-4 text-sky-400 shrink-0" />
                 <span>support@barfridgesforsale.com.au</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-sky-400 shrink-0" />
-                <span>1300 CHILL AUS (1300 244 552) • Mon–Sat 8am–7pm AEST</span>
-              </div>
             </div>
 
             {/* Crypto Badges */}
