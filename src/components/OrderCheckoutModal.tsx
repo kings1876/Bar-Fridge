@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useShop } from '../context/ShopContext';
 import { REPLY, SITE } from '../../shared/reply.config.js';
+import { WalletQr, CopyAddress } from './WalletQr';
 import { findMethod, makeOrderNumber, waOrderLink, whatsappEnabled } from '../../shared/order.js';
 import {
   X,
@@ -29,6 +30,8 @@ export const OrderCheckoutModal: React.FC = () => {
   const [extraDiscount, setExtraDiscount] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [orderComplete, setOrderComplete] = useState(false);
+  // The cart is cleared once the order is placed, so the amount to pay is remembered for the confirmation screen.
+  const [paidTotal, setPaidTotal] = useState(0);
   const [orderId, setOrderId] = useState('');
   const [submitError, setSubmitError] = useState('');
 
@@ -134,12 +137,13 @@ export const OrderCheckoutModal: React.FC = () => {
       return;
     }
     setOrderId(ref);
+    setPaidTotal(totalAfterDiscount);
     setOrderComplete(true);
     clearCart();
     addToast({
       type: 'success',
       title: 'Order Received',
-      message: `Order #${ref} received. Watch your email for payment details.`
+      message: (method as { wallet?: string }).wallet ? `Order #${ref} received. Your payment address and QR code are on screen and in your email.` : `Order #${ref} received. Watch your email for payment details.`
     });
   };
 
@@ -190,13 +194,36 @@ export const OrderCheckoutModal: React.FC = () => {
             <div className="max-w-xl mx-auto bg-sky-50 border border-sky-200 rounded-2xl p-6 text-left space-y-3">
               <div className="flex items-center justify-between border-b border-sky-200 pb-3">
                 <span className="text-xs font-bold uppercase text-sky-900">Total due ({method.label})</span>
-                <span className="text-lg font-mono font-black text-slate-900">{formatPrice(totalAfterDiscount)}</span>
+                <span className="text-lg font-mono font-black text-slate-900">{formatPrice(paidTotal)}</span>
               </div>
+              {(method as { wallet?: string }).wallet ? (
+                <div className="space-y-3">
+                  <p className="text-xs text-slate-700">
+                    <strong className="text-slate-900">Pay now:</strong> send the equivalent of <strong className="text-slate-900">{formatPrice(paidTotal)}</strong> in {method.label} to the address below, using the network shown. These details are also in your confirmation email.
+                  </p>
+                  <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start">
+                    <WalletQr value={(method as { wallet: string }).wallet} />
+                    <div className="w-full space-y-2">
+                      <CopyAddress label="Wallet address" value={(method as { wallet: string }).wallet} />
+                      <div className="rounded-xl border border-slate-200 bg-white p-3 text-left text-xs">
+                        <span className="font-bold uppercase text-[11px] text-slate-500">Network</span>
+                        <div className="mt-0.5 font-semibold text-slate-900">{(method as { network?: string }).network ?? method.label}</div>
+                      </div>
+                      <div className="rounded-xl border border-slate-200 bg-white p-3 text-left text-xs">
+                        <span className="font-bold uppercase text-[11px] text-slate-500">Reference</span>
+                        <div className="mt-0.5 font-mono font-semibold text-slate-900">{orderId}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-xs text-slate-700">Cryptocurrency payments cannot be reversed, so check the address and network carefully. After you pay, <a className="font-bold text-sky-700 underline" href={`/order/confirm-payment?id=${encodeURIComponent(orderId)}`}>upload a screenshot of your payment</a> so we can confirm it quickly.</p>
+                </div>
+              ) : (
               <div className="text-xs text-slate-700 space-y-1.5">
                 <p>• <strong className="text-slate-900">Watch your email</strong> — we will send your payment details to <strong className="text-slate-900">{formData.email}</strong> shortly.</p>
                 <p>• Please don't send any payment until you've received those details from us.</p>
-                <p>• Delivery destination: <strong className="text-slate-900">{formData.streetAddress}, {formData.suburb}, {formData.state} {formData.postcode}</strong></p>
               </div>
+              )}
+              <p className="text-xs text-slate-700 pt-1 border-t border-sky-200">• Delivery destination: <strong className="text-slate-900">{formData.streetAddress}, {formData.suburb}, {formData.state} {formData.postcode}</strong></p>
             </div>
 
             <div className="flex justify-center gap-4 pt-4">
@@ -366,7 +393,7 @@ export const OrderCheckoutModal: React.FC = () => {
                 </div>
 
                 <p className="mt-3 text-xs text-slate-600 bg-slate-50 border border-slate-200 rounded-xl p-3">
-                  <strong className="text-slate-900">How payment works:</strong> after you place your order we email you the exact payment details for your chosen method. Please don't send any payment before you receive them.
+                  <strong className="text-slate-900">How payment works:</strong> for cryptocurrency, the wallet address, network and a QR code appear on screen as soon as you place your order, and we email them to you too. For bank transfer, PayID and Osko we email you the payment details after we review your order, so please wait for them before you pay.
                 </p>
               </div>
             </div>

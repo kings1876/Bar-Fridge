@@ -248,7 +248,7 @@ export const PoliciesPage: React.FC<PoliciesPageProps> = ({ initialTab = 'shippi
             </p>
             <h3 className="text-base font-bold text-slate-900">Payment</h3>
             <p>
-              Payment is made by cryptocurrency (Bitcoin, USDT or Ethereum), bank transfer, PayID or Osko, to the details we email you. Pay the exact amount shown and upload a screenshot of your payment using the confirmation link. Please do not send any payment until you have received our details.
+              Payment is made by cryptocurrency (Bitcoin, USDT or Ethereum), bank transfer, PayID or Osko, to the details we give you. For cryptocurrency, the wallet address, network and QR code appear when you place your order and are emailed to you. For bank transfer, PayID and Osko we email the details after reviewing your order, so please wait for them before you pay. Pay the exact amount shown and upload a screenshot of your payment using the confirmation link.
             </p>
             <h3 className="text-base font-bold text-slate-900">Dispatch</h3>
             <p>

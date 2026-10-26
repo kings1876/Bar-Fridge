@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { REPLY, SITE } from '../../shared/reply.config.js';
 import { findMethod, money, waPaymentConfirmationLink, whatsappEnabled } from '../../shared/order.js';
+import { WalletQr } from '../components/WalletQr';
 
 const accent = REPLY.brand.primary;
 
@@ -67,7 +68,19 @@ export const PaymentDetailsPage: React.FC = () => {
             <p className="text-sm text-slate-600">{findMethod(d.paymentMethod).label}</p>
           </div>
           <p className="text-sm text-slate-700">Hi {d.customerName}, tap any field below to copy it.</p>
-          <div className="space-y-2">{d.fields.map((f: any, i: number) => <CopyField key={i} label={f.label} value={f.value} />)}</div>
+          <div className="space-y-2">
+            {d.fields.map((f: any, i: number) => (
+              <React.Fragment key={i}>
+                <CopyField label={f.label} value={f.value} />
+                {/wallet/i.test(f.label) && (
+                  <div className="flex flex-col items-center gap-1 py-2">
+                    <WalletQr value={f.value} />
+                    <span className="text-xs text-slate-500">Scan with your wallet app to fill in the address</span>
+                  </div>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
           <ul className="list-disc space-y-1 pl-5 text-sm text-slate-600">{d.terms.map((t: string) => <li key={t}>{t}</li>)}</ul>
           <a href={`/order/confirm-payment?id=${encodeURIComponent(d.orderNumber)}`} className="block rounded-xl py-3 text-center font-bold text-white" style={{ background: accent }}>
             I've paid — upload my screenshot

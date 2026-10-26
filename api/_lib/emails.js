@@ -1,6 +1,6 @@
 // Light-theme email shell: white body, dark brand header band, brand colour as accent only.
 import { REPLY, SITE } from '../../shared/reply.config.js';
-import { money, findMethod, paymentTermsLines } from '../../shared/order.js';
+import { money, findMethod, paymentTermsLines, defaultPaymentFields } from '../../shared/order.js';
 
 export const esc = (s) =>
   String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -63,13 +63,21 @@ ${button(`${SITE.origin}/admin/orders/${encodeURIComponent(o.orderNumber)}`, 'Re
 }
 
 export function orderConfirmationEmail(o) {
+  const payFields = defaultPaymentFields(findMethod(o.paymentMethod), o.orderNumber);
+  const payLink = `${SITE.origin}/order/payment-details?id=${encodeURIComponent(o.orderNumber)}`;
+  const next = payFields.length
+    ? `${callout('<strong>Pay now:</strong> send the equivalent of the total due in ' + esc(findMethod(o.paymentMethod).label) + ' to the address below, on the network shown, and quote your reference. Cryptocurrency payments cannot be reversed, so check the address and network carefully.')}
+${table(payFields.map((f) => field(f.label, f.value)).join(''))}
+${button(payLink, 'Open payment page (QR code, tap to copy) →')}
+${termsHtml()}`
+    : callout('<strong>What happens next:</strong> watch your inbox for a follow-up email from us with your payment details.');
   return {
     subject: `We received your order ${o.orderNumber}`,
     html: shell(
       'Order received',
       `<p style="margin:0 0 12px;">Hi ${esc(o.customerName)},</p>
 <p style="margin:0 0 12px;">Thank you for your order. Your reference is <strong>${esc(o.orderNumber)}</strong>.</p>
-${callout('<strong>What happens next:</strong> watch your inbox for a follow-up email from us with your payment details.')}
+${next}
 ${itemsTable(o.items)}
 ${table(field('Total due', money(o.amountDue)) + field('Payment method', findMethod(o.paymentMethod).label) + field('Delivery address', o.address || '—'))}
 <p style="margin:18px 0 0;color:#6b7280;">Questions? Just reply to this email.</p>`

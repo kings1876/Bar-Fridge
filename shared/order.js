@@ -28,6 +28,16 @@ export function money(amount) {
 export const findMethod = (id) => REPLY.paymentMethods.find((m) => m.id === id) || REPLY.paymentMethods[0];
 export const paymentTermsLines = () => REPLY.terms.slice();
 
+/** Payment details that need no hand-typing: the saved wallet for a crypto method (empty for bank methods, which you send per order). */
+export function defaultPaymentFields(method, orderNumber) {
+  if (!method || !method.wallet) return [];
+  return [
+    { label: 'Wallet address', value: method.wallet },
+    ...(method.network ? [{ label: 'Network', value: method.network }] : []),
+    { label: 'Reference', value: orderNumber }
+  ];
+}
+
 const KNOWN_LABELS = [
   'account name', 'account number', 'sort code', 'bank name', 'branch code', 'bsb',
   'routing number', 'beneficiary name', 'beneficiary', 'swift code', 'swift',

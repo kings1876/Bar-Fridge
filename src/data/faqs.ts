@@ -77,7 +77,7 @@ export const FAQS_DATA: FAQItem[] = [
     id: 'faq-13',
     category: 'Ordering & Payment',
     question: 'Which payment methods do you accept?',
-    answer: 'We accept Bitcoin (BTC), USDT and Ethereum (ETH), plus bank transfer, PayID and Osko. Paying with any of the three cryptocurrencies takes 10% off your order, while bank transfer, PayID and Osko are paid at the full price. After you place your order we email you the exact payment details for your chosen method, so please do not send any payment until you have received them.'
+    answer: 'We accept Bitcoin (BTC), USDT and Ethereum (ETH), plus bank transfer, PayID and Osko. Paying with any of the three cryptocurrencies takes 10% off your order, while bank transfer, PayID and Osko are paid at the full price. When you pay with cryptocurrency, the wallet address, network and a QR code appear on screen as soon as you place your order, and we email them to you too. For bank transfer, PayID and Osko we email you the payment details after we review your order, so please wait for them before you pay.'
   },
   {
     id: 'faq-16',
