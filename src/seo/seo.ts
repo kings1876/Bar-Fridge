@@ -117,6 +117,18 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Buying bar fridges in Australia? Compare the five types, sizes, climate ratings and budgets, with real prices from $257, and find the best bar fridge for you.'
   },
+  'three-door-bar-fridge-guide': {
+    keyword: '3 door bar fridge',
+    title: '3 Door Bar Fridge Guide: Sizes, Glass and Commercial Use',
+    description:
+      'A 3 door bar fridge holds 330 to 399 litres and up to 396 cans. Compare real widths, heated glass, solid doors, noise and prices for venues and big bars.'
+  },
+  'drink-fridge-guide': {
+    keyword: 'drink fridge',
+    title: 'Drink Fridge Guide: How to Choose the Right One',
+    description:
+      'Choosing a drink fridge? Compare sizes from 23 to 737 litres, glass or solid doors, heated glass, noise and prices from $297, with real models and can counts.'
+  },
   'commercial-bar-fridge-guide': {
     keyword: 'commercial bar fridge',
     title: 'Commercial Bar Fridge Guide for Pubs, Cafes and Venues',

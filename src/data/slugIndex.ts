@@ -227,7 +227,9 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "outdoor-bar-with-refrigerator-guide": "outdoor-bar-with-refrigerator-guide",
   "small-bar-freezer-guide": "small-bar-freezer-guide",
   "double-door-bar-fridge-guide": "double-door-bar-fridge-guide",
-  "bar-fridges-australia-buying-guide": "bar-fridges-australia-buying-guide"
+  "bar-fridges-australia-buying-guide": "bar-fridges-australia-buying-guide",
+  "three-door-bar-fridge-guide": "three-door-bar-fridge-guide",
+  "drink-fridge-guide": "drink-fridge-guide"
 };
 
 export interface BlogCard {
@@ -463,6 +465,24 @@ export const BLOG_CARDS: BlogCard[] = [
     "title": "Bar Fridges Australia: How to Choose by Type, Size and Budget",
     "excerpt": "Shopping for bar fridges in Australia? See what each type costs, which sizes fit where, and how to pick the best bar fridge for a home, an alfresco area or a venue.",
     "image": "/images/products/schmick-sk198d-b-hd-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "three-door-bar-fridge-guide",
+    "slug": "three-door-bar-fridge-guide",
+    "title": "3 Door Bar Fridges: Sizes, Heated Glass and Where They Fit",
+    "excerpt": "A 3 door bar fridge holds 330 to 399 litres and about 324 to 396 cans. See real widths, door types, noise ratings and prices for venues, clubs and big home bars.",
+    "image": "/images/products/rhino-sg3h-b-1.webp",
+    "category": "Buying Guides",
+    "readTime": "7 min read"
+  },
+  {
+    "id": "drink-fridge-guide",
+    "slug": "drink-fridge-guide",
+    "title": "Drink Fridges: How to Choose by Size, Door Type and Use",
+    "excerpt": "Looking for a drink fridge? Compare sizes from 23 to 737 litres, glass or solid doors, heated glass and prices from $297, with real models for homes, bars and offices.",
+    "image": "/images/products/schmick-sk116r-hd-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
   }
