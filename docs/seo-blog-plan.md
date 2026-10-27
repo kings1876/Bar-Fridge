@@ -55,3 +55,6 @@ Two posts never share a primary keyword. The risky pairs: #8 and #19 against gla
 - Checkpoints: week 4 (mid Nov): confirm posts 1 to 8 are indexed and read first impressions. Week 8 (mid Dec): compare impressions by post, then move the strongest topics earlier in the second half. 31 Dec: report on indexed posts, impressions, clicks, and top queries per post.
 - Semrush: rerun the Site Audit after each batch to keep Site Health at 100%, and run the on-page checker on each new post.
 - Success measures by 31 Dec: 20 posts live and indexed, every post earning impressions for its primary keyword, 10 or more posts with any average position under 30 for their primary.
+
+## Published ahead of calendar (28 Oct 2026)
+Transactional posts written early: #11 bar-fridge-prices-australia-guide (bar refrigerator price), #15 wine-fridges-for-sale-australia-guide (wine fridge for sale), #17 outdoor-refrigerator-cabinet-guide (outdoor refrigerator cabinet). Their keyword sets are in docs/keywords/blog-post-keywords.json.

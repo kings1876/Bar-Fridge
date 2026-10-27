@@ -231,7 +231,10 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "three-door-bar-fridge-guide": "three-door-bar-fridge-guide",
   "drink-fridge-guide": "drink-fridge-guide",
   "under-bench-fridge-guide": "under-bench-fridge-guide",
-  "outdoor-bar-refrigerator-guide": "outdoor-bar-refrigerator-guide"
+  "outdoor-bar-refrigerator-guide": "outdoor-bar-refrigerator-guide",
+  "bar-fridge-prices-australia-guide": "bar-fridge-prices-australia-guide",
+  "wine-fridges-for-sale-australia-guide": "wine-fridges-for-sale-australia-guide",
+  "outdoor-refrigerator-cabinet-guide": "outdoor-refrigerator-cabinet-guide"
 };
 
 export interface BlogCard {
@@ -505,6 +508,33 @@ export const BLOG_CARDS: BlogCard[] = [
     "image": "/images/products/rhino-env1r-ss-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
+  },
+  {
+    "id": "bar-fridge-prices-australia-guide",
+    "slug": "bar-fridge-prices-australia-guide",
+    "title": "Bar Refrigerator Price in Australia: What You Pay and Why",
+    "excerpt": "What is a fair bar refrigerator price? See real prices across 200 models from $257 to $4,997, by size, door type and category, plus free shipping and the 10% crypto saving.",
+    "image": "/images/products/schmick-hus-sc70-b-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "wine-fridges-for-sale-australia-guide",
+    "slug": "wine-fridges-for-sale-australia-guide",
+    "title": "Wine Fridge for Sale in Australia: Dual Zone Models Compared",
+    "excerpt": "Shopping for a wine fridge for sale? Compare 8 dual zone wine and beer fridges from 122 to 405 litres, with real bottle counts, zones, noise ratings and prices from $800.",
+    "image": "/images/products/schmick-jc165-1.webp",
+    "category": "Buying Guides",
+    "readTime": "7 min read"
+  },
+  {
+    "id": "outdoor-refrigerator-cabinet-guide",
+    "slug": "outdoor-refrigerator-cabinet-guide",
+    "title": "Outdoor Refrigerator Cabinet: Weatherproof Models Compared",
+    "excerpt": "Choosing an outdoor refrigerator cabinet? Compare weatherproof and 316 stainless fridges built for alfresco kitchens, with real cutout sizes, IP ratings, noise and prices from $2,057.",
+    "image": "/images/products/blastcool-ixp1-840-r-1.webp",
+    "category": "Buying Guides",
+    "readTime": "7 min read"
   }
 ];
 

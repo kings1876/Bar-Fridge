@@ -141,6 +141,24 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Outdoor bar refrigerators for sale in Australia: 11 alfresco models from 129 to 248 litres, 316 stainless and weatherproof, tropical rated, from $2,057.'
   },
+  'bar-fridge-prices-australia-guide': {
+    keyword: 'bar refrigerator price',
+    title: 'Bar Refrigerator Price in Australia: What You Pay',
+    description:
+      'Bar refrigerator price guide: 200 models from $257 to $4,997 by size, door type and category, with free shipping across Australia and 10% off with crypto.'
+  },
+  'wine-fridges-for-sale-australia-guide': {
+    keyword: 'wine fridge for sale',
+    title: 'Wine Fridge for Sale in Australia: Dual Zone Compared',
+    description:
+      'Wine fridge for sale in Australia: 8 dual zone wine and beer fridges from 122 to 405 litres with real bottle counts, zones, noise and prices from $800.'
+  },
+  'outdoor-refrigerator-cabinet-guide': {
+    keyword: 'outdoor refrigerator cabinet',
+    title: 'Outdoor Refrigerator Cabinet: Weatherproof Models',
+    description:
+      'Outdoor refrigerator cabinet guide: weatherproof and 316 stainless fridges with real cutout sizes, IP24 rating, noise and prices from $2,057. Free shipping.'
+  },
   'commercial-bar-fridge-guide': {
     keyword: 'commercial bar fridge',
     title: 'Commercial Bar Fridge Guide for Pubs, Cafes and Venues',
