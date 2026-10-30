@@ -234,7 +234,10 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "outdoor-bar-refrigerator-guide": "outdoor-bar-refrigerator-guide",
   "bar-fridge-prices-australia-guide": "bar-fridge-prices-australia-guide",
   "wine-fridges-for-sale-australia-guide": "wine-fridges-for-sale-australia-guide",
-  "outdoor-refrigerator-cabinet-guide": "outdoor-refrigerator-cabinet-guide"
+  "outdoor-refrigerator-cabinet-guide": "outdoor-refrigerator-cabinet-guide",
+  "beer-and-wine-fridge-guide": "beer-and-wine-fridge-guide",
+  "drinks-fridge-glass-door-guide": "drinks-fridge-glass-door-guide",
+  "70l-bar-fridge-guide": "70l-bar-fridge-guide"
 };
 
 export interface BlogCard {
@@ -533,6 +536,33 @@ export const BLOG_CARDS: BlogCard[] = [
     "title": "Outdoor Refrigerator Cabinet: Weatherproof Models Compared",
     "excerpt": "Choosing an outdoor refrigerator cabinet? Compare weatherproof and 316 stainless fridges built for alfresco kitchens, with real cutout sizes, IP ratings, noise and prices from $2,057.",
     "image": "/images/products/blastcool-ixp1-840-r-1.webp",
+    "category": "Buying Guides",
+    "readTime": "7 min read"
+  },
+  {
+    "id": "beer-and-wine-fridge-guide",
+    "slug": "beer-and-wine-fridge-guide",
+    "title": "Beer Wine Fridges: One Dual Zone or Two Fridges?",
+    "excerpt": "Beer wine fridges keep beer cold and wine at a warmer temperature. Compare dual zone models from $800 with single zone bar fridges, real bottle counts and sizes.",
+    "image": "/images/products/schmick-sk228d-b-hd-1.webp",
+    "category": "Buying Guides",
+    "readTime": "7 min read"
+  },
+  {
+    "id": "drinks-fridge-glass-door-guide",
+    "slug": "drinks-fridge-glass-door-guide",
+    "title": "Drinks Fridge Glass Door: Glazing, Heated Glass and Locks",
+    "excerpt": "Choosing a drinks fridge glass door model? Compare double and triple glazed, heated and low E glass, lockable doors and prices from $377 across our glass door range.",
+    "image": "/images/products/schmick-sk68r-ss-1.webp",
+    "category": "Buying Guides",
+    "readTime": "7 min read"
+  },
+  {
+    "id": "70l-bar-fridge-guide",
+    "slug": "70l-bar-fridge-guide",
+    "title": "70L Bar Fridge Guide: 27 Models, Sizes and Prices",
+    "excerpt": "A 70L bar fridge holds about 85 cans and fits a bench or bar. Compare 27 models from $527 to $817, plus 50L, 65L and 121L sizes, with real dimensions and noise ratings.",
+    "image": "/images/products/schmick-hus-sc70-ss-1.webp",
     "category": "Buying Guides",
     "readTime": "7 min read"
   }

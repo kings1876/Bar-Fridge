@@ -4,6 +4,7 @@ Goal: win the unused, low-difficulty commercial and transactional keywords in th
 
 Rules
 - Standing keyword rule (from 26 Oct): every post uses commercial and transactional keywords from the bank, one primary plus 3 to 5 supporting, all used in the text. The set for each post is in docs/keywords/blog-post-keywords.json, and `node scripts/check-blog-keywords.mjs` must pass after the build.
+- Standing linking rule (from 30 Oct): every new post points mostly at product category pages (8 or more category links, including sub-categories) and the shop page (3 or more), with a closing "Shop the range by category" section; checked by `node scripts/check-blog-keywords.mjs`.
 - Cadence: 2 posts a week (Tuesday and Friday), 20 posts in total, starting Tuesday 20 Oct.
 - One primary keyword per post, 4 to 5 supporting keywords written into the text naturally. Primary in the title (60 characters or fewer), meta description, H1 (distinct from every other page), first paragraph and one H2.
 - Length 1,200 to 1,600 words, one FAQ block, a comparison table where it helps, product facts only from the catalogue (capacity, size, rating, price). No invented claims, no fake sales.
@@ -58,3 +59,6 @@ Two posts never share a primary keyword. The risky pairs: #8 and #19 against gla
 
 ## Published ahead of calendar (28 Oct 2026)
 Transactional posts written early: #11 bar-fridge-prices-australia-guide (bar refrigerator price), #15 wine-fridges-for-sale-australia-guide (wine fridge for sale), #17 outdoor-refrigerator-cabinet-guide (outdoor refrigerator cabinet). Their keyword sets are in docs/keywords/blog-post-keywords.json.
+
+## Published 30 Oct 2026 (commercial)
+#7 beer-and-wine-fridge-guide (beer wine fridges), #8 drinks-fridge-glass-door-guide (drinks fridge glass door), #9 70l-bar-fridge-guide (70l bar fridge). Keyword sets in docs/keywords/blog-post-keywords.json.

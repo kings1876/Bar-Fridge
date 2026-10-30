@@ -159,6 +159,24 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Outdoor refrigerator cabinet guide: weatherproof and 316 stainless fridges with real cutout sizes, IP24 rating, noise and prices from $2,057. Free shipping.'
   },
+  'beer-and-wine-fridge-guide': {
+    keyword: 'beer wine fridges',
+    title: 'Beer Wine Fridges: One Dual Zone or Two Fridges?',
+    description:
+      'Beer wine fridges compared: dual zone models from $800 vs single zone bar fridges, with real bottle counts, zones and sizes. Free shipping across Australia.'
+  },
+  'drinks-fridge-glass-door-guide': {
+    keyword: 'drinks fridge glass door',
+    title: 'Drinks Fridge Glass Door: Glazing, Heated Glass, Locks',
+    description:
+      'Drinks fridge glass door guide: double and triple glazed, heated and low E glass, lockable models and 69 glass door fridges from $377. Free shipping.'
+  },
+  '70l-bar-fridge-guide': {
+    keyword: '70l bar fridge',
+    title: '70L Bar Fridge Guide: 27 Models, Sizes and Prices',
+    description:
+      '70L bar fridge guide: compare 27 models from $527 to $817, plus 50L, 65L and 121L sizes, with real can counts, dimensions and noise ratings.'
+  },
   'commercial-bar-fridge-guide': {
     keyword: 'commercial bar fridge',
     title: 'Commercial Bar Fridge Guide for Pubs, Cafes and Venues',
