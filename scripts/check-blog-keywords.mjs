@@ -35,7 +35,7 @@ for (const [slug, { primary, supporting }] of Object.entries(map)) {
   if (!h1.includes(norm(primary))) bad(`primary "${primary}" is not in the H1`);
   // Standing rule (30 Oct 2026): posts point mostly at product category pages and the shop page.
   if (BLOG_LINK_RULE_FROM.includes(slug)) {
-    const wrap = html.slice(html.indexOf('data-prerender-wrap'));
+    const wrap = html.slice(html.indexOf('<h1'), html.indexOf('<footer', html.indexOf('<h1')));
     const hrefs = [...wrap.matchAll(/href="([^"#?]*)"/g)].map((m) => m[1]).filter((h) => h.startsWith('/'));
     const cat = hrefs.filter((h) => h.startsWith('/category/')).length;
     const shop = hrefs.filter((h) => h === '/shop' || h === '/shop/').length;
