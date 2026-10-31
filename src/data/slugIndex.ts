@@ -237,7 +237,8 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "outdoor-refrigerator-cabinet-guide": "outdoor-refrigerator-cabinet-guide",
   "beer-and-wine-fridge-guide": "beer-and-wine-fridge-guide",
   "drinks-fridge-glass-door-guide": "drinks-fridge-glass-door-guide",
-  "70l-bar-fridge-guide": "70l-bar-fridge-guide"
+  "70l-bar-fridge-guide": "70l-bar-fridge-guide",
+  "bar-refrigerator-sizes-guide": "bar-refrigerator-sizes-guide"
 };
 
 export interface BlogCard {
@@ -565,6 +566,15 @@ export const BLOG_CARDS: BlogCard[] = [
     "image": "/images/products/schmick-hus-sc70-ss-1.webp",
     "category": "Buying Guides",
     "readTime": "7 min read"
+  },
+  {
+    "id": "bar-refrigerator-sizes-guide",
+    "slug": "bar-refrigerator-sizes-guide",
+    "title": "Bar Refrigerator Sizes: Dimensions, Litres and Can Counts",
+    "excerpt": "How big is a bar refrigerator? See real sizes from 23 to 737 litres, widths, heights and can counts for every size band, so you can measure your space and pick the right one.",
+    "image": "/images/products/rhino-sg1r-b-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
   }
 ];
 

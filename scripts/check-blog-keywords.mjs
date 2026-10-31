@@ -1,5 +1,5 @@
 // Checks the blog keyword rule against a finished build (run after `npm run build`):
-// each mapped post has 1 primary + 3 to 5 supporting keywords, all from the commercial / transactional banks,
+// each mapped post has 1 primary + 3 to 5 supporting keywords, all from the commercial / transactional / informational banks,
 // every phrase appears in the published text, and the primary is in the SEO title and the H1.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -7,7 +7,7 @@ import path from 'node:path';
 const root = path.resolve(import.meta.dirname, '..');
 const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim();
 const bank = new Map();
-for (const [file, kind, kd] of [['commercial', 'C', 20], ['transactional', 'T', 25]]) {
+for (const [file, kind, kd] of [['commercial', 'C', 20], ['transactional', 'T', 25], ['informational', 'I', 15]]) {
   for (const line of fs.readFileSync(path.join(root, 'docs/keywords', file + '.csv'), 'utf8').split(/\r?\n/).slice(1).filter(Boolean)) {
     const m = line.match(/^"([^"]*)",(\d+),(\d+)/);
     if (m && Number(m[3]) < kd && !bank.has(m[1].toLowerCase())) bank.set(m[1].toLowerCase(), kind);
@@ -15,7 +15,7 @@ for (const [file, kind, kd] of [['commercial', 'C', 20], ['transactional', 'T', 
 }
 const map = JSON.parse(fs.readFileSync(path.join(root, 'docs/keywords/blog-post-keywords.json'), 'utf8'));
 // Posts written under the category-and-shop linking rule.
-const BLOG_LINK_RULE_FROM = ['beer-and-wine-fridge-guide', 'drinks-fridge-glass-door-guide', '70l-bar-fridge-guide'];
+const BLOG_LINK_RULE_FROM = ['beer-and-wine-fridge-guide', 'drinks-fridge-glass-door-guide', '70l-bar-fridge-guide', 'bar-refrigerator-sizes-guide'];
 let problems = 0;
 const bad = (m) => { problems++; console.log('  FAIL', m); };
 for (const [slug, { primary, supporting }] of Object.entries(map)) {

@@ -159,6 +159,12 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Outdoor refrigerator cabinet guide: weatherproof and 316 stainless fridges with real cutout sizes, IP24 rating, noise and prices from $2,057. Free shipping.'
   },
+  'bar-refrigerator-sizes-guide': {
+    keyword: 'bar refrigerator sizes',
+    title: 'Bar Refrigerator Sizes: Dimensions and Can Counts',
+    description:
+      'Bar refrigerator sizes explained: real widths, heights and can counts from 23 to 737 litres, plus slim and tall options, to find the right size for your space.'
+  },
   'beer-and-wine-fridge-guide': {
     keyword: 'beer wine fridges',
     title: 'Beer Wine Fridges: One Dual Zone or Two Fridges?',

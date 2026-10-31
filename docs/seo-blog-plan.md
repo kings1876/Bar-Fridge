@@ -62,3 +62,6 @@ Transactional posts written early: #11 bar-fridge-prices-australia-guide (bar re
 
 ## Published 30 Oct 2026 (commercial)
 #7 beer-and-wine-fridge-guide (beer wine fridges), #8 drinks-fridge-glass-door-guide (drinks fridge glass door), #9 70l-bar-fridge-guide (70l bar fridge). Keyword sets in docs/keywords/blog-post-keywords.json.
+
+## Published 31 Oct 2026 (informational)
+bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational bank KD 12; supporting from the commercial bank and the informational bank). The keyword checker now accepts the informational bank (KD under 15) for informational posts.

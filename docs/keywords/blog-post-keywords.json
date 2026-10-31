@@ -10,5 +10,6 @@
   "outdoor-refrigerator-cabinet-guide": { "primary": "outdoor refrigerator cabinet", "supporting": ["outdoor fridge cabinet","weatherproof outdoor fridge","waterproof outdoor fridge","outdoor refrigerator"] },
   "beer-and-wine-fridge-guide": { "primary": "beer wine fridges", "supporting": ["beer and wine fridge","wine beer fridge","beer and wine refrigerator","beer wine coolers"] },
   "drinks-fridge-glass-door-guide": { "primary": "drinks fridge glass door", "supporting": ["glass door drinks fridge","beverage fridge with glass door","glass door drink refrigerator","beverage fridge glass door"] },
-  "70l-bar-fridge-guide": { "primary": "70l bar fridge", "supporting": ["50l bar fridge","65l bar fridge","bar fridge 70l","120l bar fridge"] }
+  "70l-bar-fridge-guide": { "primary": "70l bar fridge", "supporting": ["50l bar fridge","65l bar fridge","bar fridge 70l","120l bar fridge"] },
+  "bar-refrigerator-sizes-guide": { "primary": "bar refrigerator sizes", "supporting": ["slim bar fridge","narrow bar fridge","tall bar fridge","bar fridge height","bar fridge width"] }
 }
