@@ -238,7 +238,9 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "beer-and-wine-fridge-guide": "beer-and-wine-fridge-guide",
   "drinks-fridge-glass-door-guide": "drinks-fridge-glass-door-guide",
   "70l-bar-fridge-guide": "70l-bar-fridge-guide",
-  "bar-refrigerator-sizes-guide": "bar-refrigerator-sizes-guide"
+  "bar-refrigerator-sizes-guide": "bar-refrigerator-sizes-guide",
+  "bar-fridge-black-friday-checklist": "bar-fridge-black-friday-checklist",
+  "stainless-steel-outdoor-fridge-guide": "stainless-steel-outdoor-fridge-guide"
 };
 
 export interface BlogCard {
@@ -573,6 +575,24 @@ export const BLOG_CARDS: BlogCard[] = [
     "title": "Bar Refrigerator Sizes: Dimensions, Litres and Can Counts",
     "excerpt": "How big is a bar refrigerator? See real sizes from 23 to 737 litres, widths, heights and can counts for every size band, so you can measure your space and pick the right one.",
     "image": "/images/products/rhino-sg1r-b-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "bar-fridge-black-friday-checklist",
+    "slug": "bar-fridge-black-friday-checklist",
+    "title": "Bar Fridge Black Friday Sale Checklist: Buy With Confidence",
+    "excerpt": "Shopping a bar fridge Black Friday sale? Use this checklist to compare real prices from $297, check size, warranty and delivery, and save a further 10% when you pay with crypto.",
+    "image": "/images/products/schmick-hus-sc70-b-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "stainless-steel-outdoor-fridge-guide",
+    "slug": "stainless-steel-outdoor-fridge-guide",
+    "title": "Stainless Steel Outdoor Fridge: 316 Marine Grade Models",
+    "excerpt": "Compare every stainless steel outdoor fridge we sell: six 316 marine grade models from $2,747, with real sizes, can counts, noise levels and ratings for your outdoor kitchen.",
+    "image": "/images/products/rhino-env1r-ss-148l-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
   }

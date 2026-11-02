@@ -159,6 +159,18 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Outdoor refrigerator cabinet guide: weatherproof and 316 stainless fridges with real cutout sizes, IP24 rating, noise and prices from $2,057. Free shipping.'
   },
+  'bar-fridge-black-friday-checklist': {
+    keyword: 'bar fridge black friday sale',
+    title: 'Bar Fridge Black Friday Sale: Buyer Checklist',
+    description:
+      'Shopping a bar fridge Black Friday sale? Compare real prices from $297, check size, warranty and delivery, and take 10% off when you pay with crypto.'
+  },
+  'stainless-steel-outdoor-fridge-guide': {
+    keyword: 'stainless steel outdoor fridge',
+    title: 'Stainless Steel Outdoor Fridge: 316 Marine Grade',
+    description:
+      'Compare every stainless steel outdoor fridge we sell: six 316 marine grade models from $2,747 with real sizes, can counts, noise levels and ratings.'
+  },
   'bar-refrigerator-sizes-guide': {
     keyword: 'bar refrigerator sizes',
     title: 'Bar Refrigerator Sizes: Dimensions and Can Counts',

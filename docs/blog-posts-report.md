@@ -1,4 +1,4 @@
-# Blog posts written (as of 31 Oct 2026)
+# Blog posts written (as of 2 Nov 2026)
 
 Words = article body (H1 to footer) on the built page.
 
@@ -17,3 +17,5 @@ Words = article body (H1 to footer) on the built page.
 | drinks-fridge-glass-door-guide | drinks fridge glass door | glass door drinks fridge, beverage fridge with glass door, glass door drink refrigerator, beverage fridge glass door | 1,185 |
 | 70l-bar-fridge-guide | 70l bar fridge | 50l bar fridge, 65l bar fridge, bar fridge 70l, 120l bar fridge | 1,225 |
 | bar-refrigerator-sizes-guide | bar refrigerator sizes | slim bar fridge, narrow bar fridge, tall bar fridge, bar fridge height, bar fridge width | 1,674 |
+| bar-fridge-black-friday-checklist | bar fridge black friday sale | fridges on sale black friday, cheapest bar fridge, bar fridges for sale, wine fridges on sale | 1,612 |
+| stainless-steel-outdoor-fridge-guide | stainless steel outdoor fridge | outdoor stainless fridge, outdoor kitchen fridge, bar fridge outdoor kitchen, alfresco fridge | 1,420 |

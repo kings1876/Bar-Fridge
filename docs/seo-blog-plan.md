@@ -65,3 +65,8 @@ Transactional posts written early: #11 bar-fridge-prices-australia-guide (bar re
 
 ## Published 31 Oct 2026 (informational)
 bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational bank KD 12; supporting from the commercial bank and the informational bank). The keyword checker now accepts the informational bank (KD under 15) for informational posts.
+
+## Published ahead of calendar (2 Nov 2026)
+
+- #12 Black Friday checklist: bar-fridge-black-friday-checklist. Real offers only, no sale claimed.
+- Extra transactional post: stainless-steel-outdoor-fridge-guide (primary KD2).
