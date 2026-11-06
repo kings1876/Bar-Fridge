@@ -15,7 +15,7 @@ for (const [file, kind, kd] of [['commercial', 'C', 20], ['transactional', 'T', 
 }
 const map = JSON.parse(fs.readFileSync(path.join(root, 'docs/keywords/blog-post-keywords.json'), 'utf8'));
 // Posts written under the category-and-shop linking rule.
-const BLOG_LINK_RULE_FROM = ['beer-and-wine-fridge-guide', 'drinks-fridge-glass-door-guide', '70l-bar-fridge-guide', 'bar-refrigerator-sizes-guide', 'bar-fridge-black-friday-checklist', 'stainless-steel-outdoor-fridge-guide'];
+const BLOG_LINK_RULE_FROM = ['beer-and-wine-fridge-guide', 'drinks-fridge-glass-door-guide', '70l-bar-fridge-guide', 'bar-refrigerator-sizes-guide', 'bar-fridge-black-friday-checklist', 'stainless-steel-outdoor-fridge-guide', 'small-freezers-for-sale-guide', 'black-fridges-for-sale-guide', 'boxing-day-fridge-sale-checklist'];
 let problems = 0;
 const bad = (m) => { problems++; console.log('  FAIL', m); };
 for (const [slug, { primary, supporting }] of Object.entries(map)) {

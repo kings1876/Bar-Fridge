@@ -135,5 +135,32 @@
       "bar fridge outdoor kitchen",
       "alfresco fridge"
     ]
+  },
+  "small-freezers-for-sale-guide": {
+    "primary": "small freezers for sale",
+    "supporting": [
+      "small freezer for sale",
+      "mini freezer for sale",
+      "compact freezers for sale",
+      "freezers for sale"
+    ]
+  },
+  "black-fridges-for-sale-guide": {
+    "primary": "black fridges for sale",
+    "supporting": [
+      "black fridge for sale",
+      "black fridge sale",
+      "glass door fridge for sale",
+      "bar fridges for sale"
+    ]
+  },
+  "boxing-day-fridge-sale-checklist": {
+    "primary": "boxing day fridge sale",
+    "supporting": [
+      "boxing day sale fridge",
+      "fridge black friday sales",
+      "cheapest bar fridge",
+      "bar fridges for sale"
+    ]
   }
 }

@@ -19,3 +19,6 @@ Words = article body (H1 to footer) on the built page.
 | bar-refrigerator-sizes-guide | bar refrigerator sizes | slim bar fridge, narrow bar fridge, tall bar fridge, bar fridge height, bar fridge width | 1,674 |
 | bar-fridge-black-friday-checklist | bar fridge black friday sale | fridges on sale black friday, cheapest bar fridge, bar fridges for sale, wine fridges on sale | 1,612 |
 | stainless-steel-outdoor-fridge-guide | stainless steel outdoor fridge | outdoor stainless fridge, outdoor kitchen fridge, bar fridge outdoor kitchen, alfresco fridge | 1,420 |
+| small-freezers-for-sale-guide | small freezers for sale | small freezer for sale, mini freezer for sale, compact freezers for sale, freezers for sale | 1,542 |
+| black-fridges-for-sale-guide | black fridges for sale | black fridge for sale, black fridge sale, glass door fridge for sale, bar fridges for sale | 1,220 |
+| boxing-day-fridge-sale-checklist | boxing day fridge sale | boxing day sale fridge, fridge black friday sales, cheapest bar fridge, bar fridges for sale | 1,330 |

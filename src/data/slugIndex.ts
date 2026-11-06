@@ -240,7 +240,10 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "70l-bar-fridge-guide": "70l-bar-fridge-guide",
   "bar-refrigerator-sizes-guide": "bar-refrigerator-sizes-guide",
   "bar-fridge-black-friday-checklist": "bar-fridge-black-friday-checklist",
-  "stainless-steel-outdoor-fridge-guide": "stainless-steel-outdoor-fridge-guide"
+  "stainless-steel-outdoor-fridge-guide": "stainless-steel-outdoor-fridge-guide",
+  "small-freezers-for-sale-guide": "small-freezers-for-sale-guide",
+  "black-fridges-for-sale-guide": "black-fridges-for-sale-guide",
+  "boxing-day-fridge-sale-checklist": "boxing-day-fridge-sale-checklist"
 };
 
 export interface BlogCard {
@@ -593,6 +596,33 @@ export const BLOG_CARDS: BlogCard[] = [
     "title": "Stainless Steel Outdoor Fridge: 316 Marine Grade Models",
     "excerpt": "Compare every stainless steel outdoor fridge we sell: six 316 marine grade models from $2,747, with real sizes, can counts, noise levels and ratings for your outdoor kitchen.",
     "image": "/images/products/rhino-env1r-ss-148l-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "small-freezers-for-sale-guide",
+    "slug": "small-freezers-for-sale-guide",
+    "title": "Small Freezers for Sale: Bar Freezers From $427",
+    "excerpt": "Looking for small freezers for sale? Compare seven bar freezers from 36 to 241 litres, from $427, with real sizes, can counts, noise and energy ratings, and free shipping.",
+    "image": "/images/products/schmick-bd36-36l-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "black-fridges-for-sale-guide",
+    "slug": "black-fridges-for-sale-guide",
+    "title": "Black Fridges for Sale: 37 Black Bar Fridge Models",
+    "excerpt": "Compare black fridges for sale: 37 black bar fridge models from $377 to $3,327, from compact glass door to triple door, with real sizes, can counts and free shipping.",
+    "image": "/images/products/schmick-hus-sc70-b-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "boxing-day-fridge-sale-checklist",
+    "slug": "boxing-day-fridge-sale-checklist",
+    "title": "Boxing Day Fridge Sale Checklist: Buy the Right Size",
+    "excerpt": "Planning a Boxing Day fridge sale purchase? Use this checklist to pick the right size and budget, compare real prices from $297, and save 10% when you pay with crypto.",
+    "image": "/images/products/rhino-sg1r-b-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
   }

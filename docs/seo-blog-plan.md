@@ -70,3 +70,7 @@ bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational ban
 
 - #12 Black Friday checklist: bar-fridge-black-friday-checklist. Real offers only, no sale claimed.
 - Extra transactional post: stainless-steel-outdoor-fridge-guide (primary KD2).
+
+## Published ahead of calendar (6 Nov 2026)
+
+- Three transactional posts: small-freezers-for-sale-guide, black-fridges-for-sale-guide, boxing-day-fridge-sale-checklist. Real offers only, no sale claimed.

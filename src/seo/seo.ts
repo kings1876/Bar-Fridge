@@ -171,6 +171,24 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Compare every stainless steel outdoor fridge we sell: six 316 marine grade models from $2,747 with real sizes, can counts, noise levels and ratings.'
   },
+  'small-freezers-for-sale-guide': {
+    keyword: 'small freezers for sale',
+    title: 'Small Freezers for Sale: Bar Freezers From $427',
+    description:
+      'Small freezers for sale: compare seven bar freezers from 36 to 241 litres, from $427, with real sizes, noise and energy ratings, and free shipping.'
+  },
+  'black-fridges-for-sale-guide': {
+    keyword: 'black fridges for sale',
+    title: 'Black Fridges for Sale: 37 Black Bar Fridges',
+    description:
+      'Black fridges for sale: compare 37 black bar fridge models from $377 to $3,327, from compact glass door to triple door, with real sizes and free shipping.'
+  },
+  'boxing-day-fridge-sale-checklist': {
+    keyword: 'boxing day fridge sale',
+    title: 'Boxing Day Fridge Sale: Buyer Checklist',
+    description:
+      'Planning a Boxing Day fridge sale purchase? Pick the right size, compare real prices from $297 and take 10% off when you pay with crypto.'
+  },
   'bar-refrigerator-sizes-guide': {
     keyword: 'bar refrigerator sizes',
     title: 'Bar Refrigerator Sizes: Dimensions and Can Counts',
