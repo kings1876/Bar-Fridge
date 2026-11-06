@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useShop } from '../context/ShopContext';
 import { BLOG_POSTS } from '../data/blogPosts';
 import { NavLink } from '../components/NavLink';
+import { BlogConversion } from '../components/BlogConversion';
 import {
   Calendar, 
   Clock, 
@@ -103,6 +104,9 @@ export const BlogPage: React.FC = () => {
         <div className="space-y-6 text-sm sm:text-base text-slate-700 leading-relaxed font-sans">
           <RichText lines={post.content} />
         </div>
+
+        {/* Order the products mentioned + free quote form */}
+        <BlogConversion post={post} />
 
         {/* Tags */}
         <div className="pt-6 border-t border-slate-200 flex flex-wrap items-center gap-2">
