@@ -188,7 +188,12 @@ export const GUIDE_POSTS_2: BlogPost[] = [
       '### Can I add a lock to any fridge?',
       'Not reliably. Choose a model with a lockable door built in.',
       '### Are lockable fridges suitable for outdoors?',
-      'Only if the listing says it is suitable. All of these are listed for indoor or alfresco use, which means a covered area. Compare more options in our [single door bar fridges](/category/single-door).'
+      'Only if the listing says it is suitable. All of these are listed for indoor or alfresco use, which means a covered area. Compare more options in our [single door bar fridges](/category/single-door).',
+      '## Lockable bar fridge questions',
+      '### What is the cheapest lockable bar fridge?',
+      'The [Schmick HUS-SC50AB](/schmick-hus-sc50ab-50l), a 50 litre glass door fridge for $417 that holds about 38 cans.',
+      '### Which lockable bar fridge holds the most?',
+      'The [Schmick SS-P160FA](/schmick-ss-p160fa-160l), a 160 litre skinny upright holding about 144 cans for $1,167. You can compare all four lockable models with every other size in the [single door category](/category/single-door) or the [shop](/shop).'
     ]
   },
   {

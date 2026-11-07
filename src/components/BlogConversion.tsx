@@ -3,6 +3,7 @@ import { PRODUCTS } from '../data/products';
 import { ProductCard } from './ProductCard';
 import { Send, CheckCircle2 } from 'lucide-react';
 import { BlogPost } from '../types';
+import { trackEvent } from '../analytics';
 
 /**
  * Lead capture at the end of every blog post: the products the article mentions (ready to order or add to cart)
@@ -38,6 +39,7 @@ export const BlogConversion: React.FC<{ post: BlogPost }> = ({ post }) => {
       });
       const result = await res.json().catch(() => ({}));
       if (!res.ok || result.ok !== true) throw new Error('submit failed');
+      trackEvent('generate_lead', { form: 'blog_quote', post: post.slug });
       setState('sent');
     } catch {
       setState('error');

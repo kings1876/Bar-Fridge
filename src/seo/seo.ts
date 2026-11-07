@@ -565,7 +565,19 @@ export function seoForPath(pathname: string, search = ''): SeoMeta {
     const head = titleCase(pk.primary);
     const title = head.length + 23 <= 60 ? `${head} | Bar Fridges For Sale` : head.length <= 60 ? head : head.slice(0, 60).replace(/\s+\S*$/, '');
     const d = product.dimensions;
-    const desc = trim(`${head}: ${product.capacityLitres}L ${product.finish.replace(/ finish$/i, '').toLowerCase()}, ${d.width}x${d.depth}x${d.height}mm. Free shipping Australia-wide.`, 158);
+    // Facts only, all from the catalogue record: capacity, finish, size, can count, energy stars, then the standing offers.
+    const cans = (product.specs['Gross Capacity'] || '').match(/\((\d+) cans/);
+    const facts = [
+      `${product.capacityLitres}L ${product.finish.replace(/ finish$/i, '').toLowerCase()}`,
+      `${d.width}x${d.depth}x${d.height}mm`,
+      cans ? `holds ${cans[1]} cans` : '',
+      product.energyStars > 0 ? `${product.energyStars} star energy rating` : ''
+    ].filter(Boolean);
+    const tail = '. Free shipping Australia-wide, 2 year warranty.';
+    // Drop the lowest priority facts (energy stars, then can count) rather than cutting a sentence off.
+    const kept = facts.slice();
+    while (kept.length > 2 && `${head}: ${kept.join(', ')}${tail}`.length > 158) kept.pop();
+    const desc = trim(`${head}: ${kept.join(', ')}${tail}`, 158);
     const brand = product.name.split(' ')[0];
     return {
       title,

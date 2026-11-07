@@ -14,7 +14,11 @@ const GUIDES: { label: string; path: string }[] = [
   { label: 'Bar fridge dimensions guide', path: '/bar-fridge-dimensions-guide' },
   { label: 'Outdoor kitchen fridge guide', path: '/outdoor-kitchen-fridge-guide' },
   { label: 'Glass door fridge guide', path: '/glass-door-fridge-guide' },
-  { label: 'Beer fridge guide', path: '/beer-fridge-guide' }
+  { label: 'Beer fridge guide', path: '/beer-fridge-guide' },
+  { label: 'Lockable bar fridge guide', path: '/lockable-bar-fridge-guide' },
+  { label: 'Slimline bar fridge guide', path: '/slimline-bar-fridge-guide' },
+  { label: 'Small bar freezer guide', path: '/small-bar-freezer-guide' },
+  { label: 'Bar refrigerator sizes guide', path: '/bar-refrigerator-sizes-guide' }
 ];
 
 /** Buying overview shown under the full product list (no category selected). */

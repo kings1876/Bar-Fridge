@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ShieldCheck } from 'lucide-react';
+import { startAnalytics } from '../analytics';
 
 export const CookieBanner: React.FC = () => {
   const [accepted, setAccepted] = useState(true);
@@ -9,6 +10,8 @@ export const CookieBanner: React.FC = () => {
       const consent = localStorage.getItem('bffs_cookie_consent');
       if (!consent) {
         setAccepted(false);
+      } else if (consent === 'true') {
+        startAnalytics();
       }
     } catch {
       setAccepted(false);
@@ -18,6 +21,14 @@ export const CookieBanner: React.FC = () => {
   const handleAccept = () => {
     try {
       localStorage.setItem('bffs_cookie_consent', 'true');
+    } catch {}
+    startAnalytics();
+    setAccepted(true);
+  };
+
+  const handleDecline = () => {
+    try {
+      localStorage.setItem('bffs_cookie_consent', 'declined');
     } catch {}
     setAccepted(true);
   };
@@ -31,11 +42,17 @@ export const CookieBanner: React.FC = () => {
         <div className="space-y-1">
           <div className="font-bold text-slate-900">Australian Privacy & Cookie Notice</div>
           <p className="text-[11px] text-slate-500 leading-relaxed">
-            We use essential cookies to maintain your shopping cart, calculate 10% crypto payment discounts, and enhance site speed.
+            We use essential cookies to maintain your shopping cart, calculate 10% crypto payment discounts, and enhance site speed. With your consent we also use anonymous analytics to see which pages are useful.
           </p>
         </div>
       </div>
       <div className="flex items-center justify-end gap-2 pt-1">
+        <button
+          onClick={handleDecline}
+          className="px-4 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-lg text-xs transition-colors border border-slate-200"
+        >
+          Essential only
+        </button>
         <button
           onClick={handleAccept}
           className="px-4 py-1.5 bg-sky-700 hover:bg-sky-800 text-white font-bold rounded-lg text-xs transition-colors shadow-sm"

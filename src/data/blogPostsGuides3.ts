@@ -54,7 +54,18 @@ export const GUIDE_POSTS_3: BlogPost[] = [
       '### Will a bar fridge fit under a bench?',
       'It can if the height and ventilation suit. Compare the fridge height with your opening, and choose a front-breathing model for enclosed spaces.',
       '### Where do I find the exact dimensions?',
-      'Every product page lists the exterior dimensions in the specifications table. Browse by type in our [bar fridge range](/shop).'
+      'Every product page lists the exterior dimensions in the specifications table. Browse by type in our [bar fridge range](/shop).',
+      '## Bar fridge size questions',
+      '### How deep is a bar fridge?',
+      'Across the 191 fridges in our range, depth runs from 370 to 720 mm, and the typical fridge is 500 mm deep. 177 of them are 600 mm deep or less, so they sit inside a standard bench, and 113 are 500 mm or less. Browse the [single door category](/category/single-door) to filter by size.',
+      '### How wide is a bar fridge?',
+      'Width runs from 350 to 1,350 mm, and the typical fridge is 520 mm wide. A 60 to 70 litre fridge is 430 to 460 mm wide, double door fridges are about 870 to 900 mm, and triple door fridges reach 1,350 mm. See the [double and triple door category](/category/double-triple-door) for the wide models.',
+      '### How tall is a bar fridge?',
+      'Height runs from 462 to 2,130 mm, and the typical fridge is 840 mm tall. Under bench models are 800 to 875 mm, and the tall skinny uprights are 1,770 to 2,130 mm. The [skinny upright range](/category/single-door/skinny-upright) lists every tall model.',
+      '### What is the standard size of a bar fridge?',
+      'The most common size is 60 to 70 litres: 430 to 460 mm wide, 445 to 500 mm deep and 605 to 960 mm high. The [Schmick HUS-SC70-B](/schmick-hus-sc70-b-70l) is a good example at 430 x 500 x 700 mm.',
+      '### Do bar fridges have freezers?',
+      'Most do not. Bar fridges hold drinks at about 1 to 10 degrees Celsius. One model, the [Dellcool DW100CD](/dellcool-dw100cd-100l), has a mini freezer compartment in a 100 litre cabinet. For real freezing, see our [bar freezers](/category/bar-freezers), or compare every size in the [shop](/shop).'
     ]
   },
   {
@@ -184,7 +195,12 @@ export const GUIDE_POSTS_3: BlogPost[] = [
       'The 160 litre models hold about 144 cans, and the larger uprights hold much more.',
       '### Are there branded slimline fridges?',
       'Yes. Cub makes VB, Carlton and Great Northern designs. See our [branded beer fridge guide](/branded-beer-fridge-guide).',
-      'For all sizes side by side, read our [bar fridge dimensions guide](/bar-fridge-dimensions-guide).'
+      'For all sizes side by side, read our [bar fridge dimensions guide](/bar-fridge-dimensions-guide).',
+      '## Slimline bar fridge questions',
+      '### How narrow is the narrowest bar fridge?',
+      'The skinny uprights start at 390 mm wide. Our [skinny upright range](/category/single-door/skinny-upright) has 29 models, 390 to 890 mm wide, 475 to 720 mm deep and 1,770 to 2,130 mm tall, priced from $1,000 to $2,297.',
+      '### Is there a cheaper narrow option?',
+      'Yes. The [Schmick PG-65A](/schmick-pg-65a-65l) is 445 mm wide, 960 mm tall and holds 110 cans for $397. Browse the [glass door display range](/category/single-door/glass-door-display) for more compact fridges, or open the [shop](/shop) to compare everything.'
     ]
   },
   {
@@ -269,7 +285,12 @@ export const GUIDE_POSTS_3: BlogPost[] = [
       'Only models designed for it. Check the listing and the ventilation guidance.',
       '### Is there a quiet bar freezer?',
       'Compare the sound ratings on each product page.',
-      'Browse all our [bar freezers](/category/bar-freezers).'
+      'Browse all our [bar freezers](/category/bar-freezers).',
+      '## Small bar freezer questions',
+      '### How big is a small bar freezer?',
+      'Our bar freezers are 440 to 740 mm wide and 470 to 550 mm deep. The compact models are 520 mm tall, the under bench [Schmick MSF90](/schmick-msf90-96l) is 820 mm tall, and the two uprights are 1,770 mm tall. All hold -15 to -18 degrees Celsius.',
+      '### What is the cheapest small freezer?',
+      'The [Schmick BD36](/schmick-bd36-36l), a 36 litre freezer for $427 that holds 16 cans. See every model in the [bar freezers category](/category/bar-freezers), or browse the [shop](/shop).'
     ]
   }
 ];
