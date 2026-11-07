@@ -7,7 +7,8 @@ declare global {
 }
 
 // The prerender step bundles this file without Vite's env object, so read it defensively.
-const ID = ((import.meta as unknown as { env?: Record<string, string | undefined> }).env?.VITE_GA_MEASUREMENT_ID) || '';
+// Measurement ID for the "Bar Fridges For Sale" GA4 property (public, it appears in page source); VITE_GA_MEASUREMENT_ID overrides it.
+const ID = ((import.meta as unknown as { env?: Record<string, string | undefined> }).env?.VITE_GA_MEASUREMENT_ID) || 'G-FXEQYZ4HZQ';
 let started = false;
 
 const pageView = () => {
