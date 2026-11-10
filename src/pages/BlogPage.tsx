@@ -100,6 +100,24 @@ export const BlogPage: React.FC = () => {
           <img src={post.image} alt={post.title} className="w-full h-full object-contain p-4" />
         </div>
 
+        {/* Jump links to the order cards and the free quote form */}
+        <div className="flex flex-col sm:flex-row gap-3" aria-label="Order or get a quote">
+          <a
+            href="#order-from-guide"
+            onClick={(e) => { e.preventDefault(); document.getElementById('order-from-guide')?.scrollIntoView({ block: 'start' }); }}
+            className="flex-1 text-center px-5 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm rounded-xl transition-colors"
+          >
+            Order the models in this guide
+          </a>
+          <a
+            href="#free-quote"
+            onClick={(e) => { e.preventDefault(); document.getElementById('free-quote')?.scrollIntoView({ block: 'start' }); }}
+            className="flex-1 text-center px-5 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm rounded-xl transition-colors"
+          >
+            Get a free quote
+          </a>
+        </div>
+
         {/* Article Body Content */}
         <div className="space-y-6 text-sm sm:text-base text-slate-700 leading-relaxed font-sans">
           <RichText lines={post.content} />

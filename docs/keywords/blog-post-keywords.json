@@ -162,5 +162,24 @@
       "cheapest bar fridge",
       "bar fridges for sale"
     ]
+  },
+  "buy-a-wine-fridge-guide": {
+    "primary": "buy wine fridge",
+    "supporting": [
+      "wine refrigerators for sale",
+      "wine coolers for sale",
+      "wine fridge on sale",
+      "wine fridge sales",
+      "wine fridge and bar"
+    ]
+  },
+  "commercial-bar-fridge-for-sale-guide": {
+    "primary": "commercial bar fridge for sale",
+    "supporting": [
+      "2 door commercial fridge for sale",
+      "commercial fridge sales",
+      "double door bar fridge for sale",
+      "2 door bar fridge for sale"
+    ]
   }
 }

@@ -22,3 +22,5 @@ Words = article body (H1 to footer) on the built page.
 | small-freezers-for-sale-guide | small freezers for sale | small freezer for sale, mini freezer for sale, compact freezers for sale, freezers for sale | 1,542 |
 | black-fridges-for-sale-guide | black fridges for sale | black fridge for sale, black fridge sale, glass door fridge for sale, bar fridges for sale | 1,220 |
 | boxing-day-fridge-sale-checklist | boxing day fridge sale | boxing day sale fridge, fridge black friday sales, cheapest bar fridge, bar fridges for sale | 1,330 |
+| buy-a-wine-fridge-guide | buy wine fridge | wine refrigerators for sale, wine coolers for sale, wine fridge on sale, wine fridge sales, wine fridge and bar | 1,452 |
+| commercial-bar-fridge-for-sale-guide | commercial bar fridge for sale | 2 door commercial fridge for sale, commercial fridge sales, double door bar fridge for sale, 2 door bar fridge for sale | 1,442 |

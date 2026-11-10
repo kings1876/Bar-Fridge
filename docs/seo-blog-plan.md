@@ -74,3 +74,8 @@ bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational ban
 ## Published ahead of calendar (6 Nov 2026)
 
 - Three transactional posts: small-freezers-for-sale-guide, black-fridges-for-sale-guide, boxing-day-fridge-sale-checklist. Real offers only, no sale claimed.
+
+## Published ahead of calendar (10 Nov 2026)
+
+- Two transactional posts: buy-a-wine-fridge-guide, commercial-bar-fridge-for-sale-guide (venue and trade quotes). Real offers only, no sale claimed.
+- Every post now has jump buttons to the order cards and the free quote form; commercial posts show a trade quote form.

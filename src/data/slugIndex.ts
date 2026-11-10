@@ -243,7 +243,9 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "stainless-steel-outdoor-fridge-guide": "stainless-steel-outdoor-fridge-guide",
   "small-freezers-for-sale-guide": "small-freezers-for-sale-guide",
   "black-fridges-for-sale-guide": "black-fridges-for-sale-guide",
-  "boxing-day-fridge-sale-checklist": "boxing-day-fridge-sale-checklist"
+  "boxing-day-fridge-sale-checklist": "boxing-day-fridge-sale-checklist",
+  "buy-a-wine-fridge-guide": "buy-a-wine-fridge-guide",
+  "commercial-bar-fridge-for-sale-guide": "commercial-bar-fridge-for-sale-guide"
 };
 
 export interface BlogCard {
@@ -623,6 +625,24 @@ export const BLOG_CARDS: BlogCard[] = [
     "title": "Boxing Day Fridge Sale Checklist: Buy the Right Size",
     "excerpt": "Planning a Boxing Day fridge sale purchase? Use this checklist to pick the right size and budget, compare real prices from $297, and save 10% when you pay with crypto.",
     "image": "/images/products/rhino-sg1r-b-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "buy-a-wine-fridge-guide",
+    "slug": "buy-a-wine-fridge-guide",
+    "title": "Buy Wine Fridge Guide: Dual Zone Models From $800",
+    "excerpt": "Want to buy a wine fridge? Compare eight dual zone and wine cabinets from $800 to $2,177, with real bottle counts, sizes, noise and energy ratings, plus a quick free quote.",
+    "image": "/images/products/schmick-jc190-gg-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "commercial-bar-fridge-for-sale-guide",
+    "slug": "commercial-bar-fridge-for-sale-guide",
+    "title": "Commercial Bar Fridge for Sale: Double and Triple Door",
+    "excerpt": "Looking for a commercial bar fridge for sale? Compare 29 double and triple door models from $1,527 to $4,847, with real sizes, can counts and noise levels, free freight and a free quote.",
+    "image": "/images/products/rhino-sg3h-b-hd-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
   }

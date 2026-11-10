@@ -189,6 +189,18 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Planning a Boxing Day fridge sale purchase? Pick the right size, compare real prices from $297 and take 10% off when you pay with crypto.'
   },
+  'buy-a-wine-fridge-guide': {
+    keyword: 'buy wine fridge',
+    title: 'Buy Wine Fridge Guide: Dual Zone From $800',
+    description:
+      'Want to buy a wine fridge? Compare 8 dual zone and wine models from $800 to $2,177 with real bottle counts, sizes and ratings, and get a free quote.'
+  },
+  'commercial-bar-fridge-for-sale-guide': {
+    keyword: 'commercial bar fridge for sale',
+    title: 'Commercial Bar Fridge for Sale: 2 and 3 Door',
+    description:
+      'Compare 29 commercial bar fridges for sale from $1,527: real sizes, can counts and noise levels, free freight and a free trade quote.'
+  },
   'bar-refrigerator-sizes-guide': {
     keyword: 'bar refrigerator sizes',
     title: 'Bar Refrigerator Sizes: Dimensions and Can Counts',

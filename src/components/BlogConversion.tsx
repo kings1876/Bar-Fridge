@@ -16,6 +16,7 @@ export const BlogConversion: React.FC<{ post: BlogPost }> = ({ post }) => {
     .filter((p): p is NonNullable<typeof p> => Boolean(p))
     .slice(0, 3);
 
+  const isTrade = /commercial/.test(post.slug);
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
   const [honeypot, setHoneypot] = useState('');
   const [state, setState] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
@@ -32,7 +33,7 @@ export const BlogConversion: React.FC<{ post: BlogPost }> = ({ post }) => {
           name: form.name,
           email: form.email,
           phone: form.phone,
-          inquiryType: 'Free quote (from blog: ' + post.slug + ')',
+          inquiryType: (isTrade ? 'Trade quote (from blog: ' : 'Free quote (from blog: ') + post.slug + ')',
           message: form.message,
           website: honeypot
         })
@@ -52,7 +53,7 @@ export const BlogConversion: React.FC<{ post: BlogPost }> = ({ post }) => {
   return (
     <section className="space-y-8" aria-label="Order or get a free quote">
       {mentioned.length > 0 && (
-        <div className="space-y-4">
+        <div id="order-from-guide" className="space-y-4 scroll-mt-24">
           <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">Order the models from this guide</h2>
           <p className="text-sm text-slate-600">
             Free shipping across Australia, a 2 years parts and labour warranty and 10% off when you pay with crypto.
@@ -65,7 +66,7 @@ export const BlogConversion: React.FC<{ post: BlogPost }> = ({ post }) => {
         </div>
       )}
 
-      <div className="bg-sky-50 border border-sky-200 rounded-3xl p-6 sm:p-8">
+      <div id="free-quote" className="bg-sky-50 border border-sky-200 rounded-3xl p-6 sm:p-8 scroll-mt-24">
         {state === 'sent' ? (
           <div className="text-center space-y-2 py-4">
             <CheckCircle2 className="w-10 h-10 text-emerald-600 mx-auto" />
@@ -85,9 +86,9 @@ export const BlogConversion: React.FC<{ post: BlogPost }> = ({ post }) => {
               onChange={(e) => setHoneypot(e.target.value)}
             />
             <div>
-              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">Get a free quote</h2>
+              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">{isTrade ? 'Get a free trade quote' : 'Get a free quote'}</h2>
               <p className="text-sm text-slate-600 mt-1">
-                Tell us the space, the budget and what you will keep in it. We will recommend the right model and send a quote, free shipping included.
+                {isTrade ? 'Tell us your venue, the space, how many units you need and your budget. We will recommend the right models and send a quote, free shipping included.' : 'Tell us the space, the budget and what you will keep in it. We will recommend the right model and send a quote, free shipping included.'}
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
@@ -127,7 +128,7 @@ export const BlogConversion: React.FC<{ post: BlogPost }> = ({ post }) => {
               className="w-full py-3.5 bg-gradient-to-r from-sky-600 to-blue-800 hover:from-sky-500 hover:to-blue-700 disabled:opacity-50 text-white font-extrabold text-sm rounded-xl shadow-lg transition-all flex items-center justify-center gap-2"
             >
               <Send className="w-4 h-4" />
-              <span>{state === 'sending' ? 'Sending...' : 'Send my free quote request'}</span>
+              <span>{state === 'sending' ? 'Sending...' : (isTrade ? 'Send my free trade quote request' : 'Send my free quote request')}</span>
             </button>
           </form>
         )}
