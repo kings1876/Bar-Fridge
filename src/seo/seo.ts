@@ -201,6 +201,18 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Compare 29 commercial bar fridges for sale from $1,527: real sizes, can counts and noise levels, free freight and a free trade quote.'
   },
+  'glass-door-refrigerators-for-sale-guide': {
+    keyword: 'glass door refrigerators for sale',
+    title: 'Glass Door Refrigerators for Sale: 69 Models',
+    description:
+      'Glass door refrigerators for sale: 69 display models from $377, with real sizes, can counts and ratings. Order online or get a free quote. Free shipping.'
+  },
+  'outdoor-bar-fridge-buyer-guide': {
+    keyword: 'outdoor bar fridge',
+    title: 'Outdoor Bar Fridge for Sale: Weatherproof From $2,057',
+    description:
+      'Buying an outdoor bar fridge? Compare 11 weatherproof and marine grade stainless models from $2,057, plus covered patio fridges from $397. Free shipping.'
+  },
   'bar-refrigerator-sizes-guide': {
     keyword: 'bar refrigerator sizes',
     title: 'Bar Refrigerator Sizes: Dimensions and Can Counts',

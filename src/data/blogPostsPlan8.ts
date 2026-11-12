@@ -20,7 +20,7 @@ export const PLAN_POSTS_8: BlogPost[] = [
     date: DATE,
     readTime: "8 min read",
     category: "Buying Guides",
-    image: "/images/products/schmick-bd36-36l-1.webp",
+    image: "/images/products/schmick-bd36-1.webp",
     tags: ["Small Freezers For Sale", "Bar Freezers", "Mini Freezer", "Compact Freezers"],
     content: [
       "If you are searching for small freezers for sale, you want something that fits a bar, a kitchen corner or an alfresco area, keeps ice and food frozen, and is not a full-size chest freezer. We sell seven bar freezers, from a 36 litre compact model at $427 to a 241 litre commercial upright at $1,497, and every one ships free across Australia with a 2 years parts and labour warranty. This guide compares them with the real sizes, temperatures, noise levels and ratings from the catalogue, so you can choose the right one and order with confidence. You can see every model together in our [bar freezers category](/category/bar-freezers), or browse the whole range in our [shop](/shop).",

@@ -24,3 +24,5 @@ Words = article body (H1 to footer) on the built page.
 | boxing-day-fridge-sale-checklist | boxing day fridge sale | boxing day sale fridge, fridge black friday sales, cheapest bar fridge, bar fridges for sale | 1,330 |
 | buy-a-wine-fridge-guide | buy wine fridge | wine refrigerators for sale, wine coolers for sale, wine fridge on sale, wine fridge sales, wine fridge and bar | 1,452 |
 | commercial-bar-fridge-for-sale-guide | commercial bar fridge for sale | 2 door commercial fridge for sale, commercial fridge sales, double door bar fridge for sale, 2 door bar fridge for sale | 1,442 |
+| glass-door-refrigerators-for-sale-guide | glass door refrigerators for sale | glass door fridges for sale, bar fridge glass door, glass door fridge for sale, display fridges for sale | 1,288 |
+| outdoor-bar-fridge-buyer-guide | outdoor bar fridge | outdoor fridges for sale, outdoor bar with refrigerator, outdoor stainless steel refrigerator, bar cooler outdoor, outdoor fridge sale | 1,337 |

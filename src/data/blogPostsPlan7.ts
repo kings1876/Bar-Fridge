@@ -111,7 +111,7 @@ export const PLAN_POSTS_7: BlogPost[] = [
     date: DATE,
     readTime: "8 min read",
     category: "Buying Guides",
-    image: "/images/products/rhino-env1r-ss-148l-1.webp",
+    image: "/images/products/rhino-env1r-ss-1.webp",
     tags: ["Stainless Steel Outdoor Fridge", "Outdoor Kitchen Fridge", "Alfresco Fridge", "316 Marine Grade"],
     content: [
       "If you want a fridge that lives outdoors for years, a stainless steel outdoor fridge is the choice to make. The body resists rust and weather far better than painted steel, and it matches the barbecue, the rangehood and the bench around it. We sell six 316 marine grade stainless models, from $2,747 for a 148 litre fridge to $3,847 for a 248 litre fridge, and five more weatherproof models from $2,057. This guide explains what to look for, compares each one using real catalogue figures, and links to every category so you can see the full range in our [shop](/shop).",

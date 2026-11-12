@@ -181,5 +181,24 @@
       "double door bar fridge for sale",
       "2 door bar fridge for sale"
     ]
+  },
+  "glass-door-refrigerators-for-sale-guide": {
+    "primary": "glass door refrigerators for sale",
+    "supporting": [
+      "glass door fridges for sale",
+      "bar fridge glass door",
+      "glass door fridge for sale",
+      "display fridges for sale"
+    ]
+  },
+  "outdoor-bar-fridge-buyer-guide": {
+    "primary": "outdoor bar fridge",
+    "supporting": [
+      "outdoor fridges for sale",
+      "outdoor bar with refrigerator",
+      "outdoor stainless steel refrigerator",
+      "bar cooler outdoor",
+      "outdoor fridge sale"
+    ]
   }
 }

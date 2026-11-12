@@ -79,3 +79,8 @@ bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational ban
 
 - Two transactional posts: buy-a-wine-fridge-guide, commercial-bar-fridge-for-sale-guide (venue and trade quotes). Real offers only, no sale claimed.
 - Every post now has jump buttons to the order cards and the free quote form; commercial posts show a trade quote form.
+
+## Published ahead of calendar (12 Nov 2026)
+
+- Two transactional posts: glass-door-refrigerators-for-sale-guide, outdoor-bar-fridge-buyer-guide (primary KD8, 1,900 searches). Real offers only, no sale claimed.
+- Fixed three featured image paths that pointed at files that do not exist (stainless outdoor fridge and small freezers guides).

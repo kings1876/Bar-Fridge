@@ -245,7 +245,9 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "black-fridges-for-sale-guide": "black-fridges-for-sale-guide",
   "boxing-day-fridge-sale-checklist": "boxing-day-fridge-sale-checklist",
   "buy-a-wine-fridge-guide": "buy-a-wine-fridge-guide",
-  "commercial-bar-fridge-for-sale-guide": "commercial-bar-fridge-for-sale-guide"
+  "commercial-bar-fridge-for-sale-guide": "commercial-bar-fridge-for-sale-guide",
+  "glass-door-refrigerators-for-sale-guide": "glass-door-refrigerators-for-sale-guide",
+  "outdoor-bar-fridge-buyer-guide": "outdoor-bar-fridge-buyer-guide"
 };
 
 export interface BlogCard {
@@ -597,7 +599,7 @@ export const BLOG_CARDS: BlogCard[] = [
     "slug": "stainless-steel-outdoor-fridge-guide",
     "title": "Stainless Steel Outdoor Fridge: 316 Marine Grade Models",
     "excerpt": "Compare every stainless steel outdoor fridge we sell: six 316 marine grade models from $2,747, with real sizes, can counts, noise levels and ratings for your outdoor kitchen.",
-    "image": "/images/products/rhino-env1r-ss-148l-1.webp",
+    "image": "/images/products/rhino-env1r-ss-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
   },
@@ -606,7 +608,7 @@ export const BLOG_CARDS: BlogCard[] = [
     "slug": "small-freezers-for-sale-guide",
     "title": "Small Freezers for Sale: Bar Freezers From $427",
     "excerpt": "Looking for small freezers for sale? Compare seven bar freezers from 36 to 241 litres, from $427, with real sizes, can counts, noise and energy ratings, and free shipping.",
-    "image": "/images/products/schmick-bd36-36l-1.webp",
+    "image": "/images/products/schmick-bd36-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
   },
@@ -645,6 +647,24 @@ export const BLOG_CARDS: BlogCard[] = [
     "image": "/images/products/rhino-sg3h-b-hd-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
+  },
+  {
+    "id": "glass-door-refrigerators-for-sale-guide",
+    "slug": "glass-door-refrigerators-for-sale-guide",
+    "title": "Glass Door Refrigerators for Sale: 69 Display Models",
+    "excerpt": "Browse glass door refrigerators for sale: 69 display models from $377 to $2,427, from compact to double door, with real sizes, can counts and ratings. Order online or get a free quote.",
+    "image": "/images/products/schmick-hus-sc88-ss-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "outdoor-bar-fridge-buyer-guide",
+    "slug": "outdoor-bar-fridge-buyer-guide",
+    "title": "Outdoor Bar Fridge for Sale: Weatherproof From $2,057",
+    "excerpt": "Buying an outdoor bar fridge? Compare 11 weatherproof and marine grade stainless models from $2,057 plus covered patio fridges from $397, with real sizes, ratings and free shipping.",
+    "image": "/images/products/rhino-env1r-ss-1.webp",
+    "category": "Buying Guides",
+    "readTime": "9 min read"
   }
 ];
 
