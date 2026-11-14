@@ -26,3 +26,6 @@ Words = article body (H1 to footer) on the built page.
 | commercial-bar-fridge-for-sale-guide | commercial bar fridge for sale | 2 door commercial fridge for sale, commercial fridge sales, double door bar fridge for sale, 2 door bar fridge for sale | 1,442 |
 | glass-door-refrigerators-for-sale-guide | glass door refrigerators for sale | glass door fridges for sale, bar fridge glass door, glass door fridge for sale, display fridges for sale | 1,288 |
 | outdoor-bar-fridge-buyer-guide | outdoor bar fridge | outdoor fridges for sale, outdoor bar with refrigerator, outdoor stainless steel refrigerator, bar cooler outdoor, outdoor fridge sale | 1,337 |
+| retro-bar-fridge-for-sale-guide | retro bar fridge | retro mini fridge, retro style mini fridge, mini fridge vintage | 1,211 |
+| vb-beer-fridge-guide | vb beer fridge | beer fridge, beer fridges, wine and beer cooler | 1,398 |
+| small-refrigerator-price-guide | small refrigerator price | mini bar fridges, bar fridge mini fridge, mini fridge with lock, best bar fridge | 1,307 |

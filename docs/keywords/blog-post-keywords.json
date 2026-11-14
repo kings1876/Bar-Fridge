@@ -200,5 +200,30 @@
       "bar cooler outdoor",
       "outdoor fridge sale"
     ]
+  },
+  "retro-bar-fridge-for-sale-guide": {
+    "primary": "retro bar fridge",
+    "supporting": [
+      "retro mini fridge",
+      "retro style mini fridge",
+      "mini fridge vintage"
+    ]
+  },
+  "vb-beer-fridge-guide": {
+    "primary": "vb beer fridge",
+    "supporting": [
+      "beer fridge",
+      "beer fridges",
+      "wine and beer cooler"
+    ]
+  },
+  "small-refrigerator-price-guide": {
+    "primary": "small refrigerator price",
+    "supporting": [
+      "mini bar fridges",
+      "bar fridge mini fridge",
+      "mini fridge with lock",
+      "best bar fridge"
+    ]
   }
 }

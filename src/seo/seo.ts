@@ -213,6 +213,24 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Buying an outdoor bar fridge? Compare 11 weatherproof and marine grade stainless models from $2,057, plus covered patio fridges from $397. Free shipping.'
   },
+  'retro-bar-fridge-for-sale-guide': {
+    keyword: 'retro bar fridge',
+    title: 'Retro Bar Fridge for Sale: 34 Models From $297',
+    description:
+      'Shopping for a retro bar fridge? Compare 34 retro and novelty mini bar fridges from $297 with real sizes, can counts and ratings. Order online or get a quote.'
+  },
+  'vb-beer-fridge-guide': {
+    keyword: 'vb beer fridge',
+    title: 'VB Beer Fridge and Branded Mini Bar Fridges',
+    description:
+      'Want a VB beer fridge? Compare six VB models plus Carlton Draught, Corona and Holden fridges from $447, with real sizes and ratings. Free shipping.'
+  },
+  'small-refrigerator-price-guide': {
+    keyword: 'small refrigerator price',
+    title: 'Small Refrigerator Price: 61 Mini Fridges From $297',
+    description:
+      'What is a fair small refrigerator price? See what 61 mini bar fridges cost from $297, by budget, with real can counts and ratings. Free shipping Australia-wide.'
+  },
   'bar-refrigerator-sizes-guide': {
     keyword: 'bar refrigerator sizes',
     title: 'Bar Refrigerator Sizes: Dimensions and Can Counts',

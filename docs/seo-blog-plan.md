@@ -84,3 +84,7 @@ bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational ban
 
 - Two transactional posts: glass-door-refrigerators-for-sale-guide, outdoor-bar-fridge-buyer-guide (primary KD8, 1,900 searches). Real offers only, no sale claimed.
 - Fixed three featured image paths that pointed at files that do not exist (stainless outdoor fridge and small freezers guides).
+
+## Published ahead of calendar (14 Nov 2026)
+
+- Three transactional posts: retro-bar-fridge-for-sale-guide, vb-beer-fridge-guide, small-refrigerator-price-guide. Real offers only, no sale claimed.

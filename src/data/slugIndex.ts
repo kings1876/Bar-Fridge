@@ -247,7 +247,10 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "buy-a-wine-fridge-guide": "buy-a-wine-fridge-guide",
   "commercial-bar-fridge-for-sale-guide": "commercial-bar-fridge-for-sale-guide",
   "glass-door-refrigerators-for-sale-guide": "glass-door-refrigerators-for-sale-guide",
-  "outdoor-bar-fridge-buyer-guide": "outdoor-bar-fridge-buyer-guide"
+  "outdoor-bar-fridge-buyer-guide": "outdoor-bar-fridge-buyer-guide",
+  "retro-bar-fridge-for-sale-guide": "retro-bar-fridge-for-sale-guide",
+  "vb-beer-fridge-guide": "vb-beer-fridge-guide",
+  "small-refrigerator-price-guide": "small-refrigerator-price-guide"
 };
 
 export interface BlogCard {
@@ -665,6 +668,33 @@ export const BLOG_CARDS: BlogCard[] = [
     "image": "/images/products/rhino-env1r-ss-1.webp",
     "category": "Buying Guides",
     "readTime": "9 min read"
+  },
+  {
+    "id": "retro-bar-fridge-for-sale-guide",
+    "slug": "retro-bar-fridge-for-sale-guide",
+    "title": "Retro Bar Fridge for Sale: 34 Novelty Models From $297",
+    "excerpt": "Shopping for a retro bar fridge? Compare 34 novelty and retro mini bar fridges from $297, with real sizes, can counts and ratings. Order online or get a free quote.",
+    "image": "/images/products/schmick-hus-bc46b-ret-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "vb-beer-fridge-guide",
+    "slug": "vb-beer-fridge-guide",
+    "title": "VB Beer Fridge and Branded Mini Bar Fridges Compared",
+    "excerpt": "Want a VB beer fridge? Compare VB, Carlton Draught, Corona and Holden branded mini bar fridges from $447, with real sizes, can counts and ratings. Order online or get a quote.",
+    "image": "/images/products/cub-bc46w-vb-v1-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "small-refrigerator-price-guide",
+    "slug": "small-refrigerator-price-guide",
+    "title": "Small Refrigerator Price: 61 Mini Bar Fridges From $297",
+    "excerpt": "What is a fair small refrigerator price? See what 61 mini bar fridges cost, from $297, grouped by budget, with real can counts and ratings. Order online or get a free quote.",
+    "image": "/images/products/schmick-hus-sc50ab-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
   }
 ];
 
