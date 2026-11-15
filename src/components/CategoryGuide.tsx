@@ -14,6 +14,7 @@ export const CategoryGuide: React.FC<{ categoryId: string }> = ({ categoryId }) 
   // Ice boxes live in this category for navigation but aren't bar fridges: keep them out of the count and from-price.
   const inCat = PRODUCTS.filter((p) => p.category === categoryId && p.subcategory !== 'Ice Boxes & Coolers');
   const from = inCat.length ? Math.min(...inCat.map((p) => p.price)) : 0;
+  const glance = [...inCat].sort((a, b) => a.price - b.price);
 
   return (
     <section className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm space-y-8" aria-labelledby="category-guide-heading">
@@ -43,6 +44,41 @@ export const CategoryGuide: React.FC<{ categoryId: string }> = ({ categoryId }) 
           </div>
         ))}
       </div>
+
+      {glance.length > 1 && glance.length <= 12 && (
+        <div className="space-y-3">
+          <h3 className="text-xl font-extrabold text-slate-900">{cat.name} at a glance</h3>
+          <div className="overflow-x-auto -mx-2 px-2">
+            <table className="w-full text-sm text-left border-collapse min-w-[480px]">
+              <caption className="sr-only">Models in this range compared by capacity, energy stars, noise and price</caption>
+              <thead>
+                <tr className="text-slate-500 border-b border-slate-200">
+                  <th scope="col" className="py-2 pr-3 font-bold">Model</th>
+                  <th scope="col" className="py-2 pr-3 font-bold">Litres</th>
+                  <th scope="col" className="py-2 pr-3 font-bold">Energy stars</th>
+                  <th scope="col" className="py-2 pr-3 font-bold">Noise</th>
+                  <th scope="col" className="py-2 font-bold text-right">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {glance.map((p) => (
+                  <tr key={p.id} className="border-b border-slate-100">
+                    <th scope="row" className="py-2 pr-3 font-semibold text-slate-900">
+                      <NavLink page="product-detail" options={{ productId: p.id }} className="text-sky-700 hover:text-sky-800">
+                        {p.specs['Model'] ?? p.name}
+                      </NavLink>
+                    </th>
+                    <td className="py-2 pr-3 text-slate-600">{p.capacityLitres ?? '–'}</td>
+                    <td className="py-2 pr-3 text-slate-600">{p.energyStars ?? '–'}</td>
+                    <td className="py-2 pr-3 text-slate-600">{p.noiseLevelDb ? p.noiseLevelDb + ' dB' : '–'}</td>
+                    <td className="py-2 text-right font-semibold text-slate-900">{formatPrice(p.price)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
       <div className="space-y-4 max-w-3xl">
         <h3 className="text-xl font-extrabold text-slate-900">Frequently asked questions</h3>

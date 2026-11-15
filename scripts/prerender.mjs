@@ -118,6 +118,13 @@ function head(m) {
 
 const link = (href, text) => `<a href="${esc(href)}">${esc(text)}</a>`;
 const li = (items) => `<ul>${items.map(([h, t]) => `<li>${link(h, t)}</li>`).join('')}</ul>`;
+const glanceTable = (id) => {
+  const items = PRODUCTS.filter((p) => p.category === id && p.subcategory !== 'Ice Boxes & Coolers').sort((a, b) => a.price - b.price);
+  if (items.length < 2 || items.length > 12) return '';
+  const cat = CATEGORIES.find((c) => c.id === id);
+  const rows = items.map((p) => `<tr><th scope="row">${link(`/${p.slug}`, p.specs['Model'] ?? p.name)}</th><td>${p.capacityLitres ?? '-'}</td><td>${p.energyStars ?? '-'}</td><td>${p.noiseLevelDb ? p.noiseLevelDb + ' dB' : '-'}</td><td>$${p.price.toLocaleString('en-AU')}</td></tr>`).join('');
+  return `<h3>${esc(cat.name)} at a glance</h3><table><thead><tr><th>Model</th><th>Litres</th><th>Energy stars</th><th>Noise</th><th>Price</th></tr></thead><tbody>${rows}</tbody></table>`;
+};
 const NAV = `<nav aria-label="Main">${li([['/', 'Home'], ['/shop', 'Shop bar fridges'], ...CATEGORIES.map((c) => [`/category/${c.id}`, c.name]), ['/blog', 'Guides and advice']])}</nav>`;
 const FOOT = `<footer><nav aria-label="Footer">${li([['/about', 'About us'], ['/contact', 'Contact'], ['/faq', 'FAQ'], ['/shipping', 'Shipping'], ['/refund', 'Returns and refunds'], ['/privacy', 'Privacy policy'], ['/terms', 'Terms and conditions'], ['/blog', 'Blog']])}</nav><p>${esc(SITE.name)} · <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a></p></footer>`;
 const popular = PRODUCTS.filter((p) => p.badge === 'Popular' || p.badge === 'Best Value');
@@ -171,6 +178,7 @@ function fallback(route, m) {
     const guide = g
       ? `<h2>${esc(g.heading)}</h2>${g.intro.map((t) => `<p>${esc(t)}</p>`).join('')}` +
         g.sections.map((s) => `<h3>${esc(s.h)}</h3>${s.p.map((t) => `<p>${esc(t)}</p>`).join('')}`).join('') +
+        glanceTable(id) +
         `<h3>Frequently asked questions</h3>` + g.faqs.map((f) => `<h4>${esc(f.q)}</h4><p>${esc(f.a)}</p>`).join('')
       : '';
     const cat = CATEGORIES.find((c) => c.id === id);
