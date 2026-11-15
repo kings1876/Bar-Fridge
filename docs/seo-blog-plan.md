@@ -88,3 +88,7 @@ bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational ban
 ## Published ahead of calendar (14 Nov 2026)
 
 - Three transactional posts: retro-bar-fridge-for-sale-guide, vb-beer-fridge-guide, small-refrigerator-price-guide. Real offers only, no sale claimed.
+
+## Published ahead of calendar (15 Nov 2026)
+
+- Two transactional local posts: bar-fridges-brisbane-guide, bar-fridges-perth-guide. Delivery wording taken from the shipping FAQ and contact page (Brisbane metro 2 to 3 business days; WA addresses 4 to 7 business days). Real offers only, no sale claimed.

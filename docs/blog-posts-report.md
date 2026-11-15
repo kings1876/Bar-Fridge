@@ -29,3 +29,5 @@ Words = article body (H1 to footer) on the built page.
 | retro-bar-fridge-for-sale-guide | retro bar fridge | retro mini fridge, retro style mini fridge, mini fridge vintage | 1,211 |
 | vb-beer-fridge-guide | vb beer fridge | beer fridge, beer fridges, wine and beer cooler | 1,398 |
 | small-refrigerator-price-guide | small refrigerator price | mini bar fridges, bar fridge mini fridge, mini fridge with lock, best bar fridge | 1,307 |
+| bar-fridges-brisbane-guide | bar fridges brisbane | fridge for sale brisbane, commercial fridge for sale brisbane, commercial display fridge brisbane, display fridge brisbane | 1,379 |
+| bar-fridges-perth-guide | bar fridges perth | bar fridge perth, bar fridges perth wa, commercial bar fridges perth, bar fridges australia perth | 1,316 |

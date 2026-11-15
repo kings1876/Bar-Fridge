@@ -225,5 +225,23 @@
       "mini fridge with lock",
       "best bar fridge"
     ]
+  },
+  "bar-fridges-brisbane-guide": {
+    "primary": "bar fridges brisbane",
+    "supporting": [
+      "fridge for sale brisbane",
+      "commercial fridge for sale brisbane",
+      "commercial display fridge brisbane",
+      "display fridge brisbane"
+    ]
+  },
+  "bar-fridges-perth-guide": {
+    "primary": "bar fridges perth",
+    "supporting": [
+      "bar fridge perth",
+      "bar fridges perth wa",
+      "commercial bar fridges perth",
+      "bar fridges australia perth"
+    ]
   }
 }

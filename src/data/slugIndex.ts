@@ -249,7 +249,9 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "outdoor-bar-fridge-buyer-guide": "outdoor-bar-fridge-buyer-guide",
   "retro-bar-fridge-for-sale-guide": "retro-bar-fridge-for-sale-guide",
   "vb-beer-fridge-guide": "vb-beer-fridge-guide",
-  "small-refrigerator-price-guide": "small-refrigerator-price-guide"
+  "small-refrigerator-price-guide": "small-refrigerator-price-guide",
+  "bar-fridges-brisbane-guide": "bar-fridges-brisbane-guide",
+  "bar-fridges-perth-guide": "bar-fridges-perth-guide"
 };
 
 export interface BlogCard {
@@ -683,6 +685,24 @@ export const BLOG_CARDS: BlogCard[] = [
     "title": "Small Refrigerator Price: 61 Mini Bar Fridges From $297",
     "excerpt": "What is a fair small refrigerator price? See what 61 mini bar fridges cost, from $297, grouped by budget, with real can counts and ratings. Order online or get a free quote.",
     "image": "/images/products/schmick-hus-sc50ab-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "bar-fridges-brisbane-guide",
+    "slug": "bar-fridges-brisbane-guide",
+    "title": "Bar Fridges Brisbane: Heat-Ready Models With Free Delivery",
+    "excerpt": "Buying bar fridges Brisbane shoppers can order online? Compare tropical rated home bar, display and commercial fridges with real sizes and prices, free delivery and a free quote.",
+    "image": "/images/products/schmick-hus-sc70-b-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "bar-fridges-perth-guide",
+    "slug": "bar-fridges-perth-guide",
+    "title": "Bar Fridges Perth: Hot Summer Models With Free Delivery",
+    "excerpt": "Looking for bar fridges Perth buyers can order online? Compare tropical rated and outdoor fridges for hot summers, with real sizes and prices, free delivery and a free quote.",
+    "image": "/images/products/rhino-env1r-ss-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
   }

@@ -207,6 +207,18 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Buying an outdoor bar fridge? Compare 11 weatherproof and marine grade stainless models from $2,057, plus covered patio fridges from $397. Free shipping.'
   },
+  'bar-fridges-brisbane-guide': {
+    keyword: 'bar fridges brisbane',
+    title: 'Bar Fridges Brisbane: Heat-Ready Models, Free Delivery',
+    description:
+      'Bar fridges Brisbane buyers can order online: tropical rated home, display and commercial fridges from $397. Free shipping, 2 to 3 day metro delivery.'
+  },
+  'bar-fridges-perth-guide': {
+    keyword: 'bar fridges perth',
+    title: 'Bar Fridges Perth: Hot Summer Models, Free Delivery',
+    description:
+      'Bar fridges Perth buyers can order online: tropical rated and outdoor fridges from $397. Free shipping across Australia and a 2 year warranty.'
+  },
   'retro-bar-fridge-for-sale-guide': {
     keyword: 'retro bar fridge',
     title: 'Retro Bar Fridge for Sale: 34 Models From $297',
