@@ -29,7 +29,7 @@ Fallback for Shop if it underperforms: outdoor bar refrigerator.
 | Blog: built-in-bar-fridge-guide | built in bar fridge (90, KD 16) | bar fridge height, built in wine and beverage fridge |
 | Blog: beer-fridge-guide | beer fridge (1,600, KD 11) | drinks fridge, best temperature for beverage refrigerator |
 | Blog: quiet-bar-fridge-guide | quiet bar fridge (70, KD 1) | best bar fridges |
-| Blog: retro-bar-fridge-guide | retro bar fridge (480, KD 11) | mini retro fridge, retro style fridge |
+| Blog: retro-bar-fridge-for-sale-guide (merged from retro-bar-fridge-guide) | retro bar fridge (480, KD 11) | mini retro fridge, retro style fridge |
 Guide posts live in src/data/blogPostsGuides.ts (markup: ## h2, ### h3, - list, [label](/path)).
 Products: unique model-name titles; description = first sentence + free shipping.
 

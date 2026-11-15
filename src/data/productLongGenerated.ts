@@ -42,7 +42,7 @@ function guideLinks(p: Product): string {
   else if (p.category === 'bar-freezers') links.push('[bar fridge vs bar freezer guide](/bar-fridge-vs-bar-freezer-comparison)');
   else if (p.category === 'wine-dual-zone') links.push('[beer fridge guide](/beer-fridge-guide)');
   else if (p.category === 'double-triple-door') links.push('[guide to cutting bar fridge running costs](/energy-efficiency-bar-fridge-power-bills)');
-  else if (p.subcategory === 'Novelty & Branded Mini Bar' && nameHas(p, /retro|vintage/i)) links.push('[retro bar fridge guide](/retro-bar-fridge-guide)');
+  else if (p.subcategory === 'Novelty & Branded Mini Bar' && nameHas(p, /retro|vintage/i)) links.push('[retro bar fridge guide](/retro-bar-fridge-for-sale-guide)');
   else if (p.subcategory === 'Glass Door Display') links.push('[glass door fridge guide](/glass-door-fridge-guide)');
   else links.push('[bar fridge buying guide](/top-bar-fridges-for-sale-australia-guide)');
   if (nameHas(p, /front venting|under bench|underbench/i) && p.category !== 'bar-freezers') links.push('[built in bar fridge guide](/built-in-bar-fridge-guide)');

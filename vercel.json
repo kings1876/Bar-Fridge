@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/retro-bar-fridge-guide",
+      "destination": "/retro-bar-fridge-for-sale-guide",
+      "permanent": true
+    },
+    {
       "source": "/product/:slug",
       "destination": "/:slug",
       "permanent": true

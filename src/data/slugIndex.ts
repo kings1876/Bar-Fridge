@@ -213,7 +213,6 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "built-in-bar-fridge-guide": "built-in-bar-fridge-guide",
   "beer-fridge-guide": "beer-fridge-guide",
   "quiet-bar-fridge-guide": "quiet-bar-fridge-guide",
-  "retro-bar-fridge-guide": "retro-bar-fridge-guide",
   "dual-zone-wine-and-beverage-fridge-guide": "dual-zone-wine-and-beverage-fridge-guide",
   "commercial-bar-fridge-guide": "commercial-bar-fridge-guide",
   "mini-bar-fridge-guide": "mini-bar-fridge-guide",
@@ -355,15 +354,6 @@ export const BLOG_CARDS: BlogCard[] = [
     "readTime": "5 min read"
   },
   {
-    "id": "retro-bar-fridge-guide",
-    "slug": "retro-bar-fridge-guide",
-    "title": "Retro Bar Fridge Guide: Mini Bar Fridges With Vintage Style",
-    "excerpt": "Love the vintage look? This retro bar fridge guide compares 46 litre and 70 litre retro mini bar fridges, branded designs and what to check before you buy.",
-    "image": "/images/products/schmick-hus-bc70b-ret-1.webp",
-    "category": "Buying Guides",
-    "readTime": "5 min read"
-  },
-  {
     "id": "dual-zone-wine-and-beverage-fridge-guide",
     "slug": "dual-zone-wine-and-beverage-fridge-guide",
     "title": "How to Choose a Dual Zone Wine and Beverage Fridge",
@@ -411,8 +401,8 @@ export const BLOG_CARDS: BlogCard[] = [
   {
     "id": "branded-beer-fridge-guide",
     "slug": "branded-beer-fridge-guide",
-    "title": "Branded Beer Fridges: VB, Carlton and Great Northern Options",
-    "excerpt": "Looking for a VB beer fridge or other branded bar fridge for your man cave? Compare Cub mini, glass door and skinny upright designs in VB, Carlton Dry, Carlton Draught, Great Northern and Corona.",
+    "title": "Branded Beer Fridges: Carlton, Great Northern and More",
+    "excerpt": "Looking for a branded beer fridge for your man cave? Compare Cub mini, glass door and skinny upright designs in VB, Carlton Dry, Carlton Draught, Great Northern and Corona.",
     "image": "/images/products/cub-sc70-b-vb-v1-1.webp",
     "category": "Buying Guides",
     "readTime": "5 min read"

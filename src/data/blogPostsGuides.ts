@@ -141,7 +141,7 @@ export const GUIDE_POSTS: BlogPost[] = [
       '## Indoor or outdoor?',
       'If your beer fridge will live on the patio, garage or by the pool, choose a tropical rated model so it keeps cooling in summer heat, and consider a corrosion-resistant outdoor model. See our [alfresco and outdoor bar fridges](/category/alfresco-outdoor).',
       '## Retro and branded beer fridges',
-      'A branded retro mini bar fridge turns a beer fridge into a talking point for a man cave or shed. Read our [retro bar fridge guide](/retro-bar-fridge-guide).',
+      'A branded retro mini bar fridge turns a beer fridge into a talking point for a man cave or shed. Read our [retro bar fridge guide](/retro-bar-fridge-for-sale-guide).',
       '## Quick tips',
       '- Do not overload shelves; airflow keeps temperatures even.',
       '- Let drinks cool for a few hours after restocking.',
@@ -181,39 +181,6 @@ export const GUIDE_POSTS: BlogPost[] = [
       '- Avoid placing it directly against a wall that backs onto a bedroom.',
       '## Quiet and efficient go together',
       'A well-insulated fridge with good door seals runs its compressor less, which means less noise and lower running costs. See our guide to [cutting bar fridge running costs](/energy-efficiency-bar-fridge-power-bills).'
-    ]
-  },
-  {
-    id: 'retro-bar-fridge-guide',
-    slug: 'retro-bar-fridge-guide',
-    title: 'Retro Bar Fridge Guide: Mini Bar Fridges With Vintage Style',
-    excerpt:
-      'Love the vintage look? This retro bar fridge guide compares 46 litre and 70 litre retro mini bar fridges, branded designs and what to check before you buy.',
-    author: AUTHOR,
-    date: DATE,
-    readTime: '5 min read',
-    category: 'Buying Guides',
-    image: '/images/products/schmick-hus-bc70b-ret-1.webp',
-    tags: ['Retro Bar Fridge', 'Mini Bar Fridge', 'Man Cave', 'Vintage'],
-    content: [
-      'A retro bar fridge brings a vintage look to a man cave, games room, shed or bar while keeping modern cooling inside. Vintage styling and branded designs make them as much a decoration as an appliance.',
-      '## 46 litre or 70 litre?',
-      'Most retro mini bar fridges come in two sizes:',
-      '- 46 litre: compact and light, perfect for a desk, shelf or small corner. Examples include the [Schmick HUS-BC46B-RET](/schmick-hus-bc46b-ret-46l) in black and the [Schmick HUS-BC46W-RET](/schmick-hus-bc46w-ret-46l) in white.',
-      '- 70 litre: holds more bottles and cans for regular entertaining, such as the [Schmick HUS-BC70B-RET](/schmick-hus-bc70b-ret-70l).',
-      '## Plain or branded designs',
-      'Beyond classic black and white, our range includes themed retro mini bar fridges, from vintage safe and roadie case designs to beer, footy and car brand looks. Browse the full [single door bar fridge range](/category/single-door), which includes the novelty and branded mini bars.',
-      '## What to check before you buy',
-      '- Capacity: decide how many bottles and cans you need to keep cold.',
-      '- Dimensions: check width, depth and height against your space.',
-      '- Bottle opener: several models are listed with an opener, so check the listing.',
-      '- Noise: look for quiet running models if it will sit in a living area.',
-      '- Climate rating: if it will be in a shed or garage, choose a tropical rated unit that keeps cooling in hot weather.',
-      '## Where retro bar fridges work best',
-      'A retro mini bar fridge suits a man cave, rumpus room, home bar, office or caravan annexe. Because they are compact, place them where you can leave the manufacturer\'s ventilation clearance around the sides and back, and check the listing before building one into joinery. For built in fitting, read our [built in bar fridge guide](/built-in-bar-fridge-guide).',
-      '## A good gift',
-      'A branded retro bar fridge is a popular gift for beer fans and collectors. Check the listing for the design and size before ordering.',
-      'Looking for something bigger for entertaining? Our [beer fridge guide](/beer-fridge-guide) compares sizes and types.'
     ]
   }
 ];
@@ -264,15 +231,6 @@ const FAQ_ADDONS: Record<string, string[]> = {
     'Common causes are an uneven floor, the fridge touching a wall or cabinet, dust on the condenser, or a fan or compressor working hard in a hot room. Levelling the feet and allowing ventilation space often helps.',
     '### Is a thermoelectric mini fridge quieter?',
     'Thermoelectric fridges have no compressor and are very quiet, but they cool poorly in warm rooms. A quiet running compressor bar fridge is usually the better choice in Australian conditions.'
-  ],
-  'retro-bar-fridge-guide': [
-    '## Retro bar fridge FAQs',
-    '### What sizes do retro bar fridges come in?',
-    'In our range, retro mini bar fridges come in 46 litre and 70 litre sizes. The 46 litre is ideal for small spaces; the 70 litre holds more for regular entertaining.',
-    '### Can I use a retro bar fridge outside?',
-    'Only if the listing says it is suitable. Most retro mini bar fridges are designed for indoor use, so check the climate rating and keep any fridge out of direct sun and rain. For outdoor areas, see our [alfresco bar fridges](/category/alfresco-outdoor).',
-    '### Are retro bar fridges a good gift?',
-    'They are a popular gift for beer fans, collectors and anyone setting up a man cave. Check the design, size and whether it includes a bottle opener before ordering.'
   ]
 };
 GUIDE_POSTS.forEach((p) => p.content.push(...(FAQ_ADDONS[p.slug] ?? [])));

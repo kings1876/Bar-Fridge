@@ -49,8 +49,6 @@ export const GUIDE_POSTS_3: BlogPost[] = [
       '- Remember adjustable feet add a little height.',
       'For under bench fitting, read our [built in bar fridge guide](/built-in-bar-fridge-guide). For compact sizes, see our [mini bar fridge guide](/mini-bar-fridge-guide).',
       '## Bar fridge dimensions FAQs',
-      '### What is the standard size of a bar fridge?',
-      'There is no single standard. The most common single door sizes in our range are around 46 to 70 litres for minis and 89 to 164 litres for under bench models.',
       '### Will a bar fridge fit under a bench?',
       'It can if the height and ventilation suit. Compare the fridge height with your opening, and choose a front-breathing model for enclosed spaces.',
       '### Where do I find the exact dimensions?',

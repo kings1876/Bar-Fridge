@@ -63,7 +63,7 @@ export const SUBCATEGORY_GUIDES: Record<string, SubGuide> = {
       'Several models are listed with a bottle opener, so check the individual listing.'
     ],
     links: [
-      { label: 'Retro bar fridge guide', path: '/retro-bar-fridge-guide' },
+      { label: 'Retro bar fridge guide', path: '/retro-bar-fridge-for-sale-guide' },
       { label: 'Branded beer fridge guide', path: '/branded-beer-fridge-guide' },
       { label: 'Mini bar fridge guide', path: '/mini-bar-fridge-guide' }
     ]

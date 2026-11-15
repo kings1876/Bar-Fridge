@@ -83,7 +83,7 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
   },
   'beer-fridge-guide': {
     keyword: 'beer fridge',
-    title: 'Beer Fridge Guide: Best Temperature, Size & Type',
+    title: 'Beer Fridge Guide: Best Temperature, Size & Models to Buy',
     description:
       'Choosing a beer fridge or drinks fridge? Compare bar fridges, beverage fridges and dual zone models, plus the best temperature for beer.'
   },
@@ -92,12 +92,6 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     title: 'Quiet Bar Fridge: How to Choose a Low-Noise Model',
     description:
       'Need a quiet bar fridge for the lounge or home theatre? Learn what dB ratings mean, what makes fridges noisy and how to choose a quiet model.'
-  },
-  'retro-bar-fridge-guide': {
-    keyword: 'retro bar fridge',
-    title: 'Retro Bar Fridge Guide: 46L & 70L Mini Bar Fridges',
-    description:
-      'Retro bar fridge guide: compare 46 litre and 70 litre retro mini bar fridges, branded designs and what to check before you buy.'
   },
   'dual-zone-wine-and-beverage-fridge-guide': {
     keyword: 'dual zone wine and beverage fridge',
@@ -125,7 +119,7 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
   },
   'drink-fridge-guide': {
     keyword: 'drink fridge',
-    title: 'Drink Fridge Guide: How to Choose the Right One',
+    title: 'Drink Fridge for Sale: Sizes From 23L, Prices From $297',
     description:
       'Choosing a drink fridge? Compare sizes from 23 to 737 litres, glass or solid doors, heated glass, noise and prices from $297, with real models and can counts.'
   },
@@ -269,7 +263,7 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
   },
   'lockable-bar-fridge-guide': {
     keyword: 'lockable bar fridge',
-    title: 'Lockable Bar Fridge: Mini Fridges With a Lock Explained',
+    title: 'Lockable Bar Fridge: Which Models Have a Lock (AU)',
     description:
       'Need a lockable bar fridge or a mini fridge with a lock? See where a lock helps, which of our models have a lockable door and how to pick a size.'
   },
@@ -280,14 +274,14 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
       'A guide to Rhino bar fridges: how the ENVY, SG, GSP and SGT model codes work and which Rhino fridge suits indoor, alfresco or commercial use.'
   },
   'branded-beer-fridge-guide': {
-    keyword: 'vb beer fridge',
-    title: 'Branded Beer Fridges: VB, Carlton & Great Northern',
+    keyword: 'branded beer fridge',
+    title: 'Branded Beer Fridge Guide: Carlton, Great Northern & More',
     description:
-      'Looking for a VB beer fridge or other branded bar fridge for your man cave? Compare Cub mini, glass door and skinny upright designs and sizes.'
+      'Looking for a branded beer fridge for your man cave? Compare Carlton, Great Northern and Corona designs in mini, glass door and upright sizes.'
   },
   'bar-fridge-dimensions-guide': {
     keyword: 'bar fridge dimensions',
-    title: 'Bar Fridge Dimensions: Width, Height and Depth by Size',
+    title: 'Bar Fridge Dimensions: Standard Width, Height and Depth',
     description:
       'Real bar fridge dimensions by size, from 23 litre minis to triple door units, with width, depth and height ranges and tips for measuring your space.'
   },
@@ -305,7 +299,7 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
   },
   'slimline-bar-fridge-guide': {
     keyword: 'slimline bar fridge',
-    title: 'Slimline Bar Fridge Guide: Narrow and Tall Upright Models',
+    title: 'Slimline Bar Fridge: 390 mm Narrow Upright Models',
     description:
       'Short on space? Compare slimline and narrow upright bar fridges, including 390 mm wide 160 litre models, with dimensions, brands and placement tips.'
   },
@@ -317,7 +311,7 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
   },
   'small-bar-freezer-guide': {
     keyword: 'small bar freezer',
-    title: 'Small Bar Freezers: Mini, Under Counter and Upright Options',
+    title: 'Small Bar Freezer for Sale: Mini, Under Counter, Upright',
     description:
       'Choosing a small bar freezer? Compare mini glass and solid door freezers, under counter built in models and uprights, with sizes and temperatures.'
   },

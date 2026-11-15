@@ -65,7 +65,7 @@ const retroMini =
     ...p.features.map((f) => `- ${f}.`),
     `- ${p.noiseLevelDb} dB sound rating and ${art(p.energyStars)} ${p.energyStars} star energy rating.`,
     '### Size and fit',
-    `It measures ${dims(p)}, so it is easy to place on a bench or in a corner. It is listed as suitable for ${(p.specs['Suitability'] ?? 'indoor').toLowerCase()} use, so keep it out of direct sun and leave the manufacturer's ventilation clearance. Thinking about the whole range? Read our [retro bar fridge guide](/retro-bar-fridge-guide).`,
+    `It measures ${dims(p)}, so it is easy to place on a bench or in a corner. It is listed as suitable for ${(p.specs['Suitability'] ?? 'indoor').toLowerCase()} use, so keep it out of direct sun and leave the manufacturer's ventilation clearance. Thinking about the whole range? Read our [retro bar fridge guide](/retro-bar-fridge-for-sale-guide).`,
     tail(p, 'single door bar fridges', 'single-door')
   ];
 
