@@ -91,4 +91,4 @@ bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational ban
 
 ## Published ahead of calendar (15 Nov 2026)
 
-- Two transactional local posts: bar-fridges-brisbane-guide, bar-fridges-perth-guide. Delivery wording taken from the shipping FAQ and contact page (Brisbane metro 2 to 3 business days; WA addresses 4 to 7 business days). Real offers only, no sale claimed.
+- Two transactional local posts: bar-fridges-brisbane-guide, bar-fridges-perth-guide. Delivery wording taken from the shipping FAQ and contact page (all metro areas including Perth 2 to 3 business days; regional and remote WA/NT 4 to 7 business days). Real offers only, no sale claimed.

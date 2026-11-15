@@ -23,7 +23,7 @@ export const FAQS_DATA: FAQItem[] = [
     id: 'faq-4',
     category: 'Shipping & Delivery',
     question: 'How long does delivery take and which couriers do you use?',
-    answer: 'Orders are dispatched within 24 business hours from our nearest distribution center (Sydney, Melbourne, Brisbane, or Perth). Metro deliveries generally arrive within 2–3 business days. Regional and WA/NT addresses take 4–7 business days. We partner with specialized tailgate freight couriers including Direct Freight Express, Northline, and TNT with full insurance coverage.'
+    answer: 'Orders are dispatched within 24 business hours from our nearest distribution center (Sydney, Melbourne, Brisbane, or Perth). Metro deliveries, including Perth, generally arrive within 2–3 business days. Regional and remote WA/NT addresses take 4–7 business days. We partner with specialized tailgate freight couriers including Direct Freight Express, Northline, and TNT with full insurance coverage.'
   },
   {
     id: 'faq-5',
