@@ -11,7 +11,8 @@
     "lint": "tsc --noEmit",
     "gen:index": "node scripts/gen-slug-index.mjs",
     "predev": "npm run gen:index",
-    "prebuild": "npm run gen:index"
+    "prebuild": "npm run gen:index",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
