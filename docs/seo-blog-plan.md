@@ -105,3 +105,4 @@ bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational ban
 ## Size content upgrade (19 Nov 2026)
 
 - Blog markup now supports quick-answer callouts (`> text`) and tables (`| a | b |` rows). Added a quick answer plus a size table (28 to 8 models per band, real ranges from the catalogue) to bar-fridge-dimensions-guide and bar-refrigerator-sizes-guide, the strongest Google and Bing topic. Removed a duplicate FAQ earlier. Mobile hero image is shorter (2:1) so the answer sits higher on phones.
+- Same quick-answer plus size-table treatment added to 70l-bar-fridge-guide, slimline-bar-fridge-guide and mini-bar-fridge-guide (all figures from the catalogue). Replaced an unsupported 'most popular mini size' line with '18 models'.
