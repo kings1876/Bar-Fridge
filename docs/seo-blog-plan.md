@@ -97,3 +97,7 @@ bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational ban
 
 - Three transactional posts: upright-freezer-sale-guide, buy-fridge-melbourne-guide, fridge-sale-under-500-guide. Primaries and supporting keywords come from the transactional bank. Real offers only; the under-$500 post says plainly that no clearance is running.
 - New standing rule: every new post has a hero image plus at least two inline product images, written as "![alt text](/images/products/x.webp)" lines (supported by src/seo/richtext.ts, src/components/RichText.tsx and the prerender). scripts/check-blog-keywords.mjs enforces it via IMAGE_RULE_FROM (alt text of 4+ words, file exists).
+
+## IndexNow (19 Nov 2026)
+
+- Key file public/2051ee49a0ad717cf5958330d6686b0d.txt (public by design). After each deploy that adds or changes pages, run `npm run indexnow` (new sitemap URLs only; state in docs/indexnow-submitted.txt), `npm run indexnow -- --all`, or pass specific URLs. It notifies Bing, Yandex, Naver, Seznam and Yep, not Google. First run submitted all 276 URLs (HTTP 200); the first attempt returned 403 SiteVerificationNotCompleted until the key had been seen for a couple of minutes.
