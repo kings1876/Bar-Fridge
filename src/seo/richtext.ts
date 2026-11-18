@@ -3,11 +3,22 @@
 //   consecutive "- item" lines     -> bullet list
 //   "[label](/path)"              -> internal link
 //   "![alt text](/images/x.webp)"  -> inline image (a line of its own, local images only)
+//   "> text"                       -> quick-answer callout
+//   consecutive "| a | b |" lines  -> table (first row is the header; a "|---|---|" row is ignored)
 //   anything else                 -> paragraph
 export type Block =
   | { type: 'h2' | 'h3' | 'p'; text: string }
   | { type: 'ul'; items: string[] }
-  | { type: 'img'; src: string; alt: string };
+  | { type: 'img'; src: string; alt: string }
+  | { type: 'note'; text: string }
+  | { type: 'table'; head: string[]; rows: string[][] };
+
+const cells = (line: string) =>
+  line
+    .replace(/^\|/, '')
+    .replace(/\|$/, '')
+    .split('|')
+    .map((c) => c.trim());
 
 export function parseRich(lines: string[]): Block[] {
   const out: Block[] = [];
@@ -16,7 +27,13 @@ export function parseRich(lines: string[]): Block[] {
     if (!line) continue;
     const img = /^!\[([^\]]*)\]\((\/[^)\s]+)\)$/.exec(line);
     if (img) out.push({ type: 'img', alt: img[1], src: img[2] });
-    else if (line.startsWith('### ')) out.push({ type: 'h3', text: line.slice(4) });
+    else if (line.startsWith('> ')) out.push({ type: 'note', text: line.slice(2) });
+    else if (line.startsWith('|')) {
+      if (/^\|[\s:|-]+\|?$/.test(line)) continue;
+      const last = out[out.length - 1];
+      if (last && last.type === 'table') last.rows.push(cells(line));
+      else out.push({ type: 'table', head: cells(line), rows: [] });
+    } else if (line.startsWith('### ')) out.push({ type: 'h3', text: line.slice(4) });
     else if (line.startsWith('## ')) out.push({ type: 'h2', text: line.slice(3) });
     else if (line.startsWith('- ')) {
       const last = out[out.length - 1];
@@ -53,10 +70,19 @@ export function richToHtml(lines: string[]): string {
         ? `<figure><img src="${esc(b.src)}" alt="${esc(b.alt)}" width="800" height="600" loading="lazy" decoding="async"></figure>`
         : b.type === 'ul'
         ? `<ul>${b.items.map((i) => `<li>${inlineHtml(i)}</li>`).join('')}</ul>`
+        : b.type === 'note'
+        ? `<blockquote><p>${inlineHtml(b.text)}</p></blockquote>`
+        : b.type === 'table'
+        ? `<table><thead><tr>${b.head.map((h) => `<th>${inlineHtml(h)}</th>`).join('')}</tr></thead><tbody>${b.rows
+            .map((r) => `<tr>${r.map((c, i) => (i === 0 ? `<th scope="row">${inlineHtml(c)}</th>` : `<td>${inlineHtml(c)}</td>`)).join('')}</tr>`)
+            .join('')}</tbody></table>`
         : `<${b.type}>${inlineHtml(b.text)}</${b.type}>`
     )
     .join('');
 }
 
 export const richToText = (lines: string[]) =>
-  lines.filter((l) => !l.trim().startsWith('![')).map((l) => l.replace(/^#{2,3} |^- /, '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')).join(' ');
+  lines
+    .filter((l) => !l.trim().startsWith('![') && !/^\|[\s:|-]+\|?$/.test(l.trim()))
+    .map((l) => l.replace(/^#{2,3} |^- |^> /, '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/\|/g, ' '))
+    .join(' ');

@@ -33,6 +33,47 @@ export const RichText: React.FC<{ lines: string[] }> = ({ lines }) => (
             <img src={b.src} alt={b.alt} width={800} height={600} loading="lazy" decoding="async" className="w-full h-full object-contain p-4" />
           </figure>
         );
+      if (b.type === 'note')
+        return (
+          <aside key={i} className="rounded-2xl border-l-4 border-sky-500 bg-sky-50 px-4 py-3 sm:px-5 sm:py-4 text-slate-800">
+            <p className="leading-relaxed">
+              <Inline text={b.text} />
+            </p>
+          </aside>
+        );
+      if (b.type === 'table')
+        return (
+          <div key={i} className="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+            <table className="w-full min-w-[520px] text-left text-sm">
+              <thead className="bg-slate-50 text-slate-600">
+                <tr>
+                  {b.head.map((h, j) => (
+                    <th key={j} scope="col" className="px-3 py-2.5 font-bold">
+                      <Inline text={h} />
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {b.rows.map((r, j) => (
+                  <tr key={j} className="border-t border-slate-100">
+                    {r.map((c, k) =>
+                      k === 0 ? (
+                        <th key={k} scope="row" className="px-3 py-2.5 font-semibold text-slate-900">
+                          <Inline text={c} />
+                        </th>
+                      ) : (
+                        <td key={k} className="px-3 py-2.5 text-slate-600">
+                          <Inline text={c} />
+                        </td>
+                      )
+                    )}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
       if (b.type === 'h2')
         return (
           <h2 key={i} className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight pt-2">

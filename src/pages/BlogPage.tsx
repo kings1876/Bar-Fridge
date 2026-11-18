@@ -96,7 +96,7 @@ export const BlogPage: React.FC = () => {
         </header>
 
         {/* Hero Image */}
-        <div className="rounded-3xl overflow-hidden aspect-[16/9] border border-slate-200 shadow-md bg-white">
+        <div className="rounded-3xl overflow-hidden aspect-[2/1] sm:aspect-[16/9] border border-slate-200 shadow-md bg-white">
           <img src={post.image} alt={post.title} className="w-full h-full object-contain p-4" />
         </div>
 

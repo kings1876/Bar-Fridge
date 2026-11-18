@@ -101,3 +101,7 @@ bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational ban
 ## IndexNow (19 Nov 2026)
 
 - Key file public/2051ee49a0ad717cf5958330d6686b0d.txt (public by design). After each deploy that adds or changes pages, run `npm run indexnow` (new sitemap URLs only; state in docs/indexnow-submitted.txt), `npm run indexnow -- --all`, or pass specific URLs. It notifies Bing, Yandex, Naver, Seznam and Yep, not Google. First run submitted all 276 URLs (HTTP 200); the first attempt returned 403 SiteVerificationNotCompleted until the key had been seen for a couple of minutes.
+
+## Size content upgrade (19 Nov 2026)
+
+- Blog markup now supports quick-answer callouts (`> text`) and tables (`| a | b |` rows). Added a quick answer plus a size table (28 to 8 models per band, real ranges from the catalogue) to bar-fridge-dimensions-guide and bar-refrigerator-sizes-guide, the strongest Google and Bing topic. Removed a duplicate FAQ earlier. Mobile hero image is shorter (2:1) so the answer sits higher on phones.
