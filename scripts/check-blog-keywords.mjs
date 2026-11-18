@@ -15,7 +15,9 @@ for (const [file, kind, kd] of [['commercial', 'C', 20], ['transactional', 'T', 
 }
 const map = JSON.parse(fs.readFileSync(path.join(root, 'docs/keywords/blog-post-keywords.json'), 'utf8'));
 // Posts written under the category-and-shop linking rule.
-const BLOG_LINK_RULE_FROM = ['beer-and-wine-fridge-guide', 'drinks-fridge-glass-door-guide', '70l-bar-fridge-guide', 'bar-refrigerator-sizes-guide', 'bar-fridge-black-friday-checklist', 'stainless-steel-outdoor-fridge-guide', 'small-freezers-for-sale-guide', 'black-fridges-for-sale-guide', 'boxing-day-fridge-sale-checklist', 'buy-a-wine-fridge-guide', 'commercial-bar-fridge-for-sale-guide', 'glass-door-refrigerators-for-sale-guide', 'outdoor-bar-fridge-buyer-guide', 'retro-bar-fridge-for-sale-guide', 'vb-beer-fridge-guide', 'small-refrigerator-price-guide', 'bar-fridges-brisbane-guide', 'bar-fridges-perth-guide'];
+const BLOG_LINK_RULE_FROM = ['beer-and-wine-fridge-guide', 'drinks-fridge-glass-door-guide', '70l-bar-fridge-guide', 'bar-refrigerator-sizes-guide', 'bar-fridge-black-friday-checklist', 'stainless-steel-outdoor-fridge-guide', 'small-freezers-for-sale-guide', 'black-fridges-for-sale-guide', 'boxing-day-fridge-sale-checklist', 'buy-a-wine-fridge-guide', 'commercial-bar-fridge-for-sale-guide', 'glass-door-refrigerators-for-sale-guide', 'outdoor-bar-fridge-buyer-guide', 'retro-bar-fridge-for-sale-guide', 'vb-beer-fridge-guide', 'small-refrigerator-price-guide', 'bar-fridges-brisbane-guide', 'bar-fridges-perth-guide', 'upright-freezer-sale-guide', 'buy-fridge-melbourne-guide', 'fridge-sale-under-500-guide'];
+// Standing rule (18 Nov 2026): every new post carries a hero image plus at least two inline product images with alt text.
+const IMAGE_RULE_FROM = ['upright-freezer-sale-guide', 'buy-fridge-melbourne-guide', 'fridge-sale-under-500-guide'];
 let problems = 0;
 const bad = (m) => { problems++; console.log('  FAIL', m); };
 for (const [slug, { primary, supporting }] of Object.entries(map)) {
@@ -33,6 +35,15 @@ for (const [slug, { primary, supporting }] of Object.entries(map)) {
   }
   if (!title.includes(norm(primary))) bad(`primary "${primary}" is not in the SEO title`);
   if (!h1.includes(norm(primary))) bad(`primary "${primary}" is not in the H1`);
+  if (IMAGE_RULE_FROM.includes(slug)) {
+    const inline = [...html.matchAll(/<figure><img src="([^"]+)" alt="([^"]*)"/g)];
+    if (inline.length < 2) bad(`needs at least 2 inline images, has ${inline.length}`);
+    for (const [, src, alt] of inline) {
+      if (!alt || alt.split(' ').length < 4) bad(`inline image ${src} needs descriptive alt text`);
+      if (!fs.existsSync(path.join(root, 'public', src))) bad(`inline image ${src} does not exist`);
+    }
+    console.log(`  images: ${inline.length} inline`);
+  }
   // Standing rule (30 Oct 2026): posts point mostly at product category pages and the shop page.
   if (BLOG_LINK_RULE_FROM.includes(slug)) {
     const wrap = html.slice(html.indexOf('<h1'), html.indexOf('<footer', html.indexOf('<h1')));

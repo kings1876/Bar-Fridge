@@ -92,3 +92,8 @@ bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational ban
 ## Published ahead of calendar (15 Nov 2026)
 
 - Two transactional local posts: bar-fridges-brisbane-guide, bar-fridges-perth-guide. Delivery wording taken from the shipping FAQ and contact page (all metro areas including Perth 2 to 3 business days; regional and remote WA/NT 4 to 7 business days). Real offers only, no sale claimed.
+
+## Published ahead of calendar (18 Nov 2026)
+
+- Three transactional posts: upright-freezer-sale-guide, buy-fridge-melbourne-guide, fridge-sale-under-500-guide. Primaries and supporting keywords come from the transactional bank. Real offers only; the under-$500 post says plainly that no clearance is running.
+- New standing rule: every new post has a hero image plus at least two inline product images, written as "![alt text](/images/products/x.webp)" lines (supported by src/seo/richtext.ts, src/components/RichText.tsx and the prerender). scripts/check-blog-keywords.mjs enforces it via IMAGE_RULE_FROM (alt text of 4+ words, file exists).

@@ -207,6 +207,24 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Buying an outdoor bar fridge? Compare 11 weatherproof and marine grade stainless models from $2,057, plus covered patio fridges from $397. Free shipping.'
   },
+  'upright-freezer-sale-guide': {
+    keyword: 'upright freezer sale',
+    title: 'Upright Freezer Sale: Built-In and Bar Freezers From $427',
+    description:
+      'Upright freezer sale guide: two built-in uprights and five bar freezers from $427 with real sizes, noise and ratings. Free shipping and a 2 year warranty.'
+  },
+  'buy-fridge-melbourne-guide': {
+    keyword: 'buy fridge melbourne',
+    title: 'Buy Fridge Melbourne: Bar Fridges, Free Delivery',
+    description:
+      'Buy fridge Melbourne: bar fridges for flats, garages and venues from $457 with free shipping and 2 to 3 day metro delivery. Order online or get a quote.'
+  },
+  'fridge-sale-under-500-guide': {
+    keyword: 'fridge sale under $500',
+    title: 'Fridge Sale Under $500: 29 Bar Fridges From $297',
+    description:
+      'Fridge sale under $500: 29 bar fridges and 2 freezers cost $500 or less, from $297, with real sizes and can counts. Free shipping and a 2 year warranty.'
+  },
   'bar-fridges-brisbane-guide': {
     keyword: 'bar fridges brisbane',
     title: 'Bar Fridges Brisbane: Heat-Ready Models, Free Delivery',

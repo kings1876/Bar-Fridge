@@ -2,17 +2,21 @@
 //   "## Heading" / "### Heading"  -> h2 / h3
 //   consecutive "- item" lines     -> bullet list
 //   "[label](/path)"              -> internal link
+//   "![alt text](/images/x.webp)"  -> inline image (a line of its own, local images only)
 //   anything else                 -> paragraph
 export type Block =
   | { type: 'h2' | 'h3' | 'p'; text: string }
-  | { type: 'ul'; items: string[] };
+  | { type: 'ul'; items: string[] }
+  | { type: 'img'; src: string; alt: string };
 
 export function parseRich(lines: string[]): Block[] {
   const out: Block[] = [];
   for (const raw of lines) {
     const line = raw.trim();
     if (!line) continue;
-    if (line.startsWith('### ')) out.push({ type: 'h3', text: line.slice(4) });
+    const img = /^!\[([^\]]*)\]\((\/[^)\s]+)\)$/.exec(line);
+    if (img) out.push({ type: 'img', alt: img[1], src: img[2] });
+    else if (line.startsWith('### ')) out.push({ type: 'h3', text: line.slice(4) });
     else if (line.startsWith('## ')) out.push({ type: 'h2', text: line.slice(3) });
     else if (line.startsWith('- ')) {
       const last = out[out.length - 1];
@@ -45,7 +49,9 @@ const inlineHtml = (s: string) =>
 export function richToHtml(lines: string[]): string {
   return parseRich(lines)
     .map((b) =>
-      b.type === 'ul'
+      b.type === 'img'
+        ? `<figure><img src="${esc(b.src)}" alt="${esc(b.alt)}" width="800" height="600" loading="lazy" decoding="async"></figure>`
+        : b.type === 'ul'
         ? `<ul>${b.items.map((i) => `<li>${inlineHtml(i)}</li>`).join('')}</ul>`
         : `<${b.type}>${inlineHtml(b.text)}</${b.type}>`
     )
@@ -53,4 +59,4 @@ export function richToHtml(lines: string[]): string {
 }
 
 export const richToText = (lines: string[]) =>
-  lines.map((l) => l.replace(/^#{2,3} |^- /, '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')).join(' ');
+  lines.filter((l) => !l.trim().startsWith('![')).map((l) => l.replace(/^#{2,3} |^- /, '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')).join(' ');

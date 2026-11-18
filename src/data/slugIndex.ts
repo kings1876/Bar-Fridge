@@ -251,7 +251,10 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "vb-beer-fridge-guide": "vb-beer-fridge-guide",
   "small-refrigerator-price-guide": "small-refrigerator-price-guide",
   "bar-fridges-brisbane-guide": "bar-fridges-brisbane-guide",
-  "bar-fridges-perth-guide": "bar-fridges-perth-guide"
+  "bar-fridges-perth-guide": "bar-fridges-perth-guide",
+  "upright-freezer-sale-guide": "upright-freezer-sale-guide",
+  "buy-fridge-melbourne-guide": "buy-fridge-melbourne-guide",
+  "fridge-sale-under-500-guide": "fridge-sale-under-500-guide"
 };
 
 export interface BlogCard {
@@ -703,6 +706,33 @@ export const BLOG_CARDS: BlogCard[] = [
     "title": "Bar Fridges Perth: Hot Summer Models With Free Delivery",
     "excerpt": "Looking for bar fridges Perth buyers can order online? Compare tropical rated and outdoor fridges for hot summers, with real sizes and prices, free delivery and a free quote.",
     "image": "/images/products/rhino-env1r-ss-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "upright-freezer-sale-guide",
+    "slug": "upright-freezer-sale-guide",
+    "title": "Upright Freezer Sale: Built-In Uprights and Bar Freezers",
+    "excerpt": "Looking for an upright freezer sale? Compare our built-in upright freezers and five smaller bar freezers from $427, with real sizes, noise and ratings. Free shipping.",
+    "image": "/images/products/schmick-msf230-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "buy-fridge-melbourne-guide",
+    "slug": "buy-fridge-melbourne-guide",
+    "title": "Buy Fridge Melbourne: Bar Fridges With Free Delivery",
+    "excerpt": "Want to buy fridge Melbourne wide? Compare bar fridges for flats, garages, bars and venues with real sizes and prices, free delivery in 2 to 3 days and a free quote.",
+    "image": "/images/products/schmick-ss-p160fa-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "fridge-sale-under-500-guide",
+    "slug": "fridge-sale-under-500-guide",
+    "title": "Fridge Sale Under $500: 29 Bar Fridges From $297",
+    "excerpt": "Shopping for a fridge sale under $500? 29 bar fridges and 2 freezers cost $500 or less every day, from $297, with real sizes, can counts and ratings. Free shipping.",
+    "image": "/images/products/schmick-rf-42-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
   }

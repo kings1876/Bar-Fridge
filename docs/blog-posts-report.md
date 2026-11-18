@@ -31,3 +31,6 @@ Words = article body (H1 to footer) on the built page.
 | small-refrigerator-price-guide | small refrigerator price | mini bar fridges, bar fridge mini fridge, mini fridge with lock, best bar fridge | 1,307 |
 | bar-fridges-brisbane-guide | bar fridges brisbane | fridge for sale brisbane, commercial fridge for sale brisbane, commercial display fridge brisbane, display fridge brisbane | 1,379 |
 | bar-fridges-perth-guide | bar fridges perth | bar fridge perth, bar fridges perth wa, commercial bar fridges perth, bar fridges australia perth | 1,316 |
+| upright-freezer-sale-guide | upright freezer sale | upright freezer for sale, upright freezers on sale, freezer upright for sale, buy an upright freezer | 1,287 |
+| buy-fridge-melbourne-guide | buy fridge melbourne | bar fridges melbourne, bar fridge melbourne, commercial fridge sales, glass door fridge for sale | 1,211 |
+| fridge-sale-under-500-guide | fridge sale under $500 | cheapest bar fridge, cheap freezers for sale, fridges and prices, cheap fridge freezer | 1,235 |

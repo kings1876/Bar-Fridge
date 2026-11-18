@@ -34,7 +34,7 @@ export const PLAN_POSTS_12: BlogPost[] = [
       "## Delivery to Brisbane",
       "Orders are dispatched within 24 hours of confirmed payment from our nearest distribution centre, and our contact page lists a Brisbane distribution hub at Hemmant, Queensland. Delivery to Brisbane metro areas takes 2 to 3 business days, and a tailgate courier brings the fridge to the driveway or kerb. Shipping is free, and every model carries a 2 years parts and labour warranty. Our [shipping page](/shipping) has the full terms. Fridges are heavy, so have a second person ready, and let the unit stand upright for a few hours before you switch it on.",
       "## A fridge for sale Brisbane homes will love",
-      "For a home bar, rumpus room or granny flat, a single door fridge is the best value. These are the sizes people order most:",
+      "For a home bar, rumpus room or granny flat, a single door fridge is the best value. These four sizes cover most home bars:",
       "- [Schmick PG-65A](/schmick-pg-65a-65l): 65 litres, 445 x 445 x 960 mm, holds 110 cans, 38 dB, 9 stars, tropical rated, $397.",
       "- [Schmick HUS-SC70-B](/schmick-hus-sc70-b-70l): 70 litres, 430 x 500 x 700 mm, holds 85 cans, 39 dB, 9 stars, tropical rated, $577.",
       "- [Schmick SK118R-B](/schmick-sk118r-b-118l): 118 litres, 555 x 500 x 875 mm, holds 120 cans, 41 dB, 7 stars, $1,117.",

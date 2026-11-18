@@ -243,5 +243,32 @@
       "commercial bar fridges perth",
       "bar fridges australia perth"
     ]
+  },
+  "upright-freezer-sale-guide": {
+    "primary": "upright freezer sale",
+    "supporting": [
+      "upright freezer for sale",
+      "upright freezers on sale",
+      "freezer upright for sale",
+      "buy an upright freezer"
+    ]
+  },
+  "buy-fridge-melbourne-guide": {
+    "primary": "buy fridge melbourne",
+    "supporting": [
+      "bar fridges melbourne",
+      "bar fridge melbourne",
+      "commercial fridge sales",
+      "glass door fridge for sale"
+    ]
+  },
+  "fridge-sale-under-500-guide": {
+    "primary": "fridge sale under $500",
+    "supporting": [
+      "cheapest bar fridge",
+      "cheap freezers for sale",
+      "fridges and prices",
+      "cheap fridge freezer"
+    ]
   }
 }

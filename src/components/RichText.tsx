@@ -23,10 +23,16 @@ const Inline: React.FC<{ text: string }> = ({ text }) => (
   </>
 );
 
-/** Renders blog content strings (paragraphs, ## / ### headings, - lists, [links](/path)). */
+/** Renders blog content strings (paragraphs, ## / ### headings, - lists, [links](/path), ![alt](/image) lines). */
 export const RichText: React.FC<{ lines: string[] }> = ({ lines }) => (
   <>
     {parseRich(lines).map((b, i) => {
+      if (b.type === 'img')
+        return (
+          <figure key={i} className="max-w-xl mx-auto rounded-2xl border border-slate-200 bg-white aspect-[4/3] overflow-hidden">
+            <img src={b.src} alt={b.alt} width={800} height={600} loading="lazy" decoding="async" className="w-full h-full object-contain p-4" />
+          </figure>
+        );
       if (b.type === 'h2')
         return (
           <h2 key={i} className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight pt-2">
