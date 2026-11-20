@@ -34,3 +34,5 @@ Words = article body (H1 to footer) on the built page.
 | upright-freezer-sale-guide | upright freezer sale | upright freezer for sale, upright freezers on sale, freezer upright for sale, buy an upright freezer | 1,287 |
 | buy-fridge-melbourne-guide | buy fridge melbourne | bar fridges melbourne, bar fridge melbourne, commercial fridge sales, glass door fridge for sale | 1,211 |
 | fridge-sale-under-500-guide | fridge sale under $500 | cheapest bar fridge, cheap freezers for sale, fridges and prices, cheap fridge freezer | 1,235 |
+| 93l-bar-fridge-guide | 93l bar fridge | 93 litre bar fridge, 90l bar fridge, 90 litre bar fridge, 93l fridge | 1,241 |
+| 124l-bar-fridge-guide | 124l bar fridge | 120l bar fridge, 130l bar fridge, 120l fridge | 1,268 |

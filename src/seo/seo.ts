@@ -207,6 +207,18 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Buying an outdoor bar fridge? Compare 11 weatherproof and marine grade stainless models from $2,057, plus covered patio fridges from $397. Free shipping.'
   },
+  '93l-bar-fridge-guide': {
+    keyword: '93l bar fridge',
+    title: '93L Bar Fridge: 89 and 98 Litre Models, Free Shipping',
+    description:
+      '93L bar fridge? No exact 93 litre model, but nine 89 and 98 litre fridges hold 96 to 115 cans from $817. Free shipping and a 2 year warranty.'
+  },
+  '124l-bar-fridge-guide': {
+    keyword: '124l bar fridge',
+    title: '124L Bar Fridge: Closest Sizes, 115 to 132 Litres',
+    description:
+      '124L bar fridge? No exact match, but 32 models from 108 to 132 litres hold 120 to 140 cans, from $657. Free shipping and a 2 year warranty.'
+  },
   'upright-freezer-sale-guide': {
     keyword: 'upright freezer sale',
     title: 'Upright Freezer Sale: Built-In and Bar Freezers From $427',

@@ -270,5 +270,22 @@
       "fridges and prices",
       "cheap fridge freezer"
     ]
+  },
+  "93l-bar-fridge-guide": {
+    "primary": "93l bar fridge",
+    "supporting": [
+      "93 litre bar fridge",
+      "90l bar fridge",
+      "90 litre bar fridge",
+      "93l fridge"
+    ]
+  },
+  "124l-bar-fridge-guide": {
+    "primary": "124l bar fridge",
+    "supporting": [
+      "120l bar fridge",
+      "130l bar fridge",
+      "120l fridge"
+    ]
   }
 }

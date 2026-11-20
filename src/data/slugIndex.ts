@@ -254,7 +254,9 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "bar-fridges-perth-guide": "bar-fridges-perth-guide",
   "upright-freezer-sale-guide": "upright-freezer-sale-guide",
   "buy-fridge-melbourne-guide": "buy-fridge-melbourne-guide",
-  "fridge-sale-under-500-guide": "fridge-sale-under-500-guide"
+  "fridge-sale-under-500-guide": "fridge-sale-under-500-guide",
+  "93l-bar-fridge-guide": "93l-bar-fridge-guide",
+  "124l-bar-fridge-guide": "124l-bar-fridge-guide"
 };
 
 export interface BlogCard {
@@ -733,6 +735,24 @@ export const BLOG_CARDS: BlogCard[] = [
     "title": "Fridge Sale Under $500: 29 Bar Fridges From $297",
     "excerpt": "Shopping for a fridge sale under $500? 29 bar fridges and 2 freezers cost $500 or less every day, from $297, with real sizes, can counts and ratings. Free shipping.",
     "image": "/images/products/schmick-rf-42-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "93l-bar-fridge-guide",
+    "slug": "93l-bar-fridge-guide",
+    "title": "93L Bar Fridge: 89 and 98 Litre Models to Order Now",
+    "excerpt": "Looking for a 93L bar fridge? Our nearest sizes are 89 and 98 litres, holding 96 to 115 cans, from $817. Compare real sizes, noise and ratings. Free shipping.",
+    "image": "/images/products/schmick-sk86r-sd-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "124l-bar-fridge-guide",
+    "slug": "124l-bar-fridge-guide",
+    "title": "124L Bar Fridge: Closest Sizes From 115 to 132 Litres",
+    "excerpt": "Looking for a 124L bar fridge? Our nearest sizes run from 115 to 132 litres, holding 120 to 140 cans, from $657. Compare real sizes, noise and ratings. Free shipping.",
+    "image": "/images/products/schmick-sk126r-sd-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
   }
