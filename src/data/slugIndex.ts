@@ -256,7 +256,10 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "buy-fridge-melbourne-guide": "buy-fridge-melbourne-guide",
   "fridge-sale-under-500-guide": "fridge-sale-under-500-guide",
   "93l-bar-fridge-guide": "93l-bar-fridge-guide",
-  "124l-bar-fridge-guide": "124l-bar-fridge-guide"
+  "124l-bar-fridge-guide": "124l-bar-fridge-guide",
+  "fridges-on-sale-black-friday-guide": "fridges-on-sale-black-friday-guide",
+  "fridge-and-freezer-on-sale-guide": "fridge-and-freezer-on-sale-guide",
+  "bar-fridge-glass-door-guide": "bar-fridge-glass-door-guide"
 };
 
 export interface BlogCard {
@@ -753,6 +756,33 @@ export const BLOG_CARDS: BlogCard[] = [
     "title": "124L Bar Fridge: Closest Sizes From 115 to 132 Litres",
     "excerpt": "Looking for a 124L bar fridge? Our nearest sizes run from 115 to 132 litres, holding 120 to 140 cans, from $657. Compare real sizes, noise and ratings. Free shipping.",
     "image": "/images/products/schmick-sk126r-sd-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "fridges-on-sale-black-friday-guide",
+    "slug": "fridges-on-sale-black-friday-guide",
+    "title": "Fridges on Sale Black Friday: Compare Cost Per Can First",
+    "excerpt": "Hunting fridges on sale Black Friday? We have not announced a markdown, so compare today's prices by cost per can, from $3.21, with free shipping and a 2 year warranty.",
+    "image": "/images/products/schmick-rf-42-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "fridge-and-freezer-on-sale-guide",
+    "slug": "fridge-and-freezer-on-sale-guide",
+    "title": "Fridge and Freezer on Sale: Combos From $500, Pairs From $824",
+    "excerpt": "Want a fridge and freezer on sale? Compare an all-in-one fridge freezer at $997, a portable one at $500, or a bar fridge and freezer pair from $824. Free shipping.",
+    "image": "/images/products/dellcool-dw100cd-2.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "bar-fridge-glass-door-guide",
+    "slug": "bar-fridge-glass-door-guide",
+    "title": "Bar Fridge Glass Door: Heated, Triple Glazed or Locked?",
+    "excerpt": "Choosing a bar fridge glass door? 86 glass door models, 81 tropical rated, from $377. Compare heated, triple glazed and lockable doors with real sizes and prices.",
+    "image": "/images/products/schmick-sk118l-b-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
   }

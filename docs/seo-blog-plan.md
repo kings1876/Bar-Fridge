@@ -110,3 +110,7 @@ bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational ban
 ## Published ahead of calendar (20 Nov 2026)
 
 - Two transactional size posts: 93l-bar-fridge-guide and 124l-bar-fridge-guide. Neither size exists in the range, so each says so and points to the nearest real sizes (89 and 98 litres; 115 to 132 litres). Each has a quick answer, a size table, a hero image and 3 inline product images under 100 KB (the checker now fails inline images over 100 KB for these posts). Blog hero images now carry width, height and fetchpriority=high.
+
+## Published ahead of calendar (24 Nov 2026)
+
+- Three transactional posts: fridges-on-sale-black-friday-guide (compares cost per can; says plainly no markdown is announced; Black Friday is 27 Nov 2026), fridge-and-freezer-on-sale-guide (all-in-one, portable and paired options, prices added up, no bundle claimed), bar-fridge-glass-door-guide (glass feature counts from the listings). Each has a quick answer, a table, a hero and 3 to 4 inline product images under 100 KB.

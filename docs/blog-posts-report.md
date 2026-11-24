@@ -36,3 +36,6 @@ Words = article body (H1 to footer) on the built page.
 | fridge-sale-under-500-guide | fridge sale under $500 | cheapest bar fridge, cheap freezers for sale, fridges and prices, cheap fridge freezer | 1,235 |
 | 93l-bar-fridge-guide | 93l bar fridge | 93 litre bar fridge, 90l bar fridge, 90 litre bar fridge, 93l fridge | 1,241 |
 | 124l-bar-fridge-guide | 124l bar fridge | 120l bar fridge, 130l bar fridge, 120l fridge | 1,268 |
+| fridges-on-sale-black-friday-guide | fridges on sale black friday | fridge black friday sales, black friday sales fridges, black friday sales fridge, boxing day sale fridge | 1,223 |
+| fridge-and-freezer-on-sale-guide | fridge and freezer on sale | fridge freezers sale, buy fridge and freezer, bar fridge and freezer combo, bar fridges with freezer | 1,230 |
+| bar-fridge-glass-door-guide | bar fridge glass door | beverage fridge glass door, clear door fridge, glass door drink cooler, fridge glass door | 1,223 |

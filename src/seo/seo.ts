@@ -207,6 +207,24 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Buying an outdoor bar fridge? Compare 11 weatherproof and marine grade stainless models from $2,057, plus covered patio fridges from $397. Free shipping.'
   },
+  'fridges-on-sale-black-friday-guide': {
+    keyword: 'fridges on sale black friday',
+    title: 'Fridges on Sale Black Friday: Compare Cost Per Can',
+    description:
+      'Fridges on sale Black Friday? No markdown announced, so compare current prices by cost per can, from $3.21. Free shipping and a 2 year warranty.'
+  },
+  'fridge-and-freezer-on-sale-guide': {
+    keyword: 'fridge and freezer on sale',
+    title: 'Fridge and Freezer on Sale: Combos From $500',
+    description:
+      'Fridge and freezer on sale? Compare a $997 fridge with freezer, a $500 portable fridge freezer, or a bar fridge and freezer pair from $824.'
+  },
+  'bar-fridge-glass-door-guide': {
+    keyword: 'bar fridge glass door',
+    title: 'Bar Fridge Glass Door: Heated, Triple Glazed, Locked',
+    description:
+      'Bar fridge glass door: 86 models, 81 tropical rated, from $377. Compare heated, triple glazed and lockable doors. Free shipping, 2 year warranty.'
+  },
   '93l-bar-fridge-guide': {
     keyword: '93l bar fridge',
     title: '93L Bar Fridge: 89 and 98 Litre Models, Free Shipping',

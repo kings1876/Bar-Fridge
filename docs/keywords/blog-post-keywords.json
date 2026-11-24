@@ -287,5 +287,32 @@
       "130l bar fridge",
       "120l fridge"
     ]
+  },
+  "fridges-on-sale-black-friday-guide": {
+    "primary": "fridges on sale black friday",
+    "supporting": [
+      "fridge black friday sales",
+      "black friday sales fridges",
+      "black friday sales fridge",
+      "boxing day sale fridge"
+    ]
+  },
+  "fridge-and-freezer-on-sale-guide": {
+    "primary": "fridge and freezer on sale",
+    "supporting": [
+      "fridge freezers sale",
+      "buy fridge and freezer",
+      "bar fridge and freezer combo",
+      "bar fridges with freezer"
+    ]
+  },
+  "bar-fridge-glass-door-guide": {
+    "primary": "bar fridge glass door",
+    "supporting": [
+      "beverage fridge glass door",
+      "clear door fridge",
+      "glass door drink cooler",
+      "fridge glass door"
+    ]
   }
 }

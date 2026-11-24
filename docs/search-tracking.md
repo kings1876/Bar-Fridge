@@ -21,3 +21,25 @@ Opportunities (pos 5-30, 10+ impr, 0 clicks): bar fridge for sale (47 @29.7), in
 Problems: not indexed rose by 2 (both crawled-not-indexed). Could not list the URLs this run because the browser safety check failed; check manually. No drops above 25%.
 
 Notes: with 20 clicks in 28 days, all changes are directional only. Backlinks remain the main limit: 23 links, all to the homepage, mostly low-quality network sites.
+
+## 23 Nov 2026 (28 days to ~21 Nov)
+
+| Metric | 16 Nov | 23 Nov | Change |
+|---|---|---|---|
+| Clicks | 20 | 35 | +15 (+75%) |
+| Impressions | 4.64K | 6.18K | +33% |
+| CTR | 0.4% | 0.6% | up |
+| Avg position | 41.4 | 34.6 | +6.8 (better) |
+| Indexed | 256 | 260 | +4 (index report last updated 16 Nov) |
+| Not indexed | 16 | 13 | -3 (9 discovered, 4 crawled) |
+| External links | 23 | 25 | +2, all to homepage |
+| Queries / pages | n/a (596 / 174 on 13 Nov) | 765 / 201 | growing |
+
+Watch-list movers (position, before on 16 Nov -> now): bar freezer 144 @34.0 -> 187 @28.5 (+5.5); bar fridge width 31 @16.2 -> 32 @11.5 (+4.7); small bar freezer 18 @17.7 -> 25 @14.4 (+3.3); retro bar fridge 39 @27.1 -> 48 @24.0 (+3.1); bar fridge depth 25 @9.3 -> 27 @12.7 (-3.4, worse); lockable fridge 27 @22.6 -> 44 @21.3; lockable bar fridge 20 @10.4 -> 26 @8.7; bar fridge dimensions 21 @26.0 -> 24 @22.7; outdoor bar fridge 109 @67.9 -> 126 @65.7; slimline bar fridge and drinks fridge for sale flat (@11.8, @7.0). Only query clicks: "bar fridge for sale" 1 click (77 imp @24.9), "bar fridge for sale australia" 1.
+Pages: dimensions guide 688 @29.0 -> 767 @22.3, 3 clicks (was 2); /shop 627 @61.2 -> 919 @54.8, 3 clicks; slimline guide 252 @39.9 -> 307 @31.5; small-bar-freezer guide 242 @37.5 -> 323 @28.4; outdoor-bar-refrigerator-guide 270 @65.4 -> 476 @52.5; homepage 218 @68.8 -> 394 @51.3; lockable guide 154 @15.2, first click (1); beer-fridge guide 203 @14.2. Best CTR: why-tropical-rated 3 clicks/52 imp, outdoor-refrigerator-cabinet-guide 3/46, black-friday-checklist 3/27. /retro-bar-fridge-for-sale-guide has no impressions yet; old /retro-bar-fridge-guide still shows 63 imp @26.0, 8 days after the 301. /branded-beer-fridge-guide 1 imp @99.
+
+Opportunities (pos 5-30, 10+ impr, 0 clicks): bar freezer (187 @28.5), lockable fridge (44 @21.3), indoor alcohol fridges (43 @24.5), bar fridge width (32 @11.5), outdoor fridge sale (32 @22.3), slimline fridge (30 @23.5), bar fridge depth (27 @12.7), lockable bar fridge (26 @8.7), small bar freezer (25 @14.4), double bar fridge (25 @27.8), bar fridge dimensions (24 @22.7), dual zone bar fridge (24 @23.4), slim fridge (22 @24.6), outdoor fridges for sale (22 @22.5), drinks fridge for sale (20 @7.0), black fridge (20 @12.4), outdoor refrigerator (19 @11.7), slimline bar fridge (19 @11.8), bar fridge sale (16 @11.2), bar fridge height (15 @11.6), beer refrigerator (14 @13.6). Pages 50+ impr with CTR under 1%: /shop (919), dimensions (767), outdoor-bar-refrigerator (476), single-door category (445), homepage (394), small-bar-freezer (323), slimline (307), beer-fridge (203, @14.2), beer-and-wine (201), lockable (154), bar-freezers category (146), commercial-bar-fridge-for-sale (137 @78), small-refrigerator-price (134), dual-zone guide (130), wine-fridges-australia (109, 1.8%), mini-bar (111), outdoor-kitchen (110), stainless-steel guide (104), alfresco category (99, 1%).
+
+Problems: no drops over 25%. Not indexed 13: discovered-not-indexed 9 (list not shown in drilldown this run), crawled-not-indexed 4: /stainless-steel-outdoor-fridge-guide, /bar-fridge-prices-australia-guide, /rhino-env1l-sd-148l, /cub-sc70-b-dry-70l. No 404 or redirect issues surfaced.
+
+Notes: 35 clicks in 28 days is still tiny, so the gains are directional, not conclusive. Position and impressions rising across guides is consistent with the 15 Nov title/table work and new posts, but titles take 2-3 weeks. Backlinks remain the main limit: 25 links, all to the homepage, mostly low-quality network sites.
