@@ -114,3 +114,7 @@ bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational ban
 ## Published ahead of calendar (24 Nov 2026)
 
 - Three transactional posts: fridges-on-sale-black-friday-guide (compares cost per can; says plainly no markdown is announced; Black Friday is 27 Nov 2026), fridge-and-freezer-on-sale-guide (all-in-one, portable and paired options, prices added up, no bundle claimed), bar-fridge-glass-door-guide (glass feature counts from the listings). Each has a quick answer, a table, a hero and 3 to 4 inline product images under 100 KB.
+
+## Published ahead of calendar (26 Nov 2026)
+
+- Two transactional posts: bar-and-fridge-guide (home bar fridge plans, primary "bar and fridge" 1,600 searches KD12 from the commercial bank) and bar-fridge-adelaide-guide (Adelaide metro 2 to 3 business days, tropical rated picks). Each has a quick answer, a table, a hero and 4 inline product images under 100 KB.

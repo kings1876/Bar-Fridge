@@ -207,6 +207,18 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Buying an outdoor bar fridge? Compare 11 weatherproof and marine grade stainless models from $2,057, plus covered patio fridges from $397. Free shipping.'
   },
+  'bar-and-fridge-guide': {
+    keyword: 'bar and fridge',
+    title: 'Bar and Fridge: Home Bar Fridge Plans From $577',
+    description:
+      'Bar and fridge plans for a home bar: six fridges from $577 matched to corner, under bench, wine, party and outdoor bars. Free shipping, 2 year warranty.'
+  },
+  'bar-fridge-adelaide-guide': {
+    keyword: 'bar fridge adelaide',
+    title: 'Bar Fridge Adelaide: Heat-Ready Models, Free Delivery',
+    description:
+      'Bar fridge Adelaide: tropical rated home, display and outdoor fridges from $857. Free shipping, 2 to 3 day metro delivery and a 2 year warranty.'
+  },
   'fridges-on-sale-black-friday-guide': {
     keyword: 'fridges on sale black friday',
     title: 'Fridges on Sale Black Friday: Compare Cost Per Can',

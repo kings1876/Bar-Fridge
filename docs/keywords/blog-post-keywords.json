@@ -314,5 +314,23 @@
       "glass door drink cooler",
       "fridge glass door"
     ]
+  },
+  "bar-and-fridge-guide": {
+    "primary": "bar and fridge",
+    "supporting": [
+      "fridge for bar",
+      "fridge for a bar",
+      "bar and wine fridge",
+      "under counter fridge for bar"
+    ]
+  },
+  "bar-fridge-adelaide-guide": {
+    "primary": "bar fridge adelaide",
+    "supporting": [
+      "bar fridges adelaide",
+      "bar fridges adelaide sa",
+      "outdoor fridge sale",
+      "glass door fridge for sale"
+    ]
   }
 }

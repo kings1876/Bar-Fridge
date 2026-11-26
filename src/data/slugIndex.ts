@@ -259,7 +259,9 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "124l-bar-fridge-guide": "124l-bar-fridge-guide",
   "fridges-on-sale-black-friday-guide": "fridges-on-sale-black-friday-guide",
   "fridge-and-freezer-on-sale-guide": "fridge-and-freezer-on-sale-guide",
-  "bar-fridge-glass-door-guide": "bar-fridge-glass-door-guide"
+  "bar-fridge-glass-door-guide": "bar-fridge-glass-door-guide",
+  "bar-and-fridge-guide": "bar-and-fridge-guide",
+  "bar-fridge-adelaide-guide": "bar-fridge-adelaide-guide"
 };
 
 export interface BlogCard {
@@ -783,6 +785,24 @@ export const BLOG_CARDS: BlogCard[] = [
     "title": "Bar Fridge Glass Door: Heated, Triple Glazed or Locked?",
     "excerpt": "Choosing a bar fridge glass door? 86 glass door models, 81 tropical rated, from $377. Compare heated, triple glazed and lockable doors with real sizes and prices.",
     "image": "/images/products/schmick-sk118l-b-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "bar-and-fridge-guide",
+    "slug": "bar-and-fridge-guide",
+    "title": "Bar and Fridge: Home Bar Fridge Plans From $577",
+    "excerpt": "Planning a bar and fridge for home? Match the fridge to the bar run, from a $577 corner fridge to a 300 can party fridge, with real sizes and prices. Free shipping.",
+    "image": "/images/products/schmick-sk86r-sd-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "bar-fridge-adelaide-guide",
+    "slug": "bar-fridge-adelaide-guide",
+    "title": "Bar Fridge Adelaide: Heat-Ready Models, Free Delivery",
+    "excerpt": "Looking for a bar fridge Adelaide buyers can order online? Compare tropical rated home, display and outdoor fridges from $857, with free delivery and a free quote.",
+    "image": "/images/products/schmick-ss-p160fa-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
   }

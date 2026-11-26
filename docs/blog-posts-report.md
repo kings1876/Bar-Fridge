@@ -39,3 +39,5 @@ Words = article body (H1 to footer) on the built page.
 | fridges-on-sale-black-friday-guide | fridges on sale black friday | fridge black friday sales, black friday sales fridges, black friday sales fridge, boxing day sale fridge | 1,223 |
 | fridge-and-freezer-on-sale-guide | fridge and freezer on sale | fridge freezers sale, buy fridge and freezer, bar fridge and freezer combo, bar fridges with freezer | 1,230 |
 | bar-fridge-glass-door-guide | bar fridge glass door | beverage fridge glass door, clear door fridge, glass door drink cooler, fridge glass door | 1,223 |
+| bar-and-fridge-guide | bar and fridge | fridge for bar, fridge for a bar, bar and wine fridge, under counter fridge for bar | 1,294 |
+| bar-fridge-adelaide-guide | bar fridge adelaide | bar fridges adelaide, bar fridges adelaide sa, outdoor fridge sale, glass door fridge for sale | 1,231 |
