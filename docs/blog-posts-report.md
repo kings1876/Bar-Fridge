@@ -41,3 +41,5 @@ Words = article body (H1 to footer) on the built page.
 | bar-fridge-glass-door-guide | bar fridge glass door | beverage fridge glass door, clear door fridge, glass door drink cooler, fridge glass door | 1,223 |
 | bar-and-fridge-guide | bar and fridge | fridge for bar, fridge for a bar, bar and wine fridge, under counter fridge for bar | 1,294 |
 | bar-fridge-adelaide-guide | bar fridge adelaide | bar fridges adelaide, bar fridges adelaide sa, outdoor fridge sale, glass door fridge for sale | 1,231 |
+| 80-litre-bar-fridge-guide | 80 litre bar fridge | 75l bar fridge, 75 litre bar fridge, 65l bar fridge, 70 litre fridge | 1,214 |
+| 43l-bar-fridge-guide | 43l bar fridge | 50l bar fridge, mini bar and fridge, fridge for mini bar, bar mini fridge | 1,212 |

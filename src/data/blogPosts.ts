@@ -18,6 +18,7 @@ import { PLAN_POSTS_13 } from './blogPostsPlan13';
 import { PLAN_POSTS_14 } from './blogPostsPlan14';
 import { PLAN_POSTS_15 } from './blogPostsPlan15';
 import { PLAN_POSTS_16 } from './blogPostsPlan16';
+import { PLAN_POSTS_17 } from './blogPostsPlan17';
 import { BLOG_EXTRAS } from './blogExtras';
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -138,7 +139,8 @@ export const BLOG_POSTS: BlogPost[] = [
   ...PLAN_POSTS_13,
   ...PLAN_POSTS_14,
   ...PLAN_POSTS_15,
-  ...PLAN_POSTS_16
+  ...PLAN_POSTS_16,
+  ...PLAN_POSTS_17
 ];
 
 // Closing sections (see blogExtras.ts)

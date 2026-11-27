@@ -207,6 +207,18 @@ const BLOG_SEO: Record<string, { keyword: string; title: string; description: st
     description:
       'Buying an outdoor bar fridge? Compare 11 weatherproof and marine grade stainless models from $2,057, plus covered patio fridges from $397. Free shipping.'
   },
+  '80-litre-bar-fridge-guide': {
+    keyword: '80 litre bar fridge',
+    title: '80 Litre Bar Fridge: Closest Sizes, 69 to 89 Litres',
+    description:
+      '80 litre bar fridge? No exact match, but 37 fridges from 65 to 89 litres hold 76 to 110 cans from $397. Free shipping and a 2 year warranty.'
+  },
+  '43l-bar-fridge-guide': {
+    keyword: '43l bar fridge',
+    title: '43L Bar Fridge: 42 and 46 Litre Models From $297',
+    description:
+      '43L bar fridge? No exact match, but 24 mini fridges from 42 to 50 litres hold 38 to 62 cans from $297. Free shipping and a 2 year warranty.'
+  },
   'bar-and-fridge-guide': {
     keyword: 'bar and fridge',
     title: 'Bar and Fridge: Home Bar Fridge Plans From $577',

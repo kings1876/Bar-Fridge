@@ -261,7 +261,9 @@ export const BLOG_SLUG_BY_ID: Record<string, string> = {
   "fridge-and-freezer-on-sale-guide": "fridge-and-freezer-on-sale-guide",
   "bar-fridge-glass-door-guide": "bar-fridge-glass-door-guide",
   "bar-and-fridge-guide": "bar-and-fridge-guide",
-  "bar-fridge-adelaide-guide": "bar-fridge-adelaide-guide"
+  "bar-fridge-adelaide-guide": "bar-fridge-adelaide-guide",
+  "80-litre-bar-fridge-guide": "80-litre-bar-fridge-guide",
+  "43l-bar-fridge-guide": "43l-bar-fridge-guide"
 };
 
 export interface BlogCard {
@@ -803,6 +805,24 @@ export const BLOG_CARDS: BlogCard[] = [
     "title": "Bar Fridge Adelaide: Heat-Ready Models, Free Delivery",
     "excerpt": "Looking for a bar fridge Adelaide buyers can order online? Compare tropical rated home, display and outdoor fridges from $857, with free delivery and a free quote.",
     "image": "/images/products/schmick-ss-p160fa-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "80-litre-bar-fridge-guide",
+    "slug": "80-litre-bar-fridge-guide",
+    "title": "80 Litre Bar Fridge: Closest Sizes, 69 to 89 Litres",
+    "excerpt": "Looking for an 80 litre bar fridge? Our nearest sizes are 69, 70 and 89 litres, holding 76 to 96 cans, from $527. Compare real sizes and prices. Free shipping.",
+    "image": "/images/products/schmick-sk68l-ss-1.webp",
+    "category": "Buying Guides",
+    "readTime": "8 min read"
+  },
+  {
+    "id": "43l-bar-fridge-guide",
+    "slug": "43l-bar-fridge-guide",
+    "title": "43L Bar Fridge: 42 and 46 Litre Mini Fridges From $297",
+    "excerpt": "Looking for a 43L bar fridge? Our nearest sizes are 42, 46 and 50 litres, holding 38 to 62 cans, from $297. Compare real sizes, noise and ratings. Free shipping.",
+    "image": "/images/products/schmick-rf-42-1.webp",
     "category": "Buying Guides",
     "readTime": "8 min read"
   }

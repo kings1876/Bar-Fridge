@@ -332,5 +332,23 @@
       "outdoor fridge sale",
       "glass door fridge for sale"
     ]
+  },
+  "80-litre-bar-fridge-guide": {
+    "primary": "80 litre bar fridge",
+    "supporting": [
+      "75l bar fridge",
+      "75 litre bar fridge",
+      "65l bar fridge",
+      "70 litre fridge"
+    ]
+  },
+  "43l-bar-fridge-guide": {
+    "primary": "43l bar fridge",
+    "supporting": [
+      "50l bar fridge",
+      "mini bar and fridge",
+      "fridge for mini bar",
+      "bar mini fridge"
+    ]
   }
 }

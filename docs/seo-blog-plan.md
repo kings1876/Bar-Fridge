@@ -118,3 +118,7 @@ bar-refrigerator-sizes-guide (primary: bar refrigerator sizes, informational ban
 ## Published ahead of calendar (26 Nov 2026)
 
 - Two transactional posts: bar-and-fridge-guide (home bar fridge plans, primary "bar and fridge" 1,600 searches KD12 from the commercial bank) and bar-fridge-adelaide-guide (Adelaide metro 2 to 3 business days, tropical rated picks). Each has a quick answer, a table, a hero and 4 inline product images under 100 KB.
+
+## Published ahead of calendar (28 Nov 2026)
+
+- Two transactional size posts: 80-litre-bar-fridge-guide (nearest real sizes 65 to 89 litres; four 70 litre models hold exactly 80 cans) and 43l-bar-fridge-guide (42, 46 and 50 litre families; supporting terms include mini bar and fridge and fridge for mini bar, 480 searches each). Each has a quick answer, a table, a hero and 4 to 5 inline product images under 100 KB.
