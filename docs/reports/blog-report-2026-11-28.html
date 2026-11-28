@@ -1,0 +1,143 @@
+<title>Blog Batch Report</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: ledger-style report. Findings first, then the post table, then submissions. Cool slate neutrals, one teal accent. */
+:root {
+  --bg: #f3f5f7;
+  --surface: #ffffff;
+  --ink: #16212b;
+  --muted: #5a6b7a;
+  --line: #dbe2e8;
+  --accent: #0f766e;
+  --accent-soft: #dff1ee;
+  --good: #1b7f4b;
+  --good-soft: #def3e6;
+  --warn: #9a6200;
+  --warn-soft: #fbefd2;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f171e; --surface: #17222b; --ink: #e6edf2; --muted: #9bacba; --line: #2a3945;
+    --accent: #4fd1c5; --accent-soft: #123a38; --good: #5fd08f; --good-soft: #13351f; --warn: #f0b84a; --warn-soft: #3a2c0c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f171e; --surface: #17222b; --ink: #e6edf2; --muted: #9bacba; --line: #2a3945;
+  --accent: #4fd1c5; --accent-soft: #123a38; --good: #5fd08f; --good-soft: #13351f; --warn: #f0b84a; --warn-soft: #3a2c0c;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; padding-block: 28px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 980px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; }
+h1 { font-size: 1.6rem; line-height: 1.2; margin: 0; font-weight: 600; text-wrap: balance; }
+h2 { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; font-weight: 600; }
+.sub { color: var(--muted); margin: 4px 0 0; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; min-width: 0; }
+.tile .k { font-size: 0.75rem; color: var(--muted); }
+.tile .v { font-family: var(--font-mono); font-size: 1.7rem; font-weight: 500; font-variant-numeric: tabular-nums; margin-top: 2px; }
+.tile .c { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+.tile .v.na { color: var(--muted); }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; min-width: 0; }
+.finds { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 8px; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 0.9rem; }
+th { text-align: left; font-weight: 600; color: var(--muted); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+td { padding: 12px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td.num, th.num { text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+a { color: var(--accent); word-break: break-all; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.chip { font-size: 0.78rem; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; background: var(--bg); white-space: nowrap; }
+.chip b { font-family: var(--font-mono); font-weight: 500; color: var(--muted); margin-left: 4px; }
+.primary { background: var(--accent-soft); border-color: transparent; font-weight: 600; }
+.pill { display: inline-block; font-size: 0.74rem; font-weight: 600; border-radius: 999px; padding: 2px 10px; }
+.pill.good { background: var(--good-soft); color: var(--good); }
+.pill.warn { background: var(--warn-soft); color: var(--warn); }
+.foot { color: var(--muted); font-size: 0.8rem; }
+@media (prefers-reduced-motion: no-preference) { .tile { transition: border-color .15s; } .tile:hover { border-color: var(--accent); } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Blog batch, 28 November 2026</h1>
+    <p class="sub">barfridgesforsale.com.au: two transactional size posts, published and submitted.</p>
+  </header>
+
+  <section class="tiles" aria-label="Headline numbers">
+    <div class="tile"><div class="k">Posts published</div><div class="v">2</div><div class="c">80 litre and 43L bar fridge</div></div>
+    <div class="tile"><div class="k">Keywords targeted</div><div class="v">10</div><div class="c">2 primary, 8 supporting</div></div>
+    <div class="tile"><div class="k">Monthly searches covered</div><div class="v">1,760</div><div class="c">480 + 1,280, Semrush volumes</div></div>
+    <div class="tile"><div class="k">Clicks</div><div class="v na">n/a</div><div class="c">Search Console, Bing Webmaster</div></div>
+    <div class="tile"><div class="k">Leads</div><div class="v na">n/a</div><div class="c">Quote enquiries from these posts</div></div>
+  </section>
+
+  <section class="panel" aria-labelledby="f">
+    <h2 id="f">What stands out</h2>
+    <ol class="finds">
+      <li>Neither size exists in the range, so each post says so and sends readers to the nearest real models: the 69 and 70 litre fridges (four of them hold exactly 80 cans) and the 42, 46 and 50 litre minis.</li>
+      <li>The 43L post carries the most search demand: "mini bar and fridge" and "fridge for mini bar" are 480 searches a month each, against 70 for its primary keyword.</li>
+      <li>All three channels were submitted the same day, so the first real numbers should show in Search Console and Bing in 2 to 3 weeks. Until then clicks and leads stay n/a.</li>
+    </ol>
+  </section>
+
+  <section class="panel" aria-labelledby="p">
+    <h2 id="p">Posts and keywords</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Post and keywords</th><th class="num">Words</th><th class="num">Images</th><th class="num">Category links</th><th class="num">Shop links</th><th class="num">Clicks</th><th class="num">Leads</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://www.barfridgesforsale.com.au/80-litre-bar-fridge-guide">https://www.barfridgesforsale.com.au/80-litre-bar-fridge-guide</a>
+              <div class="chips">
+                <span class="chip primary">80 litre bar fridge<b>140</b></span>
+                <span class="chip">75l bar fridge<b>90</b></span>
+                <span class="chip">75 litre bar fridge<b>70</b></span>
+                <span class="chip">65l bar fridge<b>90</b></span>
+                <span class="chip">70 litre fridge<b>90</b></span>
+              </div>
+            </td>
+            <td class="num">1,214</td><td class="num">1 + 5</td><td class="num">10</td><td class="num">3</td><td class="num">n/a</td><td class="num">n/a</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://www.barfridgesforsale.com.au/43l-bar-fridge-guide">https://www.barfridgesforsale.com.au/43l-bar-fridge-guide</a>
+              <div class="chips">
+                <span class="chip primary">43l bar fridge<b>70</b></span>
+                <span class="chip">50l bar fridge<b>140</b></span>
+                <span class="chip">mini bar and fridge<b>480</b></span>
+                <span class="chip">fridge for mini bar<b>480</b></span>
+                <span class="chip">bar mini fridge<b>110</b></span>
+              </div>
+            </td>
+            <td class="num">1,212</td><td class="num">1 + 4</td><td class="num">9</td><td class="num">3</td><td class="num">n/a</td><td class="num">n/a</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="foot">Number beside each keyword: searches a month. Images: hero + inline product photos, each inline file under 100 KB. Both posts carry the free quote form and order cards for the products they name.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="s">
+    <h2 id="s">Submissions</h2>
+    <div class="scroll">
+      <table style="min-width: 560px">
+        <thead><tr><th>Channel</th><th>Action</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>Google Search Console</td><td>Sitemap resubmitted</td><td><span class="pill good">Success</span> 285 pages read</td></tr>
+          <tr><td>Google Search Console</td><td>Indexing requested for both URLs</td><td><span class="pill good">Requested</span></td></tr>
+          <tr><td>Bing Webmaster Tools</td><td>Sitemap submitted</td><td><span class="pill warn">Processing</span></td></tr>
+          <tr><td>Bing Webmaster Tools</td><td>2 URLs submitted</td><td><span class="pill good">Submitted</span></td></tr>
+          <tr><td>IndexNow</td><td>Both URLs sent after deploy</td><td><span class="pill good">HTTP 200</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <p class="foot">n/a: clicks and impressions (Search Console, Bing Webmaster Tools), leads (quote enquiries through the contact form), Semrush site score (audit not run). The posts were published on the pull date, so none of these has data yet. Keyword volumes: docs/keywords CSVs.</p>
+</div>
