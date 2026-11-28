@@ -1447,7 +1447,7 @@ export const PRODUCTS: Product[] = [
     id: 'rhino-gsp2h-840-ss',
     name: 'Rhino GSP2H-840-SS Glass 2 Door Energy Efficient Alfresco 208L Bar Fridge with LOW E Glass',
     slug: 'rhino-gsp2h-840-ss-208l',
-    price: 2447,
+    price: 1911,
     category: 'double-triple-door',
     categoryName: 'Double & Triple Door Bar Fridges',
     subcategory: 'Hinged Double Glass Door',
