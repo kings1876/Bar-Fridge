@@ -952,7 +952,7 @@ export const PRODUCTS: Product[] = [
     id: 'rhino-gsp2h-ss',
     name: 'Rhino GSP2H-SS Alfresco Glass Twin Door Bar Refrigerator With Outdoor IP24 Rating with LOW E Glass',
     slug: 'rhino-gsp2h-ss-210l',
-    price: 2447,
+    price: 1911,
     category: 'double-triple-door',
     categoryName: 'Double & Triple Door Bar Fridges',
     subcategory: 'Hinged Double Glass Door',
